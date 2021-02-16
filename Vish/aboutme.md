@@ -1,6 +1,6 @@
 My name is Vishnu Maddheshiya. 
 
-I am from Uttar Pradesh (Mau) 275101.
+I am from Uttar Pradesh (Mau).
 
 Talking about my educational qualification, I have completed my BCA from IICS College. 
 

@@ -3,7 +3,12 @@ body {
 }
 body > h1 {
     text-align: center;
+    background: -webkit-linear-gradient(left,rgb(208, 238, 61) 20%, #f0f 35%,  rgb(245, 12, 12) 54%, #00f 60%, #0f0 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .imp__text {
     color: rebeccapurple;

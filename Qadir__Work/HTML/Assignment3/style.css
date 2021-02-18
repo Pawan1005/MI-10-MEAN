@@ -1,0 +1,7 @@
+.list > ol > li:first-child {
+    color: rgb(143, 60, 143);
+}
+
+.list > ol > li:last-child {
+    color: rgb(95, 162, 250);
+}

@@ -2,6 +2,8 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;
   background-color: lightblue;
+  margin-block-start: auto;
+  margin-inline-start: auto;
 }
 
 ul {
@@ -13,4 +15,20 @@ ul {
 li {
   display: inline-block;
   margin-right: 90px;
+}
+
+h1 {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: -1.5cm;
+  margin-block-start: auto;
+  margin-inline-start: auto;
+}
+
+p {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: -1.5cm;
+  margin-block-start: auto;
+  margin-inline-start: auto;
 }

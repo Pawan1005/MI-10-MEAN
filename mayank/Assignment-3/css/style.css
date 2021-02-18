@@ -1,0 +1,16 @@
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: lightblue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 90px;
+  padding: 20px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 90px;
+}

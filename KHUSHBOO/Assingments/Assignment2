@@ -2,13 +2,13 @@
 <html lang="en">
   <head> 
         <tiltle>
-        
-        
+        Assignment2
         </title>
+      <comment><style>.tab { text-indent:100% }</style></comment>
   </head>
 
-  <body bgcolor="aqua">
-    <center><h1>Google</h1></center>
+  <body bgcolor="aqua" >
+    <h1 >Google</h1>
     <i>This article is about the company.</i>
     <br>
     <br>

@@ -2,21 +2,21 @@
 
  <html lang="en">
   <head> 
-        <tiltle>
+      <tiltle>
         <style>
-        ol.a{
-            color:#8A2BE2;
-        }
-        ol.b{
-            color:blue;
-        }
+            ol.a
+            {
+             djj color:#8A2BE2;
+            }
+            ol.b
+            {
+             color:blue;
+            }
         </style>
-        
-        </title>
+      </title>
   </head>
-
  <body bgcolor="aqua">
- <h1>Ambersoft</h1>
+ <h1 style="text-align:centerS">Ambersoft</h1>
  <ol class="a">
   <li >MI-MEAN</li>
     <ol type="I">
@@ -42,22 +42,18 @@
         </li> 
     </ol>
 </ol>
-<ol class="b">
- <li value=2>SYSTEM</li>   
-         <ol type="I" ><li value="i">SYSTEM-1</li>
-          <ul type="disc"> 
-         <li>Anu</li>
-         <li>Dipti</li>
-        
-          </ul>
-        
-       <li value="i">SYSTEM-2</li>
+  <ol class="b">
+     <li value=2>SYSTEM</li>   
+          <ol type="I" ><li value="i">SYSTEM-1</li>
+             <ul type="disc"> 
+               <li>Anu</li>
+               <li>Dipti</li>
+             </ul>
+    <li value="i">SYSTEM-2</li>
              <ul type="disc">    
                  <li>Triveni</li>
                  <li>Kalyani</li>
                </ul>  
- </ol>  
+  </ol>  
  </body>
- 
- 
 </html>

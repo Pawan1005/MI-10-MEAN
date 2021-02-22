@@ -1,0 +1,28 @@
+table,
+th,
+td {
+  border: 2px solid red;
+  color: white;
+}
+table {
+  border-collapse: collapse;
+  width: 20%;
+}
+th {
+  background-color: maroon;
+}
+td:nth-child(1) {
+  background-color: orange;
+}
+#orange {
+  background-color: orange;
+}
+#green {
+  background-color: green;
+}
+#red {
+  background-color: red;
+}
+#white {
+  background-color: aliceblue;
+}

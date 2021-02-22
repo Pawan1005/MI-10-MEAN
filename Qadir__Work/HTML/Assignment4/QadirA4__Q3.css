@@ -33,3 +33,14 @@ caption {
 .time {
     font-weight: 700;
 }
+
+.office {
+    background-color: chocolate;
+}
+
+.mat {
+    background-color:green;
+    }
+.csc {
+    background-color:pink;
+}

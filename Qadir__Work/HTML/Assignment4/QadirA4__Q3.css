@@ -35,12 +35,17 @@ caption {
 }
 
 .office {
-    background-color: chocolate;
+    background-color: rgb(238, 174, 145);
 }
 
 .mat {
     background-color:green;
-    }
+}
+
 .csc {
     background-color:pink;
+}
+
+.meet {
+    background-color: rgb(173, 169, 169);
 }

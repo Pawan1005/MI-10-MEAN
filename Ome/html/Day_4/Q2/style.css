@@ -1,0 +1,15 @@
+table, tr, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+table {
+    background-color: rgb(0, 129, 129);
+    height: 70%;
+    width: 50%;
+}
+
+caption {
+    background-color: rgb(0, 129, 129);
+}

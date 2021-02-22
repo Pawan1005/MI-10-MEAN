@@ -25,6 +25,11 @@ body > .navigation > a:nth-child(2) {
     text-align: center;
 }
 
+.main__section1 > .homepage {
+    display: inline-block;
+    justify-content: center;
+}
+
 .main > .main__section1 > .homepage > img:first-child {
     float: right;
 }

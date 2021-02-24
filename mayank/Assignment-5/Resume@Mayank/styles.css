@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 100px;
+}
+
+.image--cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table {
+  width: "850" border= "0" align= "center";
+}

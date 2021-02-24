@@ -1,0 +1,25 @@
+table,th,td{
+    width: 60%;
+    height: 80%;
+    border:1px;
+   
+}
+th,td{
+    padding: 20px;
+}
+
+table,th,td{
+    border: 3px solid gray;
+}
+.timeam
+{
+    background-color: yellow;
+    
+}
+.timepm
+{
+   background-color: lightskyblue;
+}
+.timep{
+    background-color: mediumslateblue;
+}

@@ -1,0 +1,16 @@
+table,td,th{
+          
+    border : 2px solid green;
+    
+    
+    margin: auto;
+}
+.aqua{
+    background-color: aqua;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}

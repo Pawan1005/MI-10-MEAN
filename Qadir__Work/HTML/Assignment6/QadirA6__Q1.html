@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Mi 10 Form</title>
+    </head>
+    <body>
+        <h1>MI-9 Intern HTML Assesment</h1>
+        <hr/>
+        <form>
+            <h2>Personal Details</h2>
+            <div class="input">
+                <label for="fname">First Name:</label>
+                <input placeholder="First Name" type="text" name="fiirstName" id="firstName">
+            </div>
+            <div class="input">
+                <label for="lname">Last Name:</label>
+                <input placeholder="Last Name" type="text" name="lastName" id="lastName">
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <label for="male" class="container">
+                    <input type="radio" name="gender" id="male">
+                    <span class="checkmark"></span>
+                    Male
+                </label>
+                <label for="female" class="container">
+                    <input type="radio" name="gender" id="female">
+                    <span class="checkmark"></span>
+                    Female
+                </label>
+                <label for="other" class="container">
+                    <input type="radio" name="gender" id="other">
+                    <span class="checkmark"></span>
+                    Other
+                </label>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <label for="agelt18" class="container">
+                    <input type="radio" name="age" id="agelt18">
+                    <span class="checkmark"></span>
+                    less than 18
+                </label>
+                <label for="age18to25" class="container">
+                    <input type="radio" name="age" id="age18to25" checked="checked">
+                    <span class="checkmark"></span>
+                    18-25
+                </label>
+                <label for="age26to40" class="container">
+                    <input type="radio" name="age" id="age26to40">
+                    <span class="checkmark"></span>
+                    26-40
+                </label>
+            </div>
+
+            <h2>Academic Details</h2>
+            <label for="skillSet">Skill Set:</label>
+            <input type="checkbox" name="html" id="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="javascript" id="javascript">
+            <label for="javascript">Java Script</label>
+            <input type="checkbox" name="java" id="java">
+            <label for="java">Java</label>
+            <input type="checkbox" name="oracle" id="oracle">
+            <label for="oracle">Oracle</label>
+        </form>
+    </body>
+</html>

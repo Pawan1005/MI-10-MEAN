@@ -13,5 +13,8 @@ hr{
     margin-top: 50px;
 }
 div span{
-    font-weight: 600px;
+    font-weight: 600;
+}
+h3{
+    font-style: italic;
 }

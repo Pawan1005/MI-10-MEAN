@@ -1,24 +1,24 @@
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.div{
+.box{
     background-color: sandybrown;
 }
-.div2{
+.container{
     background-color: sienna;
     width: 98%;
     margin-top: 10px;
     box-shadow: 1px 2px #000;
     padding: 10px;
 }
-.h3{
+.heading{
     text-align: right;
     font-style: italic;
     margin-right: 10px;
     font-size: 30px;
     margin-top: 0%;
 }
-.m{
+.margin{
     margin-top: 10%;
 }
 a{

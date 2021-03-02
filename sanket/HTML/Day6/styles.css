@@ -1,6 +1,7 @@
 .bg {
   background: tomato;
   margin-right: 0.6rem;
+  margin-left: -4px;
   border: 0.15rem solid black;
 }
 .bbg {
@@ -15,7 +16,7 @@ li {
 }
 span {
   color: gold;
-  border: 2px solid black;
+  border: 5px solid black;
 }
 h4 {
   text-align: end;

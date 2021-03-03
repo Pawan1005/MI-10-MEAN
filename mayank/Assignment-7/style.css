@@ -1,0 +1,47 @@
+#myHeader {
+  background-color: rgb(180, 180, 180);
+  color: black;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+}
+
+table {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+th,
+td {
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  padding: 7px;
+}
+tr {
+  text-align: center;
+}
+
+frmat_h {
+  background-color: rgb(236, 226, 225);
+  padding: 50px;
+  color: black;
+  text-align: left;
+  font-size: large;
+  border: 5px solid rgb(12, 9, 8);
+}
+
+frmat_class {
+  background-color: rgb(241, 209, 148);
+  color: black;
+  text-align: right;
+  border: 2px solid rgb(10, 6, 5);
+}
+
+#about {
+  background-color: tomato;
+  color: rgb(14, 9, 9);
+  font-size: small;
+  border-left: 20px;
+  border: 2px solid rgb(10, 6, 5);
+  text-align: left;
+}

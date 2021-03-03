@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h2 id="myHeader">MI-9 intern Html assignment</h2>
+    <hr />
+    <p id="myHeader" style="padding: 5px"><b>Personal Details</b></p>
+    <form>
+      <label for="lname"><strong>First Name: </strong></label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="First name"
+      /><br /><br />
+      <label for="lname"><strong>Last Name: </strong></label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="First name"
+      /><br /><br />
+    </form>
+    <br />
+    <br />
+    <form>
+      <b>Gender:</b>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+    </form>
+
+    <form>
+      <b>Age:</b>
+      <input type="radio" id="less then 18" name="age" value="male" />
+      <label for="less then 18">less then 18</label>
+      <input type="radio" id="18-25" name="age" value="18-25" />
+      <label for="18-25">18-25</label>
+      <input type="radio" id="26-40" name="age" value="26-40" />
+      <label for="26-40">26-40</label>
+    </form>
+    <p id="myHeader" style="padding: 5px"><b>Accadmic Details</b></p>
+
+    <form action="home.html" target="_blank">
+      <b>Skills Set:</b>
+      <input type="checkbox" id="skils1" name="skils1" value="html" />
+      <label for="skils1"> html </label>
+      <input type="checkbox" id="skils2" name="skils2" value="javascript" />
+      <label for="skils2"> javascript</label>
+      <input type="checkbox" id="skils3" name="skils3" value="java" />
+      <label for="skils3"> java</label><br /><br />
+      <input type="submit" value="Home" />
+    </form>
+  </body>
+</html>

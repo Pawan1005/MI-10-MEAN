@@ -12,26 +12,26 @@
             <h2>MI-9 Intern HTML Assesment</h2>
         </div>
         <hr>
-        <form action="#">
+        <form>
             <div class="box">
                 <h3>Personal Details</h3>
             </div>
             <div>
-                <span>First Name:</span> 
+                <label class="content">First Name:</label> 
                 <input type="text" placeholder="First Name">
             </div> 
             <div>
-                <span>Last Name:</span> 
+                <label class="content">Last Name:</label> 
                 <input type="text" placeholder="Last Name">
             </div> 
             <div>
-                <span>Gender:</span> 
+                <label class="content">Gender:</label> 
                 <input type="radio"> <label for="Male">Male</label>
                 <input type="radio"> <label for="Male">Female</label>
                 <input type="radio"> <label for="Male">Other</label>
             </div> 
             <div>
-                <span>Age:</span> 
+                <label class="content">Age:</label> 
                 <input type="radio"> <label for="less then 18">less then 18</label>
                 <input type="radio" checked> <label for="18-25">18-25</label>
                 <input type="radio"> <label for="26-40">26-40</label>
@@ -40,11 +40,14 @@
                 <h3>Academic Details</h3>
             </div>
             <div>
-                <span>Skill Set:</span>
+                <label  class="content">Skill Set:</label>
                 <input type="checkbox"><label for="HTML">HTML</label>
                 <input type="checkbox"><label for="JavaScript">JavaScript</label>
                 <input type="checkbox"><label for="Java">Java</label>
                 <input type="checkbox"><label for="Oracle">Oracle</label>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </body>

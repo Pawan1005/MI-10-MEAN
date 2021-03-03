@@ -1,0 +1,77 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.body {
+    background-color: #a0a0a0;
+}
+
+.header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.header__logo > img {
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+.header__nav > select {
+    margin-left: 15px;
+    padding: 5px;
+    max-width: 100px;
+}
+
+.header__nav > select > option {
+    color: gray;
+}
+
+.header__nav > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.header__nav > a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login > h1 {
+    color: rgb(0, 119, 255);
+}
+
+.login > form {
+    display: grid;
+    place-items: center;
+    gap: 5px;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    border: none;
+    background-color: rgb(0, 119, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+}

@@ -143,12 +143,6 @@ h2 {
     button:hover {
     background: #ff9800;
 }
-    @media (min-width: 568px) {
-    .name-item, .city-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
     .name-item input, .name-item div {
     width: calc(50% - 20px);    
 }

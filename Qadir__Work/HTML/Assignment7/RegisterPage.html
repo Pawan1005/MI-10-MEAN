@@ -10,26 +10,28 @@
     <body>
         <div class="header">
             <div class="header__logo">
-                <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="naukri_Logo">
+                <img src="https://www.brandcrowd.com/gallery/brands/pictures/picture1440467600556.png" alt="naukri_Logo">
             </div>
             <p>Already Registered?<a href="LoginPage.html">Login</a>here</p>
         </div>
         <div class="navbar">
             <a href="RegisterPage.html" target="_self">Personal</a>
-            <a href="Education.html" target="_self">Education</a>
+            <a class="edu" href="#" target="_self">Education</a>
         </div>
         <div class="formSection">
             <form action="Education.html" target="_self">
-                <label for="name">Name*</label>
+                <label for="name">Name<span>*</span></label>
                 <input type="text" id="name" name="name" placeholder="Enter Your full Name">
-                <label for="emailid">Email ID*</label>
+                <label for="emailid">Email ID<span>*</span></label>
                 <input type="email" required name="email" id="email" placeholder="Enter your active email id to receive relevent jobs">
-                <label for="password">Create Password*</label>
+                <label for="password">Create Password<span>*</span></label>
                 <input type="password" required name="password" id="password" placeholder="Minimum 6 characters">
-                <label for="mobile">Mobile number*</label>
+                <label for="mobile">Mobile number<span>*</span></label>
                 <input type="text" required placeholder="91+ Where recruiter can contact you" name="mobile" id="mobile">
-                <label for="city">Current City*</label>
+                <label for="city">Current City<span>*</span></label>
                 <input type="text" name="city" required placeholder="Tell us about your current city" id="city">
+                <label for="address">Address<span>*</span></label>
+                <textarea name="address" required placeholder="Tell us about your current city" id="address"></textarea>
                 <label for=""></label>
                 <label for="terms">
                     <input type="checkbox" name="terms" id="terms">

@@ -45,3 +45,25 @@ frmat_class {
   border: 2px solid rgb(10, 6, 5);
   text-align: left;
 }
+form {
+  background-color: rgb(127, 236, 124);
+  text-align: center;
+  border-radius: 20px;
+}
+h2 {
+  background-color: blue;
+  text-align: center;
+  border-radius: 20px;
+}
+#input {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+}
+
+textarea {
+  width: 150px;
+  height: 110px;
+  border: 2px solid slategrey;
+  background-color: aliceblue;
+}

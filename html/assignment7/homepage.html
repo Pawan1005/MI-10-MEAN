@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>assign 7</title>
+    <title>home</title>
     <style>
+      body {
+        background-color: rgb(146, 157, 219);
+      }
       div {
         font-family: Arial, Helvetica, sans-serif;
         width: 40%;
@@ -22,23 +25,34 @@
       }
       a {
         margin: 20px;
-        border: solid 4px blue;
+        border: solid 4px rgb(255, 94, 0);
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
+      }
+      img {
+        width: 50px;
+      }
+      .flex {
+        display: flex;
       }
     </style>
   </head>
   <body>
-    <a href="homepage.html" target="blank">HOME</a>
-    <a href="loginpage.html" target="blank">LOGIN</a>
-    <a href="userdetails.html" target="blank">PROFILE</a>
-
+    <p class="flex">
+      <img
+        src="https://static.thenounproject.com/png/89773-200.png"
+        alt="logo"
+      />
+      <a href="homepage.html" target="blank">HOME</a>
+      <a href="loginpage.html" target="blank">LOGIN</a>
+      <a href="userdetails.html" target="blank">PROFILE</a>
+    </p>
     <div>
       <h1>Find A Job at India's No.1 Job Site</h1>
       <form action="">
         <input type="text" id="text" placeholder="skills,designation,company" />
         <input type="text" id="text" placeholder="enter location" />
-        <input id="btn" type="submit" value="Search" />
+        <input id="btn" type="submit" formaction="loginpage.html" value="Search" />
       </form>
     </div>
   </body>

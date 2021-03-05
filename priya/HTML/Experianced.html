@@ -10,13 +10,12 @@
 </head>
 <body>
     <div class="container">
-        <form action="login.html" target="_blank">
-        <img src="file:///home/priyaughade/Downloads/work.jpeg
-        " alt="Snow" style="width:100%;">
+        <img src="file:///home/priyaughade/Downloads/work.jpeg" alt="Snow" style="width:100%;">
         <div class="top-left"><h1>GetJob <sub> Indias No.1 job site </sub></h1> </div>
         <div class="top-right">    <p style="float: right;"> Already Register?<b><a href="login.html">New User Log in here</b></a></p> </div>
         <div class="centered">
             <h2>Personal Details</h2>
+            <form action="new.html">
             <label for="Name">Name: </label>
             <input type="text" id="Name" name="Name" value="Enter Full Name"><br>
             <br>
@@ -24,14 +23,23 @@
             <input type="text" id="EmailId" value="Enter Your Active EmailId to recieve relevent jobs"> <br>
             <br>
             <label for="exp">Work Experiance</label>
-            <input type="text" id="exp" value="How much Experianced You are?"><br>
+            <input type="number" min="0" max="100" value="How much Experianced You are?"><br>
             <br>
+            <label for="course">Course</label>
+            <select id="course">
+                <option value="Computer Science">computerscience</option>
+                <option value="E&TC">E&TC</option>
+                <option value="Civil">Civil</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Bcs" >Bcs</option>
+              </select><br>
+              <br>
             <label for="company">Privious Company</label>
             <input type="text" id="city" value="Tell us about your Privious Company"><br>
             <br>
-            <input type="button" value="submit"></div>
-        </form>
+            <input type="submit" value="submit">
+         </form>
+         </div>
         </div> 
-    
-</body>
+    </body>
 </html>

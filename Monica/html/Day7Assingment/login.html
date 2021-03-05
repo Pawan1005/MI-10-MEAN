@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,13 @@
 </head>
 
 <header class="container">
-<nav>
-    <a href="Home.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="login.html">LOGIN</a>
-    <a href="contact.html">CONTACT</a>
-</nav>
+    <nav>
+        <a href="Home.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="login.html">LOGIN</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="register.html">REGISTER</a>
+    </nav>
 </header>
 
 <div class="container">
@@ -24,19 +25,16 @@
         <p style="background-color: rgb(167, 172, 180);">
             When submitting this form, the result will be opened in a new browser tab:-
         </p>
-        <form action="/action_page.php" target="_blank">
-            <label for="fname">First name:</label><br>
+        <div class="con1">
+        <form action="loginsuccess.html">
+            <label for="uname">User name:</label><br>
             <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
+            <label for="password">password:</label><br>
+            <input type="password" id="password" name="password" value=""><br><br>
             <input type="submit" value="Submit">
-          </form> 
-          
-
-        
     </div>
+    </form>
 </div>
-<body>
-    
-</body>
+</div>
+
 </html>

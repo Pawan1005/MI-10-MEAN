@@ -1,0 +1,23 @@
+.main-box{
+    width: 800px;
+    padding: 30px 50px;
+    background-color: aqua;
+}
+.box{
+    width: 800px;
+    overflow: auto;
+}
+.box img{
+    width: 200px;
+}
+.box p{
+    width: 500px;
+    float: right;
+    margin: 0;
+}
+.box-right img{
+    float: right;
+}
+.box-right p{
+    float: left;
+}

@@ -1,0 +1,39 @@
+#body {
+  background-color: aqua;
+  margin: 20px;
+}
+#p {
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+}
+.div_cls1 {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  background-color: darkcyan;
+  overflow: hidden;
+  float: left;
+  clear: right;
+}
+.div_cls2 {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  background-color: darkcyan;
+  overflow: hidden;
+  clear: left;
+  float: right;
+}
+
+.cls_wrapper1 {
+  overflow: auto;
+  padding: 5px;
+  text-align: right;
+}
+
+.cls_wrapper2 {
+  overflow: auto;
+  padding: 5px;
+  text-align: left;
+}

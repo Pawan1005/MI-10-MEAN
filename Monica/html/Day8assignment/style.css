@@ -1,0 +1,42 @@
+.wrapper{
+    border: 2px solid black;
+    overflow: auto;
+    height: 20%;
+    width: 60%;
+    margin: 20px;
+    text-align: center;
+    background-color: rgb(226, 163, 235);
+}
+
+img {
+  margin: 15px;
+  height: 300px;
+  width: 300px;
+}
+
+.clss_a > p {
+  float: right;
+}
+
+.clss_a > p > img {
+  float: left;
+  margin-right: 10px;
+}
+
+.clss_b > p {
+  float: left;
+}
+
+.clss_b > p > img {
+  float: right;
+  margin-right: 10px;
+}
+
+.clss_c > p {
+  float: right;
+}
+
+.clss_c > p > img {
+  float: left;
+  margin-right: 10px;
+}

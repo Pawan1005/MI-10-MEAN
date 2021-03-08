@@ -33,6 +33,7 @@ body {
     background: linear-gradient(90deg, rgba(17,17,18,1) 0%, rgba(111,113,113,1) 82%);
     gap: 15px;
     height: 50px;
+    /* width: 100%; */
 }
 
 .navbar > a {
@@ -77,6 +78,17 @@ input[type="button"] {
     color: rgb(6, 168, 168);
     outline: none;
     cursor: pointer;
+}
+
+select, 
+datalist, 
+input,
+textarea {
+    outline-color: rgb(1, 146, 204);
+}
+
+input::-webkit-calendar-picker-indicator {
+    color: rgb(7, 124, 202);
 }
 
 textarea  {

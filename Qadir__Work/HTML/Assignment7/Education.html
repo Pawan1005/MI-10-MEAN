@@ -77,16 +77,16 @@
                 <label for="skill">Skills<span>*</span></label>
                 <input type="text" name="skill" id="skill" placeholder="Enter your areas of Expertise/speciallization">
                 <label for="speciallization">Speciallization</label>
-                <input list="Speciallizations" name="speciallization" id="speciallization" placeholder="Please Speciallization">
-                <datalist id="Speciallizations">
-                    <option value="Computer">
-                    <option value="Agriculter">
-                    <option value="Biology">
-                    <option value="Automobile">
-                    <option value="Other Enginnering">
-                    <option value="Information Technology">
-                    <option value="Textile">
-                </datalist>
+                <!-- <input list="Speciallizations" name="speciallization" id="speciallization" placeholder="Please Speciallization"> -->
+                <select id="speciallization" name="speciallization" multiple>
+                    <option value="Computer">Computer</option>
+                    <option value="Agriculter">Agriculter</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Automobile">Automobile</option>
+                    <option value="Other Enginnering">Other Enginnering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Textile">Textile</option>
+                </select>
                 <div></div>
                 <button type="button" id="add">></button>
                 <label for="sp">Selected Speciallization</label>

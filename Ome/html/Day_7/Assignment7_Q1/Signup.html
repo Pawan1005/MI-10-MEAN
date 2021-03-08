@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div class="border">
+        <header class="container">
+            <a href="" class="logo">JobPortal</a>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="Work.html">Work</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Login.html">Login</a>
+                <a href="Signup.html">Register</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <form action="Success.html">
+                <div class="intro">
+                    
+                    <div class="txt_field"> 
+                        <label>First Name</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="txt_field">
+                        <label>Last Name</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="txt_field">
+                        <label>Date Of Birth</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="txt_field">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    
+                    <div class="txt_field">
+                        <label>Username</label>
+                        <input type="text" required>
+                    </div>
+                    
+                    <div class="txt_field">
+                        <label>Password</label>
+                        <input type="password" required>
+                    </div>
+                    
+                    <div class="txt_field">
+                        <label>Confirm Password</label>
+                        <input type="password" required>
+                    </div>
+
+                    <div class="con1">
+                        <label>Gender :</label>
+                        <input type="radio" name="gender" value="male">
+                        <label>Male</label>
+                        <input type="radio" name="gender" value="female">
+                        <label>Female</label><br><br>
+                    </div>  
+
+                    <div class="txt_field">
+                        <label>Age :</label>
+                        <select name="age">
+                          <option value="18to25">18-25</option>
+                          <option value="26to40">26-40</option>
+                          <option value="41to50">41-50</option>
+                          <option value="50to60">50-60</option>
+                        </select>
+                    </div>  
+                    
+                    <div class="con2">
+                        <label>Skills :</label>
+                        <input type="checkbox" name="skills1" value="html">
+                        <label> HTML / CSS </label><br>
+                        <input type="checkbox" name="skills2" value="bootstrap">
+                        <label> bootstrap </label><br>
+                        <input type="checkbox" name="skills3" value="js"> 
+                        <label> js </label><br>                       
+                    </div>  
+                    
+                    <div class="txt_field">
+                    <label for="myfile">Upload Resume</label>
+                    <input type="file" id="myfile" name="myfile">
+                    </div>
+
+                    <input type="submit" value="Register"><br>
+                    <input type="reset">
+           
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

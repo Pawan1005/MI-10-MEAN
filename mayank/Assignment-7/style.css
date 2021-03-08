@@ -1,0 +1,50 @@
+#myHeader {
+  background-color: rgb(180, 180, 180);
+  color: black;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+}
+
+frmat_h {
+  background-color: rgb(236, 226, 225);
+  padding: 50px;
+  color: black;
+  text-align: left;
+  font-size: large;
+  border: 5px solid rgb(12, 9, 8);
+}
+
+frmat_class {
+  background-color: rgb(241, 209, 148);
+  color: black;
+  text-align: right;
+  border: 2px solid rgb(10, 6, 5);
+}
+
+#about {
+  background-color: tomato;
+  color: rgb(14, 9, 9);
+  font-size: small;
+  border-left: 20px;
+  border: 2px solid rgb(10, 6, 5);
+  text-align: left;
+}
+form {
+  background-color: rgb(127, 236, 124);
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px;
+}
+h2 {
+  background-color: blue;
+  text-align: center;
+  border-radius: 20px;
+}
+
+textarea {
+  width: 150px;
+  height: 110px;
+  border: 2px solid slategrey;
+  background-color: aliceblue;
+}

@@ -1,0 +1,22 @@
+table,
+th,
+td {
+  border: 2px solid green;
+  border-collapse: collapse;
+  margin: 20px;
+  padding: 20px;
+}
+
+table {
+  width: 70%;
+  border-spacing: 2px;
+}
+
+th {
+  color: rgb(5, 5, 8);
+}
+
+p {
+  text-align: center;
+  margin: 10px;
+}

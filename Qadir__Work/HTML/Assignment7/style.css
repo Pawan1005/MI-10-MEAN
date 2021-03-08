@@ -137,3 +137,9 @@
 .main > p {
     margin: 10px;
 }
+
+.searchContent__field1 > form > input[type=file]::-webkit-file-upload-button {
+    border: none;
+    background-color: orange;
+    padding: 8px;
+}

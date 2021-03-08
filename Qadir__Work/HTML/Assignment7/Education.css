@@ -5,13 +5,10 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .header__logo > img {
     padding: 15px;
-    object-fit: contain;
-    height: 100px;
 }
 
 .header > p {
@@ -76,13 +73,5 @@ input[type="button"] {
     background-color: whitesmoke;
     color: rgb(6, 168, 168);
     outline: none;
-    cursor: pointer;
-}
-
-textarea  {
-    resize: none;
-}
-
-#add {
     cursor: pointer;
 }

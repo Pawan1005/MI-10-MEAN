@@ -1,0 +1,96 @@
+body {
+  width: 70%;
+  padding-left: 30%;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+ul {
+  display: flex;
+}
+
+button > a {
+  color: #fff;
+}
+button > a:hover {
+  color: #fff;
+}
+
+span {
+  font-size: xx-large;
+}
+
+.pl {
+  padding-left: 300px;
+}
+
+.pl2 {
+  padding-left: 45px;
+}
+
+.mt {
+  margin-top: 20%;
+}
+
+.mb {
+  margin-bottom: 20%;
+}
+
+/* body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  margin-bottom: 16px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+  border-color: lightskyblue;
+  outline: 0;
+  box-shadow: 0 0 0 5px rgba(86, 160, 245, 0.25);
+}
+
+h2 {
+  padding-left: 3%;
+  font-weight: 500;
+}
+
+button {
+  background: lightskyblue;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.center {
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+a.button {
+  appearance: button;
+  text-decoration: none;
+  background: lightskyblue;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+} */

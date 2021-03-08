@@ -13,12 +13,14 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100px;
 }
 
 .header__logo > img {
     padding-left: 10px;
     object-fit: contain;
+    width: 100px;
 }
 
 .header__nav > select {

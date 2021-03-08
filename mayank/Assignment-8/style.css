@@ -3,14 +3,23 @@
   overflow: scroll;
   padding: 50px;
 }
+#p2 {
+  overflow: hidden;
+  padding: 5px;
+  margin: 20px;
+  width: 500px;
+}
 #p {
   overflow: hidden;
   padding: 5px;
   margin: 20px;
+  padding-left: 400px;
+  width: 500px;
 }
+
 .div_cls1 {
-  height: 150px;
-  width: 150px;
+  height: 160px;
+  width: 160px;
   border: 1px solid black;
   background-color: darkcyan;
   overflow: hidden;
@@ -18,8 +27,8 @@
   clear: right;
 }
 .div_cls2 {
-  height: 150px;
-  width: 150px;
+  height: 160px;
+  width: 160px;
   border: 1px solid black;
   background-color: darkcyan;
   overflow: hidden;

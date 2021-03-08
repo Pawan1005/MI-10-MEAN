@@ -1,0 +1,28 @@
+.container {
+    height:700px;
+    width: 1000px;
+    border: 2px solid black;
+    background-color: cadetblue;
+  }
+  .for_img {
+    float: left;
+    margin: 2px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+  }
+  .for_img2 {
+    float: right;
+    height: 150px;
+    width: 200px;
+    margin: 7px;
+    padding: 3px;
+  }
+  .for_txt2 {
+    width: 500px;
+    float: left;
+  }
+.div1 {
+    height: 200px;
+    width: 800px;
+  } 

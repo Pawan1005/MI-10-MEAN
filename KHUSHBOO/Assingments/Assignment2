@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+        <tiltle>
+        Assignment2
+        </title>
+      <comment><style>.tab { text-indent:100% }</style></comment>
+  </head>
+
+  <body bgcolor="aqua" >
+    <h1 >Google</h1>
+    <i>This article is about the company.</i>
+    <br>
+    <br>
+    <b>From the Garage of the Googleplex</b>
+    <br>
+    <p> The Google story begins in 1995 at <Strong>Standford University.</Strong>
+    <br>
+    <i><b>Larry Page</b></i> was considering Stanford for grad school and <i><b>Sergey Brin </b></i>, a student there ,was assingned to show him arround.</p>
+    <font style="font-family: verdana">
+    <p>By some accounts,they disagreed about nearly everything during the first meeting,but by the following year they struck <span style="background-color: yellow">partnership</span>.
+    Working from their dorm rooms,they built a search engine that used links to determine the importance of Individual pages on the 
+    <font color="blue">World Wide Web.</font>
+    <br>
+    <br>
+    They called this search engine <i> <span style="background-color: green"> Backrub</span></i>.
+    <hr>
+      <h3>   Initial Public Offering</h3>
+    <br>
+    Google's initial offering (IPO) took place five years later,on 19<sup>th</sup>August 2004.
+    At that time Larry Page, Sergey Brin,and Eric schmidt agreed to work together at Google for<strike> 30 </strike>20 years,until the year 2024.
+             <br>     <h2> <center><font color="blue">Thankyou!!</font></center></h2>
+
+  </body>
+</html>

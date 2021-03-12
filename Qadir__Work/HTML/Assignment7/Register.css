@@ -5,13 +5,10 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .header__logo > img {
     padding: 15px;
-    object-fit: contain;
-    height: 100px;
 }
 
 .header > p {
@@ -65,17 +62,4 @@ body {
     background-color: rgb(0, 174, 255);
     color: white;
     font-size: medium;
-}
-
-span {
-    color: red;
-}
-
-textarea {
-    padding: 2px;
-    resize: none;
-}
-
-.edu {
-    color: rgb(49, 49, 49) !important;
 }

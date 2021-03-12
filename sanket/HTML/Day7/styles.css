@@ -1,0 +1,10 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h3 {
+  background: lightblue;
+  text-align: end;
+  border-radius: 0 10px 0 10px;
+}

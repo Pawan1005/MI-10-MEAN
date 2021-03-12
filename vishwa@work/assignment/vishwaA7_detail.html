@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job_Portal</title>
+    <link rel="stylesheet" href="job.css" />
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="job_portal.html" class="logo">NaukriWala</a>
+      <div class="nav-right">
+        <a href="job_portal.html">Home</a>
+        <a href="#">Job Search</a>
+        <a href="detail.html">Detail</a>
+        <a href="joblogin.html">Login</a>
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Your Name"
+        />
+        <label for="email"> Email Id:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email Id"
+        /><br /><br />
+        <label for="mobile"> Mobile Number:</label>
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter Your Mobile Number"
+        />
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" id="dob" name="dob" placeholder="Date of Birth" />
+        <label for="gender"> Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label> <br /><br />
+        <label for="detail">Academic Detail:</label>
+        <textarea
+          id="academic"
+          name="academic"
+          placeholder="Enter Your Academic detail"
+          style="height: 200px"
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
+

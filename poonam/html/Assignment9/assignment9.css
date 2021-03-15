@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+hr{
+    width: 70%;
+    text-align: center;
+}
+hr+div{
+    border: 1px solid black;
+    margin: 5%;
+    padding: 3%;
+}
+div>div:hover{
+    background-color: burlywood;
+}
+h2+p{
+    font-variant: small-caps;
+    color: green;
+}
+h2+p::first-letter{
+    font-size: 20px;
+    color: hotpink;
+}
+h2 i:first-child{
+    color: blueviolet;
+}

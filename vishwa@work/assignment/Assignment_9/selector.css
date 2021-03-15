@@ -1,0 +1,38 @@
+.brdhead {
+  border: 2px solid black;
+  padding: 50px;
+  margin-left: 100px;
+  width: 1500px;
+}
+i {
+  color: purple;
+}
+h1 {
+  text-align: center;
+}
+hr {
+  width: 900px;
+  border: 1px solid black;
+}
+.frstheader:hover {
+  background-color: rgb(201, 201, 201);
+}
+.frstheader > p::first-letter {
+  color: orange;
+  font-size: 60px;
+}
+.frstheader > p {
+  color: rgb(9, 160, 9);
+  text-transform: uppercase;
+}
+p {
+  font-size: 20px;
+}
+.scndhead > p::first-letter {
+  color: orange;
+  font-size: 60px;
+}
+.scndhead > p {
+  color: rgb(9, 160, 9);
+  text-transform: uppercase;
+}

@@ -1,0 +1,61 @@
+body {
+    padding: 25px;
+}
+
+body > h1 {
+    text-align: center;
+}
+
+h1 ~ hr {
+    max-width: 80%;
+    min-height: 1px;
+    background-color: black;
+}
+
+.blog {
+    margin-top: 30px;
+    border: 3px solid rgb(133, 129, 129);
+    padding: 30px;
+}
+
+.blog__sectionOne:hover,
+.blog__sectionTwo:hover {
+    background-color: rgb(182, 180, 180);
+}
+
+em {
+    color: indigo;
+}
+
+em:hover {
+    cursor: pointer;
+    color: rgb(32, 255, 2);
+}
+
+p:nth-child(2)::first-letter {
+    color: rgb(93, 133, 219);
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+p:nth-child(2) {
+    color: rgb(211, 80, 211);
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+
+
+p:nth-child(3)::before {
+    content: "\201C";
+}
+
+img {
+    object-fit: contain;
+    width: 150px;
+    opacity: 0.5;
+}
+
+img:hover {
+    cursor: pointer;
+    opacity: 1;
+}

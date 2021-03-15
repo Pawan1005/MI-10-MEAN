@@ -1,0 +1,39 @@
+* {
+    margin: 2px;
+}
+
+body {
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.sectionOne {
+    /* float: right; */
+    overflow: auto;
+}
+
+.sectionOne >  img {
+    float: left;
+    padding-right: 50px;
+}
+
+.sectionTwo {
+    /* float: left; */
+    overflow: auto;
+}
+
+.sectionTwo >  img {
+    float: right;
+    padding-left: 50px;
+}
+
+
+.sectionThree {
+    /* float: right; */
+    overflow: auto;
+}
+
+.sectionThree >  img {
+    float: left;
+    padding-right: 50px;
+}

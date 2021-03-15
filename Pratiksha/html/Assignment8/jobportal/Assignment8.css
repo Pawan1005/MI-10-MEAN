@@ -1,0 +1,32 @@
+/*.container {
+    width: 200px;
+    height: 50px;
+    background-color: #eee;
+    overflow: visible;
+   }*/
+body{
+    background-color: aqua;
+    margin: auto;
+
+}
+.cls_wrapper>p>img{
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin-right: 80px;
+}
+.cls_wrapper>p{
+    float: right;
+
+
+}
+.cls_wrapper1>div>img{
+
+  float: right;
+    margin-left: 80px;
+    height: 200px;
+    width: 200px;
+}
+.cls_wrapper1>div{
+    float: left;
+}

@@ -1,0 +1,125 @@
+body{
+    margin-top: 0;
+
+}
+li,ul,a{
+    display: inline-block;
+    word-spacing: 2px;
+    color: gray;
+    padding: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+}
+.line{
+    border-left: 1px solid gray;
+    padding-block: 1px;
+}
+.right{
+    float: right;
+    justify-content: space-evenly;
+}
+ul{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.covid{
+    width: 450px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgb(240, 191, 56);
+    position: absolute;
+    left: 25%;
+}
+.red{
+    border: 1px solid red;
+    background-color: white;
+    font-size: 20px;
+    color: red;
+}
+img{
+    height: 70px;
+    margin-left: 120px;
+    margin-top: 0px;
+}
+.login{
+    display: flex; 
+    position: absolute; 
+    right: 160px; 
+    padding-top: 10px; 
+    gap: 5px;
+}
+label{
+    font-size: 20px; 
+    font-weight: bolder;
+}
+.box1{
+    background-color: tomato; 
+    border-radius: 4px; 
+    font-size: 20px; 
+    border: 1px solid tomato;
+}
+.box2{
+    background-color: sandybrown; 
+    border-radius: 4px; 
+    border: 1px solid black; 
+    font-size: 20px;
+}
+.search{
+    background-color: #000080;
+    opacity: 50%;
+    height: 4cm;
+}
+.search > input{
+    padding: 200px;
+}
+.search > select{
+    height: 20px;
+}
+.banner{
+    height: 200px;
+    width: 950px; 
+    margin-left: 0px;
+    margin-top: 10px;
+}
+.information{
+    width: 300px; 
+    height: 100px; 
+    border: 1px solid grey; 
+    display: flex;
+    margin: 10px;
+    background-color: beige;
+}
+.icon{
+    color: brown; 
+    padding-top: 30px;
+}
+.side_image{
+    height: 300px;
+    width: 400px;
+    float: right;
+    margin: 10px;
+}
+.hiring_top{
+    margin-left: 210px; 
+    background-color: aliceblue; 
+    border: 1px solid grey; 
+    width: 950px; 
+    padding: 10px; 
+    margin-top: 20px;
+}
+.hiring{
+    width: max-content; 
+    padding-inline-end: 5px; 
+    border: 1px solid grey; 
+}
+.footer{
+    background-color: goldenrod;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,15 @@
+ul{
+    list-style-type: disc;
+}
+.d1{
+    color: maroon;
+}
+.d2{
+    color: violet;
+}
+ol{
+    list-style-type: i.;
+}
+.ol{
+    list-style: 1.;
+}

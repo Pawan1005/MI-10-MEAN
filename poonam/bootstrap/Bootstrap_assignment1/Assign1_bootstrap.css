@@ -1,0 +1,30 @@
+.mean{
+    background-image: url('https://gstatic.com/classroom/themes/img_reachout.jpg');
+    background-size: cover;
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    
+}
+.upcoming{
+    height: 200px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.upcoming>h6{
+    text-align: right;
+    margin-right: 10px;
+}
+.announce{
+    height: 80px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.announce>p{
+    padding: 10px;
+}
+.margin{
+    margin-left: 20px;
+}

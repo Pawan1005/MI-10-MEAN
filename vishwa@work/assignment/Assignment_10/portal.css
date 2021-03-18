@@ -1,0 +1,155 @@
+body {
+  background-color: rgb(240, 239, 239);
+}
+.top {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.top a {
+  padding: 10px;
+}
+.one {
+  display: inline;
+}
+.two {
+  float: right;
+  display: inline;
+}
+.header {
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px;
+}
+span {
+  color: red;
+}
+h2 {
+  color: royalblue;
+  display: inline;
+}
+.header p {
+  background-color: yellow;
+  display: inline;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 200px;
+}
+.header p button {
+  background-color: yellow;
+  border: 1px solid;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.two input[type="button"] {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
+  font-size: 15px;
+}
+img[alt="notification"] {
+  height: 30px;
+  width: 30px;
+}
+.banner {
+  text-align: center;
+}
+.search {
+  padding: 30px 0;
+  margin-top: 10px;
+  background-image: linear-gradient(to right, #6db9ef, #7ce08a);
+  align-content: center;
+  width: 100%;
+}
+.searchbar {
+  max-width: 250px;
+  display: inline-flex;
+  padding: 15px;
+  display: inline;
+}
+.btn {
+  background-color: royalblue;
+  color: seashell;
+  padding: 10px;
+  font-size: 15px;
+}
+#year {
+  width: 180px;
+  height: 50px;
+  background-color: #fff;
+}
+.search p {
+  display: inline;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 20px;
+  color: red;
+  background-color: white;
+  margin-left: 90px;
+}
+.submit {
+  padding: 5px;
+  width: 100px;
+  background-color: white;
+  border: 1px solid rgb(1, 1, 58);
+  color: rgb(1, 1, 58);
+}
+.slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slidesimg {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  width: 200px;
+  width: 1000px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.foot1 {
+  background-color: yellow;
+  text-align: center;
+  padding: 2px;
+}
+.foot1 > p {
+  font-size: 18px;
+}
+.foot2 {
+  background-color: rgb(51, 49, 49);
+  height: 600px;
+}
+label {
+  position: relative;
+  color: white;
+}
+.clear1 li a {
+  color: white;
+}

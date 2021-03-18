@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobPortal</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="top-header">
+        <div class="ubility-wrap clearfix">
+          <ul class="top-link">
+            <li>
+              <a href="https://www.timesjobs.com" class="link-active"
+                >TimesJobs</a
+              >
+            </li>
+            <li>
+              <a href="http://jobbuzz.timesjobs.com" target="_blank">JobBuzz</a>
+            </li>
+            <li>
+              <a href="https://ae.timesjobs.com" target="_blank">Gulf Jobs</a>
+            </li>
+            <li>
+              <a
+                href="http://content.timesjobs.com/recruitex?fromsite=tjcand"
+                target="_blank"
+                >Career Insight</a
+              >
+            </li>
+          </ul>
+
+          <ul class="myzone1 top-contact">
+            <li>
+              <a href="http://hire.timesjobs.com" target="_blank"
+                >Recruiter's Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://hire.timesjobs.com/employer/buyProduct.html?utm_source=Cand_Page_Online_Buy&amp;utm_medium=Click&amp;utm_campaign=Online_Buying"
+                target="_blank"
+                ><strong>Buy Online</strong></a
+              >
+            </li>
+          </ul>
+
+          <ul class="top-contact">
+            <li><i class="material-icons">call</i>0120 6358222</li>
+            <li>
+              <span id="chat-widget" class="live-chat" style="display: none"
+                >Live Chat (10am to 6pm IST)</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ubility-wrap logo-section clearfix">
+        <a
+          itemprop="url"
+          title="TIMESJOBS"
+          href="https://www.timesjobs.com"
+          class="top-tj-logo"
+        >
+          <img
+            src="https://static.timesjobs.com/images_cand/tj_images/personlisation/tj-logo-new.png"
+            alt="TimesJobs"
+            width="140"
+            height="23"
+            title="TimesJobs"
+            itemprop="logo"
+          />
+        </a>
+        <div
+          id="career-affection"
+          class="career-affection top-notifi notify-msg covid-home-page"
+          style=""
+        >
+          <div
+            class="career-affection-inner wrap career-effect"
+            id="career-affection-inner "
+          >
+            Is your career affected by Covid-19?
+            <a
+              href="javascript:void(0);"
+              onclick="profilePreview.covidAffectedProfile('Y','TJWEB');"
+              class="yes-button"
+              >Yes</a
+            >
+            <a
+              href="javascript:void(0);"
+              onclick="profilePreview.covidAffectedProfile('N','TJWEB');"
+              class="no-button"
+              >No</a
+            >
+          </div>
+        </div>
+        <ul class="main-tj-nav clearfix">
+          <li class="notification viewnote">
+            <a class="dropdown-button" href="#" data-activates="notifyDropdown">
+              <i class="material-icons left">notifications_none</i>
+              <span
+                id="notification_count"
+                class="notif-count-new"
+                style="display: none"
+                >1</span
+              >&nbsp;
+            </a>
+            <div
+              class="nav-drop viewnoteTab dropdown-content"
+              id="notifyDropdown"
+              style="
+                white-space: nowrap;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: none;
+                opacity: 1;
+              "
+            >
+              <div class="showdiv">
+                <div id="non_loggedin" class="notif-not-logedin" style="">
+                  <div class="notif-welcm-msg clearfix">
+                    To see all recommended jobs, profile views, recruiter's
+                    contacted information, updates and more...
+                  </div>
+                  <div class="notif-act clearfix">
+                    <button
+                      type="button"
+                      class="waves-effect waves-light btn red-bdr-btn"
+                      onclick="javascript:openModal.openLightBoxModal('loginLightboxModal.html?callFrom=header','light-box-popup');"
+                    >
+                      Login
+                    </button>
+
+                    <strong class="or">or</strong>
+                    <a
+                      href="/candidate/register.html"
+                      class="waves-effect waves-light btn red-bdr-btn"
+                      >Register</a
+                    >
+                  </div>
+                </div>
+                <div
+                  id="inline_login"
+                  class="notif-login-frm"
+                  style="display: none"
+                >
+                  <span class="notif-cls" title="Click to Hide"></span>
+
+                  <strong>Login to View Notifications!</strong>
+
+                  <form
+                    action="/candidate/times_login?BeforeLoginUrl=notification&amp;tab=1"
+                    method="post"
+                    name="loginFormNotification"
+                  >
+                    <input
+                      name="j_username"
+                      id="txtUseNameNotification"
+                      type="text"
+                      onblur="javascript:settextNotification('txtUseNameNotification');"
+                      onclick="filltxtNotification(txtUseNameNotification)"
+                      value="Enter Email id / Login id"
+                      class="txt2 defaultValue inpt-typ"
+                      size="42"
+                    />
+
+                    <input
+                      name="j_password"
+                      type="password"
+                      value=""
+                      class="password_input_notification"
+                      size="42"
+                      style="display: none"
+                    />
+                    <input
+                      type="text"
+                      value="Enter Password"
+                      class="clearNotification"
+                      size="42"
+                    />
+                    <div class="frgt-pass">
+                      <a
+                        href="javascript:forgotPasswordNotification();"
+                        class="fp"
+                        >Forgot Password?</a
+                      >
+                    </div>
+
+                    <input
+                      class=""
+                      type="submit"
+                      onclick="javascript:return validateLoginFormNotification();"
+                      value="Login"
+                    />
+
+                    <div
+                      class="error-msg dflt-msg"
+                      id="loginErrNotification"
+                      style="display: none"
+                    >
+                      <!--<img class="errTip" title="Error" alt="Error" src="https://static.timesjobs.com/images_cand/tj_images/home/errTipL.gif">-->
+                      <!--<a class="errCls" href="#"><img border="0" title="Close" alt="Close" src="/images_cand/tj_images/home/logginErrClse.gif"></a>-->
+                      Login-ID/Password cannot be left blank. Enter the full
+                      email ID (like: ram@gmail.com), if you are using
+                      registered email-id for login.
+                    </div>
+
+                    <input type="hidden" name="notlogin" value="mytj" />
+                    <input
+                      type="hidden"
+                      name="_acegi_security_remember_me"
+                      value="yes"
+                    />
+                  </form>
+                </div>
+                <div id="base" style="display: none" class="notif-main">
+                  <ul>
+                    <li id="heading" class="heading clearfix">
+                      <a id="heading-link" href="#"
+                        ><span>Job Alerts(10)</span></a
+                      >
+                    </li>
+                    <li id="base-li" style="display: none">
+                      <a id="base-li-anchor" href="#"
+                        >5 Matching Jobs
+                        <span id="base-li-time">3 hrs ago</span></a
+                      >
+                    </li>
+                    <span
+                      id="base-li-data"
+                      style="display: none"
+                      class="base_li"
+                    ></span>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="login-reg">
+            <a
+              href="javascript:void(0);"
+              onclick="openModal.openLightBoxModal('loginLightboxModal.html?callFrom=header','light-box-popup');"
+              >Login</a
+            >
+          </li>
+
+          <li class="login-reg">
+            <a href="/candidate/register.html?pageFlow=TJ_HOME">Register</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="wrap"></div>
+
+    <div class="open-search">
+      <div class="usability-srch clearfix">
+        <div class="main-srch-form clearfix">
+          <div id="errorMsgDiv" class="msg error" style="display: none">
+            Please provide inputs for at least one field
+          </div>
+          <form
+            id="quickSearchBean"
+            name="quickSearchBean"
+            action="https://www.timesjobs.com/candidate/job-search.html"
+            method="get"
+            onsubmit="return searchEngine.validateSearchForm(this);"
+          >
+            <input name="searchType" value="personalizedSearch" type="hidden" />
+            <input name="from" value="submit" type="hidden" />
+            <div class="auto-suggest-blk">
+              <input
+                id="txtKeywords"
+                name="txtKeywords"
+                type="text"
+                value="Enter Skills, Designation, etc"
+                class="browser-default"
+                autocomplete="off"
+              />
+              <div id="autoSuggestList" style="display: none"><ul></ul></div>
+              <iframe
+                id="FrameautoSuggestList"
+                frameborder="0"
+                style="display: none"
+              ></iframe>
+              <div
+                id="autoSuggestList2ndKeywordsListSFB"
+                class="suggestionList srch-suggest"
+                style="display: none"
+              >
+                <h5>Suggested Keywords</h5>
+                <ul></ul>
+              </div>
+            </div>
+            <div class="auto-suggest-blk location-srch">
+              <input
+                id="txtLocation"
+                name="txtLocation"
+                type="text"
+                class="location-srch browser-default"
+                value="Enter Location"
+                autocomplete="off"
+              />
+              <div id="autoSuggestLocation" style="display: none">
+                <ul></ul>
+              </div>
+              <iframe
+                id="FrameautoSuggestLocation"
+                style="display: none"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="srch-select">
+              <select
+                id="cboWorkExp1"
+                name="cboWorkExp1"
+                class="browser-default"
+              >
+                <option value="-1">Experience</option>
+
+                <option value="0">Entry Level</option>
+
+                <option value="1">1 year</option>
+
+                <option value="2">2 years</option>
+
+                <option value="3">3 years</option>
+
+                <option value="4">4 years</option>
+
+                <option value="5">5 years</option>
+
+                <option value="6">6 years</option>
+
+                <option value="7">7 years</option>
+
+                <option value="8">8 years</option>
+
+                <option value="9">9 years</option>
+
+                <option value="10">10 years</option>
+
+                <option value="11">11 years</option>
+
+                <option value="12">12 years</option>
+
+                <option value="13">13 years</option>
+
+                <option value="14">14 years</option>
+
+                <option value="15">15 years</option>
+
+                <option value="16">16 years</option>
+
+                <option value="17">17 years</option>
+
+                <option value="18">18 years</option>
+
+                <option value="19">19 years</option>
+
+                <option value="20">20 years</option>
+
+                <option value="21">20+ years</option>
+              </select>
+            </div>
+            <button
+              class="waves-effect waves-light btn"
+              value="Search"
+              onclick="javascript:setAClickOnSearch();"
+            >
+              Find Jobs
+            </button>
+          </form>
+        </div>
+        <div
+          id="recentSearchId"
+          class="recent-srchs home-srchptext srch-top-right"
+          style="display: none"
+        ></div>
+
+        <div
+          class="upload-res-uni srch-top-right clearfix"
+          id="resNewUpload"
+          style=""
+        >
+          <div class="upload-res-txt clearfix">
+            <span class="upload-icon"></span>
+            <div class="upload-res-input">
+              <h5>New to Timesjobs?</h5>
+              <label class="upload-res-btn" id="uploadResume_basic">
+                upload your resume
+                <input
+                  name="resumeFile_basic"
+                  id="resumeFile_basic"
+                  size="25"
+                  type="file"
+                  class="              "
+                />
+              </label>
+              <span id="uploadingResume_basic" style="display: none"
+                ><img
+                  src="https://static.timesjobs.com/images_cand/tj_images/personlisation/loader.gif"
+                  alt="Uploading Resume"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

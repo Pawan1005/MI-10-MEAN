@@ -1,0 +1,60 @@
+a,h1,h2,h3,h4,h5,h6,li,ul{
+    text-decoration: none;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    line-height: 23px;
+}
+header{
+    width: 100%;
+    border-top: 2px solid #000;
+    display: inline-flex;
+}
+.header-left{
+    border: 1px dotted #f00;
+    padding: 5px;
+    width: 30%;
+}
+.header-left ul{
+    text-align: center;
+}
+.header-right{
+    width: 70%;
+    background-image: url("https://image.freepik.com/free-psd/abstract-background-design_1297-78.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.box{
+    width: 25%;
+    /* padding: 30px; */
+    border: 1px solid #000;
+    height: 150px;
+    display: inline-flex;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+.box img{
+    width: 100%;
+    border-radius: 10px;
+}
+.logo-box{
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+}
+.logo-box img{
+    width: 100%;
+    border-radius: 50%;
+}
+p:nth-child(3)::first-letter {
+    color: rgb(93, 133, 219);
+    font-size: x-large;
+    font-weight: bolder;
+}
+b{
+    color: #f00;
+}
+p{
+    line-height: 30px;
+}

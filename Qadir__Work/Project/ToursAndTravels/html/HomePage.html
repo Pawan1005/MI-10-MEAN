@@ -12,9 +12,83 @@
     <body>
         <section class="loginHeader">
             <img src="../css/bootstrap-icons-1.4.0/person-square.svg" alt="login">
-            <button type="button">SignUp</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUp">SignUp</button>
+            <!-- SingUp Modal -->
+            <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signUp">Create Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Full Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <span>&#47</span>
-            <button type="button">SignIn</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">SignIn</button>
+             <!-- SingIn Modal -->
+             <div class="modal fade" id="signIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signIn">SignIn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="./UserProfile.html">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="logoHeader">
             <img src="../img/logo.png" alt="logo">
@@ -98,7 +172,7 @@
                             <h6 class="details__packageLocation">Package location: <strong>Agra, Uttar Pradesh</strong></h6>
                             <h6 class="details__packageFeatures">Features: <strong>The Taj Mahal is renowned all over the globe as the monument of eternal love and affection. The worldwide famous Taj Mahal is the symbol of true love that existed between the Mughal Emperor Shah Jahan and his wife Mumtaz Mahal.</strong></h6>
                         </div>
-                        <button type="submit">Details</button>
+                        <a href="./DetailsPage.html">Details</a>
                     </section>
                     <section class="packageSection__list">
                         <img src="../img/sydney.jpeg" alt="Sydney">
@@ -108,7 +182,7 @@
                             <h6 class="details__packageLocation">Package location: <strong>Sydney Australia</strong></h6>
                             <h6 class="details__packageFeatures">Features: <strong>The Sydney Opera House is one of the most-photographed buildings in the world, known for its unique use of a series of gleaming white sail-shaped shells as its roof structure. The iconic performing arts facility is Sydney's best-known landmark.</strong></h6>
                         </div>
-                        <button type="submit">Details</button>
+                        <a href="./DetailsPage.html">Details</a>
                     </section>
                 </section>
                 <a href="./TourPackage.html">View more packages</a>

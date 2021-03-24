@@ -12,8 +12,83 @@
     <body>
         <section class="loginHeader">
             <img src="../css/bootstrap-icons-1.4.0/person-square.svg" alt="login">
-            <button type="button">Sign Up</button>
-            <button type="button">Sign In</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUp">SignUp</button>
+            <!-- SingUp Modal -->
+            <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signUp">Create Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Full Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span>&#47</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">SignIn</button>
+             <!-- SingIn Modal -->
+             <div class="modal fade" id="signIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signIn">SignIn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="logoHeader">
             <img src="../img/logo.png" alt="logo">
@@ -31,7 +106,7 @@
                         <a class="nav-link" href="./About.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tour Packages</a>
+                        <a class="nav-link" href="./TourPackage.html">Tour Packages</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./Contact.html">ContactUs</a>

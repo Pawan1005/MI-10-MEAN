@@ -1,0 +1,284 @@
+/*CSS for Product details*/
+
+.s21 {
+    margin: 80px;
+    background-color: #EFE2BA;
+    padding: 20px;
+    height: 440px;
+    border: 1px solid black;
+    border-radius: 10px;
+    float: left;
+    width: 1000px;
+}
+
+.sticky {
+    top: 10px;
+    position: sticky;
+}
+
+.productdetails {
+    color: #223263;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.productimg {
+    height: 315px;
+    width: 450px;
+    background-size: cover;
+}
+
+.checked {
+    color: #ffc833;
+}
+
+.price {
+    color: #40BFFF;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.quantity {
+    width: 50px;
+    text-align: center;
+}
+
+.addbuttons {
+    align-items: center;
+    padding: 5px;
+    width: 200px;
+    height: 57px;
+    color: #fff;
+    font-weight: bold;
+    background: #E98074;
+    margin-left: 2px;
+    margin-top: 20px;
+    box-shadow: 0px 10px 30px rgba(64, 191, 255, 0.24);
+    border-radius: 5px;
+}
+
+/*CSS for review*/
+
+h4 {
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.textareareview, .reviewlabel {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.textareareview {
+    height: 120px;
+    padding: 10px;
+}
+
+label {
+    margin-top: 30px;
+}
+
+.checked {
+    color: #ffc833;
+}
+
+.reviewstar {
+    padding: 10px;
+}
+
+input[type="file"] {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.chead {
+    background-color: #E98074;
+}
+
+/*CSS for products*/
+
+.product {
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    height: 380px;
+    width: 220px;
+}
+
+.checked {
+    color: #ffc833;
+}
+
+.price {
+    color: #40BFFF;
+    font-weight: bold;
+}
+
+.dis {
+    color: brown;
+}
+
+.btns {
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    background: #E98074;
+    margin-left: 4px;
+    box-shadow: 0px 10px 30px rgba(64, 191, 255, 0.24);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.product-image {
+    border: 1px solid black;
+    background-color: #F2F3F4;
+    border-radius: 10px;
+    height: 150px;
+    width: 220px;
+}
+
+.product-info {
+    margin-left: 10px;
+}
+
+.product-image img {
+    width: 210px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+}
+
+/*CSS for user rating box*/
+
+.userr {
+    max-width: 400px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+.bar-5 {
+    width: 60%;
+    height: 18px;
+    background-color: #4CAF50;
+}
+
+.bar-4 {
+    width: 30%;
+    height: 18px;
+    background-color: #2196F3;
+}
+
+.bar-3 {
+    width: 10%;
+    height: 18px;
+    background-color: #00bcd4;
+}
+
+.bar-2 {
+    width: 4%;
+    height: 18px;
+    background-color: #ff9800;
+}
+
+.bar-1 {
+    width: 15%;
+    height: 18px;
+    background-color: #f44336;
+}
+
+@media (max-width: 400px) {
+    .side, .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
+
+.reviewcontainer {
+    width: 600px;
+    background-color: aliceblue;
+    float: right;
+    margin-right: 70px;
+    margin-top: 80px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/*CSS for rewiews on product*/
+
+.contain_box {
+    border: 2px solid #ccc;
+    background-color: #EFE2BA;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contain_box img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.contain_box span {
+    font-size: 20px;
+    margin-right: 10px;
+}

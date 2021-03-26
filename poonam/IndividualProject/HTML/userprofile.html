@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <header class="main_header">
+    <img src="images/ICON.png" alt="icon" />
+    <nav class="main_nav">
+      <ul>
+        <li>
+          <div class="container">
+            <form action="" class="search_container">
+              <input type="text" placeholder="Search..." name="search" class="searchbox" />
+              <button type="submit" class="searchbtn">
+                <img src="images/search.png" alt="go" />
+              </button>
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="index.html" target="_blank"><img src="images/home2.png" alt="icon" />Home</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a href="userlogin.html" target="_blank"><img src="images/login.png" alt="icon" />Login</a>
+            <div class="dropdown-content">
+              <p><a href="userlogin.html" target="_blank">MyAccount</a></p>
+              <p><a href="index.html" target="_blank">Log out</a></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="cart.html" target="_blank"><img src="images/cart.png" alt="icon" />Cart</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="nav_two">
+    <ul>
+      <li>Computers</li>
+      <li>Electronics</li>
+      <li>Mobiles</li>
+      <li>Home & Kitchen</li>
+    </ul>
+  </nav>
+  <h3>My Profile</h3>
+  <div class="container background">
+    <div class="row col-sm-12 mt-3 rounded">
+      <div class="col-sm-3">
+        <h2>Hello User,</h2>
+        <img src="images/avatar.jpg" alt="" width="100px" style="margin-left: 70px" />
+        <a href="userprofile.html" target="_self"><img src="images/pinfo.png" alt="Personal Information" /></a>
+        <a href="orders.html" target="_blank"><img src="images/porder.png" alt="Orders" /></a>
+        <a href="cart.html" target="_blank"><img src="images/pcart.png" alt="Cart" /></a>
+      </div>
+      <div class="col-sm-9">
+        <h2 class="text-center">Personal Details</h2>
+        <div>
+          <form action="" class="info">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="gender">Gender</label>
+              </div>
+              <div class="col-75">
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Your email.." />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="number">Contact Number</label>
+              </div>
+              <div class="col-75">
+                <input type="number" id="number" name="number" placeholder="Your contact number.." />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="address">Address</label>
+              </div>
+              <div class="col-75">
+                <input type="text number" id="address" name="address" placeholder="Your address.." />
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Save" class="savebtn" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

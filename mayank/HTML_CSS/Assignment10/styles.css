@@ -1,0 +1,229 @@
+.main-header,
+.top-header {
+  background: #fff;
+}
+.top-header {
+  border-bottom: 1px solid #e3e8ed;
+  padding: 9px 0;
+  font-size: 11px;
+  font-weight: 800;
+  height: 51px;
+}
+
+.main-header,
+.top-header {
+  background: #fff;
+}
+div {
+  display: block;
+}
+
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  background: #ecf0f4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ubility-wrap {
+  width: 1166px;
+  margin: auto;
+  position: relative;
+}
+.clearfix {
+  clear: both;
+}
+
+.top-header ul {
+  margin: 0;
+}
+
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
+}
+.top-link {
+  float: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: auto;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.myzone1 {
+  border-left: 1px solid #d0d3d8;
+  margin: -6px 0;
+  padding: 6px 0;
+  margin-left: 20px;
+}
+
+.top-contact {
+  float: right;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.top-tj-logo {
+  display: inline-block;
+  padding: 13px 0;
+}
+
+.ubility-wrap {
+  width: 1166px;
+  margin: auto;
+  position: relative;
+}
+
+.covid-home-page {
+  background: #ffeb9c;
+  height: 40px;
+  width: 430px;
+  display: inline-block;
+  margin: 0 0 0 60px;
+  position: relative;
+  top: -2px;
+  border: #ead992 solid 1px;
+}
+.career-effect,
+.covid-home-page-rhs .career-effect {
+  text-align: center;
+  padding: 8px 0 0 0;
+  color: #000f3f;
+  font-size: 15px;
+  font-weight: 600;
+}
+.notify-msg {
+  border-color: #fcac00;
+  background: #d6ba1b;
+  color: #b58400;
+}
+.main-tj-nav {
+  float: right;
+  margin: 0;
+}
+.clearfix {
+  clear: both;
+}
+
+.open-search {
+  height: 154px;
+  width: 100%;
+  background: center no-repeat #126db1;
+  position: absolute;
+  background-size: cover;
+}
+
+.usability-srch {
+  width: 100%;
+  z-index: 101;
+  border-radius: 2px 2px 0 0;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.main-srch-form {
+  width: 72%;
+}
+
+.usability-srch .srch-top-right.upload-res-uni {
+  padding: 13px 14px;
+  position: absolute;
+  box-sizing: border-box;
+  font-weight: 600;
+  right: 100px;
+  top: 40px;
+  background: #fff;
+  width: 22%;
+  height: 75px;
+  font-size: 10px;
+  color: #79bafe;
+  margin-top: 5px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  background: #ecf0f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input {
+  line-height: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+}
+
+.auto-suggest-blk {
+  width: 40%;
+  border-right: solid 1px #c8c7c7;
+  box-sizing: border-box;
+  float: left;
+}
+
+.auto-suggest-blk {
+  position: relative;
+  display: inline-block;
+}
+
+iframe[Attributes] {
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.usability-srch .auto-suggest-blk.location-srch {
+  width: 30%;
+}
+
+.usability-srch .srch-top-right.upload-res-uni {
+  padding: 13px 14px;
+  position: absolute;
+  right: 100px;
+  top: 40px;
+  background: #fff;
+  width: 22%;
+  height: 75px;
+  font-size: 10px;
+}

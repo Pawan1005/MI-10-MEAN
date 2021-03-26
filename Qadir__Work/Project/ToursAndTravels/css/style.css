@@ -12,6 +12,44 @@
     --packageTitle-color:rgb(43, 39, 247);
 }
 
+.userHeader {
+    position: relative;
+    top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--logingHeader-color);
+}
+
+.userHeader__left, .userHeader__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userHeader__left > img {
+    object-fit: contain;
+    min-height: 20px;
+}
+
+.userHeader__left > a, .userHeader__right > a {
+    color: white;
+    text-decoration: none;
+}
+
+.userHeader__right > p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.userHeader__right > p{
+    color: white;
+}
+
 .loginHeader {
     position: relative;
     top: 0;
@@ -19,7 +57,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--logingHeader-color)
+    background-color: var(--logingHeader-color);
 }
 
 .loginHeader > img {
@@ -184,9 +222,13 @@
     font-weight: 500;
 }
 
-.main > h2 {
+.main, .mainTourHistory {
+    padding-bottom: 20px;
+}
+
+.main > h2, .mainTourHistory > h2 {
     margin-top: 10px;
-    color: rgb(0, 153, 255);
+    color: var(--heading-color);
     font-size: 18px;
 }
 
@@ -238,6 +280,7 @@
 .packageSection__list {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 25px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -312,7 +355,8 @@
     color: rgb(7, 52, 199);
 }
 
-.packageSection__list > button {
+.packageSection__list > a {
+    text-decoration: none;
     margin-left: 15px;
     margin-right: 15px;
     padding: 2px 5px 2px 5px;
@@ -356,4 +400,218 @@
     background-color: inherit;
     color: white;
     font-size: 14px;
+}
+
+.modal-header > h5 {
+    color: var(--logingHeader-color);
+    font-size: 17px;
+}
+
+.modal-body {
+    background-color: whitesmoke;
+}
+
+.modal-body > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-body > form > a{
+    margin-left: 85px;
+    align-self: flex-start;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-body > form > button, input {
+    min-width: 300px;
+}
+
+.modal-body > form > button {
+    min-height: 40px;
+    border: none;
+    font-weight: 600;
+}
+
+.modal-body > form > button[type="submit"] {
+    background-color: var(--logingHeader-color);
+    color: white;
+}
+
+.modal-body > form > button[type="button"] {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.modal-body > form > button[type="button"] > img {
+    object-fit: contain;
+    max-height: 30px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-footer > p {
+    color: var(--logingHeader-color);
+    font-size: 14px;
+}
+
+.dropdownMenu > select {
+    cursor: pointer;
+    padding: 5px 15px 5px 15px;
+    outline-color: var(--logingHeader-color);
+}
+
+.dropdownMenu > select > option:first-child {
+    color: gray;
+}
+
+.modal-body > textarea {
+    margin-top: 20px;
+    padding: 5px;
+    resize: none;
+}
+
+.detailsImg {
+    margin-bottom: 55px;
+    object-fit: cover !important;
+    max-height: 250px !important;
+}
+
+.packageSection__travel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+    box-shadow: 0px 7px 9px 1px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 7px 9px 1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 7px 9px 1px rgba(0,0,0,0.55);
+}
+
+.packageSection__travel > h3 {
+    font-weight: 500;
+}
+
+.packageSection__travel > h4 {
+    font-size: medium;
+}
+
+.packageSection__travel > input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: whitesmoke;
+}
+
+.packageSection__travel > button {
+    padding: 5px 8px 5px 8px;
+    align-self: flex-start;
+    border: none;
+    background-color: var(--heading-color);
+    border-radius: 2px;
+}
+
+.details__date {
+    display: flex;
+    gap: 20px;
+}
+
+.details__date > div > input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: whitesmoke;
+}
+
+.packageSection__Details > h5 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.packageSection__Details > p {
+    font-size: 14px;
+}
+
+.packageSection__price {
+    padding: 25px;
+}
+
+.packageSection__priceMultiple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.minus {
+    padding: 2px 5px 2px 5px;
+    border: 1px solid gray;
+    font-size: 20px;
+    color: red;
+}
+
+.plus {
+    padding: 2px 5px 2px 5px;
+    border: 1px solid gray;
+    font-size: 20px;
+    color: var(--heading-color);
+}
+
+.packageSection__priceTotal {
+    margin-top: 15px;
+}
+
+.packageSection__priceTotal > span {
+    color: rgb(119, 118, 118);
+}
+
+.packageSection__priceTotal > p {
+    color: var(--heading-color);
+}
+
+.packageSection__priceTotal > p > span {
+    font-weight: 600;
+}
+
+.mainTourHistory {
+    min-height: 400px;
+}
+
+.mainTourHistory__table {
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow-y: scroll;
+}
+
+.mainTourHistory__table::-webkit-scrollbar {
+    display: none;
+}
+
+.mainTourHistory__table > table, td, th {
+    border: 1px solid gray ;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 5px;
+}
+
+.th__date {
+    min-width: 200px;
 }

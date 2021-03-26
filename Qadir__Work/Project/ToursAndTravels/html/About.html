@@ -7,13 +7,88 @@
         <link rel="stylesheet" href="../css/bootstrapCSS/bootstrap.min.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../css/style.css">
-        <title>Enquiry</title>
+        <title>AboutUs</title>
     </head>
     <body>
         <section class="loginHeader">
             <img src="../css/bootstrap-icons-1.4.0/person-square.svg" alt="login">
-            <button type="button">Sign Up</button>
-            <button type="button">Sign In</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUp">SignUp</button>
+            <!-- SingUp Modal -->
+            <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signUp">Create Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Full Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span>&#47</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">SignIn</button>
+             <!-- SingIn Modal -->
+             <div class="modal fade" id="signIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signIn">SignIn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="logoHeader">
             <img src="../img/logo.png" alt="logo">
@@ -28,10 +103,10 @@
                         <a class="nav-link" href="./HomePage.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="./About.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tour Packages</a>
+                        <a class="nav-link" href="./TourPackage.html">Tour Packages</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./Contact.html">ContactUs</a>
@@ -69,16 +144,11 @@
         </div>
         <section class="main">
             <h2>AboutUs</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, at. Ipsum enim sequi doloremque sapiente, ducimus assumenda accusantium ipsa blanditiis nihil sint cum saepe, hic itaque unde possimus exercitationem numquam.
-                Non porro accusantium voluptate sunt harum voluptatem, obcaecati vitae quidem doloribus labore, commodi temporibus, dolores nisi minus. Libero laborum corporis aspernatur, possimus deserunt assumenda neque praesentium quasi vitae ratione repellendus.
-                Ipsam accusamus beatae, praesentium minus sequi, asperiores nulla voluptates sint numquam officiis facilis. Eligendi iste non in nobis temporibus voluptate ullam, veritatis, alias pariatur amet eius. Deserunt sed obcaecati ut!
-                Nihil cum commodi voluptates minus laborum quia corrupti temporibus ipsam, repellat, eaque possimus alias ducimus illo esse numquam! Corporis rerum nisi recusandae aut quia dignissimos consequuntur assumenda. Ipsa, minus quisquam!
-                Perspiciatis, aperiam architecto amet necessitatibus tempore quae excepturi praesentium porro ipsa. Corporis, dicta voluptas error at porro magnam veniam animi maxime cupiditate nisi nesciunt, culpa sint, amet atque a quod.
-                Voluptatibus aliquid excepturi eius praesentium repellat maxime, hic assumenda quasi nam, quos saepe vitae quo cum. Dolores cupiditate suscipit iste animi. Excepturi eligendi quibusdam aliquam nulla beatae exercitationem enim repellendus?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error totam est dolor accusantium minus quam in ad enim incidunt itaque aperiam alias, porro rerum illo magnam nesciunt consequatur doloremque.
-                Eveniet adipisci, facere et vero vitae expedita aliquid debitis voluptates laborum, dolor excepturi beatae quia magni ipsum minus totam repellat qui maiores sunt dolorem, esse in. Voluptatibus blanditiis beatae dignissimos.
-                Maxime dolorum minus inventore tempore nobis maiores est, corporis ratione itaque quibusdam libero sit molestiae cum earum. Sunt dolorem omnis maxime saepe quia quae! Voluptates architecto optio beatae quae eveniet!
-                Earum omnis aliquam repellat odit! A, similique eum enim perspiciatis laudantium, minima nostrum iure velit necessitatibus esse, maxime soluta ducimus at aliquam. At omnis dolores ratione a, magnam reiciendis eos?
+            <p>
+                Tour World Wide is India’s leading online travel booking brand providing range of choice for hotels, flights, trains, bus and cars for travelers. 
+                Our core value differentiator is the most trusted user experience, be it in terms of quickest search and booking, fastest payments, settlement or refund processes. 
+                Through GoStays, our customers enjoy standardised stay experience at certified hotel properties. With industry first virtual travel booking currency GoCash and travel social network, GoCash+ Rewards – 
+                Tour World Wide is the number one choice for new India on the move.
             </p>
         </section>
         <section class="footer">

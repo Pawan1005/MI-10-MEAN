@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment10</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+     .container{
+         position:relative;
+     }
+     .center{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+     }
+     img { 
+  width: 100%;
+  height:200px;
+}
+.container2{
+    margin-left: 20px;
+    margin-top: 20px;
+    position:relative
+}
+.research{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+     }
+     .times{
+      position:absolute;
+      top:40%;
+      right: 5%;
+     
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+.img1{
+    flex: 60.33%;
+  padding: 5px;
+height:150px;
+width: 68%;
+float:left;
+}
+.img2{
+    flex: 23.33%;
+  padding: 2px;
+width: 30%;
+float:right;
+height: 300px;
+}
+.container3{
+margin-top:250px;
+
+}
+#job1{
+    height: 50px;
+    width: 235px;
+    flex: 2.33%;
+    padding:20px;
+    margin-left: 10px;
+    background-color: rgb(157, 236, 210);
+}
+.symbol{
+    height:40px;
+    width:40px;
+}
+.covid{
+    background-color: rgb(230, 193, 124);
+}
+#y,#n{
+    background-color:rgb(230, 193, 124) ;
+}
+button:hover{
+    color: red;
+}
+    </style>
+  </head>
+  <body><form id="form_field">
+    <div><table><tr><td><h1>TGimeJobs</h1></td>
+        <td><div class="covid">Is your career affected by Covid <button id="y">Yes</button><button id="n">NO</button></td></div>
+        <td><button name="Login"></button></td>  <td><button name="Register"></button></td></tr></table></div>
+    
+    <div class="container">
+     <div class="center">
+         <table><tr><td><input type="text" id="textfield1" value="" placeholder="Enter Skills Designation etc"></td>
+            <td><input type="text" id="textfield2" value="" placeholder="Location"></td>
+            <td><input type="text" id="textfield3" value="" placeholder="Experience"></td>
+            <td><input type="button" id="button2" value="Search" placeholder="Search"></td>
+            <td><span>
+                New to Times job?
+                <input type="file" value="Upload your Resume">
+            </span></td>
+        </tr></table>
+    </div> 
+      <img src="/home/khushboo/Downloads/img.jpeg">
+    </div>
+    <div  class="container2">
+      <div class="img1"><iframe  style="width: 100%;"src="/home/khushboo/Downloads/practice.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+      </iframe>
+  </div>
+        <div class="img2"> <img  src="/home/khushboo/Downloads/job.jpeg"> </div> 
+        <div class="times"><h5 >Times Enables</h5>
+            <li >Search</li>
+            <li >Interview</li>
+            <li >Join</li>
+            <button value="click here" >Click Here</button></div>
+   
+    </div>
+    <div class="container3">
+        <table>
+            <tr>
+            <td><div id="job1"> <img class="symbol" src="/home/khushboo/Downloads/it.png">Information Technology <br><em>85904 Jobs</em></div></td>
+            <td><div id="job1"><img class="symbol" src="/home/khushboo/Downloads/man.png">Manufacturing and Engineering <em> 45906 Jobs</em> </div></td>
+             <td><div id="job1"><img class="symbol" src="/home/khushboo/Downloads/bank.png">Banking center <em>58522 Jobs</em></div></td>
+             
+            </tr>
+        <tr>
+             <td><div id="job1"><img class="symbol" src="/home/khushboo/Downloads/sales.png">Sales and Marketng <em>852669 Jobs</em></div></td>
+             <td><div id="job1"><img class="symbol" src="/home/khushboo/Downloads/bpo.jpeg">SCM and Operations/BPO <em>45525 Jobs</em></div></td>
+             <td><div id="job1"><img class="symbol" src="/home/khushboo/Downloads/all.jpeg">All Jobs <em>285023 jobs</em></div></td>
+            </tr>
+</table>
+    </div>
+  </form>
+  </body>
+</html>

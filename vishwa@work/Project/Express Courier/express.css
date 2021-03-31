@@ -1,0 +1,426 @@
+body{
+    min-height: 100vh;
+}
+.navbar{
+    overflow: hidden;
+    background-color: rgb(167, 0, 0);
+}
+.navbar a{
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-right{
+    float: right;
+}
+.navbar a:hover{
+    text-decoration: underline;
+    color: greenyellow;
+    font-size: 22px;
+    text-shadow: cornsilk;
+}
+.reliable {
+    text-align: center;
+    margin-top: 70px;
+}
+.reliable h3{
+    font-weight: bolder; 
+    text-transform: capitalize;
+    text-shadow: 5px 2px 5px white;
+    color: tomato;
+}
+.calla button{
+    width: 200px;
+    margin-left: auto;
+    margin-right: 400px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+img[alt="AdminLogin"]{
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 150px;
+}
+.reliable a{
+    display: block;
+}
+.adminlogo{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 90px;
+
+}
+.carousel-inner img {
+width: 100%;
+}
+.trace{
+    background-image: url("./image/tc.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.tracker{
+    background-color: black;
+    opacity: 0.7;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+}
+.tracker> p{
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: burlywood;
+    font-weight: bolder;
+}
+.work{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 40px;
+}
+button{
+    margin-right: 2%;
+    font-size: 18px;
+    width: 100px;
+    margin-top: 20px;
+  
+}
+.work label{
+    color: white;
+}
+a{
+    color: white;
+    font-size: 20px;
+}
+.option{
+    margin-top: 40px;
+    margin-left: 2%;
+}
+.package>p{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bolder;
+    color: brown;
+
+}
+button[type='button_call']{
+   margin-left: 230px;
+   margin-top: 30px;
+}
+img[alt="Admin_Login"]{
+    margin-left: 250px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.sticky-footer{
+    position: sticky;
+    top: 100%;
+    width: 100%;
+    background-color: rgb(167, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+}
+.content{
+    margin: 40px;
+}
+.content >p{
+    display: inline;
+    font-size: 20px;
+    text-align: justify;
+}
+.deliver h1{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.adminlogin{
+    width:420px;
+    height: 520px;
+    background-color: black;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    opacity: 0.8;
+}
+.adminimg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.adminlogin h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.adminlogin p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.adminlogin input{
+   width: 100%;
+    margin-bottom: 40px;
+}
+.adminlogin input[type="text"], [type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+}
+.adminlogin input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: tomato;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.contact{
+    background-color: #000000;
+    opacity: 0.6;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 3px grey;
+}
+.contact hr{
+    background-color: white;
+}
+.contact h1{
+    text-align: center;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+.contact p{
+    font-size: 20px;
+}
+address{
+    font-size: 20px;
+}
+.sidenav{
+    background-color: royalblue;
+    box-shadow: 3px 3px 3px grey;
+    width: 100%;
+    height: 100%;
+}
+.sidenav a{
+    display: block;
+
+}
+.sidenav h3{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px red;
+}
+.sidenav img[alt="Admin"]{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 32%;
+    margin-right: 30%;
+    border-radius: 50%;
+    padding: 10px;
+}
+.icon{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px rgb(99, 7, 7);
+    margin-bottom: 40px;
+    margin-top: 520px
+}
+.icon a{
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 25px;
+    color: brown;
+    margin-left: 5%;
+    
+}
+.dropdown-container {
+    display: none;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  .dropdown-container a{
+      margin-top: 20px;
+      font-size: 20px;
+  }
+  .dropdown-btn {
+     display: block;
+     border: none;
+     background: none;
+     font-size: 25px;
+     color: white;
+     width: 100%;
+     text-align: left;
+     cursor: pointer;
+
+  }
+  .fa-caret-down {
+    float: right;
+    padding: 5px;
+  
+  }
+  .home a{
+    font-size: 25px;
+    padding: 10px;
+}
+.empdetail h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: coral;
+    color: white;
+}
+.detailform{
+    margin: 40px;
+    background-color: rgb(207, 207, 207);
+}
+.detailform label{
+    margin-top: 20px;
+    padding-left: 10px;       
+}
+ input[type="submit"]{
+    font-size: 20px;
+    margin-top: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px 20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: turquoise;
+    width: 40%;
+  }
+  .card-text h3{
+      text-align: center;
+      color: brown;
+      padding-top: 10px;
+     font-weight: bold;
+  }
+  .tmap{
+    background-image: url("./image/tmap.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.ttext{
+    border: 1px solid black;
+}
+.ttext h3{
+    background-color: rgb(218, 216, 216);
+    color: red;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.ttext >p{
+    margin-top: 80px;
+    margin-left: 90px;
+}
+strong{
+    color: red;
+}
+.box{
+    background-color: rgb(218, 216, 216);
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    margin-bottom: 20px;
+}
+form{
+    margin-left: 40px;
+    padding: 20px;
+}
+#captcha{
+    margin-left: 95px;
+}
+#tracking_id{
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    margin: 10px;
+    float: right;
+}
+
+img[alt="Package"], [alt="Document"], [alt="Medical"]{
+    display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.deliver h4{
+text-align: center;
+font-weight: bolder;  
+padding: 5px;
+}
+.deliver p{
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.circle{
+    background-color: teal;
+    border: 2px solid black;
+    text-transform: capitalize;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.circle p{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 180px;
+    font-weight: bolder;
+    font-size: 20px;
+    text-shadow: 3px 1px 3px red;
+    color: white;
+}

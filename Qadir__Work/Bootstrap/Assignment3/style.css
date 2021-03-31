@@ -1,0 +1,79 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 > span {
+    color: gray;
+    font-weight: 500;
+}
+
+hr:nth-child(3) {
+    width: 85%;
+}
+
+body > p {
+    text-align: center;
+}
+
+.col-5 {
+    display: flex;
+    align-items: center;
+}
+
+.detailsLeft {
+    text-align: right;
+    margin-right: 25px;
+}
+
+.detailsRight {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.profile {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+img {
+    width: 200px;
+    max-height: 190px;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    bottom: 0%;
+    left: 2%;
+    border: 5px inset rgba(105, 105, 105, 0.404);
+}
+
+.detailsLeft > p, .detailsRight > p {
+    color: gray;
+    font-size: 14px;
+}
+
+.steve, .bill, .elon, .jeff {
+    text-transform: uppercase;
+}
+
+.steve {
+    color: rgb(250, 35, 35);
+}
+
+.bill {
+    color: rgb(0, 153, 255);
+}
+
+.elon {
+    color: rgb(111, 0, 255);
+}
+
+.jeff {
+    color: goldenrod;
+}

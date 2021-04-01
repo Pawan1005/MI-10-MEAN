@@ -1,0 +1,46 @@
+.product {
+    border: 1px solid black;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    height: 430px;
+}
+
+.checked {
+    color: #ffc833;
+}
+
+.price {
+    color: #40BFFF;
+    font-weight: bold;
+}
+
+.dis {
+    color: brown;
+}
+
+.btns {
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    background: #E98074;
+    margin-left: 2px;
+    box-shadow: 0px 10px 30px rgba(64, 191, 255, 0.24);
+    border-radius: 5px;
+}
+
+.product-image {
+    border: 1px solid black;
+    background-color: #F2F3F4;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.product-image img {
+    width: 310px;
+    height: 200px;
+    object-fit: contain;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h2 class="head">MI-9 Intern HTML Assesment</h2><br><br>
+    <hr>
+    <h3 class="detail">Personal Detail</h3>
+    <form>
+        <label for="fname" class="bold"> First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+        <label for="lname" class="bold"> Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+        <label for="gender" class="bold"> Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" class="stext">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female" class="stext">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other" class="stext">Other</label><br><br>
+        <label for="age" class="bold"> Age:</label>
+        <input type="radio" id="age1" name="age" value="18">
+        <label for="age1" class="stext">Less than 18</label>
+        <input type="radio" id="age2" name="age" value="25" checked>
+        <label for="age2" class="stext">18 - 25</label>
+        <input type="radio" id="age3" name="age" value="40">
+        <label for="age3" class="stext">26 - 40</label><br>
+        <h3 class="detail">Academic Details</h3>
+        <label for="skill" class="bold">Skill Set:</label>
+        <input type="checkbox" id="html" name="skill" value="html">
+        <label for="html" class="stext">HTML</label>
+        <input type="checkbox" id="javascript" name="skill" value="javascript">
+        <label for="javascript" class="stext"> Java Script</label>
+        <input type="checkbox" id="java" name="skill" value="java">
+        <label for="java" class="stext"> Java</label>
+        <input type="checkbox" id="oracle" name="skill" value="oracle">
+        <label for="oracle" class="stext"> Oracle</label>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+table {
+  width: 60%;
+  background-color: beige;
+}
+
+th {
+  color: rgb(11, 20, 24);
+}
+
+tr {
+  color: rgb(8, 5, 5);
+}
+
+table,
+th,
+td {
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}

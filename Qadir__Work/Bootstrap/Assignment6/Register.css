@@ -1,0 +1,9 @@
+body {
+    background-color: whitesmoke;
+}
+
+.navbar2 {
+    background: rgb(17,17,18);
+    background: linear-gradient(90deg, rgba(17,17,18,1) 0%, rgba(111,113,113,1) 82%);
+    height: 50px;
+}

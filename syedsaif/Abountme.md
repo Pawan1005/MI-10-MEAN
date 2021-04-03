@@ -1,1 +1,0 @@
-my name is syedsaif...im from bangalore...i have done my graduation in computer science from st joseph college bangalore..now im persuing my internship in mean stack developer from ambersoft academy. 

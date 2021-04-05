@@ -1,0 +1,22 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-link--header:hover {
+  text-decoration: underline white 7px;
+}
+
+.corner {
+  margin-top: 7rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  background: white;
+}
+
+.box {
+  display: inline-block;
+  width: 7.5rem;
+  height: 3rem;
+  background: tomato;
+  margin: 1rem;
+  text-align: center;
+}

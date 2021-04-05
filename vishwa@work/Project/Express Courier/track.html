@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="express.css">
+    <title>Track Delivery</title>
+</head>
+<body>
+    <div class=" col-md-12 navbar">
+        <a class="active" href="home.html"><img src="./image/logo.png" alt="Logo" height="50px" width="200px"></a>
+        <div class="navbar-right">
+          <a href="home.html">Home</a>
+          <a href="about.html" target="_blank">About Us</a>
+          <a href="service.html" target="_blank">Services</a>
+          <a href="track.html">Track delivery</a>
+          <a href="contact.html" target="_blank">Contact Us</a>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <img src="./image/track.png" alt="banner" width="100%" height="350px"> 
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 tmap"></div>
+            <div class="col-md-8">
+                <div class="ttext">
+                    <h3>track your shipment</h3>
+                    <p><strong>*</strong> Indicate a require field</p>
+                    <div class="box">
+                        <form>
+                            <div class="form-group row">
+                            <label for="tracking_id"><strong>*</strong> Consignment Number:</label>
+                            <div class="col-md-8">
+                               <input type="text" name="tracking_id" class="form-control" id="tracking_id" placeholder="Enter Tracking ID / Consignment Number" required> 
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="captcha"> <strong>*</strong> Captcha:</label>
+                              <div class="col-md-8">
+                                  <img src="./image/captcha.png" alt="Captcha" width="400px" height="100px">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                                <button type="button" class="btn btn-danger">Submit</button>
+                                <button type="button" class="btn btn-danger">Reset</button>
+                            </div>
+                           
+                          </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="sticky-footer">
+        <p>Copyright © 2021 Design</p>
+    </footer>
+    
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>        
+</body>
+</html>

@@ -1,0 +1,123 @@
+.h1{
+    position: relative;
+    top: 10px;
+    color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+.p,
+.h1{
+    font-style: italic;
+    position: relative;
+    left: 50px;
+    width: 140px;
+}
+.h5{
+    position: relative;
+   top:10px;
+}
+.c1{
+    background-color:beige;
+}
+.t1{
+    position: relative;
+    left: -20px;
+    bottom: 20px;
+}
+.c2{
+    background-color:rgb(24, 1, 1);
+    height: 50px;
+    color: white;
+    top: -15px;
+    position: relative;
+}
+.rounded{
+    position: relative;
+    left: 35%;
+    width: 100px;
+}
+.c3{
+    width:fit-content;
+}
+.card-body{
+    text-align: center;
+}
+.down{
+    position: relative;
+    height: 272px;
+}
+.card{
+    top: 100px;
+}
+.more{
+    position: relative;
+    top: 150px;
+    text-align: center;
+    left: -15px;
+}
+.left{
+    position: relative;
+    top: 159px;
+    left: 35%;
+}
+.content{
+    position: relative;
+    top: 179px;
+    text-align: center;
+}
+.breadcrumb{
+    position: relative;
+    top: 200px;
+    font-size: small;
+    text-align: center;
+    background-color: white;
+    left: 100px;
+}
+.text{
+    position: relative;
+    top: 173px;
+    left:30%;
+    font-weight: lighter;
+    font-size: small;
+}
+.ul{
+    position: relative;
+    left: 300px;
+    top: -70px;
+    width: fit-content;
+    font-size: small;
+}
+.li{
+    margin: 5px;
+}
+.li:hover{
+    background-color: darkcyan;
+}
+.b1{
+    position: relative;
+    left: -50px;
+    width: fit-content;
+}
+.d1{
+    position: relative;
+    left: -300px;
+    top: 50px;
+    width: 300px;
+    height: fit-content;
+}
+.d2{
+    position: relative;
+    top: -278px;
+    width: 300px;
+    left: 200px;
+    height: fit-content;
+}
+.register{
+    position: relative;
+    top: -250px;
+    width: 200px;
+    left: 34%;
+} 

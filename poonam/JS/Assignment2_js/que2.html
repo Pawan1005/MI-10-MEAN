@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var percent=0;
+            function percentage(){
+            var a,b,c,d,e;
+            a = parseInt(document.getElementById("val1").value);
+            b = parseInt(document.getElementById("val2").value);
+            c = parseInt(document.getElementById("val3").value);
+            d = parseInt(document.getElementById("val4").value);
+            e = parseInt(document.getElementById("val5").value);
+            percent = parseFloat((a+b+c+d+e)/500) * 100;
+            document.getElementById("per").innerHTML = percent;
+            }
+
+            function grade(){
+                if (percent >= 75) {
+                    document.getElementById("grd").innerHTML = "A";
+                }
+                else if (percent >=60) {
+                    document.getElementById("grd").innerHTML = "B";
+                }
+                else if (percent >= 40) {
+                    document.getElementById("grd").innerHTML = "C";
+                }
+                else if (percent >= 30) {
+                    document.getElementById("grd").innerHTML = "D";
+                }
+                else if (percent < 30) {
+                    document.getElementById("grd").innerHTML = "F";
+                }
+                else {
+                    document.getElementById("grd").innerHTML = "--";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            First no. <input type="number" id="val1"><br><br>
+            Second no. <input type="number" id="val2"><br><br>
+            Third no. <input type="number" id="val3"><br><br>
+            Fourth no. <input type="number" id="val4"><br><br>
+            Fifth no. <input type="number" id="val5"><br><br>
+            <button type="button" onclick="percentage()">Calculate percentage</button><br><br>
+            <button type="button" onclick="grade()">Grade</button>
+        </form>
+        <h3>Total Percentage : </h3>
+        <h3 id="per"></h3>
+        <h3>Grade : </h3>
+        <h3 id="grd"></h3>
+    </body>
+</html>

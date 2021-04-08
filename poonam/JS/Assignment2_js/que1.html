@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function sndlarge() {
+            event.preventDefault();
+            let a = parseInt(document.getElementById('val1').value);
+            let b = parseInt(document.getElementById('val2').value);
+            let c = parseInt(document.getElementById('val3').value);
+            let d = parseInt(document.getElementById('val4').value);
+            let e = parseInt(document.getElementById('val5').value);
+            let listNumber = [a, b, c, d, e];
+            const findNumber = list => {
+                
+                list.sort( (number1, number2) => {
+                    return number2 - number1;
+                });
+                
+                return list[1];
+            }
+            document.getElementById('secNumber').innerHTML = `List of values are: <b>[${listNumber}]</b> Second Large value From list is <b>${findNumber(listNumber)}</b>`;
+        }
+            
+            
+        </script>
+    </head>
+    <body>
+        <form action="">
+            First no. <input type="text" id="val1"><br>
+            Second no. <input type="text" id="val2"><br>
+            Third no. <input type="text" id="val3"><br>
+            Fourth no. <input type="text" id="val4"><br>
+            Fifth no. <input type="text" id="val5"><br>
+            <button type="submit" onclick="sndlarge()">Submit</button>
+        </form>
+        <h3>The second largest number in the list is</h3>
+        <h3 id="secNumber"></h3>
+    </body>
+</html>

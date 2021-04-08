@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment1js</title>
+        <script>
+            function swap1(){
+                var a,b,temp;
+                a = parseInt(document.getElementById("val1").value);
+                b = parseInt(document.getElementById("val2").value);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("md1").innerHTML = "After Swapping (Method1) : a = " + a + " b =" + b;
+            }
+            function swap2(){
+                var a,b;
+                a = parseInt(document.getElementById("val1").value);
+                b = parseInt(document.getElementById("val2").value);
+                [a, b] = [b, a];
+                document.getElementById("md2").innerHTML = "After Swapping (Method2) : a = " + a + " b =" + b;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            A: <input type="number" id="val1">
+            B: <input type="number" id="val2">
+            <button type="button" onclick="swap1()">Method 1</button>
+            <button type="button" onclick="swap2()">Method 2</button>
+        </form>
+        <h2>Method 1: With Temporary variable</h2>
+        <p id="md1"></p>
+        <h2>Method 2: Without Temporary variable</h2>
+        <p id="md2"></p>
+    </body>
+</html>

@@ -1,5 +1,3 @@
-var d;
-
 function calculateGrade() {
     event.preventDefault();
 

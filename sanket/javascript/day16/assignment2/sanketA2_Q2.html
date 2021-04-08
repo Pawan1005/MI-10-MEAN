@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    no1: <input type="text" id="no1" /> no2: <input type="text" id="no2" /> no3:
+    <input type="text" id="no3" /> no4: <input type="text" id="no4" /> no5:
+    <input type="text" id="no5" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+
+    <script>
+      function cal() {
+        let n1 = parseInt(document.getElementById("no1").value);
+        let n2 = parseInt(document.getElementById("no2").value);
+        let n3 = parseInt(document.getElementById("no3").value);
+        let n4 = parseInt(document.getElementById("no4").value);
+        let n5 = parseInt(document.getElementById("no5").value);
+        let t = n1 + n2 + n3 + n4 + n5;
+        let p = (t / 500) * 100;
+        let g;
+        if (p >= 75) {
+          g = "A";
+        } else if (p >= 60 && p <= 74) {
+          g = "B";
+        } else if (p >= 40 && p <= 59) {
+          g = "C";
+        } else if (p >= 30 && p <= 39) {
+          g = "D";
+        } else if (p < 30) {
+          g = "F";
+        }
+        document.getElementById(
+          "p"
+        ).innerHTML = `total = ${t} and percentage = ${p}% and grade = ${g} `;
+      }
+    </script>
+  </body>
+</html>

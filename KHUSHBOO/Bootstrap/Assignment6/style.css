@@ -1,0 +1,171 @@
+.jumbotron{
+    background-image: url(vector-1.png);
+    height:500px;
+    background-color: blue;
+    color: white;
+    position: relative;
+}
+#overlay{
+
+display: none;
+width: auto;
+height: 400px;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(33, 3, 116, 0.938);
+z-index: 2;
+cursor: pointer;
+display:block;
+
+}
+.navigation{
+display: flex;
+margin-left: 200px;
+}
+.navigation > a {
+margin-left: 60px;
+color: white;
+}
+.search{
+display: flex;
+margin:30px;
+}
+.search > input{
+width:100px;
+}
+.heading{
+margin-top: 20px;
+text-align:center;
+}
+.login-l{
+color:white;
+}
+.signup{
+    padding:4px;
+    border-radius: solid black 2px;
+    width:40%;
+margin-left: 350px;
+margin-top: 10px;
+}
+.signup > h2{
+    text-align: center;
+}
+.signup > .input-group{
+    margin-bottom: 14px;
+}
+.signup > .dropdown{
+    text-align: center;
+    width:100%;
+}
+.signup > .dropdown > button{
+    width:100%;
+    background-color: blue;
+}
+.signup > .dropdown > .dropdown-menu{
+    text-align: justify;
+}
+.signup > button{
+    width:100%;
+    background-color: blue;
+    text-align: center;
+    width:100%;
+}
+.signup > .dropdown > button:hover{
+    background-color: rgb(247, 29, 138);
+}
+.signup > button:hover{
+    background-color: rgb(247, 29, 138);
+}
+.email-me{
+    border: 1px solid grey;
+    text-align: center;
+    width: 200px;
+    height:50px;
+    color: grey;
+    border-radius: 4px;
+    padding: 4px;
+}
+.email-me > a {
+    margin-top: 5px;
+}
+.email-me:hover{
+    background-color: rgb(247, 29, 40);
+}
+.card-job{
+    margin-left: 50px;
+    height: 300px;
+    width: 300px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.apply{
+    color: rgb(247, 29, 76);
+    border-radius: 12px;
+    border: solid  1px   rgb(247, 29, 76);
+}
+.company{
+    color: rgb(247, 29, 76);
+}
+.apply:hover{
+    color: white;
+    background-color: rgb(247, 29, 76);
+    border: solid  1px  white;
+}
+.bookmark{
+  float: right;
+}
+.bookmark:hover{
+    border: rgb(247, 29, 76);
+  }
+  job-gallery{
+      margin-top: 100px;
+  }
+  .gallery1{
+      display:flex;
+      margin-left:50px;
+  }
+  .client{
+display: flex;
+}
+.client1{
+  margin-top: 50px;
+  height: 250px;
+  width: 350px;
+  margin-left: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px  rgb(99, 156, 243); ;
+  display: flex;
+
+}
+.client-section1{
+  width: 100px;
+  height: 250px;
+  background-color:rgb(118, 68, 211) ;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.client-section1:hover{
+  background-color: rgb(247, 29, 76);
+}
+.trainer-details{
+  margin-left: 150px;
+}
+
+#trainer{
+margin-top:75%;
+margin-left:50px;
+}
+.client-section2{
+
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.footer{
+   background-color: blue; 
+   height: 30px;
+   margin-top: 50px;
+   text-align: center;
+}

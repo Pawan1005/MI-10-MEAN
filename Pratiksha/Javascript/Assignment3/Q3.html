@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even odd</title>
+</head>
+<body>
+    <form>
+        Enter year:
+        <input type="text" id="val1"><br><br>
+        <button  class="button" onclick="evod()"> Even or ODd</button>
+    </form>
+    <p id="demo"></p>
+    <script>
+        n= document.getElementById("val1").value;
+        function evod(){
+
+            if (n/2==0)
+            {
+                document.getElementById("demo").innerText= `Even `
+            }
+            else
+            {
+                document.getElementById("demo").innerText= ` Odd` 
+            }
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

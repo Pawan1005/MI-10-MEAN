@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+     enter marks obtained <br />
+
+     Subject 1: <input type="text" id="s1" /> <br />
+     Subject 2: <input type="text" id="s2" /><br />
+     Subject 3: <input type="text" id="s3" /><br />
+     Subject 4: <input type="text" id="s4" /><br />
+     Subject 5: <input type="text" id="s5" /><br />
+      <button type="button" onclick="marks()">Calculate</button>
+     <h2 id="Total">Total Marks are:</h2>
+     <h2 id="p">Percentage:</h2>
+     <h2 id="g">Percentage:</h2>
+
+     <script>
+         function marks() 
+         {
+             var a, b, c, d, e, total, Percentage;
+              a = parseFloat(document.getElementById("s1").value);
+              b = parseFloat(document.getElementById("s2").value);
+             c = parseFloat(document.getElementById("s3").value);
+              d = parseFloat(document.getElementById("s4").value);
+             e = parseFloat(document.getElementById("s5").value);
+             total = a + b + c + d + e;
+              document.getElementById("Total").innerHTML = total;
+             percentage = (total / 500) * 100;
+             document.getElementById("p").innerHTML = percentage;
+             if ((percentage > 74) & (percentage <= 100)) {
+              document.getElementById("g").innerHTML = "you hav obtained A Grade";
+              } else if ((percentage <= 74) & (percentage > 59)) {
+               document.getElementById("g").innerHTML = "you hav obtained B Grade";
+              } else if ((percentage <= 59) & (percentage > 39)) {
+              document.getElementById("g").innerHTML = "you hav obtained C Grade";
+             } else if ((percentage <= 40) & (percentage > 29)) {
+              document.getElementById("g").innerHTML = "you hav obtained D Grade";
+             } else if (percentage < 30) {
+               document.getElementById("g").innerHTML = "you hav obtained F Grade";
+             } else {
+                document.getElementById("g").innerHTML = "enter valid marks";
+            }
+          }
+     </script>
+  </body>
+</html>

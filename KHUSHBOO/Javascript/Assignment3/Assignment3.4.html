@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+  </head>
+  <body>
+      <h1>Square pattern</h1>
+     <input type="text" id="row" placeholder="Enter no of rows" />
+      <input type="text" id="col" placeholder="Enter no of cols" />
+
+      <button id="p" onclick="pattern()">click</button>
+     <p id="r"></p>
+     <script>
+         function pattern() {
+          var r, c, x, y;
+
+          r = parseInt(document.getElementById("row").value);
+         c = parseInt(document.getElementById("col").value);
+          let string = "";
+
+         for (x = 0; x < r; x++) {
+           for (y = 0; y < c; y++) {
+            string += "*";
+          }
+          string += "<br />";
+          }
+         document.getElementById("r").innerHTML = string;
+         }
+       </script>
+  </body>
+</html>

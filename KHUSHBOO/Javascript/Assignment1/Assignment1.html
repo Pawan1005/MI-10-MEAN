@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Swap Two Numbers</h1>
+    Enter the value for A <input type="text" id="a" /> Enter the value for B
+    <input type="text" id="b" />
+    <button type="button" onclick="method1()">Method 1</button>
+    <button type="button" onclick="method2()">Method 2</button>
+    <h1 id="swap"></h1>
+    <h1 id="swap2"></h1>
+    <script>
+      function method1() {
+        var x, y, temp;
+        x = document.getElementById("a").value;
+        y = document.getElementById("b").value;
+        temp = x;
+        x = y;
+        y = temp;
+        document.getElementById("swap").innerHTML =
+          "Method 1 with Temporary variable A: " + x + "  B:" + y;
+      }
+      function method2() {
+        var x, y;
+        x = document.getElementById("a").value;
+        y = document.getElementById("b").value;
+        [x, y] = [y, x];
+        document.getElementById("swap2").innerHTML =
+          "Method 2 withoutTemporary variable A: " + x + "  B:" + y;
+      }
+    </script>
+  </body>
+</html>

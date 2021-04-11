@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+    Vowel Charachter
+    </h1>
+    <input type="text" id="v">
+   
+    <button id="p" onclick="lowercase()">Lower case</button>
+    <button id="p" onclick="uppercase()">Upper case</button>
+    <p id="r"></p>
+    <script>
+
+function lowercase()
+{
+var mychar=document.getElementById("v").value;
+
+var lower=mychar.toLowerCase();
+
+	document.getElementById("r").innerHTML=lower + " converted text in lower case.";
+
+}
+function uppercase()
+{
+var mychar=document.getElementById("v").value;
+
+var upper=mychar.toUpperCase();
+
+	document.getElementById("r").innerHTML=upper + " converted text in Upper case.";
+
+}
+   
+
+    </script>
+</body>
+</html>

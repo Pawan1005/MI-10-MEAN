@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Krishnamurthy Number</h1>
+    <input type="text" id="n" />
+
+    <button id="p" onclick="check()">click</button>
+    <p id="num"></p>
+    <script>
+      function factorial(n) {
+        let fact = 1;
+
+        while (n != 0) {
+          fact = fact * n;
+          n--;
+        }
+
+        return fact;
+      }
+
+      function isKrishnamurthyNumber(n) 
+       {
+            let sum = 0;
+            let temp = n;
+            while (temp != 0)
+            {
+              sum = sum + factorial(temp % 10);
+              temp = parseInt(temp / 10);
+            }
+          return sum == n;
+       }
+      function check() {
+        n = document.getElementById("n").value;
+        if (isKrishnamurthyNumber(n))
+          document.getElementById("num").innerHTML =
+            n + " is a Krishnamurthy Number";
+        else
+          document.getElementById("num").innerHTML =
+            n + " is not a  Krishnamurthy Number";
+      }
+    </script>
+  </body>
+</html>

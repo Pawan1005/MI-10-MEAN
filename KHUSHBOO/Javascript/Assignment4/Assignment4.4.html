@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Vowel Charachter</h1>
+    <input type="text" id="v" />
+
+    <button id="p" onclick="vowel()">click</button>
+    <p id="r"></p>
+    <script>
+      function vowel() {
+        var mychar;
+        mychar = document.getElementById("v").value;
+        switch (mychar) {
+          default:
+            document.getElementById("r").innerHTML =
+              mychar + " is a consonant.";
+            break;
+          case "A":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "E":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "I":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "O":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "U":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+          case "a":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "e":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "i":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "o":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+            break;
+          case "u":
+            document.getElementById("r").innerHTML = mychar + " is a Vowel.";
+
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

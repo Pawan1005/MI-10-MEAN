@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Conversion of Celcius to Fahrenheit</h1>
+  </body>
+  Enter Temperature
+  <input type="text" id="temp" />°C
+  <button type="button" onclick="convert()">Convert</button>
+  <h6>After Conversion</h6>
+  <p id="result"></p>
+  <script>
+    function convert() {
+      var a, b;
+      a = parseFloat(document.getElementById("temp").value);
+      b = (a * 9) / 5 + 32;
+      document.getElementById("result").innerHTML =
+        a + "°C is equal to" + b + "°F";
+    }
+  </script>
+</html>

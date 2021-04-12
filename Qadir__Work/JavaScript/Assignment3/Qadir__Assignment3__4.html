@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./patternGenerator.js"></script>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            
+            input {
+                padding: 5px;
+            }
+
+            input[id='rows'] {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            button { 
+                margin-top: 10px;
+                border: none;
+                padding: 8px;
+                background-color: rgb(5, 84, 255);
+                color: white;
+                font-weight: 700;
+            }
+        </style>
+        <title>Pattern Generator</title>
+    </head>
+    <body>
+        <h1>Pattern Generator in Square or Rectangle</h1>
+        <form>
+            <label for="rows">Enter Rows:</label>
+            <input type="text" id="rows" placeholder="Enter a Total Rows">
+            <br>
+            <label for="cols">Enter Columns:</label>
+            <input type="text" id="cols" placeholder="Enter a Total Columns">
+            <br>
+            <button type="submit" onclick="generatePattern()">Pattern Generator</button>
+        </form>
+        <p id="pattern"></p>
+    </body>
+</html>

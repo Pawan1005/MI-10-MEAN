@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./vowels.js"></script>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            input {
+                padding: 5px;
+                margin-bottom: 15px;
+                outline-color: cornflowerblue;
+            }
+            button {
+                padding: 10px;
+                border: none;
+                background-color: darkorchid;
+                color: white;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+        </style>
+        <title>Vowels</title>
+    </head>
+    <body>
+        <h1>Vowels Checker Program</h1>
+        <form>
+            <label for="character">Character:</label>
+            <input type="text" id="character" placeholder="Enter a Character Like: A">
+            <br>
+            <button type="submit" onclick="vowelChecker()">Vowel Checker</button>
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

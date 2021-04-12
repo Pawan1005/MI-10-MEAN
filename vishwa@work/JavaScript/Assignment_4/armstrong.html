@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armstrong Number</title>
+    <script language="javascript">
+        function armstrong(){
+            var n, temp,rem,add=0;
+            n = parseInt(document.getElementById('num').value);
+            temp = n;
+            while(n>0){
+                rem = n % 10;
+                add = add + rem * rem * rem;
+                n = parseInt(n/10);
+            }
+            if(add == temp){
+                document.getElementById("pid").innerHTML = temp + " is an Armstrong Number"
+            }
+            else{
+                document.getElementById("pid").innerHTML = temp + " is not an Armstrong Number"
+            }
+        }
+    </script>
+     <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>Number 1:</label>
+      <input type="text" id="num"><br><br>
+      <button type="submit" onclick="armstrong()">Armstrong Number</button><br><br>
+      <p id="pid"></p>
+  </body>
+</html>

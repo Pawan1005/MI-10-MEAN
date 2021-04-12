@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marks</title>
+    <script language="javascript">
+        function calc(){
+        var a,b,c,d,e,sum,percentage;
+        a = parseInt(document.getElementById('eng').value)
+        b = parseInt(document.getElementById('hin').value)
+        c = parseInt(document.getElementById('math').value)
+        d = parseInt(document.getElementById('sci').value)
+        e = parseInt(document.getElementById('ss').value)
+        sum = a+b+c+d+e;
+        percentage = sum*100/500;
+        document.getElementById('tp').innerHTML = "<h1>  Percentage:</h1>"
+        document.getElementById('total').innerHTML = "Percentage Obtain =" +percentage + "%" 
+    }
+     function grade(){
+        var a,b,c,d,e,sum,percentage;
+        a = parseInt(document.getElementById('eng').value)
+        b = parseInt(document.getElementById('hin').value)
+        c = parseInt(document.getElementById('math').value)
+        d = parseInt(document.getElementById('sci').value)
+        e = parseInt(document.getElementById('ss').value)
+        sum = a+b+c+d+e;
+        percentage = sum*100/500;
+        if(+percentage <=100){
+            if(+percentage >=75){
+            document.getElementById('grd').innerHTML = "Grade A"
+        }} if(+percentage <=74){
+            if(+percentage >=60){
+            document.getElementById('grd').innerHTML = "Grade B"
+        }}if(+percentage <=59){
+            if(+percentage >=41){
+            document.getElementById('grd').innerHTML = "Grade C"  
+            }}if(+percentage <=40){
+                if(+percentage >=30){
+                    document.getElementById('grd').innerHTML = "Grade D"
+                }}
+            if(+percentage <=29){
+                if(+percentage >=0){
+                    document.getElementById('grd').innerHTML = "Grade F"
+                }}
+    }
+    
+    </script>
+  </head>
+  <body>
+    English : <input type="text" id="eng"><br><br>
+    Hindi : <input type="text" id="hin"><br><br>
+    Mathematics : <input type="text" id="math"><br><br>
+    Science : <input type="text" id="sci"><br><br>
+    Social Science : <input type="text" id="ss"><br><br>
+    <p id="tp"></p>
+    <p id="total"></p>
+    <p id="grd"></p>
+    <button type="button" onclick="calc()">Calculate</button>
+    <button type="button" onclick="grade()">Grade</button>
+  </body>
+</html>

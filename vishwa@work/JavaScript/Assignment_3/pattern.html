@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern</title>
+    <script language="javascript">
+        function pattern(){
+        var r,c,i,j;
+        r = parseInt(document.getElementById('row').value);
+        c = parseInt(document.getElementById('column').value);
+        for(i=1; i<=r; i++){
+        for(j=1; j<=c; j++){
+            document.write('*')
+    }
+    document.write('<br>')
+}
+    }
+    </script>
+  </head>
+  <body>
+      <label>Rows:</label>
+      <input type="text" id="row"><br><br>
+      <label>Column:</label>
+      <input type="text" id="column"><br><br>
+      <button type="submit" onclick="pattern()">Show</button><br><br>
+      <p id="patid"></p>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorail</title>
+    <script language="javascript">
+        function factorial(){
+            var num, fact,i;
+            num = parseInt(document.getElementById('fnum').value);
+            if(num<0){
+                console.log("Error!");
+            }
+            else if(num == 0){
+                document.getElementById('factid').innerHTML = "The factorial of" +num + " 1"
+            }
+            else {
+            let fact = 1;
+            for (i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        document.getElementById('factid').innerHTML = "The factorial of " +num + " is " +fact
+            }
+        }
+    </script>
+    <style>
+         p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>Enter Number:</label>
+      <input type="text"  id="fnum"><br><br>
+      <button type="submit" onclick="factorial()">Factorial</button><br><br>
+      <p id="factid"></p>
+  </body>
+</html>

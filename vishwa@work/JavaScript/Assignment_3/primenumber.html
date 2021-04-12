@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+    <script language="javascript">
+        function prime(){
+            var p, i, isPrime =1;
+            p = parseInt(document.getElementById('pnum').value);
+                for( i = 2; i < p; i++){
+                    if(p % i == 0){
+                        isPrime = 0;
+                        break;
+                    }
+                }
+                if(isPrime ){
+                    document.getElementById('pid').innerHTML= +p + " is a prime number"
+                }
+                else{
+                    document.getElementById('pid').innerHTML= +p + " is not a prime number"
+                }
+            }
+    </script>
+    <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>Number :</label> <input type="text"  id="pnum"><br><br>
+      <button type="submit" onclick="prime()">Find Prime Number</button><br><br>
+      <p id="pid"></p>
+  </body>
+</html>

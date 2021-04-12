@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel</title>
+    <script language="javascript">
+        function vowel(){
+            var text;
+            text = document.getElementById('word').value;
+            switch(text){
+                default: document.getElementById("vid").innerHTML = text + " is a consonant"
+                break;
+                case "A":
+                document.getElementById("vid").innerHTML = text + " is a Vowel.";
+                break;
+                case "E":
+                document.getElementById("vid").innerHTML = text + " is a Vowel.";
+                break;
+                case "I":
+                document.getElementById("vid").innerHTML = text + " is a Vowel.";
+                break;
+                case "":
+                document.getElementById("vid").innerHTML = text + " is a Vowel.";
+                break;
+                case "U":
+                document.getElementById("vid").innerHTML = text + " is a Vowel.";
+                break;
+            }
+        }
+    </script>
+     <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>Word : </label>
+      <input type="text" id="word"><br><br>
+      <button type="submit" onclick="vowel()">Vowel</button><br><br>
+      <p id="vid"></p>
+  </body>
+</html>

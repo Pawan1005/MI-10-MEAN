@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automorphic Number</title>
+    <script language="javascript">
+        function automorphic(){
+            var n,temp;
+            n = parseInt(document.getElementById('num').value);
+            temp = n * n;
+            document.getElementById("autom").innerHTML = "Square of the number is " +temp;
+            if( n % 10 != temp %10){
+                document.getElementById("autom").innerHTML = n + " is not an automorphic number";
+                n = n / 10;
+                temp = temp / 10;
+            }
+            else{
+                document.getElementById("autom").innerHTML = n + " is an automorphic number"
+            }
+        }
+    </script>
+     <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>number : </label>
+      <input type="text" id="num"><br><br>
+      <button type="submit" onclick="automorphic()">Automorphic Number</button><br><br>
+      <p id="autom"></p>
+  </body>
+</html>

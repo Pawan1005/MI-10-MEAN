@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Or Odd</title>
+    <script language="javascript">
+        function evenodd(){
+        var num;
+        num = parseInt(document.getElementById('eodd').value);
+        if(num % 2 == 0){
+            document.getElementById('eod').innerHTML = +num + " is a Even Number"
+        }
+        else{
+            document.getElementById('eod').innerHTML = +num + " is a Odd Number"
+        }
+    }
+    </script>
+     <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label for="text">Nmber:</label>
+      <input type="text" id="eodd"><br><br>
+      <button type="submit" onclick="evenodd()">Find the Number Is Even Or Odd</button><br><br>
+      <p id="eod"></p>
+  </body>
+</html>

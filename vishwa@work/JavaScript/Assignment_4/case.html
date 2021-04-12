@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upper Case and Lower Case</title>
+    <script language="javascript">
+        function lower(){
+            var w,l;
+            w = document.getElementById("word").value;
+            l = w.toLowerCase();
+            document.getElementById("ulcase").innerHTML = l + " Converted into lower case"
+        }
+        function upper(){
+            var w,y;
+            w = document.getElementById("word").value;
+            y = w.toUpperCase();
+            document.getElementById("ulcase").innerHTML = y + " Converted into upper case"
+        }
+    </script>
+     <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: tomato;
+            margin-left: 40px;
+        }
+        button{
+            font-size: 20px;
+            color: red;
+            margin-left: 40px;
+        }
+        label{
+            margin-left: 40px;
+            font-size: 20px
+        }
+    </style>
+  </head>
+  <body>
+      <label>Word : </label>
+      <input type="text" id="word"><br><br>
+      <button type="submit" onclick="upper()">Upper Case</button><br><br>
+      <button type="submit" onclick="lower()">Lower case</button><br><br>
+      <p id="ulcase"></p>
+  </body>
+</html>

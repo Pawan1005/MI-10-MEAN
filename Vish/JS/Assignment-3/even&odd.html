@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function odd_even() {
+        var no;
+        no = Number(document.getElementById("no_input").value);
+        if (no % 2 == 0) {
+            document.getElementById("demo").innerHTML = "<h3>" + no + " Even Number </h3>"
+        } else {
+            document.getElementById("demo").innerHTML = "<h3>" + no + " Odd Number </h3>"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>Check Number Is Even Ya Odd</h1>
+      <hr color="green" />
+      Enter Any Number:- <input id="no_input" />
+      <br>
+      <br>
+      <button onclick="odd_even()">Click me</button>
+      <div id="demo"></div>
+    </center>
+  </body>
+</html>

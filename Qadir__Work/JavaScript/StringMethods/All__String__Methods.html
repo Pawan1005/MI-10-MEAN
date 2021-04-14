@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./stringMethods.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Stirng Methods</title>
+    </head>
+    <body>
+        <h1>All Stirng Methods</h1>
+        <form>
+            <fieldset>
+                <legend>Trim String</legend>
+                <label for="string">Text:</label>
+                <input type="text" id="string" placeholder="Enter a Text">
+                <br>
+                <button type="submit" onclick="trimString()">Trim String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Index Finder From String</legend>
+                <label for="string1">Text: </label>
+                <input type="text" id="string1" placeholder="Enter a Text">
+                <br>
+                <label for="val">Value: </label>
+                <input type="text" id="val" placeholder="Enter a Find Value ">
+                <br>
+                <button type="submit" onclick="indexFinder()">Index String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Last Index Finder From String</legend>
+                <label for="string2">Text: </label>
+                <input type="text" id="string2" placeholder="Enter a Text">
+                <br>
+                <label for="val">Value: </label>
+                <input type="text" id="val" placeholder="Enter a Find Value ">
+                <br>
+                <button type="submit" onclick="lastIndexFinder()">Last Index String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Slice String</legend>
+                <label for="string3">Text: </label>
+                <input type="text" id="string3" placeholder="Enter a Text">
+                <br>
+                <label for="firstIndex">First Index: </label>
+                <input type="text" id="firstIndex" placeholder="Enter a First Index">
+                <br>
+                <label for="lastIndex">Last Index:</label>
+                <input type="text" id="lastIndex" placeholder="Enter a Last Index">
+                <br>
+                <button type="submit" onclick="sliceString()">Slice String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Concat String</legend>
+                <label for="string4">First Text: </label>
+                <input type="text" id="string4" placeholder="Enter a First Text">
+                <br>
+                <label for="stringTwo">Second Text: </label>
+                <input type="text" id="stringTwo" placeholder="Enter a Second Text">
+                <br>
+                <button type="submit" onclick="concatStrings()">Concat String</button>
+            </fieldset>
+            <fieldset>
+                <legend>SubStr String</legend>
+                <label for="string5">Text: </label>
+                <input type="text" id="string5" placeholder="Enter a Text">
+                <br>
+                <label for="startIndex1">Start Index: </label>
+                <input type="text" id="startIndex1" placeholder="Enter a Start Index">
+                <br>
+                <label for="length">Length:</label>
+                <input type="text" id="length" placeholder="Enter a Length">
+                <br>
+                <button type="submit" onclick="substrMethod()">SubStr String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Length String</legend>
+                <label for="string6">Text:</label>
+                <input type="text" id="string6" placeholder="Enter a Text">
+                <br>
+                <button type="submit" onclick="stringLength()">Length String</button>
+            </fieldset>
+            <fieldset>
+                <legend>UpperCase String</legend>
+                <label for="string7">Text:</label>
+                <input type="text" id="string7" placeholder="Enter a Text">
+                <br>
+                <button type="submit" onclick="upperCaseString()">UpperCase String</button>
+            </fieldset>
+            <fieldset>
+                <legend>LowerCase String</legend>
+                <label for="string8">Text:</label>
+                <input type="text" id="string8" placeholder="Enter a Text">
+                <br>
+                <button type="submit" onclick="lowerCaseString()">LowerCase String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Split String</legend>
+                <label for="string9">Text:</label>
+                <input type="text" id="string9" placeholder="Enter a Text">
+                <br>
+                <label for="split">Split Base:</label>
+                <input type="text" id="split" placeholder="Enter a Character Like: ',', !">
+                <br>
+                <button type="submit" onclick="splitString()">Split String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Character Position String</legend>
+                <label for="string10">Text:</label>
+                <input type="text" id="string10" placeholder="Enter a Text">
+                <br>
+                <label for="position">Position: </label>
+                <input type="text" id="position" placeholder="Enter a Position">
+                <br>
+                <button type="submit" onclick="charAtString()">CharAt String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Search String</legend>
+                <label for="string11">Text:</label>
+                <input type="text" id="string11" placeholder="Enter a Text">
+                <br>
+                <label for="word">Search Word: </label>
+                <input type="text" id="word" placeholder="Enter a Word for Searching">
+                <br>
+                <button type="submit" onclick="searchString()">Search String</button>
+            </fieldset>
+            <fieldset>
+                <legend>Replace Word in String</legend>
+                <label for="string12">Text:</label>
+                <input type="text" id="string12" placeholder="Enter a Text">
+                <br>
+                <label for="newWord">New Word: </label>
+                <input type="text" id="newWord" placeholder="Enter a New Word">
+                <br>
+                <label for="replaceWord">Search Word: </label>
+                <input type="text" id="replaceWord" placeholder="Enter a Replace Word ">
+                <br>
+                <button type="submit" onclick="replaceString()">Replace String Method</button>
+            </fieldset>
+
+        </form>
+        <p id="text"></p>
+        <p id="result"></p>
+    </body>
+</html>

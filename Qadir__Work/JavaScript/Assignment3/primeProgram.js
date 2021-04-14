@@ -18,7 +18,7 @@ function checkPrime() {
         isPrime = false
     }
 
-    if (isPrime) {3
+    if (isPrime) {
         prime.innerHTML = `${number} is a Prime Number`;
     }
     

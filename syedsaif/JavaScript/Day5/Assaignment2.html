@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Fibonacci Series</h1>
+        <label for="digit">Enter the number:</label>
+        <input id="digit" type="number">
+        <button onclick="Fun()">Click</button>
+        <p id="number"></p>
+    </div>
+    <script>
+        function Fun() {
+            event.preventDefault();
+            var sum=0,c=[],n1=0,n2=1;
+            var a=parseInt(document.getElementById("digit").value);
+            for(var i=1;i<=a;i++){
+               c+=n1;
+               sum=n1+n2;
+               n1=n2;
+               n2=sum;
+            }
+            document.getElementById("number").innerHTML=c;
+        }
+    </script>
+</body>
+</html>

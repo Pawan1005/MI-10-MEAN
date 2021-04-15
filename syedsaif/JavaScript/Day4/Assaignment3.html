@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishnamurthy Number</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Krishnamurthy Number</h1>
+        <label for="krish">Enter the number:</label>
+        <input id="krish" type="number">
+        <button onclick="Fun()">Click</button>
+        <p id="number"></p>
+    </div>
+    <script>
+        function Fun() {
+            event.preventDefault();
+            var p=0;
+            var a=document.getElementById("krish").value;
+            for(var i=0;i<10;i++){
+                var r=1,c=0;
+                for(var j=0;j<10;j++){
+                    if(a[i]==j){
+                       for(var k=1;k<=j;k++){
+                           c++
+                           r=r*c;
+                       }
+                       p+=r;
+                    }
+                    if(p==parseInt(a)){
+                        document.getElementById("number").innerHTML=p+ " is Krishnamurthy's number";
+                    }
+                    else{
+                        document.getElementById("number").innerHTML=p+ " is not Krishnamurthy's number";
+                    }
+                } 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime</title>
 </head>
+
 <body>
-   
-    
-       
-            
-              
-            <h4>check number is prime or not</h4>
-              
-        
-              
-            <form name="myform">
-                Enter the number:
-                <input type="text" name=n value="">
-                  
-                <br><br>
-                  
-                <input type="button" value="Check" onClick="p()">
-                <br>
-            </form>
-        <p id="demo"></p>
-        <script>
+    <h4>check number is prime or not</h4>
+    <form name="myform">
+        Enter the number:
+        <input type="text" name=n value="">
+        <br><br>
+        <input type="button" value="Check" onClick="p()">
+        <br>
+    </form>
+    <p id="demo"></p>
+    <script>
         function p() {
-              
             var n, i, flag = true;
-              
             // Getting the value form text
             // field using DOM
             n = document.myform.n.value;
             n = parseInt(n)
-            for(i = 2; i <= n - 1; i++)
+            for (i = 2; i <= n - 1; i++)
                 if (n % i == 0) {
                     flag = false;
                     break;
                 }
-                  
-                // Check and display alert message
+            // Check and display alert message
             if (flag == true)
-                document.getElementById("demo").innerText= `prime`
+                document.getElementById("demo").innerText = `prime`
             else
-            document.getElementById("demo").innerText= ` Not prime`        }
+                document.getElementById("demo").innerText = ` Not prime`
+        }
     </script>
-    </html>
+
+</html>
 </body>
+
 </html>

@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    
-</head>
-<body>
-    <form >
-       Subj1:
-        <input type="text" id="val1"><br><br>
-        Subj2:
-        <input type="text" id="val2"><br><br>
-        Subj3:
-        <input type="text" id="val3"><br><br>
-        Subj4:
-        <input type="text" id="val4"><br><br>
-       Subj5:
-        <input type="text" id="val5"><br><br>
-        <button onclick="calculate()"type="button" class=" ml-4 btn btn-primary center" id="cal">Calculate</button>
-        <button onclick="grade()" type="button" class=" ml-4 btn btn-primary center">Grade</button>
- </form>
- <p id="demo"></p>
- <p id="demo1"></p>
- <script>
-    var c;
-  function calculate(){
-    
-    var x,y,z,a,b;
-    x=parseInt(document.getElementById("val1").value);
-    y=parseInt(document.getElementById("val2").value);
-    z=parseInt(document.getElementById("val3").value);
-    a=parseInt(document.getElementById("val4").value);
-    b=parseInt(document.getElementById("val5").value);
-    c=((x+y+z+a+b)/500)*100;
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form>
+      Subj1:
+      <input type="text" id="val1" /><br /><br />
+      Subj2:
+      <input type="text" id="val2" /><br /><br />
+      Subj3:
+      <input type="text" id="val3" /><br /><br />
+      Subj4:
+      <input type="text" id="val4" /><br /><br />
+      Subj5:
+      <input type="text" id="val5" /><br /><br />
+      <button
+        onclick="calculate()"
+        type="button"
+        class="ml-4 btn btn-primary center"
+        id="cal"
+      >
+        Calculate
+      </button>
+      <button
+        onclick="grade()"
+        type="button"
+        class="ml-4 btn btn-primary center"
+      >
+        Grade
+      </button>
+    </form>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      var c;
+      function calculate() {
+        var x, y, z, a, b;
+        x = parseInt(document.getElementById("val1").value);
+        y = parseInt(document.getElementById("val2").value);
+        z = parseInt(document.getElementById("val3").value);
+        a = parseInt(document.getElementById("val4").value);
+        b = parseInt(document.getElementById("val5").value);
+        c = ((x + y + z + a + b) / 500) * 100;
 
-    document.getElementById("demo").innerText= `Percentage ${c}`
-  }
-  function grade(){
-      if (c>=75 && c<=100){
-        document.getElementById("demo1").innerText= "GradeA"
+        document.getElementById("demo").innerText = `Percentage ${c}`;
       }
-      else if (c>=60 && c<=74){
-        document.getElementById("demo1").innerText="GradeB"
+      function grade() {
+        if (c >= 75 && c <= 100) {
+          document.getElementById("demo1").innerText = "GradeA";
+        } else if (c >= 60 && c <= 74) {
+          document.getElementById("demo1").innerText = "GradeB";
+        } else if (c >= 40 && c <= 59) {
+          document.getElementById("demo1").innerText = "Grade C";
+        } else if (c >= 30 && c <= 40) {
+          document.getElementById("demo1").innerText = "Grade D";
+        } else if (c <= 30) {
+          document.getElementById("demo1").innerText = "Fail";
+        }
       }
-      else if (c>=40 && c<=59){
-        document.getElementById("demo1").innerText="Grade C"
-      }
-      else if (c>=30 && c<=40){
-        document.getElementById("demo1").innerText= "Grade D"
-      }
-      else if (c<=30){
-        document.getElementById("demo1").innerText="Fail"
-      }
-
-  }
-      
-
-
-</script>
-</body>
+    </script>
+  </body>
 </html>

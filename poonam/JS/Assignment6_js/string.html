@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function trim(){
+                var str = document.getElementById("val").value;
+                var output = str.trim();
+                output = document.getElementById("res").innerHTML= "Output = "+output;
+            }
+
+            function strlength(){
+                var str1 = document.getElementById("val1").value;
+                var output1 = str1.length;
+                output1 = document.getElementById("res1").innerHTML= "Output = "+output1;
+            }
+
+            function index(){
+                var str2 = document.getElementById("val2").value;
+                var ind1 = document.getElementById("ind1").value;
+                var output2 = str2.indexOf(ind1);
+                output2 = document.getElementById("res2").innerHTML= "Output = "+output2;
+            }
+
+            function lastindex(){
+                var str3 = document.getElementById("val3").value;
+                var ind2 = document.getElementById("ind2").value;
+                var output3 = str3.lastIndexOf(ind2);
+                output3 = document.getElementById("res3").innerHTML= "Output = "+output3;
+            }
+
+            function concatstr(){
+                var cstr1 = document.getElementById("val4").value;
+                var cstr2 = document.getElementById("val5").value;
+                var output4 = cstr1.concat(cstr2);
+                output4 = document.getElementById("res4").innerHTML= "Output = "+output4;
+            }
+            function slicestr(){
+                var str5 = document.getElementById("val6").value;
+                var ind1 = document.getElementById("find").value;
+                var ind2 = document.getElementById("lind").value;
+                var output5 = str5.slice(ind1, ind2);
+                output5 = document.getElementById("res5").innerHTML= "Output = "+output5;
+            }
+            function lower_case(){
+                var str6 = document.getElementById("val7").value;
+                var output6 = str6.toLowerCase();
+                output6 = document.getElementById("res6").innerHTML= "Output = "+output6;
+            }
+            function upper_case(){
+                var str7 = document.getElementById("val8").value;
+                var output7 = str7.toUpperCase();
+                output7 = document.getElementById("res7").innerHTML= "Output = "+output7;
+            }
+            function search_str(){
+                var str8 = document.getElementById("val9").value;
+                var word = document.getElementById("word").value;
+                var output8 = str8.search(word);
+                output8 = document.getElementById("res8").innerHTML= "Output = "+output8;
+            }
+            function replace_str(){
+                var str9 = document.getElementById("val10").value;
+                var nword = document.getElementById("nword").value;
+                var rword = document.getElementById("rword").value;
+                var output9 = str9.replace(nword, rword);
+                output9 = document.getElementById("res9").innerHTML= "Output = "+output9;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <h3>Trim string</h3>
+            <label for="val">Enter text:</label>
+            <input type="text" name="val" id="val"><br>
+            <button type="button" onclick="trim()">Submit</button>
+            <h4 id="res"></h4>
+
+            <h3>String length</h3>
+            <label for="val1">Enter text:</label>
+            <input type="text" name="val1" id="val1"><br>
+            <button type="button" onclick="strlength()">Submit</button>
+            <h4 id="res1"></h4>
+
+            <h3>Index</h3>
+            <label for="val2">Enter text:</label>
+            <input type="text" name="val2" id="val2"><br><br>
+            <label for="ind1">Find index of:</label>
+            <input type="text" id="ind1"><br>
+            <button type="button" onclick="index()">Submit</button>
+            <h4 id="res2"></h4>
+
+            <h3>Last index</h3>
+            <label for="val3">Enter text:</label>
+            <input type="text" name="val3" id="val3"><br><br>
+            <label for="ind2">Find index of:</label>
+            <input type="text" id="ind2"><br>
+            <button type="button" onclick="lastindex()">Submit</button>
+            <h4 id="res3"></h4>
+
+            <h3>Concat</h3>
+            <label for="val4">Enter text:</label>
+            <input type="text" name="val4" id="val4"><br><br>
+            <label for="val5">First index:</label>
+            <input type="text" name="val5" id="val5"><br>
+            <button type="button" onclick="concatstr()">Submit</button>
+            <h4 id="res4"></h4>
+
+            <h3>Slice</h3>
+            <label for="val6">Enter text:</label>
+            <input type="text" name="val6" id="val6"><br><br>
+            <label for="find">First index:</label>
+            <input type="number" id="find"><br><br>
+            <label for="lind">Last index:</label>
+            <input type="number" id="lind"><br>
+            <button type="button" onclick="slicestr()">Submit</button>
+            <h4 id="res5"></h4>
+
+            <h3>Lower case</h3>
+            <label for="val7">Enter text:</label>
+            <input type="text" name="" id="val7"><br>
+            <button type="button" onclick="lower_case()">Submit</button>
+            <h4 id="res6"></h4>
+
+            <h3>Upper case</h3>
+            <label for="val8">Enter text:</label>
+            <input type="text" name="" id="val8"><br>
+            <button type="button" onclick="upper_case()">Submit</button>
+            <h4 id="res7"></h4>
+
+            <h3>Search string</h3>
+            <label for="val9">Enter text:</label>
+            <input type="text" name="val9" id="val9"><br><br>
+            <label for="word">Enter word:</label>
+            <input type="text" name="word" id="word"><br>
+            <button type="button" onclick="search_str()">Submit</button>
+            <h4 id="res8"></h4>
+
+            <h3>Replace</h3>
+            <label for="val10">Enter text:</label>
+            <input type="text" name="val10" id="val10"><br><br>
+            <label for="nword">Enter word:</label>
+            <input type="text" name="nword" id="nword"><br><br>
+            <label for="rword">Enter replace word:</label>
+            <input type="text" name="rword" id="rword"><br>
+            <button type="button" onclick="replace_str()">Submit</button>
+            <h4 id="res9"></h4>
+        </form>
+    </body>
+</html>

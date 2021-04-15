@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Automorphic number</title>
+        <script>
+            function automarphic(){
+                let num, sq;
+                num = parseInt(document.getElementById("val").value);
+                sq= num*num;
+                if(num>0){
+                    if(num%10 != sq%10){
+                        document.getElementById("arm").innerHTML = num + " is not an Automorphic Number.";
+                    }
+                    else{
+                        document.getElementById("arm").innerHTML = num + " is an Automorphic Number.";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Automorphic Number</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter Number</label>
+            <input type="text" id="val">
+            <button type="button" onclick="automarphic()">Check</button>
+            <h4 id="arm"></h4>
+        </form>
+    </body>
+</html>

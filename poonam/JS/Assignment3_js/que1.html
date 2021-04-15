@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leap Year</title>
+        <script>
+            function leap(){
+            var year;
+            year = parseInt(document.getElementById("val").value);
+            if(year%4 == 0){
+                if(year%100 == 0){
+                    if(year%400 == 0){
+                        document.getElementById("ly").innerHTML = year + " is a leap year."
+                    }
+                    else{
+                        document.getElementById("ly").innerHTML = year + " is not a leap year."
+                    }
+                }
+                else{
+                    document.getElementById("ly").innerHTML = year + " is a leap year."
+                }
+            }
+            else{
+                document.getElementById("ly").innerHTML = year + " is not a leap year."
+                }
+            
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Leap Year</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter Year</label>
+            <input type="number" id="val">
+            <button type="button" onclick="leap()">Check</button>
+            <h4 id="ly"></h4>
+        </form>
+    </body>
+</html>

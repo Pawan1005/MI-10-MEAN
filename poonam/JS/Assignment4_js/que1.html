@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Armstrong Number</title>
+        <script>
+            function armstrong(){
+                var num, reminder, temp;
+                num = parseInt(document.getElementById("val").value);
+                let sum=0;
+                temp = num;
+                while(num>0){
+                    remainder = num % 10;
+                    sum = sum + remainder*remainder*remainder;
+                    num = parseInt(num/10);
+                }
+                if (sum == temp){
+                    document.getElementById("arm").innerHTML = temp + " is an Armstrong Number.";
+                }
+                else{
+                    document.getElementById("arm").innerHTML = temp + " is not an Armstrong Number.";
+                }
+                }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Armstrong Number</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter Number</label>
+            <input type="text" id="val">
+            <button type="button" onclick="armstrong()">Check</button>
+            <h4 id="arm"></h4>
+        </form>
+    </body>
+</html>

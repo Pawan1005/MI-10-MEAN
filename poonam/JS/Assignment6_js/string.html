@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //trim
+            function trim(){
+                var string_one = document.getElementById("val_one").value;
+                var output_one = string_one.trim();
+                output_one = document.getElementById("res_one").innerHTML= "Output = "+output_one;
+            }
+            //length
+            function strlength(){
+                var string_two = document.getElementById("val_two").value;
+                var output_two = string_two.length;
+                output_two = document.getElementById("res_two").innerHTML= "Output = "+output_two;
+            }
+            //index
+            function index(){
+                var string_three = document.getElementById("val_three").value;
+                var index_one = document.getElementById("inputindex").value;
+                var output_three = string_three.indexOf(index_one);
+                output_three = document.getElementById("res_three").innerHTML= "Output = "+output_three;
+            }
+            //last index
+            function lastindex(){
+                var string_four = document.getElementById("val_four").value;
+                var index_two = document.getElementById("input_index").value;
+                var output_four = string_four.lastIndexOf(index_one);
+                output_four = document.getElementById("res_four").innerHTML= "Output = "+output_four;
+            }
+            //concat
+            function concatstr(){
+                var string_five = document.getElementById("val_five").value;
+                var string_addfive = document.getElementById("val_addfive").value;
+                var output_five = string_five.concat(string_addfive);
+                output_five = document.getElementById("res_five").innerHTML= "Output = "+output_five;
+            }
+            //slice
+            function slicestr(){
+                var string_six = document.getElementById("val_six").value;
+                var ind_one = document.getElementById("f_index").value;
+                var ind_two = document.getElementById("l_index").value;
+                var output_six = string_six.slice(ind_one, ind_two);
+                output_six = document.getElementById("res_six").innerHTML= "Output = "+output_six;
+            }
+            //lower case
+            function lower_case(){
+                var string_seven = document.getElementById("val_seven").value;
+                var output_seven = string_seven.toLowerCase();
+                output_seven = document.getElementById("res_seven").innerHTML= "Output = "+output_seven;
+            }
+            //upper case
+            function upper_case(){
+                var string_eight = document.getElementById("val_eight").value;
+                var output_eight = string_eight.toUpperCase();
+                output_eight = document.getElementById("res_eight").innerHTML= "Output = "+output_eight;
+            }
+            //search
+            function search_str(){
+                var string_nine = document.getElementById("val_nine").value;
+                var word = document.getElementById("inputword").value;
+                var output_nine = string_nine.search(word);
+                output_nine = document.getElementById("res_nine").innerHTML= "Output = "+output_nine;
+            }
+            //replace
+            function replace_str(){
+                var string_ten = document.getElementById("val_ten").value;
+                var n_word = document.getElementById("nword").value;
+                var r_word = document.getElementById("rword").value;
+                var output_ten = string_ten.replace(n_word, r_word);
+                output_ten = document.getElementById("res_ten").innerHTML= "Output = "+output_ten;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="#">
+            <!--trim-->
+            <h3>Trim string</h3>
+            <label for="val_one">Enter text:</label>
+            <input type="text" id="val_one"><br>
+            <button type="button" onclick="trim()">Submit</button>
+            <h4 id="res_one"></h4>
+            <!--length-->
+            <h3>String length</h3>
+            <label for="val_two">Enter text:</label>
+            <input type="text" id="val_two"><br>
+            <button type="button" onclick="strlength()">Submit</button>
+            <h4 id="res_two"></h4>
+            <!--index-->
+            <h3>Index</h3>
+            <label for="val_three">Enter text:</label>
+            <input type="text" id="val_three"><br><br>
+            <label for="inputindex">Find index of:</label>
+            <input type="text" id="inputindex"><br>
+            <button type="button" onclick="index()">Submit</button>
+            <h4 id="res_three"></h4>
+            <!--last index-->
+            <h3>Last index</h3>
+            <label for="val_four">Enter text:</label>
+            <input type="text" id="val_four"><br><br>
+            <label for="input_index">Find last index of:</label>
+            <input type="text" id="input_index"><br>
+            <button type="button" onclick="lastindex()">Submit</button>
+            <h4 id="res_four"></h4>
+            <!--concat-->
+            <h3>Concat</h3>
+            <label for="val_five">Enter first text:</label>
+            <input type="text" id="val_five"><br><br>
+            <label for="val_addfive">Enter second text:</label>
+            <input type="text" id="val_addfive"><br>
+            <button type="button" onclick="concatstr()">Submit</button>
+            <h4 id="res_five"></h4>
+            <!--slice-->
+            <h3>Slice</h3>
+            <label for="val_six">Enter text:</label>
+            <input type="text" id="val_six"><br><br>
+            <label for="f_index">First index:</label>
+            <input type="number" id="f_index"><br><br>
+            <label for="l_index">Last index:</label>
+            <input type="number" id="l_index"><br>
+            <button type="button" onclick="slicestr()">Submit</button>
+            <h4 id="res_six"></h4>
+            <!--lowercase-->
+            <h3>Lower case</h3>
+            <label for="val_seven">Enter text:</label>
+            <input type="text" id="val_seven"><br>
+            <button type="button" onclick="lower_case()">Submit</button>
+            <h4 id="res_seven"></h4>
+            <!--uppercase-->
+            <h3>Upper case</h3>
+            <label for="val_eight">Enter text:</label>
+            <input type="text" id="val_eight"><br>
+            <button type="button" onclick="upper_case()">Submit</button>
+            <h4 id="res_eight"></h4>
+            <!--search-->
+            <h3>Search string</h3>
+            <label for="val_nine">Enter text:</label>
+            <input type="text" id="val_nine"><br><br>
+            <label for="inputword">Search word:</label>
+            <input type="text" id="inputword"><br>
+            <button type="button" onclick="search_str()">Submit</button>
+            <h4 id="res_nine"></h4>
+            <!--replace-->
+            <h3>Replace</h3>
+            <label for="val_ten">Enter text:</label>
+            <input type="text" id="val_ten"><br><br>
+            <label for="nword">Search word:</label>
+            <input type="text" id="nword"><br><br>
+            <label for="rword">Enter replace word:</label>
+            <input type="text" id="rword"><br>
+            <button type="button" onclick="replace_str()">Submit</button>
+            <h4 id="res_ten"></h4>
+        </form>
+    </body>
+</html>

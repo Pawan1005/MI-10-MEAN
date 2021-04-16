@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que5</title>
+        <script>
+            var input=[];
+            function inputnum(){
+                let num = true;
+                while(num) {
+                    let n = prompt('Enter a Number:');
+                    if (n != 'x') {
+                        input.push(parseInt(n));
+                    }
+                else {
+                    num = false;
+                }
+                } 
+            }
+            function display(){
+                var newarray = [];
+                var l=input.length
+                for (let i = 0; i < l; i++) {
+                    let p = factorial(input[i]);
+                    newarray.push(p);
+                }
+                function factorial(n) {
+                    let p = n;
+                    for (let i = 1; i < n; i++){ 
+                        p = p * i;
+                    }
+                    return p;
+                }
+                document.writeln("Factorials in desending order are: "+newarray.reverse());
+            }
+        </script>
+    </head>
+    <body>
+        <h1>List of factorials in desending order</h1>
+        <h4>Click here to input numbers:</h4>
+        <button onclick="inputnum()">input</button>
+        <h4>Click here to display the result:</h4>
+        <button onclick="display()">result</button>
+    </body>
+</html>

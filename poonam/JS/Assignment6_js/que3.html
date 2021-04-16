@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>que3</title>
+      <script>
+        var input=[];
+        function input_num(){
+          let num = true;
+          while(num) {
+            let n = prompt('Enter a Number:');
+            if (n != 'x') {
+              input.push(parseInt(n));
+            }
+            else {
+              num = false;
+            }
+          } 
+          document.getElementById("a").innerHTML="List of numbers: "+input.join("+");
+        }
+        function addition(){
+          var sum = input.reduce(myFunction);
+          document.getElementById("demo").innerHTML = "The sum is " + sum;
+          function myFunction(total, value, index, array) {
+            return total + value;
+          } 
+        }  
+      </script>
+  </head>
+  <body>
+      <h1>Addition of numbers in array</h1>
+      <button onclick="input_num()">Input numbers</button>
+      <p id="a"></p>
+      <button onclick="addition()">Addition</button>
+      <p id="demo"></p>
+  </body>
+</html>

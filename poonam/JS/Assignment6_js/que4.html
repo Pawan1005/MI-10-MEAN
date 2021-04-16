@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>que4</title>
+    <script>
+      var input=[];
+      function inputnum(){
+        let num = true;
+        while(num) {
+          let n = prompt('Enter a Number:');
+          if (n != 'x') {
+            input.push(parseInt(n));
+          }
+          else {
+            num = false;
+          }
+        } 
+      }
+      function display(){
+        var n = input.length;
+        function factorial(n){
+          let f = 1;
+          for(let i = 1; i <= n; i++){   
+            f *= i;
+          }
+          return f;
+        }
+        function sumFactorial(input, n){
+          let s = 0;
+          for (let i = 0; i < n; i++){
+            s += factorial(input[i]);
+          }
+          return s;
+        }
+        document.getElementById("res").innerHTML= "The sum of factorial is "+sumFactorial(input, n);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sum of factorials of all numbers added in array</h1>
+    <h4>Click here to input numbers:</h4>
+    <button onclick="inputnum()">input</button>
+    <h4>Click here to display the result:</h4>
+    <button onclick="display()">result</button>
+    <p id="res"></p>
+  </body>
+</html>

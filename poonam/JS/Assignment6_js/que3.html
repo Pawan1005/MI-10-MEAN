@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p id="a"></p>
+    
+    <button onclick="addition()">calc</button>
+    <p id="demo"></p>
+    
+    <script>
+        var input=[];
+        var size = 5;
+        for(var i=0; i<=size; i++){
+            input[i]=prompt("Enter numbers:");
+        }
+        document.getElementById("a").innerHTML="List of names: "+input.join("+");
+         
+  
+  function addition(){
+    
+var sum = input.reduce(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+  }
+        
+      </script>
+</body>
+</html>

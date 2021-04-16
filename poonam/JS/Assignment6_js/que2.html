@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var i=0;
+            var na=Array();
+            function add(){
+                document.getElementById("b").innerHTML="Name list by using join ~ is : ";
+                na[i]=document.getElementById("a").value;
+                i++;
+                document.getElementById("a").value="";
+                document.getElementById("b").innerHTML+=na.join("~");
+            }
+            function asc_sort(){
+                na.sort();
+                document.getElementById("asc").innerHTML="Names (Asc) : "+na;
+            }
+            function dec_sort(){
+                na.reverse();
+                document.getElementById("dec").innerHTML="Names (Dec) : "+na;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Name list using array join and sorting</h1>
+        Enter Names : <input type="text" id="a">
+        <button onclick="add()">display</button>
+        <p id="b"></p>
+        <h4>Array sort in ascending order:</h4>
+        <button onclick="asc_sort()">Ascending sort</button>
+        <p id="asc"></p>
+        <h4>Array sort in desending order:</h4>
+        <button onclick="dec_sort()">Desending sort</button>
+        <p id="dec"></p>
+    </body>
+</html>

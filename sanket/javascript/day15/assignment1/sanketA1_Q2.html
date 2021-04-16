@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>convert Fahrenite to Celcius</title>
     <script>
-      function btn() {
+      function FahreniteToCelcius() {
         let temp = parseInt(document.getElementById("t").value);
         let f = (temp * 9) / 5 + 32;
         document.getElementById(
@@ -18,7 +18,7 @@
   <body>
     <h1>Conversion of Celcius to Fahrenite.</h1>
     Temp: <input type="text" id="t" /><sup>0</sup>C
-    <button onclick="btn()">convert</button>
+    <button onclick="FahreniteToCelcius()">convert</button>
     <p id="p"></p>
   </body>
 </html>

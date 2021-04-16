@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      function btn1() {
+      function swapNumbersWithTempVariable() {
         let a = parseInt(document.getElementById("num1").value);
         let b = parseInt(document.getElementById("num2").value);
         let t = a;
@@ -16,7 +16,7 @@
           "m1"
         ).innerHTML = `<h3>m1:with temp variable</h3> after swapping A:${a} B:${b}`;
       }
-      function btn2() {
+      function swapNumbersWithoutTempVariable() {
         let a = parseInt(document.getElementById("num1").value);
         let b = parseInt(document.getElementById("num2").value);
         b = a + b - (a = b);
@@ -29,8 +29,8 @@
   <body>
     <h1>swap two numbers</h1>
     A: <input type="text" id="num1" /> B: <input type="text" id="num2" />
-    <button onclick="btn1()">method1</button>
-    <button onclick="btn2()">method2</button>
+    <button onclick="swapNumbersWithTempVariable()">method1</button>
+    <button onclick="swapNumbersWithoutTempVariable()">method2</button>
     <p id="m1"></p>
     <p id="m2"></p>
   </body>

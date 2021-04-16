@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const no = [];
+      while ("how are you today?") {
+        let n = prompt("Enter the number");
+        if (n == "X" || n == null || n == "x") {
+          break;
+        }
+        no.unshift(parseInt(n));
+      }
+      const fa = [];
+      for (let i = 0; i < no.length; i++) {
+        let f = fact(no[i]);
+        fa.unshift(f);
+      }
+      function fact(n) {
+        let f = n;
+        for (let i = 1; i < n; i++) f = f * i;
+        return f;
+      }
+      document.write(`fact in desc :${fa}`);
+    </script>
+  </body>
+</html>

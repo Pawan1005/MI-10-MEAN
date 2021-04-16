@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const no = [];
+      while ("hi") {
+        let n = prompt("Please enter the name");
+        if (n == "X" || n == null || n == "x") {
+          break;
+        }
+        no.unshift(n.toUpperCase());
+      }
+      document.write(`Seperated list  : ${no.join("~")}`);
+      document.write(`<br>Name in (asc): ${no.sort()}`);
+      document.write(`<br>Name in (desc): ${no.reverse()}`);
+    </script>
+  </body>
+</html>

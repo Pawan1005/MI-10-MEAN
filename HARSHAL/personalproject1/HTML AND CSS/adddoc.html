@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+    <style>
+         .nav-link {
+        background: #2ace6c;
+        color: white;
+        margin-right: 10px;
+        border-radius: 50px;
+      }
+      .navbar{
+              background-color: white;
+            }
+      * {
+        box-sizing: border-box;
+      }
+      /* -------------------- */
+      body {
+         background: url(Images/rbg.jpg) fixed;
+        background-size: cover;
+        color: white;  
+    }
+
+
+    *[role="form"] {
+        max-width: 530px;
+        padding: 15px;
+        margin: 0 auto;
+        border-radius: 0.3em;
+        background-color: #229952;
+      }
+
+      *[role="form"] h2 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 28px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #0a339d;
+      }
+      .btn {
+        width: 100%;
+      }
+      .form-group {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      label {
+        margin-top: 7px;
+      }
+      .photo {
+      width: 7%;
+      height: 7vh;
+      margin-right: 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm">
+      <!-- Brand/logo -->
+      <img class="photo" src="Images/logo.jpg" alt="" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="dashboard.html">DASHBOARD</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutusadmin.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactusadmin.html">CONTACT US</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="dashboard.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   MORE
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="adminprofile.html">ADMIN PROFILE</a></li>
+                    <li><a class="dropdown-item" href="adminregis.html">ADMIN REGISTRATION</a></li>
+                    <li><a class="dropdown-item" href="doctors.html">DOCTORS LIST</a></li>
+                    <li><a class="dropdown-item" href="adddoc.html">ADD NEW DOCTOR</a></li>
+                    <li><a class="dropdown-item" href="patientreport.html">PATIENT REPORTS</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <div class="container">
+      <form class="form-horizontal" role="form">
+        <h2>Registration</h2>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label"
+            >First Name</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              class="form-control"
+              autofocus
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Last Name"
+              class="form-control"
+              autofocus
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Specialist of" class="col-sm-3 control-label">Specialist of</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              id="Specialist of"
+              placeholder="Specialist of"
+              class="form-control"
+              autofocus
+            />
+          </div>
+        </div>
+     
+
+        <div class="form-group">
+          <label for="email" class="col-sm-3 control-label">Email* </label>
+          <div class="col-sm-9">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+              name="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate" class="col-sm-3 control-label"
+            >Date of Birth*</label
+          >
+          <div class="col-sm-9">
+            <input type="date" id="birthDate" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" class="col-sm-3 control-label"
+            >Phone number
+          </label>
+          <div class="col-sm-9">
+            <input
+              type="phoneNumber"
+              id="phoneNumber"
+              placeholder="Phone number"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Height" class="col-sm-3 control-label">Height* </label>
+          <div class="col-sm-9">
+            <input
+              type="number"
+              id="height"
+              placeholder="Please write your height in centimetres"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="weight" class="col-sm-3 control-label">Weight* </label>
+          <div class="col-sm-9">
+            <input
+              type="number"
+              id="weight"
+              placeholder="Please write your weight in kilograms"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3">Gender</label>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-4">
+                <label class="radio-inline">
+                  <input type="radio" id="femaleRadio" value="Female" />Female
+                </label>
+              </div>
+              <div class="col-sm-4">
+                <label class="radio-inline">
+                  <input type="radio" id="maleRadio" value="Male" />Male
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="img" class="col-sm-3 control-label">Upload Photo</label>
+            <div class="col-sm-9">
+              <input type="file" id="img" name="img" accept="image/*" />
+            </div>
+          </div>
+
+        <!-- /.form-group -->
+        <div class="form-group">
+          <div class="col-sm-9 col-sm-offset-3">
+            <span class="help-block">*Required fields</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <!-- /form -->
+    </div>
+    <!-- ./container -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

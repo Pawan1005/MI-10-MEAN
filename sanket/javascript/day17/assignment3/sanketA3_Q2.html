@@ -12,9 +12,9 @@
 
     <script>
       function cal() {
-        let n = parseInt(document.getElementById("no1").value);
-        for (let i = 2; i < n; i++) {
-          if (n % i == 0) return document.write("not prime");
+        let number = parseInt(document.getElementById("no1").value);
+        for (let i = 2; i < number; i++) {
+          if (number % i == 0) return document.write("not prime");
         }
         document.write("prime");
       }

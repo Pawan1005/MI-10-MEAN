@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p></p>
+    <h4>Enter 5 names here</h4>
+    Name1: <input type="text" id="name1" placeholder="Enter first name ">
+    <button onclick="MyArray()">Enter</button>
+    <p id="result">
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+    </p>
+    <br>
+    <br>
+    <script language="javascript">
+
+        function MyArray(){
+            var b,a,result;
+            //for input names
+              a=document.getElementById("name1").value;
+              document.write( " <b> The input names are :<b> " + a +"<br>") ;
+              document.write("<br>")
+              document.write("<br>")
+              
+              // for array converstion
+              b= a.split(" ");
+              document.write( "<b> Names are stored in array :<b>" + b) ;
+              document.write("<br>")
+              document.write("<br>")
+
+              //for list output
+              document.write("Input names with comma separated list")
+              document.write("<br>")
+
+              for (var i=0 ; i<=b.length-1; i++ ){
+                  document.write( b[i] + ","+ "<br>") ;
+                 
+              }
+              document.write("<br>")
+              document.write("<br>")
+
+              //for name1 name2 
+              for (var i=0 ; i<=b.length-1; i++ ){
+                  document.write( " name" + i + ":" + b[i] + "<br>");
+                  document.write("<br>") ;     
+              }
+            }
+
+
+         
+    </script>
+</body>
+</html>

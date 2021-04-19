@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assaignment5</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body onload="Fun(10)">
+        <div class="center">
+            <h1>sum of factors</h1>
+        </div>
+        <script>
+            var a,sum=0;
+            var b=[];
+            function Fun(a){
+                document.write("The given number is "+a+"<br>");
+                for(var i=0;i<=a;i++){
+                    if(a%i==0){
+                       b.push(i);
+                    }
+                }
+                for(var j=0;j<b.length;j++){
+                    sum=sum+parseInt(b[j]);
+                }
+                document.write("sum of the factors:"+sum);
+            }
+        </script>
+    </body>
+</html>

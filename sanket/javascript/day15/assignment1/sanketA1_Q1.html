@@ -14,7 +14,7 @@
         b = t;
         document.getElementById(
           "m1"
-        ).innerHTML = `<h3>m1:with temp variable</h3> after swapping A:${a} B:${b}`;
+        ).innerHTML = `<h3>m1: with temp variable</h3> after swapping A: ${a} B: ${b};`;
       }
       function swapNumbersWithoutTempVariable() {
         let a = parseInt(document.getElementById("num1").value);
@@ -22,7 +22,7 @@
         b = a + b - (a = b);
         document.getElementById(
           "m2"
-        ).innerHTML = `<h3>m2:without temporary variable</h3> after swapping A:${a} B:${b}`;
+        ).innerHTML = `<h3>m2: without temporary variable</h3> after swapping A: ${a} B: ${b}`;
       }
     </script>
   </head>

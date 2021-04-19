@@ -7,21 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
-    Enter Number :- <input type="text" id="val"> <br><br>
+    Enter Number :- 
+    <input type="text" id="val"> <br><br>
     <button onclick="KrishnamurthyNumber()">KrishnamurthyNumber</button>
     <br><br>
     <div id="demo"></div>
-    <script>function KrishnamurthyNumber() {
-        var num,i,p,r,sum=0,save_num;
+    <script>
+    function KrishnamurthyNumber() {
+        var num, i ,p ,r ,sum=0, save_num;
         num = parseInt(document.getElementById("val").value);
         save_num = num;
         while (num) {
-            i=1;
-            p=1;
-            r=num%10;
-            while (i<=r) {
-                p=p*i;
+            i = 1;
+            p = 1;
+            r = num%10;
+            while (i <= r) {
+                p = p * i;
                 i++;
             }
             sum = sum + p;
@@ -32,7 +33,7 @@
         } else {
             document.getElementById("demo").innerText =save_num + "is not a KrishnamurthyNumber";
         }
-    }</script>
+    }
 </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function enterNamesList() {
+                let namesList = document.getElementById('namesList');
+                let namesListNewLine = document.getElementById('namesListNewLine');
+
+                let listOfNames = [];
+
+                let ask = 0;
+                let askTimes = 5;
+                while(ask < askTimes) {
+                    let name = prompt('Enter a Names:');
+                    listOfNames.push(name);
+                    ask++;
+                }
+                namesList.innerHTML = `List Of Names Are: <b>${listOfNames.toString()}</b>`;
+                namesListNewLine.innerHTML = `List Of Names Are In New Line:<br>`;
+                listOfNames.forEach((name, index) => {
+                    namesListNewLine.innerHTML += "<b>Name "+(index+1)+": "+name+"</b>"+'<br>';
+                });
+            }
+    </script>
+    <style>
+      h4 {
+        color: rgb(197, 26, 26);
+      }
+      /* span {
+        color: rgb(134, 65, 161);
+      } */
+      button {
+        padding: 8px;
+        border: none;
+        background-color: rgb(0, 153, 255);
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+    <title>List of Names</title>
+  </head>
+  <body style="text-align: center;">
+    <h1>List of Names</h1>
+    <h4>Enter 5 Names</h4>
+    <button type="submit" onclick="enterNamesList()">Enter Names</button>
+    <hr>
+    <p id="namesList"></p>
+    <p id="namesListNewLine"></p>
+  </body>
+</html>

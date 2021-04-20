@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assaignment2</title>
+  </head>
+  <body>
+    <div class="center">
+        <h1>Prime palindrome number</h1>
+    </div>
+    <script>
+        var a=[];
+        for(var k=1;k<=5;k++){
+            a.push(prompt("enter the "+k+"st number:"));
+        }
+        for(q=0;q<=4;q++){
+            var array=[],b='',c=0,d=0;
+            array=a[q].split('');
+            array.reverse();
+            b=array.join('');
+            if(a[q]==b){
+               c=c+1;
+            }
+            if(a[q]>2){
+                for(var i=2;i<a[q];i++){
+                    if (a[q]%i==0){
+                        d=d+1;
+                    }
+                    else{
+                        continue;
+                    }
+                }
+                if(c>0 && d!==0){
+                    document.write(a[q]+" is not Prime Palindrome number <br>");
+                }
+                else{
+                    document.write(a[q]+" is a Prime Palindrome number <br>");
+                }
+            }
+            else{
+                document.write(a[q]+" It is Prime Palindrome number <br>");
+                }
+        }
+    </script>
+  </body>
+</html>

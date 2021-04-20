@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>que5</title>
         <script>
-            var input=[];
-            function inputnum(){
+            var input = [];
+            function inputnum() {
                 let num = true;
                 while(num) {
                     let n = prompt('Enter a Number:');
@@ -19,7 +19,7 @@
                 }
                 } 
             }
-            function display(){
+            function display() {
                 var newarray = [];
                 var len=input.length
                 for (let i = 0; i < len; i++) {
@@ -28,12 +28,12 @@
                 }
                 function factorial(n) {
                     let p = n;
-                    for (let i = 1; i < n; i++){ 
+                    for (let i = 1; i < n; i++) { 
                         p = p * i;
                     }
                     return p;
                 }
-                document.writeln("Factorials in desending order are: "+newarray.reverse());
+                document.writeln("Factorials in desending order are: " + newarray.reverse());
             }
         </script>
     </head>

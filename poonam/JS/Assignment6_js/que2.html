@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>que2</title>
         <script>
-            var i=0;
-            var input=Array();
-            function add(){
+            var i = 0;
+            var input = Array();
+            function add() {
                 document.getElementById("b").innerHTML="Name list by using join ~ is : ";
-                input[i]=document.getElementById("a").value;
+                input[i] = document.getElementById("a").value;
                 i++;
-                document.getElementById("a").value="";
-                document.getElementById("b").innerHTML+=input.join("~");
+                document.getElementById("a").value = "";
+                document.getElementById("b").innerHTML += input.join("~");
             }
-            function ascending_sort(){
+            function ascending_sort() {
                 input.sort();
-                document.getElementById("asc").innerHTML="Names (Asc) : "+input;
+                document.getElementById("asc").innerHTML = "Names in Ascending order : " + input;
             }
-            function decending_sort(){
+            function decending_sort() {
                 input.reverse();
-                document.getElementById("dec").innerHTML="Names (Dec) : "+input;
+                document.getElementById("dec").innerHTML = "Names in Desending order : " + input;
             }
         </script>
     </head>

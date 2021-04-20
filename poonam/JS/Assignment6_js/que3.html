@@ -6,8 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>que3</title>
       <script>
-        var input=[];
-        function input_num(){
+        var input = [];
+        function input_num() {
           let num = true;
           while(num) {
             let n = prompt('Enter a Number:');
@@ -18,9 +18,9 @@
               num = false;
             }
           } 
-          document.getElementById("a").innerHTML="List of numbers: "+input.join("+");
+          document.getElementById("a").innerHTML="List of numbers: " + input.join("+");
         }
-        function addition(){
+        function addition() {
           var sum = input.reduce(myFunction);
           document.getElementById("demo").innerHTML = "The sum is " + sum;
           function myFunction(total, value, index, array) {

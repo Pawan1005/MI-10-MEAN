@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">      
     <title>que4</title>
     <script>
-      var input=[];
-      function inputnum(){
+      var input = [];
+      function inputnum() {
         let num = true;
         while(num) {
           let n = prompt('Enter a Number:');
@@ -19,23 +19,23 @@
           }
         } 
       }
-      function display(){
+      function display() {
         var n = input.length;
-        function factorial(n){
+        function factorial(n) {
           let fact = 1;
-          for(let i = 1; i <= n; i++){   
+          for (let i = 1; i <= n; i++) {   
             fact *= i;
           }
           return fact;
         }
-        function sumFactorial(input, n){
+        function sumFactorial(input, n) {
           let sum = 0;
-          for (let i = 0; i < n; i++){
+          for (let i = 0; i < n; i++) {
             sum += factorial(input[i]);
           }
           return sum;
         }
-        document.getElementById("res").innerHTML= "The sum of factorial is "+sumFactorial(input, n);
+        document.getElementById("res").innerHTML= "The sum of factorial is " + sumFactorial(input, n);
       }
     </script>
   </head>

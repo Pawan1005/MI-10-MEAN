@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>double letters in word</title>
+  </head>
+  <body>
+    <input type="text" id="no" />
+    <button onclick="doubleLetters()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function doubleLetters() {
+        let string = document.getElementById("no").value;
+        let count = 0;
+        let letter = [];
+        for (j = 0; j < string.length - 1; j++) {
+          if (string[j] == string[j + 1]) {
+            count++;
+            letter.push(string[j]);
+          }
+        }
+        document.getElementById("p").innerHTML = "double_letter: " + letter;
+      }
+    </script>
+  </body>
+</html>

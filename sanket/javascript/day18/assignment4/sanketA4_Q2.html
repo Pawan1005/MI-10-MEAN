@@ -13,12 +13,12 @@
 
     <script>
       function cal() {
-        let n = parseInt(document.getElementById("no").value);
-        let r;
-        let s = n * n;
-        r = n % 10;
-        let r2 = s % 10;
-        if (r == r2)
+        let number = parseInt(document.getElementById("no").value);
+        let remainder;
+        let square = number * number;
+        remainder = number % 10;
+        let r2 = square % 10;
+        if (remainder == r2)
           return (document.getElementById(
             "p"
           ).innerHTML = `Automarphic number`);

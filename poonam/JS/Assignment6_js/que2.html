@@ -7,21 +7,21 @@
         <title>que2</title>
         <script>
             var i=0;
-            var na=Array();
+            var input=Array();
             function add(){
                 document.getElementById("b").innerHTML="Name list by using join ~ is : ";
-                na[i]=document.getElementById("a").value;
+                input[i]=document.getElementById("a").value;
                 i++;
                 document.getElementById("a").value="";
-                document.getElementById("b").innerHTML+=na.join("~");
+                document.getElementById("b").innerHTML+=input.join("~");
             }
-            function asc_sort(){
-                na.sort();
-                document.getElementById("asc").innerHTML="Names (Asc) : "+na;
+            function ascending_sort(){
+                input.sort();
+                document.getElementById("asc").innerHTML="Names (Asc) : "+input;
             }
-            function dec_sort(){
-                na.reverse();
-                document.getElementById("dec").innerHTML="Names (Dec) : "+na;
+            function decending_sort(){
+                input.reverse();
+                document.getElementById("dec").innerHTML="Names (Dec) : "+input;
             }
         </script>
     </head>
@@ -31,10 +31,10 @@
         <button onclick="add()">display</button>
         <p id="b"></p>
         <h4>Array sort in ascending order:</h4>
-        <button onclick="asc_sort()">Ascending sort</button>
+        <button onclick="ascending_sort()">Ascending sort</button>
         <p id="asc"></p>
         <h4>Array sort in desending order:</h4>
-        <button onclick="dec_sort()">Desending sort</button>
+        <button onclick="decending_sort()">Desending sort</button>
         <p id="dec"></p>
     </body>
 </html>

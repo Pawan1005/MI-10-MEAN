@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      function namesList() {
-        let nameWithJoin = document.getElementById("nameWithJoin");
-        let nameAscendingOrder = document.getElementById("nameAscendingOrder");
-        let nameDescendingOrder = document.getElementById("nameDescendingOrder");
-        let names = [];
-        let flag = true;
-        while (flag) {
-          let name = prompt("Enter a Name:");
-          if (name != "x" && name != "X" && name != null) {
-            names.push(name);
-          } else {
-            flag = false;
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+          function namesList() {
+              let nameWithJoin = document.getElementById("nameWithJoin");
+              let nameAscendingOrder = document.getElementById("nameAscendingOrder");
+              let nameDescendingOrder = document.getElementById("nameDescendingOrder");
+              let names = [];
+              let flag = true;
+              while (flag) {
+                  let name = prompt("Enter a Name:");
+                  if (name != "x" && name != "X" && name != null) {
+                      names.push(name);
+                  } else {
+                        flag = false;
+                    }
+              }
+              nameWithJoin.innerHTML = `List of Names With Join <q>~</q> are: <b>${names.join("~")}</b>`;
+              nameAscendingOrder.innerHTML = `List of Names in Ascending Order are:<b>${names.sort().map((name) => name.toUpperCase())}   </b>`;
+              nameDescendingOrder.innerHTML = `List of Names in Descending Order are:<b>${names.reverse().map((name) => name.toUpperCase())}</b>`;
           }
-        }
-        nameWithJoin.innerHTML = `List of Names With Join <q>~</q> are: <b>${names.join("~")}</b>`;
-        nameAscendingOrder.innerHTML = `List of Names in Ascending Order are:<b>${names.sort().map((name) => name.toUpperCase())}   </b>`;
-        nameDescendingOrder.innerHTML = `List of Names in Descending Order are:<b>${names.reverse().map((name) => name.toUpperCase())}</b>`;
-      }
-    </script>
-    <style>
-      h4 {
-        color: cornflowerblue;
-      }
-      button {
-        padding: 8px;
-        border: none;
-        background-color: rgb(0, 153, 255);
-        color: white;
-        font-family: "Times New Roman", Times, serif;
-        font-weight: 700;
-        font-size: 15px;
-        cursor: pointer;
-      }
-    </style>
-    <title>List Of Names Ascending & Descending Order</title>
-  </head>
-  <body style="text-align: center">
-    <h1>List of Names with Array Method Join and Sorting</h1>
-    <h4>
-      Press Start Button and Enter As Many Name For Cancel:
-      <strong>Enter 'X'</strong>
-    </h4>
-    <button type="submit" onclick="namesList()">Start</button>
-    <p id="nameWithJoin"></p>
-    <p id="nameAscendingOrder"></p>
-    <p id="nameDescendingOrder"></p>
-  </body>
+      </script>
+      <style>
+          h4 {
+              color: cornflowerblue;
+          }
+          button {
+              padding: 8px;
+              border: none;
+              background-color: rgb(0, 153, 255);
+              color: white;
+              font-family: "Times New Roman", Times, serif;
+              font-weight: 700;
+              font-size: 15px;
+              cursor: pointer;
+          }
+      </style>
+      <title>List Of Names Ascending & Descending Order</title>
+    </head>
+    <body style="text-align: center">
+        <h1>List of Names with Array Method Join and Sorting</h1>
+        <h4>
+            Press Start Button and Enter As Many Name For Cancel:
+            <strong>Enter 'X'</strong>
+        </h4>
+        <button type="submit" onclick="namesList()">Start</button>
+        <p id="nameWithJoin"></p>
+        <p id="nameAscendingOrder"></p>
+        <p id="nameDescendingOrder"></p>
+    </body>
 </html>

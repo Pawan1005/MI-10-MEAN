@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      function primeSeries() {
-        event.preventDefault();
-        let startRange = parseInt(document.getElementById("start").value);
-        let lastRange = parseInt(document.getElementById("last").value);
-        let result = document.getElementById("result");
-        let range = document.getElementById("range");
-        result.style.display = "block";
-        range.innerHTML = `Prime Range From <b> ${startRange} and ${lastRange}</b> are:`;
-        let isPrime;
-        for (let number = startRange; number <= lastRange; number++) {
-          if (number == 1 || number == 0) {
-            continue;
-          }
-          isPrime = true;
-          for (let prime = 2; prime <= number / 2; ++prime) {
-            if (number % prime == 0) {
-              isPrime = false;
-              break;
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            function primeSeries() {
+                event.preventDefault();
+                let startRange = parseInt(document.getElementById("start").value);
+                let lastRange = parseInt(document.getElementById("last").value);
+                let result = document.getElementById("result");
+                let range = document.getElementById("range");
+                result.style.display = "block";
+                range.innerHTML = `Prime Range From <b> ${startRange} and ${lastRange}</b> are:`;
+                let isPrime;
+                for (let number = startRange; number <= lastRange; number++) {
+                    if (number == 1 || number == 0) {
+                        continue;
+                    }
+                    isPrime = true;
+                    for (let prime = 2; prime <= number / 2; ++prime) {
+                        if (number % prime == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime == true) {
+                        result.innerHTML += `<br>${number}`;
+                    }
+                }
             }
-          }
-          if (isPrime == true) {
-            result.innerHTML += `<br>${number}`;
-          }
-        }
-      }
-    </script>
-    <style>
-      input {
-        padding: 5px;
-        outline-color: cornflowerblue;
-        margin-bottom: 10px;
-      }
-      input[id="start"] {
-        margin-left: 5px;
-      }
-      input[id="last"] {
-        margin-left: 8px;
-      }
-      button {
-        padding: 8px;
-        border: none;
-        background-color: rgb(0, 153, 255);
-        color: white;
-        font-family: "Times New Roman", Times, serif;
-        font-weight: 700;
-        font-size: 15px;
-      }
-    </style>
-    <title>Prime Number</title>
-  </head>
-  <body style="text-align: center;">
-    <h1>Prime Numbers From Start to Last Range</h1> <hr>
-        <label for="start">Start Number: </label>
-        <input type="text" id="start" placeholder="Enter a Start Number Range">
-        <br>
-        <label for="last">Last Number: </label>
-        <input type="text" id="last" placeholder="Enter a Last Number Range">
-        <br>
-        <button type="submit" onclick="primeSeries()">Prime Series</button>
-    <p id="range"></p>
-    <p id="result" style="display: none;"><b>Prime Series:</b> </p>
-  </body>
+        </script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+            input[id="start"] {
+                margin-left: 5px;
+            }
+            input[id="last"] {
+                margin-left: 8px;
+            }
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: "Times New Roman", Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Prime Number</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>Prime Numbers From Start to Last Range</h1> <hr>
+            <label for="start">Start Number: </label>
+            <input type="text" id="start" placeholder="Enter a Start Number Range">
+            <br>
+            <label for="last">Last Number: </label>
+            <input type="text" id="last" placeholder="Enter a Last Number Range">
+            <br>
+            <button type="submit" onclick="primeSeries()">Prime Series</button>
+        <p id="range"></p>
+        <p id="result" style="display: none;"><b>Prime Series:</b> </p>
+    </body>
 </html>

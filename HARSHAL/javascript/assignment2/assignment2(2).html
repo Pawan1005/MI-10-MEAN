@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>que 2</title>
+  </head>
+  <body>
+    <label for="a">enter eng marks:</label>
+    <input type="number" id="a" value="" /><br />
+    <label for="b">enter hindi marks:</label>
+    <input type="number" id="b" value="" /><br />
+    <label for="c">enter marathi marks:</label>
+    <input type="number" id="c" value="" /><br />
+    <label for="d">enter history marks:</label>
+    <input type="number" id="d" value="" /><br />
+    <label for="e">enter maths marks:</label>
+    <input type="number" id="e" value="" /><br />
+
+    <button onclick="myFunction()">click me</button>
+
+    <h1 id="total"></h1>
+    <h1 id="percent"></h1>
+    <h1 id="grade"></h1>
+  </body>
+  <script>
+    function myFunction() {
+      var first = document.getElementById("a").value;
+      var second = document.getElementById("b").value;
+      var third = document.getElementById("c").value;
+      var fourth = document.getElementById("d").value;
+      var fifth = document.getElementById("e").value;
+      var total =
+        parseInt(first) +
+        parseInt(second) +
+        parseInt(third) +
+        parseInt(fourth) +
+        parseInt(fifth);
+      document.getElementById("total").innerText =
+        "The total of marks obtained: " + total;
+      var percent = parseInt(total) / 5;
+      document.getElementById("percent").innerText =
+        "Percentage obtained: " + percent + "%";
+
+      if (percent > 75) {
+        greeting = "A";
+      } else if (percent > 60 && percent < 75) {
+        greeting = "B";
+      } else if (percent > 40 && percent < 60) {
+        greeting = "C";
+      } else if (percent > 30 && percent < 40) {
+        greeting = "D";
+      } else {
+        greeting = "E";
+      }
+      document.getElementById("grade").innerHTML = "Your grade is: " + greeting;
+    }
+  </script>
+</html>

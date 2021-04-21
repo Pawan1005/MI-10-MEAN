@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>q2</title>
+    <style>
+        body {
+          text-align: center;
+          justify-content: center;
+        }
+        button {
+          padding: 6px;
+          background-color: greenyellow;
+        }
+      </style>
+  </head>
+  <body>
+    <label for="a">ENTER A NUMBER:</label>
+    <input type="number" id="cel" value="" />
+    <button onclick="myFunction()">CLICK</button>
+    <h1>To check whether number is Automarphic number</h1>
+    <h2 id="on"></h2>
+  </body>
+  <script>
+    function myFunction() {
+      var num = document.getElementById("cel").value;
+
+      var a = num * num;
+
+      var remain = a % 10;
+
+      if (remain == num) {
+        document.getElementById("on").innerHTML = `${num} is an Automarphic number`;
+      } else {
+        document.getElementById("on").innerHTML = `${num} is not an Automarphic number`;
+      }
+    }
+  </script>
+</html>

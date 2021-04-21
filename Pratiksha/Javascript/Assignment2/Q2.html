@@ -45,25 +45,25 @@
     <script>
       var c;
       function calculate() {
-        var x, y, z, a, b;
-        x = parseInt(document.getElementById("val1").value);
-        y = parseInt(document.getElementById("val2").value);
-        z = parseInt(document.getElementById("val3").value);
-        a = parseInt(document.getElementById("val4").value);
-        b = parseInt(document.getElementById("val5").value);
-        c = ((x + y + z + a + b) / 500) * 100;
-        document.getElementById("demo").innerText = `Percentage ${c}`;
+        var sub1, sub2, sub3, sub4, sub5;
+        sub1 = parseInt(document.getElementById("val1").value);
+        sub2 = parseInt(document.getElementById("val2").value);
+        sub3 = parseInt(document.getElementById("val3").value);
+        sub4 = parseInt(document.getElementById("val4").value);
+        sub5 = parseInt(document.getElementById("val5").value);
+        per= ((sub1+ sub2 + sub3 + sub4 + sub5) / 500) * 100;
+        document.getElementById("demo").innerText = `Percentage ${per}`;
       }
       function grade() {
-        if (c >= 75 && c <= 100) {
+        if (per >= 75 && per <= 100) {
           document.getElementById("demo1").innerText = "GradeA";
-        } else if (c >= 60 && c <= 74) {
+        } else if (per >= 60 && per <= 74) {
           document.getElementById("demo1").innerText = "GradeB";
-        } else if (c >= 40 && c <= 59) {
+        } else if (per >= 40 && per <= 59) {
           document.getElementById("demo1").innerText = "Grade C";
-        } else if (c >= 30 && c <= 40) {
+        } else if (per >= 30 && per <= 40) {
           document.getElementById("demo1").innerText = "Grade D";
-        } else if (c <= 30) {
+        } else if (per <= 30) {
           document.getElementById("demo1").innerText = "Fail";
         }
       }

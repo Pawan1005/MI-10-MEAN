@@ -1,0 +1,34 @@
+header{
+    width: 100%;
+height: 70px;
+text-align: center;
+border: transparent;
+}
+p::first-letter{
+    font: x-large;
+    color: tomato;
+}
+h1>img{
+    width:40px;
+  height:30px;
+}
+nav{
+    font: bold; 
+    font-size: large;
+}
+span{
+    text-align: center;
+    position: absolute; left: 20%;
+}
+div{
+    width: 700px;
+    height: 200px;  
+    position: absolute; 
+    left: 30%;
+}
+div >p > img{
+    width: 150px;
+     height: 200px;
+     margin: 10px ;
+     padding: 5px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p></p>
+    <h4>Enter 5 numbers here</h4>
+    Number 1: <input type="text" id="num1" placeholder="Enter first number "> <br>
+    <br>
+    Number 2: <input type="text" id="num2" placeholder="Enter second number "> <br>
+    <br>
+    Number 3: <input type="text" id="num3" placeholder="Enter third number "> <br>
+    <br>
+    Number 4: <input type="text" id="num4" placeholder="Enter fourth number "> <br>
+    <br>
+    Number 5: <input type="text" id="num5" placeholder="Enter fifth number "> <br>
+    <br>
+    <button onclick="MyArray2()">Enter</button><br>
+    <br>
+    <button id="null">cancel</button>
+    <br>
+    <br>
+    <script language="javascript">
+
+        function MyArray2(){
+            debugger;
+            var b,a,c,d,e,fact, arr;
+            cancel = null;
+            //for input names
+              a= parseInt(document.getElementById("num1").value);
+              b=parseInt(document.getElementById("num2").value);
+              c=parseInt(document.getElementById("num3").value);
+              d=parseInt(document.getElementById("num4").value);
+              e=parseInt(document.getElementById("num5").value);
+              cancel=document.getElementById("null").value;
+              arr=[a,b,c,d,e]
+              document.write(arr);
+              document.write("<br>");
+              document.write("<br>");
+              var sum=0;
+              for ( var i=0; i< arr.length; i++){
+                fact=1;
+              document.write(arr[i]);
+              document.write("<br>");
+                  for (var j=1; j<= arr[i] ; j++){
+                      fact=fact*j;
+                  }
+                  sum = sum + fact;   
+                  document.write("<br>");
+   
+              }
+              document.write("The sum of all factorials are : " +sum)
+              document.write("<br>");
+
+            }      
+    </script>
+</body>
+</html>

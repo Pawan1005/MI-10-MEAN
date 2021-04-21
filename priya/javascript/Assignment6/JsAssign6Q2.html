@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p></p>
+    <h4>Enter 5 names here</h4>
+    Name1: <input type="text" id="name1" placeholder="Enter first name "> <br>
+    <br>
+    Name2: <input type="text" id="name2" placeholder="Enter first name "> <br>
+    <br>
+    Name3: <input type="text" id="name3" placeholder="Enter first name "> <br>
+    <br>
+    Name4: <input type="text" id="name4" placeholder="Enter first name "> <br>
+    <br>
+    Name5: <input type="text" id="name5" placeholder="Enter first name "> <br>
+    <br>
+    <button onclick="MyArray2()">Enter</button><br>
+    <br>
+    <button id="null">cancel</button>
+    <br>
+    <br>
+    <br>
+    <script language="javascript">
+
+        function MyArray2(){
+            var b,a,c,d,e,cancel,joined, arr;
+            cancel = null;
+            //for input names
+              a=document.getElementById("name1").value;
+              b=document.getElementById("name2").value;
+              c=document.getElementById("name3").value;
+              d=document.getElementById("name4").value;
+              e=document.getElementById("name5").value;
+              cancel=document.getElementById("null").value;
+              arr=[a,b,c,d,e,cancel]
+              document.write("<b> The Input Names stored in array : <b> ")
+              document.write(arr + "<br>");
+              document.write("<br>")
+              //joined with ~
+              document.write("<b> The Input Names joined with ~ :<b> ")
+              joined=arr.join("~");
+              document.write(joined)
+              document.write("<br>")
+              document.write("<br>")
+              //Asecnding Order
+              document.write("Input Names with Assending order  : <br>")
+              var upper = arr.sort();
+              var upper2 = upper.map(function(x) { return x.toUpperCase();})
+              document.write(upper2)
+              document.write("<br>")
+              document.write("<br>")
+              //desnding order
+              document.write("Input Names with descending order: <br>")
+              upper1= upper2.reverse();
+              upper1 = upper1.map(function(x) { return x.toUpperCase();})
+              document.write(upper1)
+            }     
+    </script>
+</body>
+</html>

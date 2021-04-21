@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>que 5</title>
     <style>
-        body{
-            text-align: center;
-            justify-content: center;
-        }
-        button{
-            padding: 6px;
-            background-color: greenyellow;
-        }
+      body {
+        text-align: center;
+        justify-content: center;
+      }
+      button {
+        padding: 6px;
+        background-color: greenyellow;
+      }
     </style>
   </head>
   <body>
@@ -22,16 +22,15 @@
     <button onclick="myFunction()">CLICK</button>
     <h1>FACTORIAL</h1>
     <h2 id="on"></h2>
-  </body>
-
-  <script>
-    function myFunction() {
-      var num = document.getElementById("cel").value;
-      var a = 1;
-      for (var i = 1; i <= num; i++) {
-        a = a * i;
+    <script>
+      function myFunction() {
+        var num = document.getElementById("cel").value;
+        var a = 1;
+        for (var i = 1; i <= num; i++) {
+          a = a * i;
+        }
+        document.getElementById("on").innerHTML = `factorial of ${num} is ${a}`;
       }
-      document.getElementById("on").innerHTML=`factorial of ${num} is ${a}` }
-    
-  </script>
+    </script>
+  </body>
 </html>

@@ -23,38 +23,39 @@
     <h1 id="total"></h1>
     <h1 id="percent"></h1>
     <h1 id="grade"></h1>
-  </body>
-  <script>
-    function myFunction() {
-      var first = document.getElementById("a").value;
-      var second = document.getElementById("b").value;
-      var third = document.getElementById("c").value;
-      var fourth = document.getElementById("d").value;
-      var fifth = document.getElementById("e").value;
-      var total =
-        parseInt(first) +
-        parseInt(second) +
-        parseInt(third) +
-        parseInt(fourth) +
-        parseInt(fifth);
-      document.getElementById("total").innerText =
-        "The total of marks obtained: " + total;
-      var percent = parseInt(total) / 5;
-      document.getElementById("percent").innerText =
-        "Percentage obtained: " + percent + "%";
+    <script>
+      function myFunction() {
+        var first = document.getElementById("a").value;
+        var second = document.getElementById("b").value;
+        var third = document.getElementById("c").value;
+        var fourth = document.getElementById("d").value;
+        var fifth = document.getElementById("e").value;
+        var total =
+          parseInt(first) +
+          parseInt(second) +
+          parseInt(third) +
+          parseInt(fourth) +
+          parseInt(fifth);
+        document.getElementById("total").innerText =
+          "The total of marks obtained: " + total;
+        var percent = parseInt(total) / 5;
+        document.getElementById("percent").innerText =
+          "Percentage obtained: " + percent + "%";
 
-      if (percent > 75) {
-        greeting = "A";
-      } else if (percent > 60 && percent < 75) {
-        greeting = "B";
-      } else if (percent > 40 && percent < 60) {
-        greeting = "C";
-      } else if (percent > 30 && percent < 40) {
-        greeting = "D";
-      } else {
-        greeting = "E";
+        if (percent > 75) {
+          greeting = "A";
+        } else if (percent > 60 && percent < 75) {
+          greeting = "B";
+        } else if (percent > 40 && percent < 60) {
+          greeting = "C";
+        } else if (percent > 30 && percent < 40) {
+          greeting = "D";
+        } else {
+          greeting = "E";
+        }
+        document.getElementById("grade").innerHTML =
+          "Your grade is: " + greeting;
       }
-      document.getElementById("grade").innerHTML = "Your grade is: " + greeting;
-    }
-  </script>
+    </script>
+  </body>
 </html>

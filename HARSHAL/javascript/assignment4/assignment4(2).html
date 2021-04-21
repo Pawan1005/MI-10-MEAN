@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>q2</title>
     <style>
-        body {
-          text-align: center;
-          justify-content: center;
-        }
-        button {
-          padding: 6px;
-          background-color: greenyellow;
-        }
-      </style>
+      body {
+        text-align: center;
+        justify-content: center;
+      }
+      button {
+        padding: 6px;
+        background-color: greenyellow;
+      }
+    </style>
   </head>
   <body>
     <label for="a">ENTER A NUMBER:</label>
@@ -22,20 +22,24 @@
     <button onclick="myFunction()">CLICK</button>
     <h1>To check whether number is Automarphic number</h1>
     <h2 id="on"></h2>
-  </body>
-  <script>
-    function myFunction() {
-      var num = document.getElementById("cel").value;
+    <script>
+      function myFunction() {
+        var num = document.getElementById("cel").value;
 
-      var a = num * num;
+        var a = num * num;
 
-      var remain = a % 10;
+        var remain = a % 10;
 
-      if (remain == num) {
-        document.getElementById("on").innerHTML = `${num} is an Automarphic number`;
-      } else {
-        document.getElementById("on").innerHTML = `${num} is not an Automarphic number`;
+        if (remain == num) {
+          document.getElementById(
+            "on"
+          ).innerHTML = `${num} is an Automarphic number`;
+        } else {
+          document.getElementById(
+            "on"
+          ).innerHTML = `${num} is not an Automarphic number`;
+        }
       }
-    }
-  </script>
+    </script>
+  </body>
 </html>

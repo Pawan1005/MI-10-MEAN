@@ -24,19 +24,19 @@
     <h1>CONVERT TO UPPERCASE OR LOWERCASE</h1>
     <h2 id="on"></h2>
     <h2 id="off"></h2>
+    <script>
+      function myFunction() {
+        var char = document.getElementById("cel").value;
+
+        var upp = char.toUpperCase();
+        document.getElementById("on").innerText = upp;
+      }
+      function myFunction1() {
+        var char = document.getElementById("cel").value;
+
+        var low = char.toLowerCase();
+        document.getElementById("off").innerText = low;
+      }
+    </script>
   </body>
-  <script>
-    function myFunction() {
-      var char = document.getElementById("cel").value;
-
-      var upp = char.toUpperCase();
-      document.getElementById("on").innerText = upp;
-    }
-    function myFunction1() {
-      var char = document.getElementById("cel").value;
-
-      var low = char.toLowerCase();
-      document.getElementById("off").innerText = low;
-    }
-  </script>
 </html>

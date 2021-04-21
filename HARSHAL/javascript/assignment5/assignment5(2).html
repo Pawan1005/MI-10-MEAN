@@ -24,23 +24,23 @@
     <h2 id="o"></h2>
     <h2 id="on"></h2>
     <h2 id="off"></h2>
-  </body>
-  <script>
-    function myFunction() {
-      var num = document.getElementById("cel").value;
+    <script>
+      function myFunction() {
+        var num = document.getElementById("cel").value;
 
-      var a = 0;
-      var b = 1;
-      document.write(a+",");
-      document.write(b);
+        var a = 0;
+        var b = 1;
+        document.write(a + ",");
+        document.write(b);
 
-      for (var i = 1; i <= num; i++) {
-        var c = a + b;
-        document.write(",");
-        document.write(c);
-        a = b;
-        b = c;
+        for (var i = 1; i <= num; i++) {
+          var c = a + b;
+          document.write(",");
+          document.write(c);
+          a = b;
+          b = c;
+        }
       }
-    }
-  </script>
+    </script>
+  </body>
 </html>

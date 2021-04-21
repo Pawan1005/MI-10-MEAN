@@ -39,28 +39,29 @@
     </table>
     <div id="num"></div>
     <div id="num1"></div>
-  </body>
 
-  <script type="text/javascript">
-    function sum_product6() {
-      var r,
-        n,
-        sum = 0,
-        product = 1;
-      n = parseInt(document.getElementById("first").value);
-      n1 = n;
-      while (n > 0) {
-        r = n % 10;
-        if (r % 2 == 0) {
-          sum = sum + r;
-        } else {
-          product = product * r;
+    <script type="text/javascript">
+      function sum_product6() {
+        var r,
+          n,
+          sum = 0,
+          product = 1;
+        n = parseInt(document.getElementById("first").value);
+        n1 = n;
+        while (n > 0) {
+          r = n % 10;
+          if (r % 2 == 0) {
+            sum = sum + r;
+          } else {
+            product = product * r;
+          }
+          n = parseInt(n / 10);
         }
-        n = parseInt(n / 10);
+        document.getElementById("num").innerHTML =
+          "Sum of even digits : " + sum;
+        document.getElementById("num1").innerHTML =
+          "Product of odd digits : " + product;
       }
-      document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
-      document.getElementById("num1").innerHTML =
-        "Product of odd digits : " + product;
-    }
-  </script>
+    </script>
+  </body>
 </html>

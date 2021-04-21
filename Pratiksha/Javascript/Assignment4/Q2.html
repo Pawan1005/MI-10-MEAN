@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>automorphic</title>
 </head>
 <body>
   <form>
@@ -15,17 +15,17 @@
   <p id="demo1"></p>
   <script>
     function automorphic() {
-      var n, m;
-      n = parseInt(document.getElementById("first").value);
-      m = n * n;
-      document.getElementById('demo').innerHTML = "Square of a number is:" + m;
-      if (n % 10 != m % 10) {
-        document.getElementById('demo1').innerHTML = n + " is not an atomorphic number";
-        n = n / 10;
-        m = m / 10;
+      var no, sqr;
+      no = parseInt(document.getElementById("first").value);
+      sqr = no * no;
+      document.getElementById('demo').innerHTML = "Square of a number is:" + sqr;
+      if (no % 10 != sqr % 10) {
+        document.getElementById('demo1').innerHTML = no + " is not an atomorphic number";
+        no = no / 10;
+        sqr = sqr / 10;
       }
       else {
-        document.getElementById('demo1').innerHTML = n + " is an automorphic number";
+        document.getElementById('demo1').innerHTML = no + " is an automorphic number";
       }
       event.preventDefault();
     }

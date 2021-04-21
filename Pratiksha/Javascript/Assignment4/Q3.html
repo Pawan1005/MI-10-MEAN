@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Krishnamurthy</title>
 </head>
 <body>
     Enter Number :- 
@@ -19,13 +19,13 @@
         save_num = num;
         while (num) {
             i = 1;
-            p = 1;
-            r = num%10;
-            while (i <= r) {
-                p = p * i;
+            fact = 1;
+            rem = num%10;
+            while (i <= rem) {
+                fact = fact * i;
                 i++;
             }
-            sum = sum + p;
+            sum = sum + fact;
             num = Math.floor(num/10);
         }
         if (sum == save_num) {

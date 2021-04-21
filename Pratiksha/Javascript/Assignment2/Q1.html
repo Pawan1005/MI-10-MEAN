@@ -29,20 +29,20 @@
       </button>
     </form>
     <p id="largest"></p>
-    <script>function largest
+    <script>function largest()
     {
-      var a= document.getElementById("val1").value;
-      var b= document.getElementById("val2").value;
-      var c= document.getElementById("val3").value;
-      var d= document.getElementById("val4").value;
-      var f= document.getElementById("val5").value;
-      if (a > b && a > c && a > d && a > f) {
+      var fstNo= document.getElementById("val1").value;
+      var secNo= document.getElementById("val2").value;
+      var trdNo= document.getElementById("val3").value;
+      var frtNo= document.getElementById("val4").value;
+      var fifNo= document.getElementById("val5").value;
+      if (fstNo >  secNo && fstNo > trdNo && fstNo > frtNo && fstNo > fifNo) {
         document.getElementById("largest")
-      } else if (b > a && b > c && b > d && b > f) {
+      } else if ( secNo> fstNo && secNo > trdNo && secNo > frtNo && secNo > fifNo) {
         document.getElementById("largest")
-      } else if (c > a && c > b && c > d && c > f) {
+      } else if (trdNo > fstNo && trdNo > secNo && trdNo > frtNo && trdNo > fifNo) {
         document.getElementById("largest")
-      } else if (d > a && d > c && d > b && d > f) {
+      } else if (frtNo > fstNo && frtNo > trdNo && frtNo > secNo && frtNo > fifNo) {
         document.getElementById("largest")
       } else {
         document.getElementById("largest")  

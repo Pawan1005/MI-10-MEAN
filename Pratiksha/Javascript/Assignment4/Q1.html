@@ -12,13 +12,13 @@
   <p id="demo"></p>
   <script>
     function armstrg() {
-      var arm = 0, a, b, c, d, num;
+      var arm = 0, actual_No, temp, num;
       num = Number(document.getElementById("val1").value);
       temp = num;
       while (temp > 0) {
-        a = temp % 10;
+        actual_No = temp % 10;
         temp = parseInt(temp / 10);
-        arm = arm + a * a * a;
+        arm = arm + actual_No * actual_No * actual_No;
       }
       if (arm == num) {
         alert("Armstrong number");

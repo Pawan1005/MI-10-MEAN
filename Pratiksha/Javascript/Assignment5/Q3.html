@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h3>Prime Numbers From Start to Last Range</h3>
     <form>
-        <label for="start">First Number: </label>
-        <input type="text" id="start" >
-        <br>
-        <label for="last">Last Number: </label>
-        <input type="text" id="last"  >
-        <br>
-        <button type="submit" onclick="primeSeries()"> Inbwtween Prime Num</button>
+      <label for="start">First Number: </label>
+      <input type="text" id="start" />
+      <br />
+      <label for="last">Last Number: </label>
+      <input type="text" id="last" />
+      <br />
+      <button type="submit" onclick="primeSeries()">Inbwtween Prime Num</button>
     </form>
-
     <p id="range"></p>
     <p id="result"></p>
     <script>
-        function primeSeries() {
-    event.preventDefault();
-
-    let startRange = parseInt(document.getElementById('start').value);
-    let lastRange = parseInt(document.getElementById('last').value);
-
-    let result = document.getElementById('result');
-    let range = document.getElementById('range');
-
-    result.style.display = 'block';
-
-    
-    // For Number is prime or not;
-    let isPrime;
-
-    for (let number = startRange; number <= lastRange; number++) {
-
-        // Skip 0 and 1 for prime 
-        if (number ==1 || number == 0) {
+      function primeSeries() {
+        event.preventDefault();
+        let startRange = parseInt(document.getElementById("start").value);
+        let lastRange = parseInt(document.getElementById("last").value);
+        let result = document.getElementById("result");
+        let range = document.getElementById("range");
+        result.style.display = "block";
+        // For Number is prime or not;
+        let isPrime;
+        for (let number = startRange; number <= lastRange; number++) {
+          // Skip 0 and 1 for prime
+          if (number == 1 || number == 0) {
             continue;
-        }
-
-        isPrime = true;
-
-        for(let prime=2; prime<= number/2; ++prime) {
+          }
+          isPrime = true;
+          for (let prime = 2; prime <= number / 2; ++prime) {
             if (number % prime == 0) {
-                isPrime = false;
-                break;
+              isPrime = false;
+              break;
             }
-        }
-
-        if(isPrime == true) {
+          }
+          if (isPrime == true) {
             result.innerHTML += `<br>${number}`;
+          }
         }
-    }
-} 
-
+      }
     </script>
-</body>
+  </body>
 </html>

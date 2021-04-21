@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 1</title>
+    </head>
+    <body>
+        <h1>Pallindrome Number</h1>
+        <h4 id="number"></h4>
+        <p>Click here to check the number is palindrome or not:</p>
+        <button onclick="palindrome()">Check</button>
+        <h4 id="result"></h4>
+        <script>
+            var n = parseInt(prompt("Enter a number:"));
+            document.getElementById("number").innerHTML = "Number: " + n;
+            function palindrome() {
+                var rem, temp, rev = "";
+                temp = n;
+                while (temp > 0) {
+                    rem = temp % 10;
+                    temp = parseInt(temp / 10);
+                    rev = rev + rem.toString();
+                    console.log(rev);
+                }
+                if (rev == n) {
+                    document.getElementById("result").innerHTML = "The given number is palindrome.";
+                }
+                else {
+                    document.getElementById("result").innerHTML = "The given number is not palindrome.";
+                }
+            }
+        </script>
+    </body>
+</html>

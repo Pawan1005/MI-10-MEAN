@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 2</title>
+    </head>
+    <body>
+        <h1>Prime Pallindrome Number</h1>
+        <h4 id="number"></h4>
+        <p>Click here to check the number is prime palindrome or not:</p>
+        <button onclick="primepalindrome()">Check</button>
+        <h4 id="result"></h4>
+        <script>
+            var n = parseInt(prompt("Enter a number: "));
+            document.getElementById("number").innerHTML = "Number: " + n;
+            function primepalindrome() {
+                let isPrime = true; 
+                for (let i = 2; i < n; i++) {
+                        if (n % i == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                if (isPrime) {
+                    var p = n.toString().split("").reverse().join("");
+                    console.log(p);
+                    if (n == p) {
+                        document.getElementById("result").innerHTML = "The given number is prime palindrome number";
+                    }
+                    else {
+                        document.getElementById("result").innerHTML = "The given number is not prime palindrome number";
+                    }
+                } 
+                else {
+                    document.getElementById("result").innerHTML = "The given number is not prime palindrome number";
+                }
+            }
+        </script>
+    </body>
+</html>

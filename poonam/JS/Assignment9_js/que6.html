@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 6</title>
+    </head>
+    <body>
+        <h1>Count words and spaces</h1>
+            <h4 id="input"></h4>
+            <p>Click here to count the words and spaces in the sentence:</p>
+            <button onclick="count()">Check</button>
+            <p>Number of words are:</p>
+            <h4 id="words"></h4>
+            <p>Number of spaces are:</p>
+            <h4 id="spaces"></h4>
+        <script>
+            var n = prompt("Enter a sentence:");
+            document.getElementById("input").innerHTML = n;
+            function count() {
+                var wordcount = 0;
+                var words = n.split(" ");
+                var l = words.length;
+                for (i = 0; i < l; i++) {
+                    if (words[i] != "") {
+                        wordcount += 1;
+                    }
+                }
+                document.getElementById("words").innerHTML = wordcount;
+                var space = (l - 1);
+                document.getElementById("spaces").innerHTML = space;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 2</title>
+    </head>
+    <body>
+        <script>
+            var arrMarks = [];
+            var n, temp;
+            n = prompt("Enter number of students:");
+            for (var i=1; i<=n; i++) {
+                arrMarks[i] = parseInt(prompt("Enter marks:"));
+            }
+            for (var i = 1; i <= n; i++) {      
+                document.write("<br> Marks " + i + ": " + arrMarks[i]);
+            }
+        </script>
+    </body>
+</html>

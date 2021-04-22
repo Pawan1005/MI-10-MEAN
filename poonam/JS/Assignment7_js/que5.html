@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 5</title>
+    </head>
+    <body>
+        <script>
+            var arrMarks = [];
+            var n, temp;
+            n = prompt("Enter number of students:");
+            for (var i = 1; i <= n; i++) {
+                arrMarks[i] = parseInt(prompt("Enter marks:"));
+            }
+            document.write("*****Before Sorting*****");
+            for (var i = 1; i <= n; i++) {      
+                document.write("<br> Marks " + i + ": " + arrMarks[i] );
+            }
+            for (var i = 1; i <= n; i++) {
+                for (var j = 0; j <= i; j++) {  
+                    if (arrMarks[j] > arrMarks[i]) {
+                        temp = arrMarks[j];
+                        arrMarks[j] = arrMarks[i];
+                        for (var k = i; k > j; k--) {
+                            arrMarks[k] = arrMarks[k - 1];
+                        }
+                        arrMarks[k + 1] = temp;
+                    }
+                }
+                document.write("<br>Iteration: " + i + ":" + arrMarks)
+            }
+            document.write("<br><br>*****After Sorting (Insertion Sort)*****");
+            for (var i = 1; i <= n; i++) {
+                document.write("<br> Marks " + i + ": " + arrMarks[i] );
+            }
+        </script>
+    </body>
+</html>

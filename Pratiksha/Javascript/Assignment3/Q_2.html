@@ -18,13 +18,12 @@
     <p id="demo"></p>
     <script>
       function primeornot() {
-        var n,
-          i,
-          flag = true;
-        n = document.myform.n.value;
-        n = parseInt(n);
-        for (i = 2; i <= n - 1; i++)
-          if (n % i == 0) {
+        var num,i,// i is used for loop
+        flag = true;
+        num = document.myform.num.value;
+        num = parseInt(num);
+        for (i = 2; i <= num- 1; i++)
+          if (num % i == 0) {
             flag = false;
             break;
           }

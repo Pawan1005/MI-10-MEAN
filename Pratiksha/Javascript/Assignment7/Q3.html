@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Triangle</title>
+ </head>
+ <body>
+     <form>
+         <label for="number">Number:</label>
+         <input type="text" id="number">
+         <br>
+         <button type="submit" onclick="pattern()">click</button>
+     </form>
+     <p id="result"></p>
+     <script>
+         function pattern(){
+             event.preventDefault();
+             let numbers = parseInt(document.getElementById('number').value);
+             let result = document.getElementById('result');
+             let row, column;
+             for(row = 0; row <numbers; row++){
+                 if(-1 < 0 && row == 0){
+                     result.innerHTML += '1<br>'
+                 }
+                 let num = 1;
+                 // for(column = row; column <=row; column--) {
+                 //     result.innerHTML += `${column}`
+                 // }
+                 for(column = 0; column <=row; column++) {
+                     if (row == 0 || column <= 0) {
+                         num =1 ;
+                     }
+                     else if (row>=2 || column >=1) {
+                         num = num + 1;
+                     }
+                     result.innerHTML += `${num}`
+                 }
+                 result.innerHTML += "1<br>";
+              }
+             }
+     </script>
+ </body>
+ </html>
+

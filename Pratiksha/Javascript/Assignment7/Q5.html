@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insetion_Sort</title>
+  </head>
+  <body>
+    <script>
+      //Defining array
+      var stdCount = parseInt(prompt("how many student u want to enter?"));
+      var input_arr = [];
+      //Input
+      for (var i = 0; i < stdCount; i++) {
+        for (var mark = 0; mark < 5; mark++) {
+          let marks = parseInt(prompt("Enter Marks of  the student"));
+          input_arr.push(marks);
+        }
+      }
+      document.write("*****Before Sorting******" + "<br>");
+      //Display
+      for (var i = 0; i < 5; i++) {
+        document.write("Marks:" + input_arr[i] + "<br>");
+      }
+      for (let i = 1; i < stdCount; i++) {
+        let current = input_arr[i];
+        let j = i - 1;
+        while (j > -1 && current < input_arr[j]) {
+          input_arr[j + 1] = input_arr[j];
+          j--;
+        }
+        input_arr[j + 1] = current;
+      }
+      document.write("*****After Sorting******" + "<br>");
+      for (var i = 0; i < 5; i++) {
+        document.write("Marks:" + input_arr[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Marks of student</title>
+  </head>
+  <body>
+    <script>
+      //Defining array
+      var stdCount = prompt("how many student u want to enter?");
+      var input_arr = [];
+      //Input and i is index of array
+      for (var i = 0; i < stdCount; i++) {
+        input_arr[i] = prompt("Enter Marks of  the student");
+      }
+      //Display
+      for (var i = 0; i < stdCount; i++) {
+        document.write("Marks:" + input_arr[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>
+

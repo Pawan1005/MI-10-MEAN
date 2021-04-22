@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble sort</title>
+  </head>
+  <body>
+    <script>
+      //Defining array
+      var stdCount = prompt("how many student u want to enter?");
+      var input_arr = [];
+      //Input 
+      for (var i = 0; i < stdCount; i++) {
+        input_arr[i] = prompt("Enter Marks of  the student");
+      }
+      //Display
+      document.write("*****Before Sorting******" + "<br>");
+      for (var i = 0; i < stdCount; i++) {
+        document.write("Marks" + i + ":" + input_arr[i] + "<br>");
+      }
+      var temp;
+      for (var i = 0; i < stdCount - 1; i++) {
+        for (var j = 0; j < stdCount - 1; j++) {
+          if (input_arr[j] > input_arr[j + 1]) {
+            temp = input_arr[j];
+            input_arr[j] = input_arr[j + 1];
+            input_arr[j + 1] = temp;
+          }
+          document.write("<br> Iteration in side j : " + j + ":" + input_arr);
+        }
+        document.write("<br> ****************");
+        document.write("<br> Iteration : " + i + ":" + input_arr);
+      }
+      document.write("<br> After  Sorting ");
+      for (var i = 0; i < stdCount; i++) {
+        document.write(
+          "<br>" + " input_arr[" + i + "]:" + input_arr[i] + "<br>"
+        );
+      }
+    </script>
+  </body>
+</html>
+

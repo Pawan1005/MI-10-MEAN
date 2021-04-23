@@ -10,30 +10,30 @@
             function inputnum() {
                 let num = true;
                 while(num) {
-                    let n = prompt('Enter a Number:');
-                    if (n != 'x') {
-                        input.push(parseInt(n));
+                    let number = prompt('Enter a Number:');
+                    if (number != 'x') {
+                        input.push(parseInt(number));
                     }
                     else {
-                    num = false;
-                }
+                        num = false;
+                    }
                 } 
             }
             function display() {
-                var newarray = [];
+                var new_array = [];
                 var len=input.length
                 for (let i = 0; i < len; i++) {
-                    let p = factorial(input[i]);
-                    newarray.push(p);
+                    let fact = factorial(input[i]);
+                    new_array.push(fact);
                 }
-                function factorial(n) {
-                    let p = n;
-                    for (let i = 1; i < n; i++) { 
-                        p = p * i;
+                function factorial(number) {
+                    let fact = number;
+                    for (let i = 1; i < number; i++) { 
+                        fact = fact * i;
                     }
-                    return p;
+                    return fact;
                 }
-                document.writeln("Factorials in desending order are: " + newarray.reverse());
+                document.writeln("Factorials in desending order are: " + new_array.reverse());
             }
         </script>
     </head>

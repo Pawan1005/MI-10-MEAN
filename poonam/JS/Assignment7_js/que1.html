@@ -15,10 +15,10 @@
             </div>
             <script>
                 function triangle() {
-                    var n, i, j;
-                    n = parseInt(document.getElementById("val").value);
-                    for (i = 0; i <= n; i++) {
-                        for (j = 1; j <= i; j++) {
+                    var num;
+                    num = parseInt(document.getElementById("val").value);
+                    for (var i = 0; i <= num; i++) {
+                        for (var j = 1; j <= i; j++) {
                             document.writeln(j + " ");
                         }
                         document.write("1");

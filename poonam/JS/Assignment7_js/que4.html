@@ -9,17 +9,17 @@
     <body>
         <script>
             var arrMarks = [];
-            var n, temp;
+            var num, temp;
             n = prompt("Enter number of students:");
-            for (var i = 1; i <= n; i++) {
+            for (var i = 1; i <= num; i++) {
                 arrMarks[i] = parseInt(prompt("Enter marks:"));
             }
             document.write("*****Before Sorting*****");
-            for (var i = 1; i <= n; i++) {      
+            for (var i = 1; i <= num; i++) {      
                 document.write("<br> Marks " + i + ": " + arrMarks[i] );
             }
-            for (var j = 1; j <= n-1; j++) {
-                for (var i = j + 1; i <=n; i++) {
+            for (var j = 1; j <= num - 1; j++) {
+                for (var i = j + 1; i <= num; i++) {
                     if (arrMarks[j] > arrMarks[i]) {
                         temp = arrMarks[j];
                         arrMarks[j] = arrMarks[i];
@@ -29,7 +29,7 @@
                 document.write("<br>Iteration " + j + ": " + arrMarks);
             }
             document.write("<br><br>*****After Sorting (Selection Sort)*****");
-            for (var i = 1; i <= n; i++) {
+            for (var i = 1; i <= num; i++) {
                 document.write("<br> Marks " + i + ": " + arrMarks[i] );
             }
         </script>

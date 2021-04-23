@@ -4,16 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./listNameArray.js"></script>
+        <script src="./objectValChange.js"></script>
         <style>
-            h4 {
-                color: rgb(0, 89, 255)
-            }
-
-            span {
-                color: red;
-            }
-            
             button {
                 padding: 8px;
                 border: none;
@@ -25,13 +17,16 @@
                 cursor: pointer;
             }
         </style>
-        <title>List of Names</title>
+        <title>Object Value Change</title>
     </head>
     <body>
-        <h1>List of Names</h1>
-        <h4>Press Button and <span>Enter 5 Names</span></h4>
-        <button type="submit" onclick="enterNamesList()">Enter Names</button>
-        <p id="namesList"></p>
-        <p id="namesListNewLine"></p>
+        <h1>Object Value Chnages</h1>
+        <h4>Sample Object:</h4>
+        <p>person = {firsName: 'Jhon', lastName:'Doe', age:50, eyeColor:"blue"}</p>
+        <button type="submit" onclick="changeObjectValue()">Change Object Values</button>
+        <p id="keys"></p>
+        <p id="eyeColors"></p>
+        <p id="method"></p>
+        <p id="newObject"></p>
     </body>
 </html>

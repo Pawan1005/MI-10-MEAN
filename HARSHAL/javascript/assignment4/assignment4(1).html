@@ -27,16 +27,12 @@
       function myFunction() {
         var num = document.getElementById("cel").value;
         let sum = 0;
-
         let temp = num;
         while (temp > 0) {
           let remainder = temp % 10;
-
           sum += remainder * remainder * remainder;
-
           temp = parseInt(temp / 10);
         }
-
         if (sum == num) {
           document.getElementById(
             "on"

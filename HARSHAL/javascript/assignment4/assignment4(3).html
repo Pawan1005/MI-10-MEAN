@@ -27,29 +27,24 @@
       function myFunction() {
         var num = document.getElementById("cel").value;
         let sum = 0;
-
         let temp = num;
-
         let remainder = temp % 10;
         var a = 1;
         for (var i = 1; i <= remainder; i++) {
           a = a * i;
         }
-
         var s = parseInt(temp / 10);
         let remainder2 = parseInt(s % 10);
         var b = 1;
         for (var i = 1; i <= remainder2; i++) {
           b = b * i;
         }
-
         var t = parseInt(s / 10);
         let remainder3 = parseInt(t % 10);
         var c = 1;
         for (var i = 1; i <= remainder3; i++) {
           c = c * i;
         }
-
         if (num == 1 || num == 2) {
           document.getElementById(
             "on"

@@ -17,9 +17,7 @@
     <input type="number" id="d" value="" /><br />
     <label for="e">enter maths marks:</label>
     <input type="number" id="e" value="" /><br />
-
     <button onclick="myFunction()">click me</button>
-
     <h1 id="total"></h1>
     <h1 id="percent"></h1>
     <h1 id="grade"></h1>
@@ -41,7 +39,6 @@
         var percent = parseInt(total) / 5;
         document.getElementById("percent").innerText =
           "Percentage obtained: " + percent + "%";
-
         if (percent > 75) {
           greeting = "A";
         } else if (percent > 60 && percent < 75) {

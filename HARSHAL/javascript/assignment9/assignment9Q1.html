@@ -12,18 +12,14 @@
       var num = prompt("ENTER A NUMBER");
       document.write(num);
       var temp = num;
-
       var sum = 0;
       while (num > 0) {
         var rem = parseInt(num % 10);
-
         sum = sum * 10 + rem;
-
         num = parseInt(num / 10);
       }
       console.log(temp);
       console.log(sum);
-
       if (temp == sum) {
         document.write(`<br>number is palindrome`);
       } else {

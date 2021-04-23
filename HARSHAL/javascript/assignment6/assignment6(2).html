@@ -7,25 +7,25 @@
     <title>q2</title>
   </head>
   <body>
-    <script>
-      var names = [];
-      for (var a = 1; a <= 5; a++) {
-        names.push(prompt(`ENTER NUMBER ${a}`));
-      }
-      console.log(`[${names}]`);
-      document.write(`[${names}]`);
-      document.write("<br>" + "<br>" + "JOIN METHOD<br>" + names.join("~"));
-      var sor = names.sort().join().toUpperCase();
-      console.log(sor);
+      <script>
+        var names = [];
+        for (var a = 1; a <= 5; a++) {
+          names.push(prompt(`ENTER NUMBER ${a}`));
+        }
+        console.log(`[${names}]`);
+        document.write(`[${names}]`);
+        document.write("<br>" + "<br>" + "JOIN METHOD<br>" + names.join("~"));
+        var sor = names.sort().join().toUpperCase();
+        console.log(sor);
 
-      document.write(
-        "<br>" + "<br>" + "SORTING ARRAY IN ASCENDING ORDER<br>" + sor
-      );
-      var rev = names.reverse().join().toUpperCase();
-      document.write(
-        "<br>" + "<br>" + "SORTING ARRAY IN DECENDING ORDER<br>" + rev
-      );
-    </script>
-    <h1>array que 2</h1>
+        document.write(
+          "<br>" + "<br>" + "SORTING ARRAY IN ASCENDING ORDER<br>" + sor
+        );
+        var rev = names.reverse().join().toUpperCase();
+        document.write(
+          "<br>" + "<br>" + "SORTING ARRAY IN DECENDING ORDER<br>" + rev
+        );
+      </script>
+      <h1>array que 2</h1>
   </body>
 </html>

@@ -17,20 +17,20 @@
     </style>
   </head>
   <body>
-    <label for="a">ENTER A NUMBER:</label>
-    <input type="number" id="cel" value="" />
-    <button onclick="myFunction()">CLICK</button>
-    <h1>FACTORIAL</h1>
-    <h2 id="on"></h2>
-    <script>
-      function myFunction() {
-        var num = document.getElementById("cel").value;
-        var a = 1;
-        for (var i = 1; i <= num; i++) {
-          a = a * i;
+      <label for="a">ENTER A NUMBER:</label>
+      <input type="number" id="cel" value="" />
+      <button onclick="myFunction()">CLICK</button>
+      <h1>FACTORIAL</h1>
+      <h2 id="on"></h2>
+      <script>
+        function myFunction() {
+          var num = document.getElementById("cel").value;
+          var a = 1;
+          for (var i = 1; i <= num; i++) {
+            a = a * i;
+          }
+          document.getElementById("on").innerHTML = `factorial of ${num} is ${a}`;
         }
-        document.getElementById("on").innerHTML = `factorial of ${num} is ${a}`;
-      }
-    </script>
+      </script>
   </body>
 </html>

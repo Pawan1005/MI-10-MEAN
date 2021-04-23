@@ -17,31 +17,31 @@
     </style>
   </head>
   <body>
-    <label for="a">ENTER A NUMBER:</label>
-    <input type="number" id="cel" value="" />
-    <button onclick="myFunction()">CLICK</button>
-    <h1>Floyd’s triangle</h1>
-    <h2 id="o"></h2>
-    <h2 id="on"></h2>
-    <h2 id="off"></h2>
-    <script>
-      function myFunction() {
-        var num = document.getElementById("cel").value;
-        var tempStr = "",
-          prevNumber = 1,
-          i,
-          num = num;
-        for (i = 0; i < num; i++) {
-          tempStr = "";
-          j = 0;
-          while (j <= i) {
-            tempStr = tempStr + "    " + prevNumber;
-            j++;
-            prevNumber++;
+      <label for="a">ENTER A NUMBER:</label>
+      <input type="number" id="cel" value="" />
+      <button onclick="myFunction()">CLICK</button>
+      <h1>Floyd’s triangle</h1>
+      <h2 id="o"></h2>
+      <h2 id="on"></h2>
+      <h2 id="off"></h2>
+      <script>
+        function myFunction() {
+          var num = document.getElementById("cel").value;
+          var tempStr = "",
+            prevNumber = 1,
+            i,
+            num = num;
+          for (i = 0; i < num; i++) {
+            tempStr = "";
+            j = 0;
+            while (j <= i) {
+              tempStr = tempStr + "    " + prevNumber;
+              j++;
+              prevNumber++;
+            }
+            document.write(tempStr + "<br>");
           }
-          document.write(tempStr + "<br>");
         }
-      }
-    </script>
+      </script>
   </body>
 </html>

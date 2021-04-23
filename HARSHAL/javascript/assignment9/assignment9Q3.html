@@ -7,37 +7,37 @@
     <title>q3</title>
   </head>
   <body>
-    <h1>To check 5 prime palindrome numbers</h1>
-    <script>
-      var Number = [];
-      for (var a = 1; a <= 5; a++) {
-        Number.push(prompt(`ENTER NUMBER ${a}`));
-      }
-      for (var i = 0; i < Number.length; i++) {
-        var OriginalNumber = Number[i];
-        var ReverseNumber = 0;
-        while (Number[i] != 0) {
-          var Lastdigit = parseInt(Number[i] % 10);
-          var ReverseNumber = ReverseNumber * 10 + Lastdigit;
-          Number[i] = parseInt(Number[i] / 10);
+      <h1>To check 5 prime palindrome numbers</h1>
+      <script>
+        var Number = [];
+        for (var a = 1; a <= 5; a++) {
+          Number.push(prompt(`ENTER NUMBER ${a}`));
         }
-        document.write(ReverseNumber);
-        if (OriginalNumber == ReverseNumber) {
-          for (var j = 2; j < OriginalNumber; j++) {
-            if (OriginalNumber % j == 0) {
-              var Prime = true;
-              break;
+        for (var i = 0; i < Number.length; i++) {
+          var OriginalNumber = Number[i];
+          var ReverseNumber = 0;
+          while (Number[i] != 0) {
+            var Lastdigit = parseInt(Number[i] % 10);
+            var ReverseNumber = ReverseNumber * 10 + Lastdigit;
+            Number[i] = parseInt(Number[i] / 10);
+          }
+          document.write(ReverseNumber);
+          if (OriginalNumber == ReverseNumber) {
+            for (var j = 2; j < OriginalNumber; j++) {
+              if (OriginalNumber % j == 0) {
+                var Prime = true;
+                break;
+              }
             }
-          }
-          if (Prime == true) {
-            document.write("<br>Number is not Prime Palindrome<br>");
+            if (Prime == true) {
+              document.write("<br>Number is not Prime Palindrome<br>");
+            } else {
+              document.write("<br>Number is Prime Palindrome<br>");
+            }
           } else {
-            document.write("<br>Number is Prime Palindrome<br>");
+            document.write("<br>Number is not Prime Palindrome<br>");
           }
-        } else {
-          document.write("<br>Number is not Prime Palindrome<br>");
         }
-      }
-    </script>
+      </script>
   </body>
 </html>

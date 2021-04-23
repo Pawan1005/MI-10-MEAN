@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>q5</title>
-</head>
-<body>
-    <h1>To find repeating letters in words </h1>
-    <script>
+  </head>
+  <body>
+        <h1>To find repeating letters in words</h1>
+        <script>
         var a = prompt("ENTER A SENTENCE");
         var b = a.split("");
-       console.log(b);
-       document.write(`<br>the reapeating letters in [${a}]:`);
-       for(var i=0; i<b.length ; i++){
-           if(b[i]==b[i+1]){
-               document.write(`<br>${b[i]}`);
-           }     
-       }
-    </script>
-</body>
+        console.log(b);
+        document.write(`<br>the reapeating letters in [${a}]:`);
+        for (var i = 0; i < b.length; i++) {
+            if (b[i] == b[i + 1]) {
+            document.write(`<br>${b[i]}`);
+            }
+        }
+        </script>
+  </body>
 </html>

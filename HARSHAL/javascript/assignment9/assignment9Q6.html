@@ -7,22 +7,20 @@
     <title>q6</title>
   </head>
   <body>
-      <h1>
-          determining number of whitespaces and words in a sentence
-      </h1>
-    <script>
-      var a = prompt("ENTER A SENTENCE")
-      document.write(a+"<br>")
-      var b = a.split("");
-      console.log(b);
-      var count=0;
-      for(var i=0; i<a.length; i++){
-          if(b[i]==" "){
-              count=count+1;
+      <h1>determining number of whitespaces and words in a sentence</h1>
+      <script>
+        var a = prompt("ENTER A SENTENCE");
+        document.write(a + "<br>");
+        var b = a.split("");
+        console.log(b);
+        var count = 0;
+        for (var i = 0; i < a.length; i++) {
+          if (b[i] == " ") {
+            count = count + 1;
           }
         }
-        document.write(`whitespaces= ${count}<br>`)
-        document.write(`total number of words= ${count+1}`)
-    </script>
+        document.write(`whitespaces= ${count}<br>`);
+        document.write(`total number of words= ${count + 1}`);
+      </script>
   </body>
 </html>

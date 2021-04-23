@@ -17,32 +17,32 @@
     </style>
   </head>
   <body>
-    <label for="a">ENTER A NUMBER:</label>
-    <input type="number" id="cel" value="" />
-    <button onclick="myFunction()">CLICK</button>
-    <h1>
-      check middle digit of given 3 digit number is Equal to the Sum of Other two digits or Not
-    </h1>
-    <h2 id="o"></h2>
-    <h2 id="on"></h2>
-    <h2 id="off"></h2>
-    <script>
-      function myFunction() {
-        var num = document.getElementById("cel").value;
-        var last = num % 10;
-        var s = parseInt(num / 10);
-        let second = parseInt(s % 10);
-        var third = parseInt(s / 10);
-        if (num < 100 || num > 999) {
-          document.getElementById(
-            "o"
-          ).innerHTML = `please enter a valid 3 digit number`;
-        } else if (last + third == second) {
-          document.getElementById("on").innerHTML = `sum match`;
-        } else {
-          document.getElementById("off").innerHTML = `sum does not match`;
+      <label for="a">ENTER A NUMBER:</label>
+      <input type="number" id="cel" value="" />
+      <button onclick="myFunction()">CLICK</button>
+      <h1>
+        check middle digit of given 3 digit number is Equal to the Sum of Other two digits or Not
+      </h1>
+      <h2 id="o"></h2>
+      <h2 id="on"></h2>
+      <h2 id="off"></h2>
+      <script>
+        function myFunction() {
+          var num = document.getElementById("cel").value;
+          var last = num % 10;
+          var s = parseInt(num / 10);
+          let second = parseInt(s % 10);
+          var third = parseInt(s / 10);
+          if (num < 100 || num > 999) {
+            document.getElementById(
+              "o"
+            ).innerHTML = `please enter a valid 3 digit number`;
+          } else if (last + third == second) {
+            document.getElementById("on").innerHTML = `sum match`;
+          } else {
+            document.getElementById("off").innerHTML = `sum does not match`;
+          }
         }
-      }
-    </script>
+      </script>
   </body>
 </html>

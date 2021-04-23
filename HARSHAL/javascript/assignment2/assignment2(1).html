@@ -7,32 +7,32 @@
     <title>que 1</title>
   </head>
   <body>
-    <label for="a">enter 1st number:</label>
-    <input type="number" id="a" value="" /><br />
-    <label for="b">enter 2nd number:</label>
-    <input type="number" id="b" value="" /><br />
-    <label for="c">enter 3rd number:</label>
-    <input type="number" id="c" value="" /><br />
-    <label for="d">enter 4th number:</label>
-    <input type="number" id="d" value="" /><br />
-    <label for="e">enter 5th number:</label>
-    <input type="number" id="e" value="" /><br />
-    <button onclick="myFunction()">click me</button>
-    <h1 id="nd"></h1>
-    <script>
-      function myFunction() {
-        var first = document.getElementById("a").value;
-        var second = document.getElementById("b").value;
-        var third = document.getElementById("c").value;
-        var fourth = document.getElementById("d").value;
-        var fifth = document.getElementById("e").value;
-        var cars = [first, second, third, fourth, fifth];
-        cars.sort(function (a, b) {
-          return a - b;
-        });
-        document.getElementById("nd").innerHTML =
-          "The second gretest number is: " + cars[1];
-      }
-    </script>
+      <label for="a">enter 1st number:</label>
+      <input type="number" id="a" value="" /><br />
+      <label for="b">enter 2nd number:</label>
+      <input type="number" id="b" value="" /><br />
+      <label for="c">enter 3rd number:</label>
+      <input type="number" id="c" value="" /><br />
+      <label for="d">enter 4th number:</label>
+      <input type="number" id="d" value="" /><br />
+      <label for="e">enter 5th number:</label>
+      <input type="number" id="e" value="" /><br />
+      <button onclick="myFunction()">click me</button>
+      <h1 id="nd"></h1>
+      <script>
+        function myFunction() {
+          var first = document.getElementById("a").value;
+          var second = document.getElementById("b").value;
+          var third = document.getElementById("c").value;
+          var fourth = document.getElementById("d").value;
+          var fifth = document.getElementById("e").value;
+          var cars = [first, second, third, fourth, fifth];
+          cars.sort(function (a, b) {
+            return a - b;
+          });
+          document.getElementById("nd").innerHTML =
+            "The second gretest number is: " + cars[1];
+        }
+      </script>
   </body>
 </html>

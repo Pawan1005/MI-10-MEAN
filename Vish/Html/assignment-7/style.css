@@ -1,0 +1,146 @@
+body{
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    height: 100%;
+}
+section, footer, header{
+    width: 1100px;
+    margin: auto;
+    background: radial-gradient(circle, rgba(111,105,218,1) 9%, rgba(218,105,201,1) 21%, rgba(48,151,39,1) 39%, rgba(121,27,9,1) 54%, rgba(121,9,84,1) 77%, rgba(97,121,9,1) 94%);
+}
+a, li, ul, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: justify;
+    color: black;
+}
+.header-right{
+    float: right;
+}
+.header-box{
+    display: inline-block;
+    padding: 10px;
+}
+.header-box nav ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.header-box nav ul li:hover {
+    background-color: blanchedalmond;
+    color: mediumblue;
+}
+.hero-box{
+    height: 200px;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(97,121,9,1) 9%, rgba(218,105,201,1) 21%, rgba(48,151,39,1) 39%, rgba(121,27,9,1) 54%, rgba(121,9,84,1) 77%, rgba(111,105,218,1) 94%);
+}
+h2 {
+    padding: 10px 0;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    color:#f0f;
+}
+.main-block {
+    max-width: 340px; 
+    min-height: 460px; 
+    padding: 10px 0;
+    margin: auto;
+    border-radius: 5px; 
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    background: #ebebeb; 
+}
+.account-type, .gender {
+    margin: 15px 0;
+}
+input[type=radio] {
+    display: none;
+}
+form {
+    margin: 0 30px;    
+}
+label {
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+}
+label.radio {
+    position: relative;
+    display: inline-block;
+    padding-top: 4px;
+    margin-right: 20px;
+    text-indent: 30px;
+    overflow: visible;
+    cursor: pointer;
+}
+label.radio:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1c87c9;
+}
+label.radio:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 4px;
+    top: 8px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+input[type=radio]:checked + label:after {
+    opacity: 1;
+}
+input[type=text], input[type=password] {
+    width: calc(100% - 57px);
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff; 
+    box-sizing: border-box;
+}
+input[type=password] {
+    margin-bottom: 15px;
+}
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px; 
+    border: none;
+    background: #1c87c9; 
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+button:hover {
+    background: #26a9e0;
+    opacity: 0.8;
+}
+span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+}
+.container {
+    padding: 16px 0;
+    text-align:left;
+}
+.formcontainer {
+    text-align: left;
+    margin: 24px 50px 12px;
+}

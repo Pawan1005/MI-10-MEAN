@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Square pattern</title>
+        <script>
+            function sqpattern(){
+                var r, c;
+                let pattern = "";
+                r = parseInt(document.getElementById("star").value);
+                c = parseInt(document.getElementById("star").value);
+                for(let i=0; i<=r; i++){
+                    for(let j=0; j<c; j++){
+                        document.getElementById("str").innerHTML = pattern += "*";
+                    }
+                    document.getElementById("str").innerHTML = pattern += "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Pattern</h1>
+        <form action="" style=" margin-top: 50px;">
+            <label for="star">Enter row</label>
+            <input type="number" id="star"><br><br>
+            <label for="star">Enter row</label>
+            <input type="number" id="star">
+            <button type="button" onclick="sqpattern()">Check</button>
+            <h4 id="str"></h4>
+    </body>
+</html>

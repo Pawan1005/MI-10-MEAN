@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment2js</title>
+        <script>
+            function tem(){
+            var value,conversion;
+            value = parseInt(document.getElementById("val").value);
+            conversion = parseFloat(value * 9/5) + 32;
+            document.getElementById("md").innerHTML = value + " C is equal to " + conversion + " F";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Conversion of Celcius to Fahrenheit</h1>
+        <form action="">
+            Temp : <input type="number" id="val"> C
+            <button type="button" onclick="tem()">Convert</button>
+            <h2>After Conversion</h2>
+            <p id="md"></p>
+        </form>
+    </body>
+</html>

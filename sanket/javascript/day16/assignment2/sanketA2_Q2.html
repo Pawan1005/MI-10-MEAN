@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>total and percentage and grade</title>
+  </head>
+  <body>
+    no1: <input type="text" id="no1" /> no2: <input type="text" id="no2" /> no3:
+    <input type="text" id="no3" /> no4: <input type="text" id="no4" /> no5:
+    <input type="text" id="no5" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function cal() {
+        let n1 = parseInt(document.getElementById("no1").value);
+        let n2 = parseInt(document.getElementById("no2").value);
+        let n3 = parseInt(document.getElementById("no3").value);
+        let n4 = parseInt(document.getElementById("no4").value);
+        let n5 = parseInt(document.getElementById("no5").value);
+        let total_marks = n1 + n2 + n3 + n4 + n5;
+        let percent = (total_marks / 500) * 100;
+        let grade;
+        if (percent >= 75) {
+          grade = "A";
+        } else if (percent >= 60 && percent <= 74) {
+          grade = "B";
+        } else if (percent >= 40 && percent <= 59) {
+          grade = "C";
+        } else if (percent >= 30 && percent <= 39) {
+          grade = "D";
+        } else if (percent < 30) {
+          grade = "F";
+        }
+        document.getElementById(
+          "p"
+        ).innerHTML = `total = ${total_marks} and percentage = ${percent}% and grade = ${grade} `;
+      }
+    </script>
+  </body>
+</html>

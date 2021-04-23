@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Que 5</title>
+        <script>
+            function triangle() {
+                var n, i, j, number = 1;
+                n = parseInt(document.getElementById("val").value);
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= i; j++) {
+                        document.getElementById('result').innerHTML += ` ${number} `
+                        number++;
+                    }
+                    document.getElementById('result').innerHTML += "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Floyd's triangle</h1>
+        <div style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter Number</label>
+            <input type="text" id="val">
+            <button type="button" onclick="triangle()">Print Floyd's triangle</button>
+        </div>
+        <h4 id="result"></h4>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+.usrimg {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.but {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    color: white;
+    font-weight: bolder;
+}
+
+.pdtimg {
+    width: px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.addbuttons {
+    align-items: center;
+    padding: 5px;
+    width: 200px;
+    height: 57px;
+    color: #fff;
+    font-weight: bold;
+    background: #E98074;
+    margin-left: 150px;
+    margin-top: 20px;
+    box-shadow: 0px 10px 30px rgba(64, 191, 255, 0.24);
+    border-radius: 5px;
+}
+
+.fix {
+    overflow-x: hidden;
+    height: 800px;
+}
+
+.apbtn {
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+
+.sticky {
+    top: 10px;
+    position: sticky;
+}
+
+/*Dashboard items*/
+
+.box1 {
+    width: 200px;
+    height: 150px;
+    background-color: #EAE7DC;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.box2 {
+    width: 200px;
+    height: 150px;
+    background-color: #EAE7DC;
+    border-radius: 10px;
+    margin-left: 50px;
+}

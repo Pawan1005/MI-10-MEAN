@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your Guide - Find a Guide to show you around"
+    />
+    <title>Your Guide - Find a Guide</title>
+    <link rel="shortcut icon" href="images/badge.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="container-fluid">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand website--name" href="/">Your Guide</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav--bar--center">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#search">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="privacy.html">Privacy</a>
+            </li>
+          </ul>
+
+          <button
+            class="btn btn-outline-primary my-2 my-sm-0 mr-5 nav--bar--center"
+            type="submit"
+            data-toggle="modal"
+            data-target="#loginModal"
+          >
+            Log in
+          </button>
+
+          <button
+            class="btn btn-primary my-2 my-sm-0"
+            type="submit"
+            data-toggle="modal"
+            data-target="#registerModal"
+          >
+            Register
+          </button>
+        </div>
+      </nav>
+
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content p-5 my-5">
+            <div class="modal-header border-0"></div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="yourguideInputEmaillogin">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="yourguideInputEmaillogin"
+                    aria-describedby="emailHelp"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input mt-3"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label ml-3" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-secondary mr-4"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="user_profile_page.html" class="btn btn-primary">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="registerModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content p-5 my-5">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="yourguideInputEmailsignup">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="yourguideInputEmailsignup"
+                    aria-describedby="emailHelp"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input mt-3"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label ml-3" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-block btn-primary">
+                Sign up as a Tourist
+              </button>
+              <button type="button" class="btn btn-block btn-primary">
+                Sign up as a Guide
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="shadow my-5 mx-1 p-5">
+      <h3>Privacy Policy</h3>
+      <p>
+        How We Collect and Use Information <br />
+        We collect the following types of information about you
+      </p>
+      <br />
+      <h3>Information you provide us directly:</h3>
+      <p>
+        We ask for certain information such as your username, real name,
+        address, phone number and e-mail address when you register for a
+        yourguide account, or if you correspond with us. We may collect
+        information you provide in User Content you post to the Service. We use
+        this information to operate, maintain, and provide to you the features
+        and functionality of the Service. Your username and if you choose to
+        disclose it, your real name, will be published publicly. Once published
+        your username and / or real name may not be able to be removed.
+      </p>
+      <br />
+      <h3>Analytics information:</h3>
+      <p>
+        We may directly collect analytics data, or use third-party analytics
+        tools and services, to help us measure traffic and usage trends for the
+        Service. These tools collect information sent by your browser or mobile
+        device, including the pages you visit and other information that assists
+        us in improving the Service. We collect and use this analytics
+        information in aggregate form such that it cannot reasonably be
+        manipulated to identify any particular individual user.
+      </p>
+      <br />
+      <h3>Cookies information:</h3>
+      <p>
+        When you visit the Service, we may send one or more cookies — a small
+        text file containing a string of alphanumeric characters — to your
+        computer that uniquely identifies your browser and lets yourguide help
+        you log in faster and enhance your navigation through the site. A cookie
+        may also convey information to us about how you use the Service (e.g.,
+        the pages you view, the links you click and other actions you take on
+        the Service), and allow us or our business partners to track your usage
+        of the Service over time. A persistent cookie remains on your hard drive
+        after you close your browser. Persistent cookies may be used by your
+        browser on subsequent visits to the site. Persistent cookies can be
+        removed by following your web browser’s directions. A session cookie is
+        temporary and disappears after you close your browser. You can reset
+        your web browser to refuse all cookies or to indicate when a cookie is
+        being sent. However, some features of the Service may not function
+        properly if the ability to accept cookies is disabled.
+      </p>
+      <br />
+      <h3>Log file information:</h3>
+      <p>
+        Log file information is automatically reported by your browser or mobile
+        device each time you access the Service. When you use our Service, our
+        servers automatically record certain log file information. These server
+        logs may include anonymous information such as your web request,
+        Internet Protocol (“IP”) address, browser type, referring / exit pages
+        and URLs, number of clicks and how you interact with links on the
+        Service, domain names, landing pages, pages viewed, and other such
+        information.
+      </p>
+      <br />
+      <h3>Clear gifs/web beacons information:</h3>
+      <p>
+        When you use the Service, we may employ clear gifs (also known as web
+        beacons) which are used to anonymously track the online usage patterns
+        of our Users. In addition, we may also use clear gifs in HTML-based
+        emails sent to our users to track which emails are opened and which
+        links are clicked by recipients. The information is allows for more
+        accurate reporting and improvement of the Service.
+      </p>
+      <br />
+      <h3>Device identifiers:</h3>
+      <p>
+        When you access the Service by or through a mobile device (including but
+        not limited to smart-phones or tablets), we may access, collect, monitor
+        and/or remotely store one or more “device identifiers,” such as a
+        universally unique identifier (“UUID”). Device identifiers are small
+        data files or similar data structures stored on or associated with your
+        mobile device, which uniquely identify your mobile device. A device
+        identifier may be data stored in connection with the device hardware,
+        data stored in connection with the device’s operating system or other
+        software, or data sent to the device by yourguide. A device identifier
+        may convey information to us about how you browse and use the Service. A
+        device identifier may remain persistently on your device, to help you
+        log in faster and enhance your navigation through the Service. Some
+        features of the Service may not function properly if use or availability
+        of device identifiers is impaired or disabled.
+      </p>
+      <br />
+      <h3>Location data:</h3>
+      <p>
+        When you access the Service by or through a mobile device, we may
+        access, collect, monitor and/or remotely store “location data,” which
+        may include GPS coordinates (e.g. latitude and/or longitude) or similar
+        information regarding the location of your mobile device. Location data
+        may convey to us information about how you browse and use the Service.
+        Some features of the Service, particularly location-based services, may
+        not function properly if use or availability of location data is
+        impaired or disabled.
+      </p>
+      <br />
+      <h3>Commercial and marketing communications:</h3>
+      <p>
+        We use the information we collect or receive, such as your email
+        address, to communicate directly with you. We may send you emails
+        containing newsletters, promotions, and special offers. If you do not
+        want to receive such email messages, you will be given the option to opt
+        out or change your preferences. We also use your information to send you
+        Service-related emails (e.g., account verification, purchase and billing
+        confirmations and reminders, changes/updates to features of the Service,
+        technical and security notices). You may not opt out of Service-related
+        emails.
+      </p>
+    </section>
+    <footer class="footer bg-dark">
+      <div class="row justify-content-center pt-5">
+        <div class="col col-md-auto"><a href="">Contact us</a></div>
+        <div class="col col-md-auto"><a href="">Privacy</a></div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col col-md-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="col col-md-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="col col-md-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col footer__copyright">Copyright 2021 Your Guide</div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel</title>
+  </head>
+  <body>
+    no: <input type="text" id="no" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+
+    <script>
+      function cal() {
+        let n = document.getElementById("no").value;
+        s = n.toLowerCase();
+
+        switch (s) {
+          case "a":
+            v = "Vowel";
+            break;
+          case "e":
+            v = "Vowel";
+            break;
+          case "i":
+            v = "Vowel";
+            break;
+          case "o":
+            v = "Vowel";
+            break;
+          case "u":
+            v = "Vowel";
+            break;
+          default:
+            v = "not Vowel";
+        }
+        document.getElementById("p").innerHTML = v;
+      }
+    </script>
+  </body>
+</html>

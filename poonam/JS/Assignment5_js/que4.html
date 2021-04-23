@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Que 4</title>
+        <script>
+            function sum() {
+                var r, n, sum = 0, product = 1;
+                n = parseInt(document.getElementById("val").value);
+                n1 = n;
+                while (n > 0) {
+                    r = n % 10;
+                    if (r % 2 == 0) {
+                        sum = sum + r;
+                    }
+                    else {
+                        product = product * r;
+                    }
+                    n = parseInt(n / 10);
+                }
+                document.getElementById("result1").innerHTML = "Sum of even digits : " + sum;
+                document.getElementById("result2").innerHTML = "Product of odd digits : " + product;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Sum of Even and Product of Odd digits of given 6 digit
+            Number</h1>
+        <div style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter 6 digit Number</label>
+            <input type="number" maxlength="6" id="val">
+            <button type="button" onclick="sum()">Calculate</button>
+        </div>
+        <h4 id="result1"></h4>
+        <h4 id="result2"></h4>
+    </body>
+</html>

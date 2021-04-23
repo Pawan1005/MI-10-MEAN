@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="./swapNumber.js"></script>
+        <title>Swap Two Numbers</title>
+    </head>
+    <body>
+        <h1>Swap Two numbers</h1>
+        <form>
+            <label for="number1">A:</label>
+            <input type="text" id="number1">
+            <label for="number2">B:</label>
+            <input type="text" id="number2">
+            <button type="submit" onclick="swapWithTempVariable()">Method1</button>
+            <button type="submit" onclick="swapWithoutTempVariable()">Method2</button>
+        </form>
+        <h3>Method1: With Temporary variable</h3>
+        <p id="method1">After Swapping (Method1)- A: <span id="A"></span> B: <span id="B"></span></p>
+        <h3>Method2: Without Temporary variable</h3>
+        <p id="method2">After Swapping (Method2)- A: <span id="A"></span> B: <span id="B"></span></p>
+    </body>
+</html>

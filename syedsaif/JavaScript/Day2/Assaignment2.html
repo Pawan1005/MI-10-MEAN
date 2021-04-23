@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+         <style>
+         h1{
+             text-align: center;
+         }
+         p{
+             text-align: center;
+             color: red;
+         }
+         </style>
+   </head>
+   <body>  
+      <div>
+           <h1>Enter the Five Subject Marks</h1>
+           <div style="text-align: center; color: blue;">
+           <form>
+               <label for="Science">Science:</label>
+               <input type="number" id="one"><br><br>
+               <label for="Social">Social:</label>
+               <input type="number" id="two"><br><br>
+               <label for="Maths">Maths:</label>
+               <input type="number" id="three"><br><br>
+               <label for="Physics">Physics:</label>
+               <input type="number" id="four"><br><br>
+               <label for="Computers">Computers:</label>
+               <input type="number" id="five"><br><br>
+               <button onclick="Function()">Result</button>
+           </form>
+           </div>
+           <p id="total"> </p>
+           <p id="per"> </p>
+      </div>
+      <script>
+          function Function() {
+              event.preventDefault()
+              let a,b,c,d,e,total,per;
+              a=parseFloat(document.getElementById("one").value);
+              console.log(a)
+              b=parseFloat(document.getElementById("two").value);
+              c=parseFloat(document.getElementById("three").value);
+              d=parseFloat(document.getElementById("four").value);
+              e=parseFloat(document.getElementById("five").value);
+              total=parseFloat(a+b+c+d+e);
+              per=parseFloat((total/500)*100);
+              if (per>=75){
+                  document.getElementById("total").innerHTML="Congratulations!  You have Scored total Marks"+ total+ "of 500";
+                  document.getElementById("per").innerHTML="You have Scored"+ per + "% percentage out of 100 and Secured A grade";
+              }
+              else if (per>=60){
+                  document.getElementById("total").innerHTML="Congratulations!  You have Scored total Marks"+ total+ "of 500";
+                  document.getElementById("per").innerHTML="You have Scored"+ per + "% percentage out of 100 and Secured B grade";
+              }
+              else if (per>=40){
+                  document.getElementById("total").innerHTML="Congratulations!  You have Scored total Marks"+ total+ "of 500";
+                  document.getElementById("per").innerHTML="You have Scored"+ per + "% percentage out of 100 and Secured C grade";
+              }
+              else if (per>=30){
+                  document.getElementById("total").innerHTML="Congratulations!  You have Scored total Marks"+ total+ "of 500";
+                  document.getElementById("per").innerHTML="You have Scored"+ per + "% percentage out of 100 and Secured D grade";
+              }
+              else {
+                document.getElementById("total").innerHTML="Regret Message!  You have Scored total Marks"+ total+ "of 500";
+                  document.getElementById("per").innerHTML="You have Scored"+ per + "% percentage out of 100 and Secured F grade";
+              }
+          }
+      </script>
+   </body>
+</html>

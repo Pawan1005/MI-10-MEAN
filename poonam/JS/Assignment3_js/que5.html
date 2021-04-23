@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Factorial</title>
+        <script>
+            function factorial(){
+                var n, res=1;
+                n = parseInt(document.getElementById("num").value);
+                for(i=1; i<=n; i++){
+                    res *= i;
+                    document.getElementById("fac").innerHTML =" Factorial of " + n + " is " + res;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Factorial</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="num">Enter Number</label>
+            <input type="number" id="num">
+            <button type="button" onclick="factorial()">Check</button>
+            <h4 id="fac"></h4>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="sanketA7_Q1.html"><span>job.com</span></a>
+        <li>
+          <a class="pl2" href="pers_acad.html">Personal Details</a>
+        </li>
+        <li><a class="pl2" href="prof.html">Professional Details</a></li>
+      </ul>
+    </nav>
+    <h2>Professional Details</h2>
+    <form>
+      <label>IT Skills</label>
+      <input type="text" list="skills" autocomplete="off" />
+      <datalist id="skills">
+        <option>Java</option>
+        <option>JavaScript</option>
+        <option>React</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>other</option>
+      </datalist>
+      <label for="version">Version</label>
+      <input type="number" min="0" id="version" />
+      <label for="lastused">Last Used</label>
+      <input type="number" min="0" id="lastused" />
+      <label for="experience">Experience</label>
+      <input type="number" min="0" id="experience" />
+    </form>
+  </body>
+</html>

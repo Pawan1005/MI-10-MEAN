@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrapCSS/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../css/style.css">
+        <title>AboutUs</title>
+    </head>
+    <body>
+        <section class="loginHeader">
+            <img src="../css/bootstrap-icons-1.4.0/person-square.svg" alt="login">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUp">SignUp</button>
+            <!-- SingUp Modal -->
+            <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signUp">Create Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Full Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span>&#47</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">SignIn</button>
+             <!-- SingIn Modal -->
+             <div class="modal fade" id="signIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signIn">SignIn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="./UserProfile.html">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Email Id">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Password">
+                                </div>
+                                <a href="./ChangePassword.html">Forgot Password</a>
+                                <button type="submit">SIGN IN</button>
+                                <button type="button">
+                                    <img src="../img/Google__Logo.svg" alt="Google__Logo">
+                                    Google
+                                </button>
+                                <button type="button">
+                                    <img src="../img/Facebook_logo.png" alt="Facebook_logo">
+                                    Facebook
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>By Logging in you agree to our Terms Conditions and Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="logoHeader">
+            <img src="../img/logo.png" alt="logo">
+        </section>
+        <section class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./HomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./TourPackage.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Contact.html">ContactUs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Enquiry.html">Enquiry</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img src="https://source.unsplash.com/1555x400/?travelling" alt="Image1">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://source.unsplash.com/1553x400/?travelling" alt="Image1">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://source.unsplash.com/1554x400/?travelling" alt="Image1">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://source.unsplash.com/1551x400/?travelling" alt="Image1">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://source.unsplash.com/1556x400/?travelling" alt="Image1">
+              </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <section class="main">
+            <h2>AboutUs</h2>
+            <p>
+                Tour World Wide is India’s leading online travel booking brand providing range of choice for hotels, flights, trains, bus and cars for travelers. 
+                Our core value differentiator is the most trusted user experience, be it in terms of quickest search and booking, fastest payments, settlement or refund processes. 
+                Through GoStays, our customers enjoy standardised stay experience at certified hotel properties. With industry first virtual travel booking currency GoCash and travel social network, GoCash+ Rewards – 
+                Tour World Wide is the number one choice for new India on the move.
+            </p>
+        </section>
+        <section class="footer">
+            <span>&copy;CopyRights 2020-2021</span>
+            <button type="button">Privacy Policy</button>
+            <button type="button">Terms</button>
+        </section>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script src="../js/sliderSwiper.js"></script>
+        <!-- Bootstrap -->
+        <script src="../js/bootstrapJs/bootstrap.min.js"></script>
+    </body>
+</html>

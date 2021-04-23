@@ -1,0 +1,43 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.header {
+  color: white;
+}
+.col-7 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0dgS_GzRrcnU9YngHJ9i1PE5YD3K_Pu6NFA&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 27px 186px;
+  line-height: 1.1;
+  overflow: auto;
+}
+.big {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.small {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.col-7 li {
+  list-style: none;
+}
+.text {
+  background-color: rgb(214, 214, 214);
+  padding: 180px 46px;
+  overflow: auto;
+}
+.photo {
+  background-image: url(https://cdn.pixabay.com/photo/2014/10/14/20/14/library-488690_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 389px;
+  overflow: auto;
+}
+.col-1 {
+  background-color: rgb(214, 214, 214);
+  width: 5%;
+  overflow: auto;
+}

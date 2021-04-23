@@ -1,0 +1,23 @@
+table {
+    width: 60%;
+}
+
+th {
+    color: rgb(0, 183, 255);
+}
+
+tr {
+    color: rgb(238, 11, 49);
+}
+
+.table__thirdHeading {
+    width: 50px;
+}
+
+table,
+th,
+td {
+    padding: 10px;
+    border: 2px solid rgb(7, 248, 88);
+    border-collapse: collapse;
+}

@@ -11,16 +11,16 @@
     <input type="number" id="a" value="" /><br />
     <button onclick="myFunction()">click me</button>
     <h1 id="b"></h1>
-  <script>
-    function myFunction() {
-      var year = document.getElementById("a").value;
-      if (year % 4 == 0) {
-        greet = "a leap year";
-      } else {
-        greet = "not a leap year";
+    <script>
+      function myFunction() {
+        var year = document.getElementById("a").value;
+        if (year % 4 == 0) {
+          greet = "a leap year";
+        } else {
+          greet = "not a leap year";
+        }
+        document.getElementById("b").innerHTML = "It is " + greet;
       }
-      document.getElementById("b").innerHTML="It is "+greet;
-    }
-  </script>
+    </script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marks of a student</title>
+  </head>
+  <body>
+    <script>
+      let marks,
+        totalMarks = [];
+      externalMarks = [];
+      internalMarks = [];
+      for (i = 0; i < 10; i++) {
+        marks = prompt("Enter marks of subject " + (i + 1));
+        if (marks > 80) window.alert("enter marks less than 80 ");
+        else externalMarks.push(parseInt(marks));
+      }
+      for (i = 0; i < externalMarks.length; i++) {
+        internalMarks[i] = (20 * externalMarks[i]) / 100;
+        totalMarks[i] = parseInt(externalMarks[i] + internalMarks[i]);
+      }
+      totalMarks.forEach((marks, index) =>
+        document.write(`subject ${index + 1} = marks : ${marks}<br>`)
+      );
+    </script>
+  </body>
+</html>

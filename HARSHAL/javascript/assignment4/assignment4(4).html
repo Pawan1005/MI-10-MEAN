@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>q4</title>
-    <style>
-      body {
-        text-align: center;
-        justify-content: center;
-      }
-      button {
-        padding: 6px;
-        background-color: greenyellow;
-      }
-    </style>
-  </head>
-  <body>
-      <label for="a">ENTER A CHARACTER:</label>
-      <input type="text" id="cel" value="" />
-      <button onclick="myFunction()">CLICK</button>
-      <h1>check if it is a vowel or not</h1>
-      <h2 id="on"></h2>
-      <h2 id="off"></h2>
-      <script>
-        function myFunction() {
-          var char = document.getElementById("cel").value;
-          switch (char) {
-            case "a":
-            case "e":
-            case "i":
-            case "o":
-            case "u":
-            case "A":
-            case "E":
-            case "I":
-            case "O":
-            case "U":
-              document.getElementById("on").innerHTML = `It is a vowel`;
-              break;
-            default:
-              document.getElementById("off").innerHTML = `It is not a vowel`;
-              break;
-          }
-        }
-      </script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q4</title>
+        <style>
+            body {
+                text-align: center;
+                justify-content: center;
+            }
+            button {
+                padding: 6px;
+                background-color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="a">ENTER A CHARACTER:</label>
+        <input type="text" id="cel" value="" />
+        <button onclick="myFunction()">CLICK</button>
+        <h1>check if it is a vowel or not</h1>
+        <h2 id="on"></h2>
+        <h2 id="off"></h2>
+        <script>
+            function myFunction() {
+                var char = document.getElementById("cel").value;
+                switch (char) {
+                    case "a":
+                    case "e":
+                    case "i":
+                    case "o":
+                    case "u":
+                    case "A":
+                    case "E":
+                    case "I":
+                    case "O":
+                    case "U":
+                        document.getElementById(
+                            "on"
+                        ).innerHTML = `It is a vowel`;
+                        break;
+                    default:
+                        document.getElementById(
+                            "off"
+                        ).innerHTML = `It is not a vowel`;
+                        break;
+                }
+            }
+        </script>
+    </body>
 </html>

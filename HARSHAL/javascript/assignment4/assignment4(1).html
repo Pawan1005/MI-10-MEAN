@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>q1</title>
-    <style>
-      body {
-        text-align: center;
-        justify-content: center;
-      }
-      button {
-        padding: 6px;
-        background-color: greenyellow;
-      }
-    </style>
-  </head>
-  <body>
-      <label for="a">ENTER A 3 DIGIT NUMBER:</label>
-      <input type="number" id="cel" value="" />
-      <button onclick="myFunction()">CLICK</button>
-      <h1>TO CHECK WHETHER A NUMBER IS ARMSTRONG NUMBER</h1>
-      <h2 id="on"></h2>
-      <h2 id="off"></h2>
-      <script>
-        function myFunction() {
-          var num = document.getElementById("cel").value;
-          let sum = 0;
-          let temp = num;
-          while (temp > 0) {
-            let remainder = temp % 10;
-            sum += remainder * remainder * remainder;
-            temp = parseInt(temp / 10);
-          }
-          if (sum == num) {
-            document.getElementById(
-              "on"
-            ).innerHTML = `${num} is an Armstrong number`;
-          } else {
-            document.getElementById(
-              "off"
-            ).innerHTML = `${num} is not an Armstrong number`;
-          }
-        }
-      </script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q1</title>
+        <style>
+            body {
+                text-align: center;
+                justify-content: center;
+            }
+            button {
+                padding: 6px;
+                background-color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="a">ENTER A 3 DIGIT NUMBER:</label>
+        <input type="number" id="cel" value="" />
+        <button onclick="myFunction()">CLICK</button>
+        <h1>TO CHECK WHETHER A NUMBER IS ARMSTRONG NUMBER</h1>
+        <h2 id="on"></h2>
+        <h2 id="off"></h2>
+        <script>
+            function myFunction() {
+                var num = document.getElementById("cel").value;
+                let sum = 0;
+                let temp = num;
+                while (temp > 0) {
+                    let remainder = temp % 10;
+                    sum += remainder * remainder * remainder;
+                    temp = parseInt(temp / 10);
+                }
+                if (sum == num) {
+                    document.getElementById(
+                        "on"
+                    ).innerHTML = `${num} is an Armstrong number`;
+                } else {
+                    document.getElementById(
+                        "off"
+                    ).innerHTML = `${num} is not an Armstrong number`;
+                }
+            }
+        </script>
+    </body>
 </html>

@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>que 1</title>
-  </head>
-  <body>
-      <label for="a">enter a:</label>
-      <input type="number" id="a" value="" /><br />
-      <label for="b">enter b:</label>
-      <input type="number" id="b" value="" /><br />
-      <h1>WITHOUT USING TEMP VARIABLE</h1>
-      <button onclick="myFunction()">click me</button>
-      <div id="st"></div>
-      <div id="nd"></div>
-      <h1>USING TEMP VARIABLE</h1>
-      <button onclick="myFunction1()">click me</button>
-      <div id="one"></div>
-      <div id="two"></div>
-      <script>
-        function myFunction() {
-          var a = document.getElementById("a").value;
-          var b = document.getElementById("b").value;
-          document.getElementById("st").innerText = "the value of a is " + b;
-          document.getElementById("nd").innerText = "the value of b is " + a;
-        }
-        function myFunction1() {
-          var a = document.getElementById("a").value;
-          var b = document.getElementById("b").value;
-          var temp_a = b;
-          var temp_b = a;
-          document.getElementById("one").innerText =
-            "the value of a is " + temp_a;
-          document.getElementById("two").innerText =
-            "the value of b is " + temp_b;
-        }
-      </script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que 1</title>
+    </head>
+    <body>
+        <label for="a">enter a:</label>
+        <input type="number" id="a" value="" /><br />
+        <label for="b">enter b:</label>
+        <input type="number" id="b" value="" /><br />
+        <h1>WITHOUT USING TEMP VARIABLE</h1>
+        <button onclick="myFunction()">click me</button>
+        <div id="st"></div>
+        <div id="nd"></div>
+        <h1>USING TEMP VARIABLE</h1>
+        <button onclick="myFunction1()">click me</button>
+        <div id="one"></div>
+        <div id="two"></div>
+        <script>
+            function myFunction() {
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                document.getElementById("st").innerText =
+                    "the value of a is " + b;
+                document.getElementById("nd").innerText =
+                    "the value of b is " + a;
+            }
+            function myFunction1() {
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var temp_a = b;
+                var temp_b = a;
+                document.getElementById("one").innerText =
+                    "the value of a is " + temp_a;
+                document.getElementById("two").innerText =
+                    "the value of b is " + temp_b;
+            }
+        </script>
+    </body>
 </html>

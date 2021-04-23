@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>que 4</title>
-  </head>
-  <body>
-      <h1 id="star"></h1>
-      <script>
-        let y = 10;
-        let x = 10;
-        let str = "";
-        for (let i = 1; i < y; i++) {
-          for (let j = 1; j < x; j++) {
-            if (i + j >= y) {
-              str = str.concat("*");
-            } else {
-              str = str.concat(" ");
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que 4</title>
+    </head>
+    <body>
+        <h1 id="star"></h1>
+        <script>
+            let y = 10;
+            let x = 10;
+            let str = "";
+            for (let i = 1; i < y; i++) {
+                for (let j = 1; j < x; j++) {
+                    if (i + j >= y) {
+                        str = str.concat("*");
+                    } else {
+                        str = str.concat(" ");
+                    }
+                }
+                str = str.concat("\n");
             }
-          }
-          str = str.concat("\n");
-        }
-        document.getElementById("star").innerText = str;
-        console.log(str);
-      </script>
-  </body>
+            document.getElementById("star").innerText = str;
+            console.log(str);
+        </script>
+    </body>
 </html>

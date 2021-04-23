@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble, Insertion, selection, Quick Sort</title>
+  </head>
+  <body>
+    <script>
+      let marks,
+        totalMarks = [];
+      externalMarks = [];
+      internalMarks = [];
+      for (i = 0; i < 10; i++) {
+        marks = prompt("Enter marks of subject " + (i + 1));
+        if (marks > 80) window.alert("enter marks less than 80 ");
+        else externalMarks.push(parseInt(marks));
+      }
+      for (i = 0; i < externalMarks.length; i++) {
+        internalMarks[i] = (20 * externalMarks[i]) / 100;
+        totalMarks[i] = parseInt(externalMarks[i] + internalMarks[i]);
+      }
+      totalMarks.forEach((marks, index) =>
+        document.write(`subject ${index + 1} = marks : ${marks}<br>`)
+      );
+      let choice = prompt(
+        `Enter Your choice 
+         1.bubble sort 
+         2.insertion sort 
+         3.selection sort 
+         4.Quick sort`
+      );
+      switch (choice) {
+        case "1":
+          bubbleSort();
+          break;
+        case "2":
+          sortedArray = insertionSort(totalMarks);
+          document.write("Sorted Marks using insertion sort : " + sortedArray);
+          break;
+        case "3":
+          sortedArray = selectionSort(totalMarks);
+          document.write("Sorted Marks using selection sort : " + sortedArray);
+          break;
+        case "4":
+          sortedArray = quickSort(totalMarks, 0, totalMarks.length - 1);
+          document.write("Sorted Marks using Quick sort : " + sortedArray);
+          break;
+        default:
+          break;
+      }
+      function bubbleSort() {
+        for (i = 0; i < totalMarks.length; i++) {
+          for (j = 0; j < totalMarks.length - i; j++) {
+            if (totalMarks[j] > totalMarks[j + 1]) {
+              temp = totalMarks[j];
+              totalMarks[j] = totalMarks[j + 1];
+              totalMarks[j + 1] = temp;
+            }
+          }
+        }
+        document.write("sorting using bubble sort " + totalMarks);
+      }
+
+      function insertionSort(totalMarks) {
+        for (i = 1; i <= totalMarks.length - 1; i++) {
+          for (j = 0; j <= i; j++) {
+            if (totalMarks[j] > totalMarks[i]) {
+              temp = totalMarks[j];
+              totalMarks[j] = totalMarks[i];
+              for (k = i; k > j; k--) {
+                totalMarks[k] = totalMarks[k - 1];
+              }
+              totalMarks[k + 1] = temp;
+            }
+          }
+        }
+        return totalMarks;
+      }
+
+      function selectionSort(inputArr) {
+        for (i = 0; i < totalMarks.length - 1; i++) {
+          for (j = i + 1; j < totalMarks.length; j++) {
+            if (totalMarks[i] > totalMarks[j]) {
+              temp = totalMarks[i];
+              totalMarks[i] = totalMarks[j];
+              totalMarks[j] = temp;
+            }
+          }
+        }
+        return totalMarks;
+      }
+
+      function quickSort(totalMarks, left, right) {
+        let index;
+        if (totalMarks.length > 1) {
+          index = partition(totalMarks, left, right);
+          if (left < index - 1) {
+            quickSort(totalMarks, left, index - 1);
+          }
+          if (index < right) {
+            quickSort(totalMarks, index, right);
+          }
+        }
+        return totalMarks;
+      }
+      function partition(totalMarks, left, right) {
+        let pivot = totalMarks[Math.floor((right + left) / 2)],
+          i = left,
+          j = right;
+        while (i <= j) {
+          while (totalMarks[i] < pivot) {
+            i++;
+          }
+          while (totalMarks[j] > pivot) {
+            j--;
+          }
+          if (i <= j) {
+            swap(totalMarks, i, j);
+            i++;
+            j--;
+          }
+        }
+        return i;
+      }
+      function swap(totalMarks, leftIndex, rightIndex) {
+        let temp = totalMarks[leftIndex];
+        totalMarks[leftIndex] = totalMarks[rightIndex];
+        totalMarks[rightIndex] = temp;
+      }
+    </script>
+  </body>
+</html>

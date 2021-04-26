@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function isDoubleLetter() {
+                event.preventDefault();
+                let word = document.getElementById('word').value;
+                let result = document.getElementById('result');
+                // Storing All Double letter word in array
+                let doubleLetter = [];
+                // loop through all word
+                for (let index = 0; index < word.length; index++) {
+                    // Now Checking previous letter to next letter are same or not
+                    if (word[index] == word[index+1]) {
+                        doubleLetter.push(word[index]);
+                    }
+                }
+                doubleLetter.length?(result.innerHTML=`Double Letter are: ${doubleLetter.toString()}`):(result.innerHTML = 'No Double Letter in Word');
+            }
+        </script>
+        <title>Double Letter Checking in word</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>Double Letter In a Word</h1>
+        <form>
+            <label for="word">Enter String</label>
+            <input type="text" id="word" placeholder="Enter a Word, Like: Whatsapp">
+            <button type="submit" onclick="isDoubleLetter()">Checking</button>
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

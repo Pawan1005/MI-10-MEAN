@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort</title>
+    <script>
+        function mergeSplit(a){
+            var first=[],second=[];
+            var left,right;
+            if(a.length==1){
+                return a;
+            }
+            const m = Math.floor(a.length/2); 
+            document.write("<br>Mid Element " + m);
+            /* for(var i=0;i<m;i++){
+                first[i]=a[i];
+            }
+            for(var i=m;i<a.length;i++){
+                second[i]=a[i];
+            } */
+            first = a.slice(0,m);
+            second = a.slice(m);
+            document.write("<br>First Array"+first);
+            document.write("<br>Second Array"+second);
+            left = mergeSplit(first);
+            right = mergeSplit(second);
+           // document.write("<br>    Left Array"+left);
+           // document.write("<br>    Right Array"+right);
+           return merge(left,right);
+
+        }
+        function merge(a, b) {
+        var i, j, k,c=[];
+        var len = (a.length + b.length)-1
+        for (i = j = k = 0; i <= len; ) {
+          if (a[i] <= b[j]) {
+            c[k] = a[i];
+            k++;
+            i++;
+          } else {
+            c[k] = b[j];
+            k++;
+            j++;
+          }
+          if (i == a.length || j == b.length) break;
+        }
+        for (; i <= a.length-1; ) {
+          c[k] = a[i];
+          k++;
+          i++;
+        }
+        for (; j <= b.length-1; ) {
+          c[k] = b[j];
+          k++;
+          j++;
+        }
+        console.log("<br>Sorted array in the function : "+ c);
+        return c;
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Merge Sort</h1>
+        <label>Click here to get the Sorted list</label>
+        <button onclick="merge()">Click</button>
+        <span id="sort"></span>
+    </div>
+    <script>
+        var arr = [23,45,1,3,2,78,41],final =[];
+        console.log("<br>Array a(b4 sorting) : " + arr);
+        final = mergeSplit(arr);
+        document.getElementById('sort').innerHTML=("<br>Sorted Array : " +final);
+
+    </script>
+</body>
+</html>

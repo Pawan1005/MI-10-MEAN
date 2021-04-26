@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q1</title>
+        <script>
+            function Fun(){
+                var a=[],sum=0,b='';
+                for(var i=0;i<10;i++){
+                    a.push(parseInt(prompt("Enter the "+(i+1)+"st Subject mark:")));
+                    if(a[i]>80){
+                        a.pop();
+                        i--;
+                        a.push(parseInt(prompt('kindly enter valid marks:')));
+                    }
+                    sum=parseFloat(sum+a[i]);
+                }
+                document.getElementById("total").innerHTML="<br> You have scored "+sum+" out of 800 <br>";
+                for(var j=0;j<10;j++){
+                    b+='Subject'+(j+1)+': '+((0.2*a[j])+a[j])+'<br>';
+                }
+                document.getElementById("sub").innerHTML=b;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Results</h1>
+            <button onclick="Fun()">Click</button>
+            <span id="total"></span>
+            <h5>Total marks scored of each subject</h5>
+            <span id="sub"></span>
+        </div>
+    </body>
+</html>

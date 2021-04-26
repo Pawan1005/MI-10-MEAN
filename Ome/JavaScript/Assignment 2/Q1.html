@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Find second largest number</title>
+    <style>
+        body {
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .container-box {
+            align-items: center;
+            border: 2px solid green;
+            width: 25%;
+            height: 60%;
+        }
+
+        form {
+
+            margin: 50px;
+            text-align: center;
+            margin-left: 40%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Find Second Largest Number</h1>
+
+    <form>
+        <div class="container-box">
+
+            <h2>Put Your Numbers Here</h2>
+            <label>Number 1</label>
+            <input type="number" id="num1">
+            <label>Number 2</label>
+            <input type="number" id="num2">
+            <label>Number 3</label>
+            <input type="number" id="num3">
+            <label>Number 4</label>
+            <input type="number" id="num4">
+            <label>Number 5</label>
+            <input type="number" id="num5"><br>
+
+            <button type="submit" onclick="largeNum()">Test</button><br>
+
+            <strong>Second largest number in the list : </strong>
+            <strong id="result"> </strong>
+
+        </div>
+    </form>
+
+
+    <script>
+
+        function largeNum() {
+            event.preventDefault();
+
+            let a, b, c, d, e;
+
+            a = parseInt(document.getElementById("num1").value);
+            b = parseInt(document.getElementById("num2").value);
+            c = parseInt(document.getElementById("num3").value);
+            d = parseInt(document.getElementById("num4").value);
+            e = parseInt(document.getElementById("num5").value);
+
+            let findSecLargest = 0;
+
+            let arr = [a, b, c, d, e];
+
+            let findMaximumPotential = Math.max.apply(null, arr);
+
+            arr.splice(arr.indexOf(findMaximumPotential), 1);
+
+            findSecLargest = Math.max.apply(null, arr);
+
+            document.getElementById("result").innerHTML = findSecLargest;
+        }
+    </script>
+
+</body>
+
+</html>

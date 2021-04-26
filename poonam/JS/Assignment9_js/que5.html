@@ -14,21 +14,21 @@
         <p>Double letters:</p>
         <h4 id="result"></h4>
         <script>
-            var n = prompt("Enter a word:");
-            var p = n.split("").join(" ");
-            document.getElementById("input").innerHTML = "User Enters: " + p;
+            var input = prompt("Enter a word:");
+            var arr = input.split("").join(" ");
+            document.getElementById("input").innerHTML = "User Enters: " + arr;
             function count() {
-                const doubleletter = (p = []) => {
+                const doubleletter = (arr = []) => {
                 const res = [];
-                for (let i = 0; i < p.length; i++) {
-                    if (i === p.lastIndexOf(p[i])) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (i === arr.lastIndexOf(arr[i])) {
                         continue;
                     }
-                    res.push(p[i])
+                    res.push(arr[i])
                 }
                 return res.join("");
                 }
-                document.getElementById("result").innerHTML = doubleletter(p);
+                document.getElementById("result").innerHTML = doubleletter(arr);
             }
         </script>
     </body>

@@ -13,18 +13,17 @@
         <button onclick="palindrome()">Check</button>
         <h4 id="result"></h4>
         <script>
-            var n = parseInt(prompt("Enter a number:"));
-            document.getElementById("number").innerHTML = "Number: " + n;
+            var num = parseInt(prompt("Enter a number:"));
+            document.getElementById("number").innerHTML = "Number: " + num;
             function palindrome() {
                 var rem, temp, rev = "";
-                temp = n;
+                temp = num;
                 while (temp > 0) {
                     rem = temp % 10;
                     temp = parseInt(temp / 10);
                     rev = rev + rem.toString();
-                    console.log(rev);
                 }
-                if (rev == n) {
+                if (rev == num) {
                     document.getElementById("result").innerHTML = "The given number is palindrome.";
                 }
                 else {

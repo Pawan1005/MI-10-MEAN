@@ -13,12 +13,11 @@
         <button onclick="palindrome()">Check</button>
         <h4 id="result"></h4>
         <script>
-            var n = prompt("Enter a string: ");
-            document.getElementById("input").innerHTML = n;
+            var str = prompt("Enter a string: ");
+            document.getElementById("input").innerHTML = str;
             function palindrome() {
-                var p = n.split("").reverse().join("");
-                console.log(p);
-                if (n == p) {
+                var res = str.split("").reverse().join("");
+                if (str == res) {
                     document.getElementById("result").innerHTML = "The given string is palindrome";
                 }
                 else {

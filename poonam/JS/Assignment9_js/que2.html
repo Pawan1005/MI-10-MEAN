@@ -13,20 +13,19 @@
         <button onclick="primepalindrome()">Check</button>
         <h4 id="result"></h4>
         <script>
-            var n = parseInt(prompt("Enter a number: "));
-            document.getElementById("number").innerHTML = "Number: " + n;
+            var num = parseInt(prompt("Enter a number: "));
+            document.getElementById("number").innerHTML = "Number: " + num;
             function primepalindrome() {
                 let isPrime = true; 
-                for (let i = 2; i < n; i++) {
-                        if (n % i == 0) {
+                for (let i = 2; i < num; i++) {
+                        if (num % i == 0) {
                             isPrime = false;
                             break;
                         }
                     }
                 if (isPrime) {
-                    var p = n.toString().split("").reverse().join("");
-                    console.log(p);
-                    if (n == p) {
+                    var reverse = num.toString().split("").reverse().join("");
+                    if (num == reverse) {
                         document.getElementById("result").innerHTML = "The given number is prime palindrome number";
                     }
                     else {

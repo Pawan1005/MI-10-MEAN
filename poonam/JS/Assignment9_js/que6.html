@@ -16,19 +16,19 @@
             <p>Number of spaces are:</p>
             <h4 id="spaces"></h4>
         <script>
-            var n = prompt("Enter a sentence:");
-            document.getElementById("input").innerHTML = n;
+            var input = prompt("Enter a sentence:");
+            document.getElementById("input").innerHTML = input;
             function count() {
                 var wordcount = 0;
-                var words = n.split(" ");
-                var l = words.length;
-                for (i = 0; i < l; i++) {
+                var words = input.split(" ");
+                var len = words.length;
+                for (i = 0; i < len; i++) {
                     if (words[i] != "") {
                         wordcount += 1;
                     }
                 }
                 document.getElementById("words").innerHTML = wordcount;
-                var space = (l - 1);
+                var space = (len - 1);
                 document.getElementById("spaces").innerHTML = space;
             }
         </script>

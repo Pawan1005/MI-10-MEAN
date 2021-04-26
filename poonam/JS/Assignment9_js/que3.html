@@ -26,10 +26,10 @@
         var primepalindrome = [];
         var rev;
         for (let i = 0; i <= 4; i++) {
-            let n = prompt("Enter one by one five Numbers:");
-            rev = n.split("").reverse().join("");
-            if (prime(n) && (rev == n)) {
-                primepalindrome.push(n);
+            let input = prompt("Enter one by one five Numbers:");
+            rev = input.split("").reverse().join("");
+            if (prime(input) && (rev == input)) {
+                primepalindrome.push(input);
             }  
         }
         document.writeln("Prime palindrome numbers: " + primepalindrome);   

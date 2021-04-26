@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que4</title>
+    </head>
+    <body>
+        <h1>selectionsort for marks of 1 student</h1>
+        <script>
+            var marks = [];
+            for (var a = 1; a <= 5; a++) {
+                marks.push(prompt(`ENTER MARKS: ${a}`));
+            }
+            console.log(`[${marks}]`);
+            for (var b = 0; b <= 4; b++) {
+                document.write(`<br>Marks${b + 1}: ${marks[b]}`);
+            }
+            for (var i = 0; i < marks.length; i++) {
+                let min = i;
+                for (var j = i + 1; j < marks.length; j++) {
+                    if (marks[min] > marks[j]) {
+                        min = j;
+                    }
+                }
+                if (i !== min) {
+                    let temp = marks[i];
+                    marks[i] = marks[min];
+                    marks[min] = temp;
+                }
+            }
+            console.log(marks);
+            document.write("<br><br><br>after selection sort");
+            for (var c = 0; c <= 4; c++) {
+                document.write(`<br>Marks${c + 1}: ${marks[c]}`);
+            }
+        </script>
+    </body>
+</html>

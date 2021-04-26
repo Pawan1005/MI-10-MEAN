@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que3</title>
+    </head>
+    <body>
+        <h1>bubblesort for marks of 1 student</h1>
+        <script>
+            var marks = [];
+            for (var a = 1; a <= 5; a++) {
+                marks.push(prompt(`ENTER MARKS: ${a}`));
+            }
+            console.log(`[${marks}]`);
+            for (var b = 0; b <= 4; b++) {
+                document.write(`<br>Marks${b + 1}: ${marks[b]}`);
+            }
+            let len = marks.length;
+            for (let i = 0; i < len; i++) {
+                for (let j = 0; j < len; j++) {
+                    if (marks[j] > marks[j + 1]) {
+                        let temp = marks[j];
+                        marks[j] = marks[j + 1];
+                        marks[j + 1] = temp;
+                    }
+                }
+            }
+            console.log(marks);
+            document.write("<br><br><br>after bubblesort");
+            for (var c = 0; c <= 4; c++) {
+                document.write(`<br>Marks${c + 1}: ${marks[c]}`);
+            }
+        </script>
+    </body>
+</html>

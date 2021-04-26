@@ -5,30 +5,29 @@
 			function Palindrome()
 			{
 				var rem, temp, final = 0;
-				var number = Number(document.getElementById("N").value);
-				temp = number;
-				while(number>0)
+				var num = Number(document.getElementById("num").value);
+				temp = num;
+				while(num>0)
 				{
-					rem = number%10;
-					number = parseInt(number/10);
+					rem = num%10;
+					num = parseInt(num/10);
 					final = final*10+rem;
 				}
 				if(final==temp)
 				{
-					window.alert("The inputed number is Palindrome");
+					window.alert("The Input Number is Palindrome");
 				}
 				else
 				{
-					window.alert("The inputted number is not palindrome");
+					window.alert("The Input Number is not Palindrome");
 				}
 			}
 		</script>
 	</head>
 	<body>
 		<br>
-		<h1>Whether a number is Palindrome or not</h1>
-		Enter The Number :<input type="text" name="n" id = "N"/>
-		<hr color="cyan">
+		<h1>Number is Palindrome or not</h1>
+		Enter The Number :<input type="text" name="num" id = "num"/>
 		<br>
 		<center><button onClick="Palindrome()">CHECK</button></center>
 	</body>

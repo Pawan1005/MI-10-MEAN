@@ -9,21 +9,20 @@
     <body>
         <h1>String is Plaindrome or not</h1>
         <form>
-            <label for="string">String </label>
+            <label id="text">String </label>
             <input type="text" id="string" placeholder="Enter a String">
-            <button type="submit" onclick="isPalindrome()">Check Palindrome</button>
+            <button type="submit" onclick="palindrome()">Check</button>
         </form>
-        <p id="result"></p>
+        <p id="demo"></p>
         <script>
-            function isPalindrome() {
-                event.preventDefault();
+            function palindrome() {
                 let string = document.getElementById("string").value;
-                let result = document.getElementById("result");
+                let demo = document.getElementById("demo");
                 let reverseString = string.split("").reverse().join("");
                 if (reverseString == string) {
-                    result.innerHTML = `<b>${string} is a Palindrome String</b>`;
+                    demo.innerHTML = `<b>${string} is a Palindrome String</b>`;
                 } else {
-                    result.innerHTML = `<b>${string} not a Palindrome String</b>`;
+                    demo.innerHTML = `<b>${string} not a Palindrome String</b>`;
                 }
             }
         </script>

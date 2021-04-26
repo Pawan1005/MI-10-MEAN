@@ -19,14 +19,14 @@
                 if (isPrime) {
                     var p = n.toString().split("").reverse().join("");
                     if (n == p) {
-                        document.getElementById("result").innerHTML = "The given number is prime palindrome number";
+                        document.getElementById("demo").innerHTML = "The given number is prime palindrome number";
                     }
                     else {
-                        document.getElementById("result").innerHTML = "The given number is not prime palindrome number";
+                        document.getElementById("demo").innerHTML = "The given number is not prime palindrome number";
                     }
                 } 
                 else {
-                    document.getElementById("result").innerHTML = "The given number is not prime palindrome number";
+                    document.getElementById("demo").innerHTML = "The given number is not prime palindrome number";
                 }
             }
         </script>
@@ -36,6 +36,6 @@
         <h4 id="num"></h4>
         <p>Click here to check the number is prime palindrome or not:</p>
         <button onclick="primepalindrome()">Check</button>
-        <h4 id="result"></h4>
+        <h4 id="demo"></h4>
     </body>
 </html>

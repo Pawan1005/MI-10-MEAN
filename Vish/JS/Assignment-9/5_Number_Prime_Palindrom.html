@@ -9,62 +9,50 @@
     <body style="text-align: center;">
         <h1>Numbers is Prime Plaindrome or not</h1>
         <h4><span>Enter 5 Numbers</span></h4>
-        <button type="submit" onclick="isNumberPrimePalindrome()">Check</button>
-        <p id="numbers"></p>
-        <p id="result"></p>
+        <button type="submit" onclick="PrimePalindrome()">Check</button>
+        <p id="num"></p>
+        <p id="res"></p>
         <script>
-            function isPrimeNumber(number) {
-                let isPrime = true;
-                if (number > 1) {
-                    for(let i = 2; i< number; i++){
-                        if ((number % i) == 0) {
-                            isPrime = false;
-                            break;
-                        }
-                    }
-                }
-                else {
-                    isPrime = false
-                }
-                // return true is prime otherwise false
-                return isPrime;
-            }
-            function isNumberPrimePalindrome() {
-                event.preventDefault();
-
-                let numbers = document.getElementById('numbers');
-                let result = document.getElementById('result');
-                
-                let reverse = '';
-
-                // Creating Array for Storing input numbers and Prime Palindrome number
-                let primePalindromeNumbers = [];
+            function PrimePalindrome() {
+                let num = document.getElementById('num');
+                let res = document.getElementById('res');
+                let rev = '';
+                let primePalindrome = [];
                 let listNumbers = [];
                 let notPrimePalindrome = [];
-
-                // Asking 5 time from user a input number
-                let ask = 5;
-                while (ask > 0) {
-                    let inputNumbers = prompt('Enter a  5 Numbers:');
+                let count = 5;
+                while (count > 0) {
+                    var inputNumbers = prompt('Enter a  5 Numbers:');
                     listNumbers.push(inputNumbers);
-
-                    // Converting number into palindrome
-                    reverse = inputNumbers.split('').reverse().join('');
-
-                    // Checking both prime and palindrome
-                    if (isPrimeNumber(parseInt(inputNumbers)) && (reverse == inputNumbers)) {
-                        primePalindromeNumbers.push(inputNumbers);
+                    rev = inputNumbers.split('').reverse().join('');
+                    if (Prime(parseInt(inputNumbers)) && (rev == inputNumbers)) {
+                        primePalindrome.push(inputNumbers);
                     }
                 
                     else {
                         notPrimePalindrome.push(inputNumbers)
                     }
-                    ask--;
+                    count--;
                 }
-
-                numbers.innerHTML = `List of Numbers are ${listNumbers.toString()}`
-                result.innerHTML = `<b>Prime Palindrome Numbers are: </b> ${primePalindromeNumbers.toString()} <br>`;
-                result.innerHTML += `<b>Not Prime Palindrome Numbers are: </b> ${notPrimePalindrome.toString()} <br>`;
+                num.innerHTML = `List of Numbers are ${listNumbers.toString()}`
+                res.innerHTML = `<b>Prime Palindrome Numbers are: </b> ${primePalindrome.toString()} <br>`;
+                res.innerHTML += `<b>Not Prime Palindrome Numbers are: </b> ${notPrimePalindrome.toString()} <br>`;
+            }
+            function Prime(num) {
+                let Prime = true;
+                if (num > 1) {
+                    for(var i = 2; i< num; i++){
+                        if ((num % i) == 0) {
+                            Prime = false;
+                            break;
+                        }
+                    }
+                }
+                else {
+                    Prime = false
+                }
+                // return true is prime otherwise false
+                return Prime;
             }
         </script>
     </body>

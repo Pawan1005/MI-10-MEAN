@@ -5,31 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function isDoubleLetter() {
+            function doubleLetter() {
                 event.preventDefault();
-                let word = document.getElementById('word').value;
-                let result = document.getElementById('result');
-                // Storing All Double letter word in array
+                var text = document.getElementById('text').value;
+                var demo = document.getElementById('demo');
                 let doubleLetter = [];
-                // loop through all word
-                for (let index = 0; index < word.length; index++) {
-                    // Now Checking previous letter to next letter are same or not
-                    if (word[index] == word[index+1]) {
-                        doubleLetter.push(word[index]);
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] == text[i+1]) {
+                        doubleLetter.push(text[i]);
                     }
                 }
-                doubleLetter.length?(result.innerHTML=`Double Letter are: ${doubleLetter.toString()}`):(result.innerHTML = 'No Double Letter in Word');
+                doubleLetter.length?(demo.innerHTML=`Double Letter: ${doubleLetter.toString()}`):(demo.innerHTML = 'No Double Letter');
             }
         </script>
         <title>Double Letter Checking in word</title>
     </head>
     <body style="text-align: center;">
         <h1>Double Letter In a Word</h1>
-        <form>
-            <label for="word">Enter String</label>
-            <input type="text" id="word" placeholder="Enter a Word, Like: Whatsapp">
-            <button type="submit" onclick="isDoubleLetter()">Checking</button>
-        </form>
-        <p id="result"></p>
+        <label>Enter String</label>
+        <input type="text" id="text" placeholder="Enter a Word, Like: Whatsapp">
+        <button onclick="doubleLetter()">Check</button>
+        <p id="demo"></p>
     </body>
 </html>

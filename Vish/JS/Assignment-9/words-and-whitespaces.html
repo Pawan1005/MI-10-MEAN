@@ -7,19 +7,18 @@
         <title>Words and Whitespaces</title>
         <script>
             function WordCount() {
-              var str = document.getElementById("N").value;
+              var str = document.getElementById("num").value;
               var tempStr = str.split(" ").length;
               window.alert(str+" (Total Word) :- "+tempStr);
             }
         </script>
     </head>
-    <body>
-        <br />
+    <body style="text-align: center;">
         <h1>Words and Whitespaces</h1>
         <label> The String :</label> 
-        <input type="text" name="n" id="N" />
-        <hr color="cyan" />
-        <br />
-        <center><button onClick="WordCount()">CHECK</button></center>
+        <input type="text" name="num" id="num" />
+        <hr>
+        <br/>
+        <button onClick="WordCount()">Check</button>
     </body>
 </html>

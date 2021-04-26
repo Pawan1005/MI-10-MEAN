@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./stringCaseConverter.js"></script>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            input {
+                padding: 5px;
+                margin-bottom: 15px;
+                outline-color: cornflowerblue;
+            }
+            button {
+                padding: 10px;
+                border: none;
+                background-color: darkorchid;
+                color: white;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+        </style>
+        <title>String Uppercase to Lowecase</title>
+    </head>
+    <body>
+        <h1>Converting String Uppercase to Lowecase or Lowercase to Uppercase</h1>
+        <form>
+            <label for="text">String: </label>
+            <input type="text" id="text" placeholder="Enter a Text or Anything without Number">
+            <br>
+            <button type="submit" onclick="stringCaseConvert()">Convert String Case</button>
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

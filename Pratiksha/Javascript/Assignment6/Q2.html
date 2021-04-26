@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortname</title>
+</head>
+<body>
+    <h1>Sorting of Names using storing it into array</h1>
+        Enter Names : 
+        <input type="text" id="Name_list">
+        <button onclick="addNameInArray()">Show List</button>
+        <p id="given">Given List</p>
+        <h4>Array sort in ascending order:</h4>
+        <button onclick="asc()">Ascending sort</button>
+        <p id="asc"></p>
+        <h4>Array sort in desending order:</h4>
+        <button onclick="dsc()">Desending sort</button>
+        <p id="dsc"></p>
+        <script>
+            var emty=0;
+            var arr=Array();
+            var i;
+            function addNameInArray(){}
+                arr[i]=document.getElementById("Name_list").value;
+                i++;
+                document.getElementById("Name_list").value="";
+                document.getElementById("given").innerHTML+= arr.join("<br>");
+            }
+            function asc(){
+                arr.sort();
+                document.getElementById("asc").innerHTML="Names (Asc) : "+ arr;
+            }
+            function dsc(){
+                arr.reverse();
+                document.getElementById("dsc").innerHTML="Names (Dsc) : " + arr;
+            }
+        </script>
+</body>
+</html>

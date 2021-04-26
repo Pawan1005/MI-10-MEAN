@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your Guide - Find a Guide to show you around"
+    />
+    <title>Your Guide - Find a Guide</title>
+    <link rel="shortcut icon" href="images/badge.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="container-fluid">
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand website--name" href="admin.html">Your Guide</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav--bar--center">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#search">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="privacy.html">Privacy</a>
+            </li>
+          </ul>
+
+          <button
+            class="btn btn-outline-primary my-2 my-sm-0 mr-5 nav--bar--center"
+            type="submit"
+            data-toggle="modal"
+            data-target="#loginModal"
+          >
+            Log in
+          </button>
+
+          <button
+            class="btn btn-primary my-2 my-sm-0"
+            type="submit"
+            data-toggle="modal"
+            data-target="#registerModal"
+          >
+            Register
+          </button>
+        </div>
+      </nav>
+
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content p-5 my-5">
+            <div class="modal-header border-0"></div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label ml-3" for="exampleCheck1"
+                    >Forgot password?</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-secondary mr-4"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a class="btn btn-primary" href="user_profile_page.html">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="registerModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content px-5 pb-5 my-5">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">
+                  <svg class="icon--rupee">
+                    <use xlink:href="images/sprite.svg#close_black"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail2">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail2"
+                    aria-describedby="emailHelp1"
+                  />
+                  <small id="emailHelp1" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword2">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword2"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">Password Again</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword3"
+                  />
+                </div>
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input mt-3"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label ml-3" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-block btn-primary">
+                Sign up as a Tourist
+              </button>
+              <button type="button" class="btn btn-block btn-outline-primary">
+                Sign up as a Guide
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="mt-5 container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-md">
+          <header class="hero__content">
+            <h2>Find a Guide to Show You Around</h2>
+
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control shadow-lg border-0 p-5"
+                placeholder="Where Next?"
+                id="search"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-primary shadow p-0 px-3" type="button">
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#search"></use>
+                  </svg>
+                  Search
+                </button>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="col-md">
+          <svg class="hero__image">
+            <use xlink:href="images/sprite.svg#taj-mahal"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <div class="" data-aos="fade-up">
+      <div class="row">
+        <div class="col" data-aos="fade-up">
+          <a href="profile_page.html">
+            <div class="card guide--plans shadow">
+              <img
+                src="https://source.unsplash.com/jF9aTJ_T_Tw/400x600"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body card--secondary">
+                <div class="row">
+                  <div class="col">
+                    <span class="card__name">Aabha</span>
+                    <span class="card__place">Agra, India</span>
+                  </div>
+                  <div class="col">
+                    <span class="card__price">
+                      <svg class="icon icon--rupee">
+                        <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                      </svg>
+                      2000/h
+                    </span>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                    <div class="card__rating">Rating</div>
+                    <svg class="icon--star">
+                      <use xlink:href="images/sprite.svg#star-fill"></use>
+                    </svg>
+                    <svg class="icon--star">
+                      <use xlink:href="images/sprite.svg#star-fill"></use>
+                    </svg>
+                    <svg class="icon--star">
+                      <use xlink:href="images/sprite.svg#star-fill"></use>
+                    </svg>
+                    <svg class="icon--star">
+                      <use xlink:href="images/sprite.svg#star-fill"></use>
+                    </svg>
+                    <svg class="icon--star">
+                      <use xlink:href="images/sprite.svg#star-fill"></use>
+                    </svg>
+                  </div>
+                  <div class="col">
+                    <div class="card__reviews">Review</div>
+                    <div class="card__reviews__count">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col" data-aos="fade-up">
+          <div class="card guide--plans guide--popular shadow">
+            <img
+              src="https://source.unsplash.com/hj50WxMqPVg/400x600"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body card--secondary">
+              <div class="row">
+                <div class="col">
+                  <span class="card__name">Advika </span>
+                  <span class="card__place">Delhi, India</span>
+                </div>
+                <div class="col">
+                  <span class="card__price">
+                    <svg class="icon icon--rupee">
+                      <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                    </svg>
+                    1000/h
+                  </span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="card__rating">Rating</div>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <div class="col">
+                  <div class="card__reviews">Reviews</div>
+                  <div class="card__reviews__count">12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-up">
+          <div class="card guide--plans shadow">
+            <img
+              src="https://source.unsplash.com/KEYWBXAn_dQ/400x600"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body card--primary card--popular">
+              <div class="row">
+                <div class="col">
+                  <span class="card__name">Chhaya </span>
+                  <span class="card__place">Bengaluru, India</span>
+                </div>
+                <div class="col">
+                  <span class="card__price">
+                    <svg class="icon icon--rupee">
+                      <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                    </svg>
+                    3000/h
+                  </span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="card__rating">Rating</div>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                </div>
+                <div class="col">
+                  <div class="card__reviews">Reviews</div>
+                  <div class="card__reviews__count">27</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="" data-aos="fade-up">
+      <div class="row">
+        <div class="col" data-aos="fade-up">
+          <div class="card guide--plans shadow">
+            <img
+              src="https://source.unsplash.com/XhMSz5I1kn8/400x600"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body card--secondary">
+              <div class="row">
+                <div class="col">
+                  <span class="card__name">Aadi</span>
+                  <span class="card__place">Delhi, India</span>
+                </div>
+                <div class="col">
+                  <span class="card__price">
+                    <svg class="icon icon--rupee">
+                      <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                    </svg>
+                    5000/h
+                  </span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="card__rating">Rating</div>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-half"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <div class="col">
+                  <div class="card__reviews">Review</div>
+                  <div class="card__reviews__count">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-up">
+          <div class="card guide--plans guide--popular shadow">
+            <img
+              src="https://source.unsplash.com/sMR__Unqh5A/400x600"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body card--primary card--popular">
+              <div class="row">
+                <div class="col">
+                  <span class="card__name">Aarush</span>
+                  <span class="card__place">Hyderabad, India</span>
+                </div>
+                <div class="col">
+                  <span class="card__price">
+                    <svg class="icon icon--rupee">
+                      <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                    </svg>
+                    6000/h
+                  </span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="card__rating">Rating</div>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-half"></use>
+                  </svg>
+                </div>
+                <div class="col">
+                  <div class="card__reviews">Reviews</div>
+                  <div class="card__reviews__count">11</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-up">
+          <div class="card guide--plans shadow">
+            <img
+              src="https://source.unsplash.com/sYhUhse5uT8/400x600"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body card--primary">
+              <div class="row">
+                <div class="col">
+                  <span class="card__name">Aarav</span>
+                  <span class="card__place">Pune, India</span>
+                </div>
+                <div class="col">
+                  <span class="card__price">
+                    <svg class="icon icon--rupee">
+                      <use xlink:href="images/sprite.svg#rupee-sign"></use>
+                    </svg>
+                    900/h
+                  </span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="card__rating">Rating</div>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star-fill"></use>
+                  </svg>
+                  <svg class="icon--star">
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <div class="col">
+                  <div class="card__reviews">Reviews</div>
+                  <div class="card__reviews__count">17</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="row justify-content-center pt-5">
+        <div class="col col-auto"><a href="">Contact us</a></div>
+        <div class="col col-auto"><a href="">Privacy</a></div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col col-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="col col-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="col col-auto">
+          <a href="">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/sprite.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col footer__copyright">Copyright 2021 Your Guide</div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

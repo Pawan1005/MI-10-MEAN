@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsAssign4Q3_Kirshnamurty Number</title>
+</head>
+<body>
+    <body>
+        <h4>Find Kirshnamurty Number</h4>
+        Number :
+        <input type="text" id="Kirshnamurty" placeholder="Enter number " /><br />
+        <br />
+        <button type="button" onclick="Kirshnamurty_number()">Show</button>
+        <p id="demo"></p>
+        <script language="javascript">
+          function Kirshnamurty_number() {
+              debugger;
+            var n, fact, sum, count, a ;       
+            n = parseInt(document.getElementById("Kirshnamurty").value);
+           sum = 0;
+            count = n;
+            while (count > 0) {
+              a = count % 10;
+              fact=1; 
+              for (var i=1; i<=a; i++){
+                  fact=fact*i;
+              }
+              count = parseInt(count / 10);
+              sum=sum+fact;
+
+            }
+            if (sum == n) {
+              document.getElementById("demo").innerHTML = n + "<b> is Kirshnamurthy Number :<b>";
+            } else {
+              document.getElementById("demo").innerHTML = n + "<b> is not Krishnamurty Number :<b>";
+            }
+          }
+        </script>
+      </body>
+</body>
+</html>

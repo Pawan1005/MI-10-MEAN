@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tempreature Conversion</title>
+    <script language="javascript">
+        function con(){
+        var c,f;
+        c = parseInt(document.getElementById('celsius').value);
+        f = (c * 9/5) +32;
+        document.getElementById('p1').innerHTML = "<h1> After Conversion:</h1>"
+        document.getElementById('p2').innerHTML =  +c + "C" + "is equal to" + +f + "F"
+    }   
+    </script>
+  </head>
+  <body>
+      <h1 style="font-size: 60px; text-align: center;">Conversion From Celcius to Fahrenheit</h1>
+      <input type="text" id="celsius"> C
+      <button type="button" onclick="con()">Convert</button>
+      <p id="p1"></p>
+      <p id="p2"></p>
+  </body>
+</html>

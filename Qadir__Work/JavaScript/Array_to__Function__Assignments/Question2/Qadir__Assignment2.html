@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./changeObject.js"></script>
+        <style>
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        </style>
+        <title>Object Particular Value Change</title>
+    </head>
+    <body>
+        <h1>Object Value Chnages</h1>
+        <h4>Sample Object:</h4>
+        <p>person = {firstName:"John", lastName:"Doe", block:["a","b",{e:"block_one", f:"block_two", g:[1,{main:"main_value"},3]},"c"], eyeColor:"blue"};</p>
+        <button type="submit" onclick="changeObjectValue()">Change Object Values</button>
+        <p id="mainValue"></p>
+        <p id="finalValue"></p>
+        <p id="newObject"></p>
+    </body>
+</html>

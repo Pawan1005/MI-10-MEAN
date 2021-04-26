@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsAssign5_Q3_PrimeNumbers</title>
+  </head>
+  <body>
+    <h4>Find all Prime Number</h4>
+    Number 1 :
+    <input type="text" id="primeno1" placeholder="Enter first Number" /><br />
+    <br>
+    <br>
+    Number 2:
+    <input type="text" id="primeno2" placeholder="Enter second Number" /><br />
+    <br />
+    <br>
+    <button type="button" onclick="prime()">Submit</button>
+    <br>
+    <p id="demo"></p>
+    <script language="javascript">
+      function prime() {
+        var a, b, flage;
+        a = parseInt(document.getElementById("primeno1").value); //starting number,from this number count will get start
+        b = parseInt(document.getElementById("primeno2").value); // end number, here count will get end.
+       if (a>1 && b>1){
+         document.write('<b>The prime numbers are :<b><br>')
+        for (var i = a; i <= b; i++) {
+          flage = 1;
+          for (var j = 2; j < i; j++) {
+            if (i % j == 0) {
+              flage = 0;
+              break;
+            }
+          }
+          if (flage == 1 && i > 1) {
+            document.write(i + "<br>");
+          }
+        }
+      }
+      else {
+      document.write("Enter valid starting point it must be greter than 1")
+    }
+    }
+   
+    </script>
+  </body>
+</html>

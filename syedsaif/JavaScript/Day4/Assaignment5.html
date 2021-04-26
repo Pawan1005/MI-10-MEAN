@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Case Reverse</h1>
+        <label for="text">Enter the text:</label>
+        <input id="text" type="text">
+        <button onclick="Fun()">Lowercase</button>
+        <button onclick="Fun1()">Uppercase</button>
+        <p id="number"></p>
+    </div>
+    <script>
+        function Fun() {
+            event.preventDefault();
+            var a=document.getElementById("text").value;
+            var res=a.toLocaleLowerCase();
+            document.getElementById("number").innerHTML=res;
+        }
+        function Fun1() {
+            event.preventDefault();
+            var a=document.getElementById("text").value;
+            var res=a.toLocaleUpperCase();
+            document.getElementById("number").innerHTML=res;
+        }
+    </script>
+</body>
+</html>

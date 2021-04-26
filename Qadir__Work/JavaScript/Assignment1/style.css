@@ -1,0 +1,19 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    padding: 5px 8px;
+    width: 100px;
+}
+
+button {
+    padding: 5px 8px;
+    background-color: white;
+    border: 1px solid gray;
+    outline-color: orange;
+}

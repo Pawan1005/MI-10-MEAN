@@ -1,0 +1,24 @@
+.jumbotron {
+  background-image: url("./image/banner.jpg");
+  margin: 0%;
+}
+.jumbotron h1,
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.two {
+  height: 350px;
+}
+.three img {
+  height: 800px;
+  width: 100%;
+}
+.text {
+  text-align: justify;
+  margin: 70px;
+}
+.text > p {
+  font-size: 20px;
+  font-style: italic;
+}

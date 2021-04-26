@@ -1,0 +1,28 @@
+h1{
+    color: white;
+}
+.head{
+    border: 2px solid;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-image: url(a.jpg);
+}
+#frmt_p{
+    text-align: end;
+    margin-right: 10px;
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+}
+.aboutme{
+    background-color: orange;
+    border: 1px solid orange;
+    padding: auto;
+    margin-left: 5px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 2px grey;
+    font-size: 20px;
+}
+ul{
+    list-style: square;
+}

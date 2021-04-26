@@ -1,0 +1,25 @@
+body {
+  padding: 10px;
+}
+.cls_border {
+  padding: 10px;
+  border: 1px solid black;
+  background-image: url(https://i.pinimg.com/236x/fc/d7/32/fcd732f1b6d22333dea56f970d63a9a7.jpg);
+  opacity: 0.8;
+}
+h1 {
+  text-align: center;
+}
+.cls_firstline {
+  color: chartreuse;
+}
+em:hover {
+  color: blueviolet;
+}
+p.cls_firstline::first-letter {
+  color: chocolate;
+  font-variant: small-caps;
+}
+.section1 {
+  background-color: plum;
+}

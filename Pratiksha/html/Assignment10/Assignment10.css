@@ -1,0 +1,149 @@
+h1{
+    color: rgb(207, 51, 103);
+}
+h1::first-letter{
+    font-style: italic;
+    
+}
+.menu li{
+    display: inline;
+    padding: 5px;
+}
+.rt{
+    float: right;
+    padding: 0px;
+    margin-right: 40px;
+}
+.ct{
+    float: center;
+    padding: 30px;
+}
+.menu1 h1,p{
+    display: inline;
+    padding: 50px;
+}
+.menu1 >p{
+border: 1px solid black;
+padding: 5px;
+background-color: burlywood;
+}
+.menu1 >p:first-child button{
+    background-color: red;
+}
+.bt{
+   float: right;
+   padding: 5px;
+   margin-right: 40px;
+   color: red;
+   border:  1px dotted  red;
+}
+.container1{
+    padding: 50px;
+    border: 1px transparent black;
+    background-color: cornflowerblue;
+    margin-top: 20px; 
+    display: inline-flex; 
+    width: 100%; 
+}
+.bt1{
+    background-color: red;
+    height: 40px;
+}
+
+input{
+    height: 35px;
+}
+select{
+    height: 40px;
+}
+.container2{
+    border: 1px solid white;
+    height: 60px;
+    width: 25%;
+    color: rgb(85, 102, 196);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    float: right;
+    margin-left: auto;
+   margin-right: auto;
+   line-height: 1.5;
+   padding: 15px;
+} 
+.banner__jobs {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 15px;
+}
+
+.banner__jobsInfo {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+}
+
+.banner__jobsInfoTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banner__jobsInfoTitle > h5 {
+    font-size: 15px;
+}
+
+.banner__jobsInfoTitle > h4 {
+    color: red;
+    font-size: 14px;
+}
+
+.banner__jobsCompany {
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner__jobsCompany > div:nth-child(2) {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-around;
+    max-width: 300px;
+    padding: 15px;
+}
+
+.banner__jobsCompany > div > img {
+    object-fit: contain;
+    height: 80px;
+}
+
+.banner__Name > span {
+    border: 1px solid rgb(83, 169, 250);
+    padding: 5px;
+    margin-left: 5px;
+    background-color: rgb(175, 204, 248);
+    font-size: 14px;
+}
+
+.banner__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner__right > img:nth-child(3) {
+    height: 100px;
+}.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px 0px 100px;
+    background-color: rgb(103, 103, 185)
+}
+
+.footer > h4 {
+    font-size: 12px;
+} 
+

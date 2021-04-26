@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q5</title>
+        <style>
+            body {
+                text-align: center;
+                justify-content: center;
+            }
+            button {
+                padding: 6px;
+                background-color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="a">ENTER A WORD:</label>
+        <input type="text" id="cel" value="" />
+        <button onclick="myFunction()">UPPERCASE</button>
+        <button onclick="myFunction1()">LOWERCASE</button>
+        <h1>CONVERT TO UPPERCASE OR LOWERCASE</h1>
+        <h2 id="on"></h2>
+        <h2 id="off"></h2>
+        <script>
+            function myFunction() {
+                var char = document.getElementById("cel").value;
+                var upp = char.toUpperCase();
+                document.getElementById("on").innerText = upp;
+            }
+            function myFunction1() {
+                var char = document.getElementById("cel").value;
+                var low = char.toLowerCase();
+                document.getElementById("off").innerText = low;
+            }
+        </script>
+    </body>
+</html>

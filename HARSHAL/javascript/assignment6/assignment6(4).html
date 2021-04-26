@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q4</title>
+    </head>
+    <body>
+        <h1>array que 4</h1>
+        <script>
+            var names = [];
+            for (var a = 1; a <= 5; a++) {
+                names.push(prompt(`ENTER NUMBER ${a}`));
+            }
+            console.log(`[${names}]`);
+            document.write(
+                `[${names}]<br>SUM OF FACTORIAL OF ARRAY NUMBERS IS: `
+            );
+            var sum0 = 1;
+            for (var i = 1; i <= parseInt(names[0]); i++) {
+                sum0 = sum0 * i;
+            }
+            var sum1 = 1;
+            for (var i = 1; i <= parseInt(names[1]); i++) {
+                sum1 = sum1 * i;
+            }
+            var sum2 = 1;
+            for (var i = 1; i <= parseInt(names[2]); i++) {
+                sum2 = sum2 * i;
+            }
+            var sum3 = 1;
+            for (var i = 1; i <= parseInt(names[3]); i++) {
+                sum3 = sum3 * i;
+            }
+            var sum4 = 1;
+            for (var i = 1; i <= parseInt(names[4]); i++) {
+                sum4 = sum4 * i;
+            }
+            document.write(sum0 + sum1 + sum2 + sum3 + sum4);
+        </script>
+    </body>
+</html>

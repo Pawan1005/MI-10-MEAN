@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q1</title>
+    </head>
+    <body>
+        <h1>array que 1</h1>
+        <script>
+            var names = [];
+            for (var a = 1; a <= 5; a++) {
+                names.push(prompt(`ENTER NUMBER ${a}`));
+            }
+            console.log(`[${names}]`);
+            document.write(`[${names}]`);
+            for (var i = 0; i < names.length; i++) {
+                console.log(`Name${i}=${names[i]}`);
+                document.write(`<br>Name${i}=${names[i]}`);
+            }
+        </script>
+    </body>
+</html>

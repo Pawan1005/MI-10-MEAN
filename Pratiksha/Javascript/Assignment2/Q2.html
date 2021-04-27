@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grading</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form>
+      Subj1:
+      <input type="text" id="val1" /><br /><br />
+      Subj2:
+      <input type="text" id="val2" /><br /><br />
+      Subj3:
+      <input type="text" id="val3" /><br /><br />
+      Subj4:
+      <input type="text" id="val4" /><br /><br />
+      Subj5:
+      <input type="text" id="val5" /><br /><br />
+      <button
+        onclick="calculate()"
+        type="button"
+        class="ml-4 btn btn-primary center"
+        id="cal"
+      >
+        Calculate
+      </button>
+      <button
+        onclick="grade()"
+        type="button"
+        class="ml-4 btn btn-primary center"
+      >
+        Grade
+      </button>
+    </form>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      var per;
+      function calculate() {
+        var sub1, sub2, sub3, sub4, sub5;
+        sub1 = parseInt(document.getElementById("val1").value);
+        sub2 = parseInt(document.getElementById("val2").value);
+        sub3 = parseInt(document.getElementById("val3").value);
+        sub4 = parseInt(document.getElementById("val4").value);
+        sub5 = parseInt(document.getElementById("val5").value);
+        per= ((sub1+ sub2 + sub3 + sub4 + sub5) / 500) * 100;
+        document.getElementById("demo").innerText = `Percentage ${per}`;
+      }
+      function grade() {
+        if (per >= 75 && per <= 100) {
+          document.getElementById("demo1").innerText = "GradeA";
+        } else if (per >= 60 && per <= 74) {
+          document.getElementById("demo1").innerText = "GradeB";
+        } else if (per >= 40 && per <= 59) {
+          document.getElementById("demo1").innerText = "Grade C";
+        } else if (per >= 30 && per <= 40) {
+          document.getElementById("demo1").innerText = "Grade D";
+        } else if (per <= 30) {
+          document.getElementById("demo1").innerText = "Fail";
+        }
+      }
+    </script>
+  </body>
+</html>
+

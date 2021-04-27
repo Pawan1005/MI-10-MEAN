@@ -1,0 +1,42 @@
+.wrapper{
+    border: 2px solid black;
+    overflow: auto;
+    height: 20%;
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+    background-color: cyan;
+}
+
+img {
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+.cls_1 > p {
+  float: right;
+}
+
+.cls_1 > p > img {
+  float: left;
+  margin-right: 10px;
+}
+
+.cls_2 > p {
+  float: left;
+}
+
+.cls_2 > p > img {
+  float: right;
+  margin-right: 10px;
+}
+
+.cls_3 > p {
+  float: right;
+}
+
+.cls_3 > p > img {
+  float: left;
+  margin-right: 10px;
+}

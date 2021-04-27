@@ -1,0 +1,145 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.body {
+    background-color: #fafafa;
+}
+
+.header {
+    background: rgb(30,8,203);
+    background: linear-gradient(90deg, rgb(8, 18, 161) 0%, rgba(69,80,233,0.989233193277311) 49%, rgba(11,157,189,1) 82%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.header__logo > img {
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+.header__nav > select {
+    margin-left: 15px;
+    padding: 5px;
+    max-width: 100px;
+}
+
+.header__nav > select > option {
+    color: gray;
+}
+
+.header__nav > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.header__nav > a:hover {
+    text-decoration: underline;
+}
+
+.header__notification > img {
+    object-fit: contain;
+    height: 25px;
+}
+
+.searchContent {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.searchContent__right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.searchContent__right > h1 {
+    color: rgb(10, 137, 221);
+}
+
+.searchContent__field > form {
+    display: flex;
+    gap: 15px;
+}
+
+.searchContent__field > form > input {
+    width: 300px;
+    padding: 10px;
+}
+
+.searchContent__field > form > button {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(5, 215, 252);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: 600;
+}
+
+.searchContent__left {
+    border-left: 1px solid rgb(105, 105, 105);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.searchContent__left > h5 {
+    font-size: small;
+    font-weight: 300;
+    width: 280px;
+}
+
+.searchContent__field1 > form {
+    display: flex;
+    gap: 20px;
+}
+
+.searchContent__field1 > form > button {
+    border: none;
+    background-color: orange;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.searchContent__field1 > form > input {
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.searchContent__field1 > form > input::after {
+    padding: 5px;
+    content: "Upload Cv";
+}
+
+.main {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.main > p {
+    margin: 10px;
+}
+
+.searchContent__field1 > form > input[type=file]::-webkit-file-upload-button {
+    border: none;
+    background-color: orange;
+    padding: 8px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function check_leapyear(){
+                var year;
+                year = parseInt(document.getElementById("year").value);
+                if( (0 == year % 4) && (0 != year % 100) || (0 == year % 400) )
+                {
+                    document.getElementById("demo").innerHTML= year + " Is a Leap Year";
+                }
+                else
+                {
+                    document.getElementById("demo").innerHTML= year + " Is Not a Leap Year";
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center;">
+        <h3 style="text-align: center;">Javascript Program to find leap year</h3>
+        <hr color="Green" />
+        Enert Year :- <input type="text" id="year" placeholder="2020"></input>
+        <button onclick="check_leapyear()">Check</button><br><br>
+        <div id="demo"></div>
+    </body>
+</html>

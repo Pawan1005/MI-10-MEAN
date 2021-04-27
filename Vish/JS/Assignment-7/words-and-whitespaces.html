@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Words and Whitespaces</title>
+        <script>
+            function WordCount() {
+              var str = document.getElementById("N").value;
+              var tempStr = str.split(" ").length;
+              window.alert(str+" (Total Word) :- "+tempStr);
+            }
+        </script>
+    </head>
+    <body>
+        <br />
+        <h1>Words and Whitespaces</h1>
+        <label> The String :</label> 
+        <input type="text" name="n" id="N" />
+        <hr color="cyan" />
+        <br />
+        <center><button onClick="WordCount()">CHECK</button></center>
+    </body>
+</html>

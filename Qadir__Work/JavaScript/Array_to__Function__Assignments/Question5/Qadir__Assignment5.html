@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./positveFactor.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 5px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        </style>
+        <title>Positve Factor Number</title>
+    </head>
+    <body>
+        <h1>Positve Factor Number</h1>
+        <form>
+            <label for="number">Number: </label>
+            <input type="text" id="number" placeholder="Enter a Positve Number">
+            <button type="submit" onclick="factorNumber()">Generate Positve Factor</button>
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      middle digit of given 3 digit number is Equal to the Sum of Other Two
+      digits or Not
+    </title>
+  </head>
+  <body>
+    no: <input type="text" id="no" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function cal() {
+        let n = document.getElementById("no").value;
+        if (3 == n.length) {
+          s = parseInt(n[0]) + parseInt(n[2]);
+          if (parseInt(n[1]) == s)
+            document.getElementById("p").innerHTML = `sum match`;
+          else document.getElementById("p").innerHTML = `sum does not match`;
+        } else
+          document.getElementById("p").innerHTML =
+            "Invalid Number!!Please enter a 3 digit no.";
+      }
+    </script>
+  </body>
+</html>

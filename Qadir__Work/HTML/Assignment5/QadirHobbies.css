@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(180deg, rgba(106,181,238,1) 0%, rgba(117,139,249,1) 49%, rgba(104,230,245,1) 82%);
+    background-repeat: no-repeat;
+}
+
+body > h1 {
+    text-align: center;
+    background: -webkit-linear-gradient(270deg,rgb(248, 203, 1), rgb(217, 255, 0), rgb(166, 255, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.interset > strong {
+    display: flex;
+    flex-direction: column;
+}
+
+.interset > span {
+    display: block;
+    width: 200px;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+}

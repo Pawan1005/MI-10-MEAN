@@ -1,0 +1,36 @@
+.a{
+    text-align:center;
+}
+.contact{
+    text-align:justify;
+}
+.contactimg{top:50%;
+
+ left:100%;
+  align:left;
+}
+ .sub{
+        padding-top:5%;  
+      }
+ .homepage
+ {
+
+display:grid;
+ }
+ .main1 > h2 {
+    text-align:center;   
+ }
+.para
+{
+display: inline-block;
+justify-content: center;
+
+}
+.para > img:first-child
+{
+    float: left;
+}
+.para > img:last-child
+{
+    float: right;
+}

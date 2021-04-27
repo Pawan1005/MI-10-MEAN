@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./secondLargeNumber.js"></script>
+        <title>Second Largest Number in list</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            input {
+                margin-top: 10px;
+                margin-left: 25px;
+                outline-color: cyan;
+                padding: 5px;
+            }
+            button {
+                margin-top: 10px;
+                border: none;
+                padding: 10px;
+                color: white;
+                font-weight: 700;
+                background-color: rgb(0, 155, 245);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Second Largest Number in list</h1>
+        <form>
+            <label for="num1">Number 1:</label>
+            <input type="text" id="num1">
+            <br>
+            <label for="num2">Number 2:</label>
+            <input type="text" id="num2">
+            <br>
+            <label for="num3">Number 3:</label>
+            <input type="text" id="num3">
+            <br>
+            <label for="num4">Number 4:</label>
+            <input type="text" id="num4">
+            <br>
+            <label for="num5">Number 5:</label>
+            <input type="text" id="num5">
+            <br>
+            <button type="submit" onclick="secondLarge()">Find Second Largest Number</button>
+        </form>
+        <h2>Second Large Number from List</h2>
+        <p id="secNumber"></p>
+    </body>
+</html>

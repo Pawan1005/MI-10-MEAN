@@ -8,37 +8,30 @@
     </head>
     <body>
         <h4>Enter 5 names here</h4>
-        Name1: <input type="text" id="name1" placeholder="Enter name ">
         <button onclick="MyArray()">Enter</button>
-        <br>
-        <br>
         <script language="javascript">
             function MyArray(){
-                var split_input,input1,result;
-                //for input names
-                input1=document.getElementById("name1").value;
+                var input1;
+                input1=[];
+                for (var i=0; i<=4; i++){
+                    input1[i]=prompt("Enter the names ")
+                }
                 document.write( " <b> The input names are :<b> " + input1 +"<br>") ;
                     document.write("<br>")
-                    document.write("<br>")
-                // for array converstion
-                split_input= input1.split(" ");
-                    document.write( "<b> Names are stored in array :<b>" + split_input) ;
                         document.write("<br>")
-                        document.write("<br>")
-                //for list output
-                document.write("Input names with comma separated list")
-                document.write("<br>")
-                for (var i=0 ; i<=split_input.length-1; i++ ){
-                    document.write( split_input[i] + ","+ "<br>") ;
-                }
-                document.write("<br>")
-                document.write("<br>")
-                //for name1 name2 
-                for (var i=0 ; i<=split_input.length-1; i++ ){
-                    document.write( " name" + i + ":" + split_input[i] + "<br>");
-                    document.write("<br>") ;     
-                }
-            }
+                            document.write("Input names with comma separated list")
+                                document.write("<br>")
+                                for (var i=0 ; i<=input1.length-1; i++ ){
+                                    document.write(input1[i] + ","+ "<br>") ;
+                                }
+                                document.write("<br>")
+                                    document.write("<br>")
+                                    for (var i=0 ; i<=input1.length-1; i++ ){
+                                        document.write( " name" + (i+1) + ":" + input1[i] + "<br>");
+                                            document.write("<br>") ;     
+                                        }
+                                    }
         </script>
     </body>
 </html>
+

@@ -15,21 +15,18 @@
         <h4 id="result"></h4>
         <script>
             var input = prompt("Enter a word:");
-            var arr = input.split("").join(" ");
+            var arr = input.split("").join(" ");       
             document.getElementById("input").innerHTML = "User Enters: " + arr;
             function count() {
-                const doubleletter = (arr = []) => {
-                const res = [];
-                for (let i = 0; i < arr.length; i++) {
-                    if (i === arr.lastIndexOf(arr[i])) {
-                        continue;
-                    }
-                    res.push(arr[i])
+                var res = [];
+                for (let i = 1; i < input.length; i++) {
+                    if (input[i] == input[i + 1]) {
+                        res.push(input[i]);
+                    }    
                 }
-                return res.join("");
-                }
-                document.getElementById("result").innerHTML = doubleletter(arr);
+                document.getElementById("result").innerHTML = res;
             }
         </script>
     </body>
 </html>
+

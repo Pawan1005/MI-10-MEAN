@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./studentMarks.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            div {
+                display: inline-block;
+                position: relative;
+            }
+
+            span[id=left] {
+                position: absolute;
+                right: 0;
+            }
+        </style>
+        <title>Student Marks</title>
+    </head>
+    <body>
+        <h1>Student Marks Out Of 50 With Marks in Descending Order</h1>
+
+        <form>
+            <input type="text" id="rollNumber" placeholder="Enter a Roll Number">
+            <button type="submit" onclick="studentMark(studentMarkRollNo)">Show</button>
+        </form>
+
+        <p id="marks"></p>
+        <div id="descendingOrder"></div>
+        <script>
+            let descendingOrder = document.getElementById("descendingOrder");
+            let totalStudent = 10;
+            var studentMarkRollNo = [];
+            alert("Enter a 10 Roll Number of Students and There Marks");
+
+            while(totalStudent > 0) {
+                let rollNumber = parseInt(prompt("Enter a Roll Number"));
+                let marks = parseInt(prompt("Enter a Marks"));
+
+                if(marks > 50 || marks < 0 || rollNumber < 0) {
+                   alert("Error - Invalid Marks!!");
+                    totalStudent++;
+                }
+                else {
+                    marks = marks + parseInt(marks * 0.2);
+                    studentMarkRollNo.push({"Roll Number": rollNumber, "Marks": marks});
+                }
+                totalStudent--;
+            }
+
+            // Bubble Sort
+            for (let iteration = 0; iteration <= studentMarkRollNo.length-1; iteration++) {
+                for (let index = 0; index<= studentMarkRollNo.length - 2; index++) {
+                    if(studentMarkRollNo[index]["Marks"] < studentMarkRollNo[index+1]["Marks"]) {
+                        let temp = studentMarkRollNo[index];
+                        studentMarkRollNo[index] = studentMarkRollNo[index+1];
+                        studentMarkRollNo[index+1]=temp;
+                    }
+                }
+            }
+
+            descendingOrder.innerHTML = `<br><strong>Roll No</strong> <strong>Marks</strong>`;
+
+            // Printing Marks in Descending Order
+            for(let show = 0; show < 10; show++) {
+                descendingOrder.innerHTML += `<br><span>${studentMarkRollNo[show][["Roll Number"]]}</span> <span id="left">${studentMarkRollNo[show]["Marks"]}</span><br>`;
+            }
+
+        </script>
+    </body>
+</html>

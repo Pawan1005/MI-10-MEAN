@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Student Marks And Grade</title>
+</head>
+
+<body>
+    <h3> Student Marks And Grade </h3>
+
+    Physics: <input id="first"><br />
+    Chemistry: <input id="second"><br />
+    Maths: <input id="third"><br />
+    Biology: <input id="fourth"><br />
+    Geography: <input id="five"><br />
+
+
+    <button onclick="add()">show results</button>
+</body>
+
+<script>
+    function add() {
+        var a, b, c, d, e, total, perc;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        c = Number(document.getElementById("third").value);
+        d = Number(document.getElementById("fourth").value);
+        e = Number(document.getElementById("five").value);
+        total = a + b + c + d + e;
+        perc = total / 5;
+        document.write(" Your Total marks out of 500 is :" + total);
+        document.write("<br>");
+        document.write(" Your Percentage is :" + perc);
+        document.write("<br>");
+
+        if (perc <= 100 && perc >= 75) {
+            document.write("Congratulations You got A grade");
+        }
+        else if (perc <= 74 && perc >= 60) {
+            document.write(" You got B grade");
+        }
+        else if (perc <= 59 && perc >= 40) {
+            document.write(" You got C grade");
+        }
+
+        else if (perc <= 39 && perc >= 30) {
+            document.write(" You got D grade");
+        }
+
+        else {
+            document.write(" You are failed in exam");
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 3</title>
+    </head>
+    <body>
+        <script>
+            var arrMarks = [];
+            for (var i = 0; i < 10; i++) {
+                marks = parseInt(prompt("Enter marks out of 80 for subject" + (i + 1) + " :"));
+                if (marks > 80) {
+                    alert("Enter marks less than or equals to 80.");
+                }
+                else {
+                    marks = marks + (marks / 10 * 2);
+                    arrMarks.push(marks);
+                }
+                document.write("<br> Marks of subject " + (i + 1) + ": " + arrMarks[i]);
+            }
+            let select = parseInt(prompt("1 – Bubble sort (Press 1)\n2 – Insertion sort (Press 2)\n3 – selection sort(Press 3)\n4 – Quick Sort(Press 5)\n5 – Exit (Press X or Cancel or 5)"));
+            switch (select) {
+                case 1:
+                    bubblesort();
+                    break;
+                case 2:
+                    selectionsort();
+                    break;
+                case 3:
+                    insertionsort();
+                    break;
+                case 4:
+                    quicksort();
+                    break;
+                default:
+                    break;
+            }
+            function bubblesort() {
+                var temp;
+                for (var i = 1; i <= 9; i++) {
+                    for (var j = 1; j <= 9; j++) {
+                        if (arrMarks[j] > arrMarks[j + 1]) {
+                            temp = arrMarks[j];
+                            arrMarks[j] = arrMarks[j + 1];
+                            arrMarks[j + 1] = temp;
+                        }
+                    }
+                }
+                document.write("<br><br>*****After Sorting (Bubble Sort)*****");
+                document.write("<br>Marks : " + arrMarks);
+            }
+            function selectionsort() {
+                var temp;
+                for (var j = 1; j <= 9; j++) {
+                    for (var i = j + 1; i <= 10; i++) {
+                        if (arrMarks[j] > arrMarks[i]) {
+                            temp = arrMarks[j];
+                            arrMarks[j] = arrMarks[i];
+                            arrMarks[i] = temp;
+                        }
+                    }
+                }
+                document.write("<br><br>*****After Sorting (Selection Sort)*****");
+
+                document.write("<br>Marks : " + arrMarks);
+            }
+            function insertionsort() {
+                var temp;
+                for (var i = 1; i <= 10; i++) {
+                    for (var j = 0; j <= i; j++) {
+                        if (arrMarks[j] > arrMarks[i]) {
+                            temp = arrMarks[j];
+                            arrMarks[j] = arrMarks[i];
+                            for (var k = i; k > j; k--) {
+                                arrMarks[k] = arrMarks[k - 1];
+                            }
+                            arrMarks[k + 1] = temp;
+                        }
+                    }
+                }
+                document.write("<br><br>*****After Sorting (Insertion Sort)*****");
+                document.write("<br>Marks : " + arrMarks);
+            }
+            function quicksort() {
+                function splitVal(arr, lower, upper) {
+                    var p, q, temp, pi;
+                    pi = arr[lower];
+                    p = lower + 1;
+                    q = upper;
+                    while (q >= p) {
+                        while (arr[p] < pi) {
+                            p++;
+                        }
+                        while (arr[q] > pi) {
+                            q--;
+                        }
+                        if (q > p) {
+                            temp = arr[p];
+                            arr[p] = arr[q];
+                            arr[q] = temp;
+                        }
+                    }
+                    temp = arr[lower];
+                    arr[lower] = arr[q];
+                    arr[q] = temp;
+                    return q; s
+                }
+                function quicksort(arr, lower, upper) {
+                    var e;
+                    if (upper > lower) {
+                        e = splitVal(arr, lower, upper);
+                        quicksort(arr, lower, e - 1);
+                        quicksort(arr, e + 1, upper);
+                    }
+                }
+                var pi, lower, upper;
+                quicksort(arrMarks, 0, 9);
+                document.write("<br><br>*****After Sorting (Quick Sort)*****");
+                document.write("<br>Marks : " + arrMarks);
+            }
+        </script>
+    </body>
+</html>

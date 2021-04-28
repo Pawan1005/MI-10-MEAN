@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 1</title>
+    </head>
+    <body>
+        <script>
+            var arrMarks = [];
+            for (var i = 0; i < 10; i++) {
+                marks = parseInt(prompt("Enter marks out of 80 for subject" + (i + 1) + " :"));
+                if (marks > 80) {
+                    alert("Enter marks less than or equals to 80.");
+                }
+                else {
+                    marks = marks + (marks / 10 * 2);
+                    arrMarks.push(marks);
+                }
+            }
+            arrMarks.forEach(myFunction);
+            function myFunction(item, index) {
+                document.writeln("Marks for subject " + (index + 1) + ": " + item + "<br>");
+            }
+        </script>
+    </body>
+</html>

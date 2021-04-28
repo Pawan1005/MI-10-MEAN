@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9</title>
+  </head>
+  <body>
+    <h4><b> check the number is palindrome or not</b></h4>
+    Number : <input type="text" id="pali" placeholder="enter number here">
+    <br>
+    <button onclick="palindrome()">Enter</button>
+    <br>
+    <script>
+      function palindrome() {
+        var input, res, number, temp, stored_value;
+        input = parseInt(document.getElementById("pali").value);
+        res = "";
+        number = input;
+        while (number > 0) {
+          temp = number % 10;
+          res = res + temp.toString();
+          number = parseInt(number / 10);
+        }
+        stored_value = parseInt(res);
+        if (input == stored_value) {
+          document.write("<b>The input number is palindrome <b> ");
+        } else {
+          document.write("<b> The input number is not palindrome <b>");
+        }
+      }
+    </script>
+  </body>
+</html>

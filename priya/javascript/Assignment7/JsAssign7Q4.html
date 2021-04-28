@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selection_sort</title>
+    </head>
+    <body>
+        <p style="text-align: center;">
+            <h4>Selection_sort</h4>
+            Number_of_student : <input type="text" id="num" placeholder="Enter number of students"><br>
+            <br>
+            <button onclick="Select()">submit</button><br>
+            <br>
+            <p id="demo"></p>
+        </p>
+        <script>
+            function Select(){
+                var input,arr,temp;
+                input=parseInt(document.getElementById("num").value);
+                arr=[];
+                for (var i=0; i< input ; i++){
+                    arr[i]=parseInt(prompt("Enter the marks"))
+                }
+                document.write("********* Before Sorting ********** <br>" );
+                for(var i=0; i< input ; i++){
+                    document.write("Marks "+ (i+1)+ ": "+arr[i] + "<br>")
+                }
+                document.write( "<br>" )
+                document.write("********* Before Sorting ********** <br>" );
+                document.write( "<br>" + arr + "<br>")
+                for (var i=0; i<=arr.length-1; i++){
+                    for(var j=i+1; j< arr.length; j++){
+                        if (arr[i] > arr[j]){
+                            temp = arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                        }
+                    }
+                    document.write("<br> array after iteration : " + arr )  
+                }
+                document.write( "<br>" )
+                document.write( "<br> **********After sorting (selction sort )*********")
+                document.write( "<br>" )
+                document.write( "<br>" + arr)
+            } 
+        </script>
+    </body>
+</html>
+

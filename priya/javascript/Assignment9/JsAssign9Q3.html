@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsAssign9_Q3_Primepalindrome Number</title>
+  </head>
+  <body>
+    <h4>check the input numbers are Primepalindromic Number or not</h4>
+    Number : <input type="text" id="prime1" placeholder="Enter count" ><br>
+    <br>
+    <button type="button" onclick="prime_number()">Submit</button>
+    <p id="demo"></p>
+    <script language="javascript">
+      function prime_number() {
+        var input, flage, count, res, array1, array2, temp, string_con,arr;
+        res = "";
+        flage = true;
+        input = parseInt(document.getElementById("prime1").value);
+        arr = [];
+        for (var i = 0; i < input; i++) {
+          arr[i] = parseInt(prompt("enter a number :"));
+        }
+        array1 = arr;
+        array2 = [];
+        for (var i = 0; i < input; i++) {
+          if (array1[i] > 1) {
+            count = 2;
+            while (count < array1[i]) {
+              if (array1[i] % count == 0) {
+                flage = false;
+                break;
+              }
+              count = count + 1;
+            }
+
+            if (flage == false) {
+              document.write(array1[i] + " <b > : is not prime palindrome number <b><br>");
+              array2.push(array1[i]);
+            } 
+            else {
+              array2.push(array1[i]);
+              while (array2[i] > 0) {
+                temp = array2[i] % 10;
+                res = res + temp.toString();
+                array2[i] = parseInt(array2[i] / 10);
+              }
+              string_con = parseInt(res);
+             
+              if (arr[i] == string_con) {
+                document.write(
+                  arr[i] + " <b > : is  primepalindrome number <b><br>"
+                );
+                res='';
+              } else {
+                document.write(
+                  arr[i] + " <b > : is  prime number but not palindrom <b><br>"
+                );
+                res='';
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

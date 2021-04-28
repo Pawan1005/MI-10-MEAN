@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble_sort</title>
+  </head>
+  <body>
+    <p style="text-align: center">
+      Number_of_student :<input type="text" id="num" placeholder="Enter number of students"><br>
+      <br>
+      <button onclick="bubble()">submit</button><br>
+      <br>
+    </p>
+    <script>
+      function bubble() {
+        var input, arr;
+        input = parseInt(document.getElementById("num").value);
+        document.write("<br><b>Marks Obtained by students<b> <br>");
+
+        arr = [];
+        for (var i = 0; i < input; i++) {
+          arr[i] = parseInt(prompt("Enter the marks"));
+        }
+        for (var i = 0; i < input; i++) {
+          document.write("Marks " + (i + 1) + ": " + arr[i] + "<br>");
+        }
+        document.write("<br>" + arr);
+      }
+    </script>
+  </body>
+</html>

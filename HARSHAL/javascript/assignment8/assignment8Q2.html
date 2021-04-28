@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que2</title>
+    </head>
+    <body>
+        <script>
+            var marks = [];
+            for (var a = 0; a <= 9; a++) {
+                marks.push(parseInt(prompt(`ENTER MARKS: ${a + 1}`)));
+                if (marks[a] > 80) {
+                    marks.pop();
+                    marks.push(
+                        prompt(`enter correct marks out of 80  MARKS: ${a + 1}`)
+                    );
+                    if (marks[a] > 80) {
+                        alert(
+                            "please restrat the program you entered wrong marks twice "
+                        );
+                        break;
+                    }
+                }
+            }
+            var total = [];
+            for (var b = 0; b <= 9; b++) {
+                total[b] = marks[b] + 0.2 * marks[b];
+            }
+            console.log(total);
+            for (var c = 0; c <= 9; c++) {
+                document.write(`<br>MARKS for sub${c + 1}= ${marks[c]}`);
+            }
+            document.write("<br>");
+            for (var c = 0; c <= 9; c++) {
+                document.write(`<br>TOTAL MARKS for sub${c + 1} = ${total[c]}`);
+            }
+
+            function swap(total, leftIndex, rightIndex) {
+                var temp = total[leftIndex];
+                total[leftIndex] = total[rightIndex];
+                total[rightIndex] = temp;
+            }
+            function partition(total, left, right) {
+                var pivot = total[Math.floor((right + left) / 2)],
+                    i = left,
+                    j = right;
+                while (i <= j) {
+                    while (total[i] < pivot) {
+                        i++;
+                    }
+                    while (total[j] > pivot) {
+                        j--;
+                    }
+                    if (i <= j) {
+                        swap(total, i, j);
+                        i++;
+                        j--;
+                    }
+                }
+                return i;
+            }
+            function quickSort(total, left, right) {
+                var index;
+                if (total.length > 1) {
+                    index = partition(total, left, right);
+                    if (left < index - 1) {
+                        quickSort(total, left, index - 1);
+                    }
+                    if (index < right) {
+                        quickSort(total, index, right);
+                    }
+                }
+                return total;
+            }
+            var sortedArray = quickSort(total, 0, total.length - 1);
+            console.log(sortedArray);
+            document.write(
+                "<br><br><bt>Total marks arranged using quick sort :-" +
+                    sortedArray
+            );
+        </script>
+    </body>
+</html>

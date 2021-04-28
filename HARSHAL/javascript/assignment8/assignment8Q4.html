@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que4</title>
+    </head>
+    <body>
+        <script>
+            let sectionA = [];
+            for (i = 0; i < 5; i++) {
+                sectionA[i] = prompt(
+                    "enter marks of 5 students from section A "
+                );
+            }
+            for (var b = 0; b < 5; b++) {
+                document.write(`<br>Marks${b + 1}: ${sectionA[b]}`);
+            }
+            let sectionB = [];
+            for (j = 0; j < 5; j++) {
+                sectionB[j] = prompt(
+                    "enter marks of 5 students from section B "
+                );
+            }
+            for (var b = 0; b < 5; b++) {
+                document.write(`<br>Marks${b + 1}: ${sectionB[b]}`);
+            }
+            document.write("<br>after merge sort<br>");
+            let unsortedMarks = sectionA.concat(sectionB);
+            document.write("sorted marks = " + mergeSort(unsortedMarks));
+            function mergeSort(array) {
+                if (array.length < 2) {
+                    return array;
+                } else {
+                    let midpoint = parseInt(array.length / 2);
+                    let leftArray = array.slice(0, midpoint);
+                    let rightArray = array.slice(midpoint, array.length);
+                    return merge(mergeSort(leftArray), mergeSort(rightArray));
+                }
+            }
+            function merge(leftArray, rightArray) {
+                let sortedMarks = [];
+                while (leftArray.length && rightArray.length) {
+                    if (leftArray[0] <= rightArray[0]) {
+                        sortedMarks.push(leftArray[0]);
+                        leftArray = leftArray.slice(1);
+                    } else {
+                        sortedMarks.push(rightArray[0]);
+                        rightArray = rightArray.slice(1);
+                    }
+                }
+                while (leftArray.length) sortedMarks.push(leftArray.shift());
+                while (rightArray.length) sortedMarks.push(rightArray.shift());
+                return sortedMarks;
+            }
+        </script>
+    </body>
+</html>

@@ -10,22 +10,24 @@
         <h1>insertionsort for marks of 1 student</h1>
         <script>
             var marks = [];
-            for (var a = 1; a <= 5; a++) {
-                marks.push(prompt(`ENTER MARKS: ${a}`));
+            for (var a = 0; a <= 4; a++) {
+                marks.push(prompt(`ENTER MARKS: ${a + 1}`));
             }
             console.log(`[${marks}]`);
             for (var b = 0; b <= 4; b++) {
                 document.write(`<br>Marks${b + 1}: ${marks[b]}`);
             }
-            let n = marks.length;
-            for (let i = 1; i < n; i++) {
-                let current = marks[i];
-                let j = i - 1;
-                while (j > -1 && current < marks[j]) {
-                    marks[j + 1] = marks[j];
-                    j--;
+            for (var i = 1; i <= 4; i++) {
+                for (var j = 0; j <= i; j++) {
+                    if (marks[j] > marks[i]) {
+                        temp = marks[j];
+                        marks[j] = marks[i];
+                        for (var k = i; k > j; k--) {
+                            marks[k] = marks[k - 1];
+                        }
+                        marks[k + 1] = temp;
+                    }
                 }
-                marks[j + 1] = current;
             }
             console.log(marks);
             document.write("<br><br><br>after insertion sort");

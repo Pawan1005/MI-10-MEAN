@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que5</title>
+    </head>
+    <body>
+        <h1>insertionsort for marks of 1 student</h1>
+        <script>
+            var marks = [];
+            for (var a = 0; a <= 4; a++) {
+                marks.push(prompt(`ENTER MARKS: ${a + 1}`));
+            }
+            console.log(`[${marks}]`);
+            for (var b = 0; b <= 4; b++) {
+                document.write(`<br>Marks${b + 1}: ${marks[b]}`);
+            }
+            for (var i = 1; i <= 4; i++) {
+                for (var j = 0; j <= i; j++) {
+                    if (marks[j] > marks[i]) {
+                        temp = marks[j];
+                        marks[j] = marks[i];
+                        for (var k = i; k > j; k--) {
+                            marks[k] = marks[k - 1];
+                        }
+                        marks[k + 1] = temp;
+                    }
+                }
+            }
+            console.log(marks);
+            document.write("<br><br><br>after insertion sort");
+            for (var c = 0; c <= 4; c++) {
+                document.write(`<br>Marks${c + 1}: ${marks[c]}`);
+            }
+        </script>
+    </body>
+</html>

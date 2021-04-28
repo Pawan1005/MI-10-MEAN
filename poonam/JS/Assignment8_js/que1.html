@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>que 1</title>
+        <title>Input marks</title>
     </head>
     <body>
         <script>
@@ -19,9 +19,9 @@
                     arrMarks.push(marks);
                 }
             }
-            arrMarks.forEach(myFunction);
-            function myFunction(item, index) {
-                document.writeln("Marks for subject " + (index + 1) + ": " + item + "<br>");
+
+            for (var i = 0; i < 10; i++) {
+                document.writeln("Marks for subject " + (i + 1) + ": " + arrMarks[i] + "<br>");
             }
         </script>
     </body>

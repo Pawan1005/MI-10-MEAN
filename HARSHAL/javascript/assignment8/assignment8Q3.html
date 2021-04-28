@@ -28,7 +28,7 @@
             for (var b = 0; b <= 9; b++) {
                 total[b] = marks[b] + 0.2 * marks[b];
             }
-            console.log(total);
+            // console.log(total);
             for (var c = 0; c <= 9; c++) {
                 document.write(`<br>MARKS for sub${c + 1}= ${marks[c]}`);
             }
@@ -89,7 +89,7 @@
                     return total;
                 }
                 var sortedArray = quickSort(total, 0, total.length - 1);
-                console.log(sortedArray);
+                // console.log(sortedArray);
                 document.write(
                     "<br><br><bt>Total marks arranged using quick sort :-" +
                         sortedArray
@@ -106,7 +106,7 @@
                         }
                     }
                 }
-                console.log(total);
+                // console.log(total);
                 document.write("<br><br><br>after bubblesort");
                 for (var c = 0; c <= len; c++) {
                     document.write(`<br>Marks${c + 1}: ${total[c]}`);
@@ -127,7 +127,7 @@
                         total[min] = tmp;
                     }
                 }
-                console.log(total);
+                // console.log(total);
                 document.write("<br><br><br>after selection sort");
                 for (var c = 0; c <= len; c++) {
                     document.write(`<br>Marks${c + 1}: ${total[c]}`);
@@ -144,7 +144,7 @@
                     }
                     total[j + 1] = current;
                 }
-                console.log(total);
+                // console.log(total);
                 document.write("<br><br><br>after insertion sort");
                 for (var c = 0; c <= n; c++) {
                     document.write(`<br>Marks${c + 1}: ${total[c]}`);

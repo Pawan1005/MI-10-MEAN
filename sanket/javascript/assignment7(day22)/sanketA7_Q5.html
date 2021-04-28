@@ -18,17 +18,14 @@
         document.write("<br>Marks " + (i + 1) + " : " + marks[i]);
       }
       document.write("<br>(*****each iteration****)");
-      for (i = 1; i <= marks.length - 1; i++) {
-        for (j = 0; j <= i; j++) {
-          if (marks[j] > marks[i]) {
-            temp = marks[j];
-            marks[j] = marks[i];
-            for (k = i; k > j; k--) {
-              marks[k] = marks[k - 1];
-            }
-            marks[k + 1] = temp;
-          }
+      for (i = 1; i < marks.length; i++) {
+        let current = marks[i];
+        j = i - 1;
+        while (j >= 0 && marks[j] > current) {
+          marks[j + 1] = marks[j];
+          j--;
         }
+        marks[j + 1] = current;
         document.write(" <br>" + marks);
       }
       document.write("<br>(****After Sorting(Insertion sort)****)");

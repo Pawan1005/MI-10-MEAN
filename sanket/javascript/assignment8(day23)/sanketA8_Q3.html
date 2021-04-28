@@ -34,18 +34,19 @@
       switch (choice) {
         case "1":
           bubbleSort();
+          document.write("sorting using bubble sort " + totalMarks);
           break;
         case "2":
-          sortedArray = insertionSort(totalMarks);
-          document.write("Sorted Marks using insertion sort : " + sortedArray);
+          insertionSort(totalMarks);
+          document.write("Sorted Marks using insertion sort : " + totalMarks);
           break;
         case "3":
-          sortedArray = selectionSort(totalMarks);
-          document.write("Sorted Marks using selection sort : " + sortedArray);
+          selectionSort(totalMarks);
+          document.write("Sorted Marks using selection sort : " + totalMarks);
           break;
         case "4":
-          sortedArray = quickSort(totalMarks, 0, totalMarks.length - 1);
-          document.write("Sorted Marks using Quick sort : " + sortedArray);
+          quickSort(totalMarks, 0, totalMarks.length - 1);
+          document.write("Sorted Marks using Quick sort : " + totalMarks);
           break;
         default:
           break;
@@ -60,74 +61,47 @@
             }
           }
         }
-        document.write("sorting using bubble sort " + totalMarks);
       }
-
       function insertionSort(totalMarks) {
-        for (i = 1; i <= totalMarks.length - 1; i++) {
-          for (j = 0; j <= i; j++) {
-            if (totalMarks[j] > totalMarks[i]) {
-              temp = totalMarks[j];
-              totalMarks[j] = totalMarks[i];
-              for (k = i; k > j; k--) {
-                totalMarks[k] = totalMarks[k - 1];
-              }
-              totalMarks[k + 1] = temp;
-            }
+        for (i = 1; i < totalMarks.length; i++) {
+          let current = totalMarks[i];
+          j = i - 1;
+          while (j >= 0 && totalMarks[j] > current) {
+            totalMarks[j + 1] = totalMarks[j];
+            j--;
           }
+          totalMarks[j + 1] = current;
         }
-        return totalMarks;
       }
-
       function selectionSort(inputArr) {
-        for (i = 0; i < totalMarks.length - 1; i++) {
-          for (j = i + 1; j < totalMarks.length; j++) {
-            if (totalMarks[i] > totalMarks[j]) {
-              temp = totalMarks[i];
-              totalMarks[i] = totalMarks[j];
-              totalMarks[j] = temp;
+        for (let i = 0; i < totalMarks.length; i++) {
+          let minIndex = i;
+          for (j = i; j < totalMarks.length; j++) {
+            if (totalMarks[j] < totalMarks[minIndex]) {
+              let temp = totalMarks[j];
+              totalMarks[j] = totalMarks[minIndex];
+              totalMarks[minIndex] = temp;
             }
           }
         }
-        return totalMarks;
       }
-
-      function quickSort(totalMarks, left, right) {
-        let index;
-        if (totalMarks.length > 1) {
-          index = partition(totalMarks, left, right);
-          if (left < index - 1) {
-            quickSort(totalMarks, left, index - 1);
-          }
-          if (index < right) {
-            quickSort(totalMarks, index, right);
+      function quickSort(array, start, end) {
+        if (start >= end) return;
+        let boundary = partition(array, start, end);
+        quickSort(array, start, boundary - 1);
+        quickSort(array, boundary + 1, end);
+      }
+      function partition(array, start, end) {
+        let pivot = array[end];
+        let boundary = start - 1;
+        for (i = start; i <= end; i++) {
+          if (array[i] <= pivot) {
+            let temp = array[++boundary];
+            array[boundary] = array[i];
+            array[i] = temp;
           }
         }
-        return totalMarks;
-      }
-      function partition(totalMarks, left, right) {
-        let pivot = totalMarks[Math.floor((right + left) / 2)],
-          i = left,
-          j = right;
-        while (i <= j) {
-          while (totalMarks[i] < pivot) {
-            i++;
-          }
-          while (totalMarks[j] > pivot) {
-            j--;
-          }
-          if (i <= j) {
-            swap(totalMarks, i, j);
-            i++;
-            j--;
-          }
-        }
-        return i;
-      }
-      function swap(totalMarks, leftIndex, rightIndex) {
-        let temp = totalMarks[leftIndex];
-        totalMarks[leftIndex] = totalMarks[rightIndex];
-        totalMarks[rightIndex] = temp;
+        return boundary;
       }
     </script>
   </body>

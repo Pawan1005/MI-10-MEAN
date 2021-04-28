@@ -18,12 +18,13 @@
         document.write("<br>Marks " + (i + 1) + " : " + marks[i]);
       }
       document.write("<br>(*****each iteration****)");
-      for (i = 0; i < marks.length - 1; i++) {
-        for (j = i + 1; j < marks.length; j++) {
-          if (marks[i] > marks[j]) {
-            temp = marks[i];
-            marks[i] = marks[j];
-            marks[j] = temp;
+      for (let i = 0; i < marks.length; i++) {
+        let minIndex = i;
+        for (j = i; j < marks.length; j++) {
+          if (marks[j] < marks[minIndex]) {
+            let temp = marks[j];
+            marks[j] = marks[minIndex];
+            marks[minIndex] = temp;
           }
         }
         document.write(" <br>" + marks);

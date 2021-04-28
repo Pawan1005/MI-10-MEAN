@@ -68,35 +68,33 @@
 
     </div>
 
-
-
-    <script>
-
-        function largeNum() {
-            event.preventDefault();
-
-            let a, b, c, d, e;
-
-            a = parseInt(document.getElementById("num1").value);
-            b = parseInt(document.getElementById("num2").value);
-            c = parseInt(document.getElementById("num3").value);
-            d = parseInt(document.getElementById("num4").value);
-            e = parseInt(document.getElementById("num5").value);
-
-            let findSecLargest = 0;
-
-            let arr = [a, b, c, d, e];
-
-            let findMaximumPotential = Math.max.apply(null, arr);
-
-            arr.splice(arr.indexOf(findMaximumPotential), 1);
-
-            findSecLargest = Math.max.apply(null, arr);
-
-            document.getElementById("result").innerHTML = findSecLargest;
-        }
-    </script>
-
 </body>
+
+<script>
+
+    function largeNum() {
+        event.preventDefault();
+
+        let a, b, c, d, e;
+
+        a = parseInt(document.getElementById("num1").value);
+        b = parseInt(document.getElementById("num2").value);
+        c = parseInt(document.getElementById("num3").value);
+        d = parseInt(document.getElementById("num4").value);
+        e = parseInt(document.getElementById("num5").value);
+
+        let findSecLargest = 0;
+
+        let arr = [a, b, c, d, e];
+
+        let findMaximumPotential = Math.max.apply(null, arr);
+
+        arr.splice(arr.indexOf(findMaximumPotential), 1);
+
+        findSecLargest = Math.max.apply(null, arr);
+
+        document.getElementById("result").innerHTML = findSecLargest;
+    }
+</script>
 
 </html>

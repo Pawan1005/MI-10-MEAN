@@ -29,22 +29,23 @@
 		<p id="con"></p>
 	</form>
 
-	<script>
-		function afterConvert() {
-			event.preventDefault();
-			let cel, result;
-
-			cel = parseInt(document.getElementById('temp').value);
-
-			result = ((cel * 9 / 5) + 32);
-
-			document.getElementById('con').innerHTML =
-				parseInt(document.getElementById('temp').value) +
-				"&#8451; is equal to " +
-				result +
-				"&#8457;";
-		}
-	</script>
 </body>
+
+<script>
+	function afterConvert() {
+		event.preventDefault();
+		let cel, result;
+
+		cel = parseInt(document.getElementById('temp').value);
+
+		result = ((cel * 9 / 5) + 32);
+
+		document.getElementById('con').innerHTML =
+			parseInt(document.getElementById('temp').value) +
+			"&#8451; is equal to " +
+			result +
+			"&#8457;";
+	}
+</script>
 
 </html>

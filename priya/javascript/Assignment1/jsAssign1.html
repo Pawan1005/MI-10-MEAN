@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_assign1</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Swap Two Numbers</h2>
+    A: <input type="text" id="num1" placeholder="Enter first Number"/> 
+    B: <input type="text" id="num2" placeholder="Enter second Number" />
+    <button type="button" onclick="add1()">Method1</button>
+    <button type="button" onclick="add2()">Method2</button>
+    <p id="demo"></p><p id="demo1"></p><p id="demo2"></p>
+    <p id="para"></p><p id="para1"></p><p id="para2"></p>
+    <script language="javascript">
+      function add1() {
+        var a, b, c;
+        a = parseInt(document.getElementById("num1").value);
+        b = parseInt(document.getElementById("num2").value);
+        c = a;
+        a = b;
+        b = c;
+        document.getElementById("demo").innerHTML = "<h4> Method1: With Temporary Variables <h4>";
+        document.getElementById("demo1").innerHTML = "After Swapping Method1 : A =" + a;
+        document.getElementById("demo2").innerHTML = "After Swapping Method1 : B =" + b;
+      }
+      function add2() {
+        var a, b, c;
+        a = parseInt(document.getElementById("num1").value);
+        b = parseInt(document.getElementById("num2").value);
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        document.getElementById("para").innerHTML = "<h4> Method2: Without Temporary Variables <h4>";
+        document.getElementById("para1").innerHTML = "After Swapping Method2 : A =" + a;
+        document.getElementById("para2").innerHTML = "After Swapping Method2 : B =" + b;
+      }
+    </script>
+  </body>
+</html>

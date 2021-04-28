@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+    <body>
+        <h4>Enter 5 numbers here</h4>
+        <br>
+        <button onclick="MyArray2()">Enter</button><br>
+        <br>
+        <br>
+        <script language="javascript">
+            function MyArray2(){
+                var sum,arr,fact;
+                arr = [];
+                for (var i=0; i<=4; i++){
+                    arr[i]=parseInt(prompt("enter number here"));
+                }
+                document.write(arr);
+                    document.write("<br>");
+                        document.write("<br>");
+                sum=0;
+                for ( var i=0; i< arr.length; i++){
+                     fact=1;
+                        document.write(arr[i]);
+                            document.write("<br>");
+                            for (var j=1; j<= arr[i] ; j++){
+                                fact=fact*j;
+                            }
+                            sum = sum + fact;    
+                            document.write("<br>");
+                        }
+                        document.write("The sum of all factorials are : " +sum)
+                        document.write("<br>");
+                    }      
+        </script>
+    </body>
+</html>
+

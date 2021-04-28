@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Array</title>
+    </head>
+    <body>
+      <h4>Enter 5 number here</h4>
+     <br>
+      <button onclick="MyArray2()">Enter</button><br>
+      <br>
+      <br>
+      <script language="javascript">
+          function MyArray2(){
+            var sum,arr,fact;
+                arr = [];
+                for (var i=0; i<=4; i++){
+                    arr[i]=parseInt(prompt("enter number here"));
+                }
+                document.write("The input numbers are : "+ arr);
+                    document.write("<br>");
+                        document.write("The Factorial of each input number : ");
+                        document.write("<br>");
+                        var sum=[];
+                        for ( var i=0; i< arr.length; i++){
+                          fact=1;
+                          console.log(arr[i]);
+                          for (var j=1; j<= arr[i] ; j++){
+                            fact=fact*j;
+                          }
+                          console.log(fact);
+                          document.write(fact)
+                              document.write("<br>");
+                              sum.push(fact);   
+                            }
+                            document.write("New array of factorial : " + sum )
+                            document.write("<br>");
+                            sum1=sum.sort(function(a,b){return a-b});
+                              document.write(" The array of factorial by descending order : ")
+                                document.write(sum1);
+                      // for (var i=0 ; i<=sum1.length-1; i++ ){
+                      //document.write( sum1[i] + ",") ;
+                      //console.log("<br>") 
+                      // }
+                    }
+              </script>
+        </body>
+</html>
+

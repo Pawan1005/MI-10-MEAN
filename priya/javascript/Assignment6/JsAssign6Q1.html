@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+    <body>
+        <h4>Enter 5 names here</h4>
+        <button onclick="MyArray()">Enter</button>
+        <script language="javascript">
+            function MyArray(){
+                var input1;
+                input1=[];
+                for (var i=0; i<=4; i++){
+                    input1[i]=prompt("Enter the names ")
+                }
+                document.write( " <b> The input names are :<b> " + input1 +"<br>") ;
+                    document.write("<br>")
+                        document.write("<br>")
+                            document.write("Input names with comma separated list")
+                                document.write("<br>")
+                                for (var i=0 ; i<=input1.length-1; i++ ){
+                                    document.write(input1[i] + ","+ "<br>") ;
+                                }
+                                document.write("<br>")
+                                    document.write("<br>")
+                                    for (var i=0 ; i<=input1.length-1; i++ ){
+                                        document.write( " name" + (i+1) + ":" + input1[i] + "<br>");
+                                            document.write("<br>") ;     
+                                        }
+                                    }
+        </script>
+    </body>
+</html>
+

@@ -10,9 +10,9 @@
         function input_num() {
           let num = true;
           while(num) {
-            let n = prompt('Enter a Number:');
-            if (n != 'x') {
-              input.push(parseInt(n));
+            let number = prompt('Enter a Number:');
+            if (number != 'x') {
+              input.push(parseInt(number));
             }
             else {
               num = false;
@@ -22,7 +22,7 @@
         }
         function addition() {
           var sum = input.reduce(myFunction);
-          document.getElementById("demo").innerHTML = "The sum is " + sum;
+          document.getElementById("demo").innerHTML = "The sum is: " + sum;
           function myFunction(total, value, index, array) {
             return total + value;
           } 

@@ -10,9 +10,9 @@
       function inputnum() {
         let num = true;
         while(num) {
-          let n = prompt('Enter a Number:');
-          if (n != 'x') {
-            input.push(parseInt(n));
+          let number = prompt('Enter a Number:');
+          if (number != 'x') {
+            input.push(parseInt(number));
           }
           else {
             num = false;
@@ -20,31 +20,31 @@
         } 
       }
       function display() {
-        var n = input.length;
-        function factorial(n) {
+        var len = input.length;
+        function factorial(len) {
           let fact = 1;
-          for (let i = 1; i <= n; i++) {   
+          for (let i = 1; i <= len; i++) {   
             fact *= i;
           }
           return fact;
         }
-        function sumFactorial(input, n) {
+        function sumFactorial(input, len) {
           let sum = 0;
-          for (let i = 0; i < n; i++) {
+          for (let i = 0; i < len; i++) {
             sum += factorial(input[i]);
           }
           return sum;
         }
-        document.getElementById("res").innerHTML= "The sum of factorial is " + sumFactorial(input, n);
+        document.getElementById("res").innerHTML= "The sum of factorial is " + sumFactorial(input, len);
       }
     </script>
   </head>
   <body>
     <h1>Sum of factorials of all numbers added in array</h1>
     <h4>Click here to input numbers:</h4>
-    <button onclick="inputnum()">input</button>
+    <button onclick="inputnum()">Input</button>
     <h4>Click here to display the result:</h4>
-    <button onclick="display()">result</button>
+    <button onclick="display()">Result</button>
     <p id="res"></p>
   </body>
 </html>

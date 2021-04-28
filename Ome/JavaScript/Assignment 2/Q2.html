@@ -6,19 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Student Marks And Grade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #d5d8dc;
+            text-align: center;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            border: 6px solid rgb(51, 5, 5);
+            padding: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h1,
+        label,
+        button,
+        input {
+            margin: 20px;
+        }
+
+        input,
+        button {
+            padding: 5px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h3> Student Marks And Grade </h3>
+    <div class="container">
+        <h1> Student Marks And Grade </h1>
 
-    Physics: <input id="first"><br />
-    Chemistry: <input id="second"><br />
-    Maths: <input id="third"><br />
-    Biology: <input id="fourth"><br />
-    Geography: <input id="five"><br />
+        <form>
+
+            <label>Physics: </label>
+            <input type="number" id="first"><br />
+            <label>Chemistry:</label>
+            <input type="number" id="second"><br />
+            <label>Maths:</label>
+            <input type="number" id="third"><br />
+            <label>Biology:</label>
+            <input type="number" id="fourth"><br />
+            <label>Geography:</label>
+            <input type="number" id="five"><br />
 
 
-    <button onclick="add()">show results</button>
+            <button onclick="add()">show results</button>
+        </form>
+        
+    </div>
 </body>
 
 <script>

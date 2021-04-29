@@ -11,12 +11,12 @@
             <h4>Bubble_sort</h4>
             Number_of_student : <input type="text" id="num" placeholder="Enter number of students"><br>
             <br>
-            <button onclick="bubble()">submit</button><br>
+            <button onclick="bubble_sort()">submit</button><br>
             <br>
             <p id="demo"></p>
         </p>
         <script>
-            function bubble(){
+            function bubble_sort(){
                 var input,arr,temp;
                 input=parseInt(document.getElementById("num").value);
                 arr=[];
@@ -27,7 +27,6 @@
                 for(var i=0; i< input ; i++){
                     document.write("Marks "+ (i+1)+ ": "+arr[i] + "<br>")
                 }
-                document.write( "<br>" )
                 document.write("********* Before Sorting ********** <br>" );
                 document.write( "<br>" + arr +"<br>")
                 document.write("<br>***************************************" );
@@ -39,16 +38,11 @@
                             arr[j+1]=temp;
                         }
                     }
-                    document.write( "<br>" )
-                    document.write("<br> array after each iteration : " + arr ) 
-                    document.write( "<br>" )
+                    document.write("<br> array after each iteration : " + arr + "<br>") 
             }
-            document.write( "<br>" )
-            document.write( "<br> **********After sorting(Bubble Sort , Ascending order) *********")
-            document.write( "<br>" )
-            document.write( "<br>" + arr)
-                    
-            }
+            document.write( "<br> **********After sorting(Bubble Sort , Ascending order) *********<br>")
+            document.write( "<br>" + arr + "<br>")
+        }
         </script>
     </body>
 </html>

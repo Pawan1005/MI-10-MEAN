@@ -55,6 +55,5 @@ function callInitMethod() {
 }
 
 function showEmployee() {
-
     std.display();
 }

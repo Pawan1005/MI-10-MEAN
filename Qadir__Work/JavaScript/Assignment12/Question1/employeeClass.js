@@ -5,12 +5,12 @@ class Employee {
         this.address = "Old Panvel";
         this.city = "Navi Mumbai";
         this.salary = 85000;
-        this.da;
-        this.hra;
-        this.pf;
-        this.gross;
-        this.net;
-        this.basic;
+        this.da = 0;
+        this.hra = 0;
+        this.pf = 0;
+        this.gross = 0;
+        this.net = 0;
+        this.basic = 0;
     }
 
     show__init() {

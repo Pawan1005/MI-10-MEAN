@@ -1,17 +1,25 @@
 class Employee {
-    constructor(empno, name, address, city, salary){
+    constructor(){
+        this.empno = 0;
+        this.name = "";
+        this.address = "";
+        this.city = "";
+        this.salary = 0;
+        this.da = 0;
+        this.hra = 0;
+        this.pf = 0;
+        this.gross = 0;
+        this.net = 0;
+        this.basic = 0;
+        this.counter = 0;
+    }
+
+    getData(empno, name, address, city, salary) {
         this.empno = empno;
         this.name = name;
         this.address = address;
         this.city = city;
         this.salary = salary;
-        this.da;
-        this.hra;
-        this.pf;
-        this.gross;
-        this.net;
-        this.basic;
-        this.counter = 0;
     }
 
     show__init() {
@@ -59,7 +67,8 @@ function callGetEmployee() {
     let employeeCity = prompt('Enter a Employee City:');
     let employeeSalary = parseInt(prompt('Enter a Employee Salary:'));
 
-    std = new Employee(employeeNumber, employeeName, employeeAdress, employeeCity, employeeSalary);
+    std = new Employee();
+    std.getData(employeeNumber, employeeName, employeeAdress, employeeCity, employeeSalary);
 }
 
 function callInitMethod() {

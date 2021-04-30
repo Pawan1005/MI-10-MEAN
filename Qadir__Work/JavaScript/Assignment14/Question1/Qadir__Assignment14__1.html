@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritence</title>
+  </head>
+  <body>
+      <!-- language attribute is optional -->
+    <script language="javascript">
+        // 1. class Name is Always start with Captial Letter not Small
+        // class student -- class Student
+        class Student { 
+          constructor(RollNo, Name) {
+              this.RollNo = RollNo;
+              this.Name = Name;
+          }
+
+          display() {
+              document.write("<br>Inside Display");
+              document.write("<br>Roll No " + this.RollNo);
+              document.write("<br>Name " + this.Name);
+          }
+        }
+
+        //Marks is a derived class/child class
+        class Marks extends Student {
+          //Construcor Overrriding
+          // 2. if we are overriding class variable we need to declare super() inside the constructor
+          // Also parameter name and class variable name is always in small case
+          constructor(RollNo, Name, Marks) {
+              super(RollNo, Name);
+              this.RollNo = RollNo;
+              this.Name = Name;
+              this.Marks = Marks;
+              // 3. d1 is not declared and define so we need declare d1 and define 
+              //Like this: Because d1 is Date type object and there methods getDate(), etc.
+              this.d1 = new Date();
+              this.created = this.d1.getDate() + "/" + this.d1.getMonth() + "/" + this.d1.getFullYear();
+          }
+
+          marks() {
+              document.write("<br>Inside Marks---Created on " + this.created);
+              document.write("<br>Inside Marks---Name " + this.Name);
+              document.write("<br>Inside Marks---Marks " + this.Marks);
+          }
+
+          // 6. Creating show method
+          show() {
+              document.write("<br>Show Method Call With Correct");
+          }
+        }
+        
+        // 4. we need to declare variable object using let,var, const.
+        let m2 = new Marks(2, "ss", 45);
+        m2.marks();
+        m2.display();
+        // 5. show() method is not define and declare it's throw an error 
+        // so we either we create inside a class or remove show() method call
+        m2.show();
+    </script>
+  </body>
+</html>

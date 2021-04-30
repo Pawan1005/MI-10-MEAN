@@ -16,7 +16,7 @@
         document.getElementById(
           "p"
         ).innerHTML = `Roll no ${number} has scored ${
-          totalMarks[rollNo.indexOf(number)]
+          total[rollNo.indexOf(number)]
         } marks`;
       }
       let rollNo = [];
@@ -39,12 +39,25 @@
         t = parseInt(marks[i]) + parseInt((20 * marks[i]) / 100);
         total.push(t);
       }
-      let totalMarks = total.sort().reverse();
-      document.write("roll_No \u00A0 marks");
+      let totalR = total;
+      let rollNoR = rollNo;
+      sort(totalR, rollNoR);
       for (let i = 0; i < 10; i++)
         document.write(
-          `<br>${rollNo[i]} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${totalMarks[i]}`
+          `<br>${rollNoR[i]} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${totalR[i]}`
         );
+      function sort(totalR, rollNoR) {
+        for (i = 0; i < totalR.length - 1; i++)
+          for (j = 0; j < totalR.length - 1; j++)
+            if (totalR[j] < totalR[j + 1]) {
+              temp = totalR[j];
+              totalR[j] = totalR[j + 1];
+              totalR[j + 1] = temp;
+              temp = rollNoR[j];
+              rollNoR[j] = rollNoR[j + 1];
+              rollNoR[j + 1] = temp;
+            }
+      }
     </script>
   </body>
 </html>

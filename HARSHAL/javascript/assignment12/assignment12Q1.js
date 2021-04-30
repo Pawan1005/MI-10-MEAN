@@ -4,11 +4,11 @@ class Employee {
         this.empno = empno;
         this.address = address;
         this.salary = salary;
-        this.da;
-        this.hra;
-        this.pf;
-        this.gross;
-        this.net;
+        this.da=0;
+        this.hra=0;
+        this.pf=0;
+        this.gross=0;
+        this.net=0;
     }
     show_init() {
         return `NAME: ${this.name}<br>EMPLOYEE NUMBER: ${this.empno}<br>ADDRESS: ${this.address}<br>SALARY: ${this.salary}`;

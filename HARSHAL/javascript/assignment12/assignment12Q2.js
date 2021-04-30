@@ -4,11 +4,11 @@ class Employee {
         this.empno = 0;
         this.address = "";
         this.salary = 0;
-        this.da;
-        this.hra;
-        this.pf;
-        this.gross;
-        this.net;
+        this.da=0;
+        this.hra=0;
+        this.pf=0;
+        this.gross=0;
+        this.net=0;
     }
     get_data() {
         this.name = prompt("name of employee");
@@ -48,7 +48,6 @@ class Employee {
         ).innerHTML += `<br>Net Salary: <b>${this.net}</b><br><br>`;
     }
 }
-
 var obj = new Employee();
 obj.display();
 var obj2 = new Employee();

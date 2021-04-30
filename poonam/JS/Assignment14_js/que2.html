@@ -19,11 +19,11 @@
                     this.acc_name = prompt("Enter name:");
                     this.bal = parseInt(prompt("Enter balance:"));
                 }
-                deposit() {
+                deposit(credit) {
                     this.credit = parseInt(prompt("Enter deposit amount:"));
                     this.bal = this.bal + this.credit;
                 }
-                withdraw() {
+                withdraw(debit) {
                     this.debit = parseInt(prompt("Enter withdraw amount:"));
                     this.bal = this.bal - this.debit;
                 }

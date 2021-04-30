@@ -9,12 +9,12 @@
     <body>
         <script>
             class Employee {
-                constructor(empno, name, address, city, salary) {
-                    this.empno = empno;
-                    this.name = name;
-                    this.address = address;
-                    this.city = city;
-                    this.salary = salary;
+                constructor () {
+                    this.empno = 0;
+                    this.name = "";
+                    this.address = "";
+                    this.city = "";
+                    this.salary = 0;
                 }
                 show_init() {
                     document.write("<br><br><br>Employee no.: " + this.empno);

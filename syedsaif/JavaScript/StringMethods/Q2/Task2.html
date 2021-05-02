@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <link rel="stylesheet" href="../all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>String Methods</h1>
+        <label for="input">Input Text:</label>
+        <input id="input" type="text">
+        <input id="input1" type="text">
+        <button onclick="string()">click</button>
+        <p id="Trim"></p>
+        <p id="Char"></p>
+        <p id="concat"></p>
+        <p id="index"></p>
+        <p id="last"></p>
+        <p id="slice"></p>
+        <p id="split"></p>
+        <p id="upper"></p>
+        <p id="lower"></p>
+    </div>
+    <script>
+        function string() {
+            a=document.getElementById("input").value;
+            b=document.getElementById("input1").value;
+            document.getElementById("Trim").innerHTML="trim() Method is used to erase empty spaces in String <h3>"+ a.trim()+"</h3>";
+            document.getElementById("Char").innerHTML="charAt() Method is used to return the character at specified index in a string <h3>"+ a.charAt(2)+"</h3>";
+            document.getElementById("concat").innerHTML="concat() Method is used to join two or more strings and returns one string <h3>"+ a.concat(b)+"</h3>";
+            document.getElementById("index").innerHTML="index() Method is used to return the position of the first occurence of a specified string <h3>"+ a.index('Hello')+"</h3>";
+            document.getElementById("last").innerHTML="lastIndexOf() Method is used to return the position of the last occurence of a specified string <h3>"+ a.lastIndexOf('bangalore')+"</h3>";
+            document.getElementById("slice").innerHTML="slice() Method is used to extract a part of a string <h3>"+ a.slice(0,5)+"</h3>";
+            document.getElementById("split").innerHTML="split() Method is used to split a string into an array of substrings <h3>"+ a.split(" ")+"</h3>";
+            document.getElementById("upper").innerHTML="toUpperCase() Method is used to convert a string to uppercase <h3>"+ a.toUpperCase()+"</h3>";
+            document.getElementById("lower").innerHTML="charAt() Method is used to convert a string to lowercase <h3>"+ a.toLowerCase()+"</h3>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insertion sort</title>
+        <script>
+            function Fun() {
+                var a=[],c='',d='',e='',temp=0;
+                var b=parseInt(prompt("No of Total Students:"));
+                for(var i=1;i<=b;i++){
+                    a.push(prompt("enter the marks:"));
+                    d+= '<br> Mark '+i+': '+a[i-1];
+                    document.getElementById('before').innerHTML=(d);
+                }
+                for (var i = 1; i <= b; i++) {
+                    for (var j = 0; j <= i; j++) {
+                        if (a[j] > a[i]) {
+                          temp = a[j];
+                          a[j] = a[i];
+                          for (var k = i; k > j; k--) {
+                              a[k] = a[k - 1];
+                            }
+                          a[k + 1] = temp;
+                          document.getElementById("Iteration").innerHTML=c+=a+'<br>';
+                        }
+                    }
+                }
+                for(var q=0;q<a.length;q++){
+                    e+="<br> Marks: "+(q+1)+': '+a[q];
+                    document.getElementById("Asscending").innerHTML=e;
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <div>
+            <h1>Insertion Sort</h1>
+            <span>Before Sorting:</span>
+            <span id="before"></span>
+            <p>Iteration</p>
+            <span id="Iteration"></span>
+            <p>After Sorting:</p>
+            <p id="Asscending"></p>
+            <button onclick="Fun()">Asscending</button> 
+       </div>
+    </body>
+</html>

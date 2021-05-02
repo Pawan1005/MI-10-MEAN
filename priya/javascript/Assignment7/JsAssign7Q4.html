@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selection_sort</title>
+    </head>
+    <body>
+        <p style="text-align: center;">
+            <h4>Selection_sort</h4>
+            Number_of_student : <input type="text" id="num" placeholder="Enter number of students"><br>
+            <br>
+            <button onclick="select()">submit</button><br>
+            <br>
+            <p id="demo"></p>
+        </p>
+        <script>
+            function select(){
+                var input,arr,temp;
+                input=parseInt(document.getElementById("num").value);
+                arr=[];
+                for (var index=0; index< input ; index++){
+                    arr[index]=parseInt(prompt("Enter the marks"))
+                }
+                document.write("********* Before Sorting ********** <br>" );
+                for(var index=0; index< input ; index++){
+                    document.write("Marks "+ (index+1)+ ": "+arr[index] + "<br>")
+                }
+                document.write("<br>********* Before Sorting ********** <br>" );
+                document.write( "<br>" + arr + "<br>")
+                for (var index=0; index<=arr.length-1; index++){
+                    for(var second_index=index+1; second_index< arr.length; second_index++){
+                        if (arr[index] > arr[second_index]){
+                            temp = arr[index];
+                            arr[index]=arr[second_index];
+                            arr[second_index]=temp;
+                        }
+                    }
+                    document.write("<br> array after iteration :"+ arr +"<br>")  
+                }
+                document.write( "<br> **********After sorting (selction sort )*********<br>")
+                document.write( "<br>" + arr)
+            } 
+        </script>
+    </body>
+</html>
+

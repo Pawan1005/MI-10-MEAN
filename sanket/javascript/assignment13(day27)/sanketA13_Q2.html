@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weekday</title>
+  </head>
+  <body>
+    <script>
+      var d1 = new Date(2021, 0, 31);
+      alert(getWeekDay(d1));
+      function getWeekDay(d1) {
+        let weekday = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+        return weekday[d1.getDay()];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./firstWordUpperCaseOrNot.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>First Character is UpperCase or Not</title>
+    </head>
+    <body>
+        <h1>Check First Character in Text is UpperCase or Not</h1>
+        <form>
+            <label for="string">Text: </label>
+            <input type="text" id="string" placeholder="Enter a Text">
+            <br>
+            <button type="submit" onclick="firstWordUpperCase()">Check </button>
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

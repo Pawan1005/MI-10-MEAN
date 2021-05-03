@@ -9,5 +9,15 @@ function alphaDashUnderScoreCheck() {
 
     let isValid = alphaDashUnderScorePattern.test(string);
 
-    result.innerHTML += `<br>Given String <b>${string}</b> ${isValid? "Contain" : "Not Contain"} Alphabet or Dash or UnderScore`;
+    // If digit only pattern for Ignore
+    let digit = /^[0-9]*$/
+
+    // IF there is only digit
+    if (digit.test(string)) {
+        result.innerHTML += `<br>Given String <b>${string}</b> Not Contain Alphabet or Dash or UnderScore`;
+    }
+    else {
+        result.innerHTML += `<br>Given String <b>${string}</b> ${isValid? "Contain" : "Not Contain"} Alphabet or Dash or UnderScore`;
+    }
+    
 }

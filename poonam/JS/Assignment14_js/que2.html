@@ -15,16 +15,16 @@
                     this.bal = 0;
                 }
                 getData(acc_no, acc_name, bal) {
-                    this.acc_no = prompt("Enter Employee No.:");
-                    this.acc_name = prompt("Enter name:");
-                    this.bal = parseInt(prompt("Enter balance:"));
+                    this.acc_no = acc_no;
+                    this.acc_name = acc_name;
+                    this.bal = bal;
                 }
                 deposit(credit) {
-                    this.credit = parseInt(prompt("Enter deposit amount:"));
+                    this.credit = credit;
                     this.bal = this.bal + this.credit;
                 }
                 withdraw(debit) {
-                    this.debit = parseInt(prompt("Enter withdraw amount:"));
+                    this.debit = debit;
                     this.bal = this.bal - this.debit;
                 }
                 display() {
@@ -40,14 +40,27 @@
                 }
             }
             var e1 = new BankDet();
-            e1.getData();
-            e1.deposit();
-            e1.withdraw();
+            acc_no = prompt("Enter account No");
+            acc_name = prompt("Enter account name");
+            bal = parseInt(prompt("Enter account balance"));
+            debit = parseInt(prompt("Enter withdraw amount:"));
+            credit = parseInt(prompt("Enter deposit amount:"));
+
+            e1.getData(acc_no, acc_name, bal);
+            e1.deposit(credit);
+            e1.withdraw(debit);
             e1.display();
             var e2 = new BankDet();
-            e2.getData();
-            e2.deposit();
-            e2.withdraw();
+            acc_no = prompt("Enter account No");
+            acc_name = prompt("Enter account name");
+            bal = parseInt(prompt("Enter account balance"));
+            debit = parseInt(prompt("Enter withdraw amount:"));
+            credit = parseInt(prompt("Enter deposit amount:"));
+
+
+            e2.getData(acc_no, acc_name, bal);
+            e2.deposit(credit);
+            e2.withdraw(debit);
             e2.display();
         </script>
     </body>

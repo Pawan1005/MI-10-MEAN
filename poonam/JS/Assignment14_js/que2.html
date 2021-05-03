@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bank details</title>
+    </head>
+    <body>
+        <script>
+            class BankDet {
+                constructor() {
+                    this.acc_no = 0;
+                    this.acc_name = "";
+                    this.bal = 0;
+                }
+                getData(acc_no, acc_name, bal) {
+                    this.acc_no = acc_no;
+                    this.acc_name = acc_name;
+                    this.bal = bal;
+                }
+                deposit(credit) {
+                    this.credit = credit;
+                    this.bal = this.bal + this.credit;
+                }
+                withdraw(debit) {
+                    this.debit = debit;
+                    this.bal = this.bal - this.debit;
+                }
+                display() {
+                    document.write("<br>Acc_No.: " + this.acc_no);
+                    document.write("  Name: " + this.acc_name);
+                    document.write("  Balance: " + this.bal);
+                    if (this.debit > this.bal) {
+                        document.write("<br>Error: Insufficient Funds");
+                    }
+                    if (this.bal < 1000) {
+                        document.write("<br>Balance below 1000");
+                    }
+                }
+            }
+            var e1 = new BankDet();
+            acc_no = prompt("Enter account No");
+            acc_name = prompt("Enter account name");
+            bal = parseInt(prompt("Enter account balance"));
+            debit = parseInt(prompt("Enter withdraw amount:"));
+            credit = parseInt(prompt("Enter deposit amount:"));
+
+            e1.getData(acc_no, acc_name, bal);
+            e1.deposit(credit);
+            e1.withdraw(debit);
+            e1.display();
+            var e2 = new BankDet();
+            acc_no = prompt("Enter account No");
+            acc_name = prompt("Enter account name");
+            bal = parseInt(prompt("Enter account balance"));
+            debit = parseInt(prompt("Enter withdraw amount:"));
+            credit = parseInt(prompt("Enter deposit amount:"));
+
+
+            e2.getData(acc_no, acc_name, bal);
+            e2.deposit(credit);
+            e2.withdraw(debit);
+            e2.display();
+        </script>
+    </body>
+</html>

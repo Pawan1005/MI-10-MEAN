@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>credit card number</title>
+  </head>
+  <body>
+    <script>
+      let regExp = /^(?:4[0-9]{12}(?:[0-9]{3})?)$|^(?:5[1-5][0-9]{14})$|^(?:3[47][0-9]{13})$|^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+      regExp.test(prompt("enter credit card no"))
+        ? document.write("credit card number is valid")
+        : document.write("credit card number is not valid");
+    </script>
+  </body>
+</html>

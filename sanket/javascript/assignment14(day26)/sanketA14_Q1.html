@@ -19,9 +19,7 @@
       class Marks extends student {
         //Constructor Overriding
         constructor(RollNo, Name, Marks) {
-          super();
-          this.RollNo = RollNo;
-          this.Name = Name;
+          super(RollNo, Name);
           this.Marks = Marks;
           this.created =
             d1.getDate() + "/" + d1.getMonth() + "/" + d1.getFullYear();

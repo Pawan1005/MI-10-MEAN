@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./colorSizeFontChanger.js"></script>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #info {
+                align-self: center;
+                border: 1px solid goldenrod;
+                padding: 5px;
+                text-align: center;
+            }
+            
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Color, Font and Size Changer</title>
+    </head>
+    <body>
+        <h1>Changing The Paragraph Color, Font Size And Font Style</h1>
+        <p id="info">
+            Bitcoin[a] (₿) is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.[13] 
+            <br> The currency began use in 2009[14] when its implementation was released as open-source software.[6]: 
+            <br> ch. 1 Bitcoin is a decentralized digital currency, without a central bank or single administrator,
+            <br> that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.[7] 
+            <br> Transactions are verified by network nodes through cryptography and recorded in a public distributed ledger called a blockchain.
+        </p>
+
+        <form>
+            <fieldset>
+                <legend id="color">Color</legend>
+                <button onclick="textRedColor()">Red</button>
+                <button onclick="textBlueColor()">Blue</button>
+                <button onclick="textGreenColor()">Green</button>
+            </fieldset>
+            <fieldset>
+                <legend id="fontSize">Font Size</legend>
+                <button onclick="textFontSizeSmall()">Small</button>
+                <button onclick="textFontSizeMedium()">Medium</button>
+                <button onclick="textFontSizeLarge()">Large</button>
+            </fieldset>
+            <fieldset>
+                <legend id="fontStyle">Font Family</legend>
+                <button onclick="textFontStyleTimes()">Times New Roman</button>
+                <button onclick="textFontStyleArial()">Arial</button>
+                <button onclick="textFontStyleMonospace()">Monospace</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

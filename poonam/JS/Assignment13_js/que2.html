@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week day</title>
+    </head>
+    <body>
+        <script>
+            var input = prompt("Enter date: ");
+            var d = new Date(input);
+            alert(d);
+            var day;
+            switch(d.getDay()) {
+                case 0:
+                    day = "SU";
+                    break;
+                case 1:
+                    day = "MO";
+                    break;
+                case 2:
+                    day = "TU";
+                    break;
+                case 3:
+                    day = "WE";
+                    break;
+                case 4:
+                    day = "TH";
+                    break;
+                    case 5:
+                    day = "FR";
+                    break;
+                case  6:
+                    day = "SA";
+            }
+            document.write("Today is " + day);
+        </script>
+    </body>
+</html>

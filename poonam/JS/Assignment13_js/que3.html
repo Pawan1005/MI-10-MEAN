@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Previous date</title>
+    </head>
+    <body>
+        <script>
+            var input = prompt("Enter date of birth in the following format:\nMonth, date, year ");
+            var date = new Date(input);
+            var days = prompt("Enter days: ");      
+            document.write("Date: " + date)          
+            function getDateAgo(date, days) {
+            let dateCopy = new Date(date);
+                                                                                                                                                
+            dateCopy.setDate(date.getDate() - days);
+            return dateCopy.getDate();
+            }                                                                                                                                  
+            document.write("<br>Yesterday's date: " + getDateAgo(date, 1) );
+            document.write("<br>Day before yesterday's date: " + getDateAgo(date, 2) );
+            document.write("<br>Date: " + getDateAgo(date, 365) );
+        </script>
+    </body>
+</html>

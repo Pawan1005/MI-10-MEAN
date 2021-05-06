@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll number and Marks</title>
+  </head>
+  <body>
+    Enter number: <input type="text" id="pic">
+    <button onclick="show_roll()">show</button>
+    <p id="demo"></p>
+    <script>
+      function show_roll() {
+        var p;
+        p = parseInt(document.getElementById("pic").value);
+        document.getElementById("demo").innerHTML = `roll no :${p} scrored ${sorted_mark[roll_no.indexOf(p)]} marks`;
+      }
+      //take the roll no from user
+      var roll_no = [];
+      for (var index = 0; index <= 9; index++) {
+        roll_no[index] = parseInt(prompt("Enter a  roll number"));
+      }
+      document.write("Roll numbers are : <br> <br>" + roll_no + "<br>");
+      var input = [];
+      var marks;
+      for (var index = 0; index <= 9; index++) {
+        marks = parseInt(prompt("Enter marks of Student"));
+        if (marks <= 50 && marks > 0) {
+          input.push(marks);
+        } else {
+          alert("enter valid input");
+          var marks = parseInt(prompt("enter input "));
+          input.push(marks);
+        }
+      }
+      // document.write("marks of students : <br>" + input);
+      var array1 = [];
+      for (var i = 0; i < input.length; i++) {
+        var total = input[i] + (20 / 100) * input[i];
+        array1.push(total);
+        // document.write(" <br>The mark scored out of 100 is by adding internal marks is : <br>" + array1[i]);
+      }
+      var temp;
+      var sorted_mark = input;
+      for (var i = 0; i < sorted_mark.length; i++) {
+        for (var j = i + 1; j < sorted_mark.length; j++) {
+          if (sorted_mark[i] < sorted_mark[j]) {
+            temp = sorted_mark[i];
+            sorted_mark[i] = sorted_mark[j];
+            sorted_mark[j] = temp;
+          }
+          // document.write("<br> The sorting after each iteration :" + sorted_mark + "<br>")
+        }
+      }
+      document.write("<br>Roll no " + "Marks <br>");
+      for (var i = 0; i < sorted_mark.length; i++) {
+        document.write("<br>" + roll_no[i] +"&nbsp &nbsp &nbsp &nbsp &nbsp " +sorted_mark[i]);
+      }
+    </script>
+  </body>
+</html>

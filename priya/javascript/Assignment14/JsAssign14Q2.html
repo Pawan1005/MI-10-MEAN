@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance ex2</title>
+  </head>
+  <body>
+    <script>
+      class bankDet {
+        constructor() {
+          this.acc_no = 0;
+          this.acc_name = "";
+          this.bal = 0;
+        }
+        getData(acc_no, acc_name, bal) {
+          this.acc_no = acc_no;
+          this.acc_name = acc_name;
+          this.bal = bal;
+          return ("The account number is : " + acc_no +"<br>Account holder name : " +acc_name +"<br>Total balance is : " + bal);
+        }
+        deposit(bal) {
+          this.bal_deposit = this.bal + bal;
+          return bal + "<br>The amount after deposite :" + this.bal_deposit;
+        }
+        withdraw(w_d) {
+          this.with_draw = w_d;
+          this.total = this.bal_deposit - w_d;
+          if (this.total < 1000) {
+            return "insufficient funds";
+          } else {
+            return ("The amount withdrawan :" +this.with_draw +"<br>The current account balance is :" +this.total);
+          }
+        }
+        display(sr_no) {
+          this.sr_no = sr_no;
+          return `<b>${sr_no} &emsp;&emsp;&emsp; ${this.acc_no}&emsp;&emsp;&emsp; ${this.acc_name} &emsp;&emsp;&emsp;${this.total} <b>`;
+        }
+      }
+      var sale1 = new bankDet();
+      let account_no = parseInt(prompt("Enter account number "));
+      let account_holder = prompt("Enter account holder name");
+      document.write("<br>" + sale1.getData(account_no, account_holder, 30000));
+      let amount_deposite = parseInt(prompt("Enter the amount you want to deposite:"));
+      document.write("<br>The amount deposited : " + sale1.deposit(amount_deposite));
+      let amount_withdraw = parseInt(prompt("<br>Enter the amount you want to withdraw"));
+      document.write("<br>" + sale1.withdraw(amount_withdraw));
+      document.write("<br><b>Sr.no &nbsp; Acc.no &nbsp;Acc.name:&nbsp;Acc.bal:<b>" +"<br>" +"<br>" +sale1.display(1)
+      );
+    </script>
+  </body>
+</html>

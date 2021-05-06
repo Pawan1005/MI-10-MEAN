@@ -9,12 +9,17 @@
   <body>
     <script>
       function check(value) {
-        let regExp = /[\w-]/;
-        regExp.test(value)
-          ? document.write("value contains alpha numeric dash and underscore.")
-          : document.write(
-              "value not contains alpha numeric dash and underscore."
-            );
+        if (
+          /[A-Za-z]/.test(value) &&
+          /-/.test(value) &&
+          /_/.test(value) &&
+          /\d/.test(value)
+        )
+          document.write("value contains alpha numeric dash and underscore.");
+        else
+          document.write(
+            "value not contains alpha numeric dash and underscore."
+          );
       }
       check(prompt("enter value"));
     </script>

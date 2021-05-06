@@ -41,9 +41,9 @@
 
     <script>
         function manualTime() {
-            let otherDate = new Date("02-21-2012 03:12");
-
-            window.alert(otherDate);
+            var d = new Date("Feb 21,2021 03:12:00");
+            var n = d.toLocaleString('en-US', { year: "numeric", day: "numeric", month: "short", hour: "numeric", minute: "numeric", hour12: true });
+            window.alert("Local Time & Date " + n);
         }
     </script>
 

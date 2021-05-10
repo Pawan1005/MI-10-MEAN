@@ -14,10 +14,10 @@ class Calculator extends Salesman {
         for (let i = 0; i < this.numberofsales; i++) {
             var sales = parseInt(prompt("enter sale amount"));
             try {
-                if (sales < 0) throw alert("entered negative value");
-                if (isNaN(sales)) throw alert("enter number");
+                if (sales < 0) throw "entered negative value";
+                if (isNaN(sales)) throw "enter number";
             } catch (err) {
-                return err;
+                return alert(err);
             }
             if (sales > 0 && sales <= 5000) {
                 amount = amount + sales * 0.02;

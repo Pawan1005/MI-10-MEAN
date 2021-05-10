@@ -15,18 +15,18 @@ class BankDet {
     withdraw(w) {
         console.log(this.bal);
         try {
-            if (w > this.bal) throw alert("ERROR: INSUFFICIENT FUNDS");
+            if (w > this.bal) throw "ERROR: INSUFFICIENT FUNDS";
         } catch (err) {
-            return err;
+            return alert(err);
         }
         if (w < this.bal) {
             this.bal = this.bal - w;
             try {
                 if (this.bal < 1000)
-                    throw alert("your balance is below 1000, Please deposit");
-                else throw alert("your account balance is rs " + this.bal);
+                    throw "your balance is below 1000, Please deposit";
+                else throw "your account balance is rs " + this.bal;
             } catch (err) {
-                return err;
+                return alert(err);
             }
         }
     }

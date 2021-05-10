@@ -1,8 +1,8 @@
-var a = prompt("write one word");
-var firstindex = a.charAt(0);
-var check = firstindex.toUpperCase();
-if (firstindex == check) {
-    alert("the 1st character if string is in uppercase");
+var user = prompt("enter a word");
+var patt = /^[A-Z]/;
+var check = patt.test(user);
+if (check) {
+    document.write("You entered a word with 1st letter capital");
 } else {
-    alert("it is not in uppercase");
+    document.write("You entered a word with 1st letter not a capital letter");
 }

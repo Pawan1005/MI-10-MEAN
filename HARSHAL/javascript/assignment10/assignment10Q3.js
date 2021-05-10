@@ -3,9 +3,9 @@ function emailAddressCheck() {
     var patt = /^([a-zA-Z0-9\.\$!#%&'*+-/=?^_`{|}~]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
     var check = patt.test(emailAddress);
     console.log(check);
-    if (check == true) {
-        document.write("<b>YOU ENTERED CORRECT EMAIL FORMAT<b><br>");
+    if (check) {
+        alert("YOU ENTERED CORRECT EMAIL FORMAT");
     } else {
-        document.write("<b>YOU ENTERED WRONG EMAIL FORMAT<b><br>");
+        alert("YOU ENTERED WRONG EMAIL FORMAT");
     }
 }

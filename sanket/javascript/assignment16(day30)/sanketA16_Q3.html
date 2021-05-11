@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>images</title>
+  </head>
+  <body>
+    <h1 id="h">green trees on green grass filed</h1>
+    <img id="i" src="https://source.unsplash.com/lbRSuQtgpfI/300x300" />
+    <button onclick="change()">play</button>
+    <script>
+      let flag = 0;
+      function change() {
+        if (flag == 0) {
+          document.getElementById("h").innerHTML = "blue flower";
+          document.getElementById("i").src =
+            "https://source.unsplash.com/bLQPQZkI2e0/300x300";
+          flag = 1;
+        } else if (flag == 1) {
+          document.getElementById("h").innerHTML =
+            "read and green trees beside river";
+          document.getElementById("i").src =
+            "https://source.unsplash.com/P-yzuyWFEIk/300x300";
+          flag = 2;
+        } else {
+          document.getElementById("h").innerHTML =
+            "green trees on green grass filed";
+          document.getElementById("i").src =
+            "https://source.unsplash.com/lbRSuQtgpfI/300x300";
+          flag = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>even or odd</title>
+  </head>
+  <body>
+    <fieldset>
+      <label>Enter a Number: </label>
+      <input id="n" type="text" />
+      <button onclick="check()">Even/Odd</button>
+      <p id="p"></p>
+    </fieldset>
+    <script>
+      function check() {
+        let number = document.getElementById("n").value;
+        try {
+          if (/\D/.test(number)) throw new Error("Please enter a valid number");
+          number % 2 == 0
+            ? (document.getElementById("p").innerHTML = "even")
+            : (document.getElementById("p").innerHTML = "odd");
+        } catch (ex) {
+          alert(ex);
+        }
+      }
+    </script>
+  </body>
+</html>

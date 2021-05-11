@@ -9,7 +9,8 @@
     <body>
         <script>
             let date = new Date("Feb 21, 2012, 03:12:00");
-            alert(date);
+            date = date.toLocaleString('en-US', {year: "numeric", day:"numeric", month:"short", hour:"numeric", minute:"numeric", hour12:true});
+            alert(`${date}`);
         </script>
     </body>
 </html>

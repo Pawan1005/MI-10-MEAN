@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./todoList.js"></script>
+        <style>
+            input {
+                margin-left: 25px;
+                width: 200px;
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 6px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+                border-radius: 5px;
+            }
+        </style>
+        <title>List Of Programming Language</title>
+    </head>
+    <body>
+       <h1>Programming Language List</h1>
+       <ol id="programmingList">
+           <li>SDLC</li>
+           <li>HTML</li>
+           <li>FIGMA</li>
+           <li>CSS</li>
+       </ol>
+       <form>
+           <input type="text" id="programming" placeholder="Enter a Programming Language">
+           <button type="submit" onclick="addProgramming()">Add</button>
+       </form>
+    </body>
+</html>

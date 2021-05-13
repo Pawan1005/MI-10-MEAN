@@ -2,7 +2,7 @@ function checkFormFieldsIsValidOrNot() {
     event.preventDefault();
 
     // UserName length 8 to 15
-    let userNamePattern = /^\w{8,15}$/;
+    let userNamePattern = /^[a-z]{8,15}$/i;
     let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8})/i;
     let namePattern = /^[a-z ]*$/i;
 

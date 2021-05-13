@@ -122,4 +122,5 @@ function deleteData(rowNumberListData) {
     catch(error) {
         alert(error.message);
     }
+    rowNumberList = [];
 }

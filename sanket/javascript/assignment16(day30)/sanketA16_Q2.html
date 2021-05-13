@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color size and font</title>
+  </head>
+  <body>
+    <p id="c" style="text-align: center">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus rem
+      necessitatibus ratione molestias voluptas, saepe quae vero id temporibus
+      suscipit laborum nulla beatae, deleniti asperiores tempora pariatur sit?
+      Dolorum itaque omnis aperiam non a et minima numquam consectetur
+      consequatur modi expedita hic maiores similique deserunt vitae obcaecati,
+      accusamus laborum nobis?
+    </p>
+    <fieldset>
+      <legend>colors</legend>
+      <button onclick="red()">red</button>
+      <button onclick="blue()">blue</button>
+      <button onclick="green()">green</button>
+    </fieldset>
+    <fieldset>
+      <legend>size</legend>
+      <button onclick="small()">small</button>
+      <button onclick="medium()">medium</button>
+      <button onclick="large()">large</button>
+    </fieldset>
+    <fieldset>
+      <legend>font</legend>
+      <button onclick="monospace()">monospace</button>
+      <button onclick="arial()">arial</button>
+      <button onclick="times()">times</button>
+    </fieldset>
+    <script>
+      function red() {
+        document.getElementById("c").style.color = "red";
+      }
+      function blue() {
+        document.getElementById("c").style.color = "blue";
+      }
+      function green() {
+        document.getElementById("c").style.color = "green";
+      }
+      function small() {
+        document.getElementById("c").style.fontSize = "10px";
+      }
+      function medium() {
+        document.getElementById("c").style.fontSize = "20px";
+      }
+      function large() {
+        document.getElementById("c").style.fontSize = "30px";
+      }
+      function monospace() {
+        document.getElementById("c").style.fontFamily = "monospace";
+      }
+      function arial() {
+        document.getElementById("c").style.fontFamily = "Arial";
+      }
+      function times() {
+        document.getElementById("c").style.fontFamily = "Times";
+      }
+    </script>
+  </body>
+</html>

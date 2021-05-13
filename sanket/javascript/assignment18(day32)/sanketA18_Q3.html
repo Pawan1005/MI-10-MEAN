@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>discount</title>
+  </head>
+  <body>
+    <fieldset>
+      <label>Enter shopping amount: </label>
+      <input id="n" type="text" />
+      <button onclick="calculate()">calculate</button>
+      <p id="p"></p>
+    </fieldset>
+    <script>
+      function calculate() {
+        let amount = parseInt(document.getElementById("n").value);
+        if (amount > 1000) {
+          let total = amount - amount * 0.15;
+          document.getElementById("p").innerHTML = "Total Amount: " + total;
+        } else if (amount <= 1000) {
+          total = amount - amount * 0.05;
+          document.getElementById("p").innerHTML = "Total Amount: " + total;
+        }
+      }
+    </script>
+  </body>
+</html>

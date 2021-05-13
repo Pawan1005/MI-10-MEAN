@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add row with details</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="t">
+      <tr>
+        <th>Select</th>
+        <th>Sr No.</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td><input type="checkbox" disabled /></td>
+        <td>1</td>
+        <td>a</td>
+        <td>123</td>
+        <td>Delhi</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" disabled /></td>
+        <td>2</td>
+        <td>b</td>
+        <td>456</td>
+        <td>Gurgaon</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" disabled /></td>
+        <td>3</td>
+        <td>c</td>
+        <td>789</td>
+        <td>Noida</td>
+      </tr>
+    </table>
+    <br />
+    <button onclick="addRow()">Add</button>
+    <button>Edit</button>
+    <button>Delete</button>
+    <script>
+      let table = document.getElementById("t");
+      let actRow = table.rows.length;
+      function addRow() {
+        let row = (table.insertRow().outerHTML = `<tr id="row${actRow}">
+            <td id="row${actRow}0"><input type="checkbox"  disabled /></td>
+            <td id="row${actRow}1">${actRow}</td>
+            <td id="row${actRow}2"><input type="text" id="n" ></td>
+            <td id="row${actRow}3"><input type="text" id="m"></td>
+            <td id="row${actRow}4"><input type="text" id="c">
+            <span id="row${actRow}5" ><button onclick="save(${actRow})">Save</button></span></td>  
+          </tr>`);
+        actRow++;
+      }
+      function save(actRow) {
+        let name = document.getElementById("n").value;
+        let mobile = document.getElementById("m").value;
+        let city = document.getElementById("c").value;
+        document.getElementById(`row${actRow}2`).innerHTML = name;
+        document.getElementById(`row${actRow}3`).innerHTML = mobile;
+        document.getElementById(`row${actRow}4`).innerHTML = city;
+      }
+    </script>
+  </body>
+</html>

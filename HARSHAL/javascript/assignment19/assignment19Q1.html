@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que1</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            button {
+                display: block;
+                width: 20%;
+                margin: auto;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <label for="number">ENTER A NUMBER: </label>
+            <input id="number" type="text" />
+            <button onclick="check()">CREATE TABLE</button>
+            <p id="table"></p>
+        </fieldset>
+        <script>
+            function check() {
+                var number;
+                var check;
+                number = document.getElementById("number").value;
+                patt = /[0-9]/;
+                check = patt.test(number);
+                if (check) {
+                    for (var i = 1; i <= 10; i++) {
+                        let t=number * i;
+                        document.getElementById("table").innerHTML+="<br>"+number+"*"+i+"="+t;
+                    }
+                }
+                else{
+                    alert("please enter proper number")
+                }
+            }
+        </script>
+    </body>
+</html>

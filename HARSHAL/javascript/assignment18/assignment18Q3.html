@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            shopping="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>que3</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            button,
+            label {
+                display: block;
+                width: 20%;
+                margin: auto;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <label for="number">ENTER SHOPPING AMOUNT: </label>
+            <input id="shopping" type="number" />
+            <button onclick="check()">CALCULATE</button>
+            <p>TOTAL AMOUNT: <span id="price"></span></p>
+        </fieldset>
+        <script>
+            function check() {
+                var shopping;
+                shopping = document.getElementById("shopping").value;
+                if (shopping > 1000) {
+                    let afterdiscount = shopping - shopping * 0.15;
+                    document.getElementById("price").innerHTML = afterdiscount;
+                } else if (shopping < 1000) {
+                    let afterdiscount = shopping - shopping * 0.05;
+                    document.getElementById("price").innerHTML = afterdiscount;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        h1{
+            text-align: center;
+        }
+        table{
+            text-align: center;
+        }
+        table,td,th{
+          
+            border : 2px solid green;
+            border-collapse: collapse;
+            padding: 10px;
+            
+        }
+        th{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 4</h1>
+    <h2>Colspan</h2>
+    
+    
+    <table >
+        <caption> list of Books</caption>
+        <tr>
+        <th>Author</th>
+    
+        <th colspan="2"> Books</th>
+        </tr>
+        
+        <tr>
+         <td>J.K.Rowling</td>
+         <td>Harry Potter 1</td>
+         <td>Harry Potter 2</td>
+        </tr>
+
+        <tr>
+            <td>Ruthyard Kipling</td>
+            <td>Junglebook 1</td>
+            <td>Junglebook 2</td>
+           </tr>
+
+
+
+    </table>
+    <h2>Rowspan</h2>
+
+  
+    
+    <table >
+        <caption>List of Books</caption>
+        <tr>
+         <th>Author</th>
+         <td>A.P.J</td>
+         
+            
+        </tr>
+        <tr>
+            <th rowspan="2"> Books</th>
+            
+            <td > Wings Of Fire</td>
+            
+               
+           </tr>
+           <tr>
+            
+            
+            <td  rowspan="2">Ignited Minds</td>
+            
+               
+           </tr>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body > h1 {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+}
+
+th {
+    color: blue;
+}
+
+table,
+th,
+td {
+    padding: 15px;
+    border: 2px solid rgb(7, 187, 7);
+    border-collapse: collapse;
+}

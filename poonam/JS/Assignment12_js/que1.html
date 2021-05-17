@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee details 1</title>
+    </head>
+    <body>
+        <script>
+            class Employee {
+                constructor() {
+                    this.empno = 101;
+                    this.name = "Ashok Kumar";
+                    this.address = "43, Ramnagar";
+                    this.city = "Pune , Maharashtra";
+                    this.salary = 80000;
+                }
+                show_init() {
+                    document.write("<br>Employee no.: " + this.empno);
+                    document.write("<br>Name: " + this.name);
+                    document.write("<br>Address: " + this.address);
+                    document.write("<br>City: " + this.city);
+                    document.write("<br>Salary: " + this.salary);
+                }
+                calculate() {
+                    this.da = this.salary * 0.3;
+                    this.hra = this.salary * 0.15;
+                    this.pf = this.salary * 0.125;
+                    this.gross = this.salary + this.da + this.hra;
+                    this.net = this.gross - this.pf;
+                    this.annual = this.gross * 12;
+                    if (this.annual > this.salary) {
+                        document.write("<br>Income Tax Payer");
+                    }
+                    else {
+                        document.write("<br>Not an Income Tax Payer");
+                    }
+                }
+                display() {
+                    document.write("<br><br><br>Name: " + this.name);
+                    document.write("<br>Employee no.: " + this.empno);
+                    document.write("<br>Gross Salary: " + this.gross);
+                    document.write("<br>Net Salary: " + this.net);
+                }
+            }
+            var e1 = new Employee();
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+        </script>
+    </body>
+</html>

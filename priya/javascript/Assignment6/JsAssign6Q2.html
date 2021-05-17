@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+    </head>
+    <body>
+        <h4>Enter 5 names here</h4>
+        <br>
+        <br>
+        <button onclick="MyArray2()">Enter</button><br />
+        <br>
+        <script language="javascript">
+            function MyArray2() {
+                var joined, arr;
+                arr=[];
+                for (var i=0; i<=4; i++){
+                    arr[i]= prompt("enter 5 names here")
+                }
+                document.write("<b> The Input Names stored in array : <b> ");
+                    document.write(arr + "<br>");
+                       document.write("<br>");
+                //joined with ~
+                document.write("<b> The Input Names joined with ~ :<b> ");
+                    joined = arr.join("~");
+                        document.write(joined);
+                            document.write("<br>");
+                                document.write("<br>");
+                //Asecnding Order
+                document.write("Input Names with Assending order  : <br>");
+                    var upper = arr.sort();
+                    var upper2 = upper.map(function (x) {
+                        return x.toUpperCase();
+                        });
+                    document.write(upper2);
+                        document.write("<br>");
+                            document.write("<br>");
+                //desnding order
+                document.write("Input Names with descending order: <br>");
+                    upper1 = upper2.reverse();
+                       upper1 = upper1.map(function (x) {
+                            return x.toUpperCase();
+                        });
+                        document.write(upper1);
+                    }
+        </script>
+    </body>
+</html>
+

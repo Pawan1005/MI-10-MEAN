@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 5</title>
+    </head>
+    <body>
+        <h1>Find the double letters</h1>JS
+        
+        <h4 id="input"></h4>
+        <p>Click here to find the double letters in the word:</p>
+        <button onclick="count()">Check</button>
+        <p>Double letters:</p>
+        <h4 id="result"></h4>
+        <script>
+            var input = prompt("Enter a word:");
+            var arr = input.split("").join(" ");       
+            document.getElementById("input").innerHTML = "User Enters: " + arr;
+            function count() {
+                var res = [];
+                for (let i = 1; i < input.length; i++) {
+                    if (input[i] == input[i + 1]) {
+                        res.push(input[i]);
+                    }    
+                }
+                document.getElementById("result").innerHTML = res;
+            }
+        </script>
+    </body>
+</html>
+

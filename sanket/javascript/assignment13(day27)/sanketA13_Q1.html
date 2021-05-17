@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date object</title>
+  </head>
+  <body>
+    <script>
+      let time = new Date("February 21, 2012 03:12:00");
+      let zoneDateTime = time.toLocaleString("en-CA", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      });
+      alert("date: " + zoneDateTime);
+    </script>
+  </body>
+</html>

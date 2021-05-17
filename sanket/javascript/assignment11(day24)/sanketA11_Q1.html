@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student marks</title>
+  </head>
+  <body>
+    <input type="text" id="rollNo" />
+    <button onclick="showMarks()">show</button>
+    <p id="p"></p>
+    <script>
+      function showMarks() {
+        let number = document.getElementById("rollNo").value;
+        document.getElementById(
+          "p"
+        ).innerHTML = `Roll no ${number} has scored ${
+          total[rollNo.indexOf(number)]
+        } marks`;
+      }
+      let rollNo = [];
+      for (let i = 0; i < 10; i++) {
+        r = prompt("enter roll number of student no " + (i + 1));
+        rollNo.push(r);
+      }
+      let marks = [];
+      let i = 0;
+      while (i < 10) {
+        m = prompt("enter marks of student no " + (i + 1));
+        if (m > 50 || m < 0 || m == "") window.alert("Error – Invalid Marks!!");
+        else {
+          i++;
+          marks.push(m);
+        }
+      }
+      let total = [];
+      for (i = 0; i < marks.length; i++) {
+        t = parseInt(marks[i]) + parseInt((20 * marks[i]) / 100);
+        total.push(t);
+      }
+      let totalR = total;
+      let rollNoR = rollNo;
+      sort(totalR, rollNoR);
+      for (let i = 0; i < 10; i++)
+        document.write(
+          `<br>${rollNoR[i]} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${totalR[i]}`
+        );
+      function sort(totalR, rollNoR) {
+        for (i = 0; i < totalR.length - 1; i++)
+          for (j = 0; j < totalR.length - 1; j++)
+            if (totalR[j] < totalR[j + 1]) {
+              temp = totalR[j];
+              totalR[j] = totalR[j + 1];
+              totalR[j + 1] = temp;
+              temp = rollNoR[j];
+              rollNoR[j] = rollNoR[j + 1];
+              rollNoR[j + 1] = temp;
+            }
+      }
+    </script>
+  </body>
+</html>

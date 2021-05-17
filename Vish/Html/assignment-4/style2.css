@@ -1,0 +1,15 @@
+table,th,td{
+    border-collapse: collapse;
+    border: #000 solid 1px;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+th{
+    width: 150px;
+}
+p{
+    margin-left: 200px;
+    margin-bottom: -2px;
+    font-style: italic;
+    font-size: 20px;
+}

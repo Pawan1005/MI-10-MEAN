@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or odd</title>
+    <style>
+        .c{
+            text-align: center;
+        }
+        #odd{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        <h1>Even or Odd</h1>
+        <label for="even">Enter the number:</label>
+        <input id="even" type="number">
+        <button onclick="Fun()">Click</button>
+        <p id="odd"></p>
+    </div>
+    <script>
+        function Fun(){
+            var a;
+            a=parseInt(document.getElementById("even").value);
+            if (a%2==0){
+                document.getElementById("odd").innerHTML="The given number is Even number";
+            }
+            else{
+                document.getElementById("odd").innerHTML="The given number is odd number"
+            }
+        } 
+    </script>
+</body>
+</html>

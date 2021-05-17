@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Choose sort</title>
+        <script>
+            function Fun(){
+                var a=[],sum=0,b='',d=[];
+                for(var i=0;i<10;i++){
+                    a.push(parseInt(prompt("Enter the "+(i+1)+"st Subject mark:")));
+                    if(a[i]>80){
+                        a.pop();
+                        i--;
+                        a.push(parseInt(prompt('kindly enter valid marks:')));
+                    }
+                    sum=parseFloat(sum+a[i]);
+                }
+                document.getElementById("total").innerHTML="<br> You have scored "+sum+" out of 800 <br>";
+                for(var j=0;j<10;j++){
+                    d.push(((0.2*a[j])+a[j]));
+                    b+='Subject'+(j+1)+': '+((0.2*a[j])+a[j])+'<br>';
+                }
+                document.getElementById("sub").innerHTML=b;
+                if(d.length<2){
+                    document.getElementById("sorted").innerHTML=d;
+                }
+                var temp=0;
+                function swap(d, leftIndex, rightIndex){                
+                    var d = d[leftIndex];
+                    d[leftIndex] = d[rightIndex];
+                    d[rightIndex] = temp;
+                }
+                function partition(items, left, right) {
+                    var pivot   = d[Math.floor((right + left) / 2)];
+                        i       = left;
+                        j       = right;
+                    while (i <= j) {
+                        while (d[i] < pivot) {
+                            i++;
+                        }
+                        while (d[j] > pivot) {
+                            j--;
+                        }
+                        if (i <= j) {
+                            swap(d, i, j);
+                            i++;
+                            j--;
+                        }
+                    }
+                    return i;
+                }
+                function quickSort(d, left, right) {
+                    var index;
+                    if (d.length > 1) {
+                        index = partition(d, left, right);
+                        if (left < index - 1) {
+                            quickSort(d, left, index - 1);
+                        }
+                        if (index < right) {
+                            quickSort(d, index, right);
+                        }
+                    }
+                    return d;
+                }
+                var sortedArray = quickSort(d, 0, d.length - 1);
+                document.getElementById('sorted').innerHTML=(sortedArray);
+            }
+            function Fun1(){
+                var a=[],d=[],e='',f='',sum=0,b='';
+                for(var z=0;z<10;z++){
+                    a.push(parseInt(prompt("Enter the "+(z+1)+"st Subject mark:")));
+                    if(a[z]>80){
+                        a.pop();
+                        z--;
+                        a.push(parseInt(prompt('kindly enter valid marks:')));
+                    }
+                    sum=parseFloat(sum+a[z]);
+                }
+                document.getElementById("total").innerHTML="<br> You have scored "+sum+" out of 800 <br>";
+                for(var j=0;j<10;j++){
+                    d.push(((0.2*a[j])+a[j]));
+                    b+='Subject'+(j+1)+': '+((0.2*a[j])+a[j])+'<br>';
+                }
+                document.getElementById("sub").innerHTML=b;
+                for(var j=0;j<d.length;j++){
+                   temp=0;
+                   for(var k=0;k<d.length;k++){
+                       if(d[k]>d[k+1]){
+                           temp=d[k];
+                           d[k]=d[k+1];
+                           d[k+1]=temp;
+                        }
+                   }
+                }
+                for(var l=0;l<a.length;l++){
+                   f+='Mark'+(l+1)+': '+d[l]+'<br>';
+                   document.getElementById("sorted").innerHTML=f;
+                }
+            }
+            function Fun2() {
+                var a=[],c='',d=[],e='',sum=0,b='';
+                for(var z=0;z<10;z++){
+                    a.push(parseInt(prompt("Enter the "+(z+1)+"st Subject mark:")));
+                    if(a[z]>80){
+                        a.pop();
+                        z--;
+                        a.push(parseInt(prompt('kindly enter valid marks:')));
+                    }
+                    sum=parseFloat(sum+a[z]);
+                }
+                document.getElementById("total").innerHTML="<br> You have scored "+sum+" out of 800 <br>";
+                for(var j=0;j<10;j++){
+                    d.push(((0.2*a[j])+a[j]));
+                    b+='Subject'+(j+1)+': '+((0.2*a[j])+a[j])+'<br>';
+                }
+                document.getElementById("sub").innerHTML=b;
+                for(var j=0;j<d.length;j++){
+                   for(var k=j+1;k>j;k++){
+                       if(a[j]>a[k]){
+                           temp=a[j];
+                           a[j]=a[k];
+                           a[k]=temp;
+                       }
+                   }
+                }
+                for(var l=0;l<a.length;l++){
+                    e+='Mark '+(l+1)+': '+d[l+l]+'<br>';
+                    document.getElementById('sorted').innerHTML=e;
+                }
+            }
+            function Fun3() {
+                var a=[],c='',d=[],e='',temp=0,sum=0,b='';
+                for(var z=0;z<10;z++){
+                    a.push(parseInt(prompt("Enter the "+(z+1)+"st Subject mark:")));
+                    if(a[z]>80){
+                        a.pop();
+                        z--;
+                        a.push(parseInt(prompt('kindly enter valid marks:')));
+                    }
+                    sum=parseFloat(sum+a[z]);
+                }
+                document.getElementById("total").innerHTML="<br> You have scored "+sum+" out of 800 <br>";
+                for(var j=0;j<10;j++){
+                    d.push(((0.2*a[j])+a[j]));
+                    b+='Subject'+(j+1)+': '+((0.2*a[j])+a[j])+'<br>';
+                }
+                document.getElementById("sub").innerHTML=b;
+                for (var i = 1; i <= d.length; i++) {
+                    for (var j = 0; j <= i; j++) {
+                        if (d[j] > d[i]) {
+                          temp = d[j];
+                          d[j] = d[i];
+                          for (var k = i; k > j; k--) {
+                              d[k] = d[k - 1];
+                            }
+                          d[k + 1] = temp;
+                        }
+                    }
+                }
+                for(var q=0;q<d.length;q++){
+                    e+="<br> Marks: "+(q+1)+': '+d[q];
+                    document.getElementById("sorted").innerHTML=e;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Choose Sort</h1>
+            <label>Click here for Quick Sort</label>
+            <button onclick="Fun()">Quick Sort</button>
+            <br>
+            <label> click here for Bubble Sort </label>
+            <button onclick="Fun1()">Bubble Sort</button>
+            <br>
+            <label> click here for Selection Sort </label>
+            <button onclick="Fun2()">Selection Sort</button>
+            <br>
+            <label> click here for Insertion Sort </label>
+            <button onclick="Fun3()">Insertion Sort</button>
+            <br>
+            <span id="total"></span>
+            <h5>Total marks scored of each subject</h5>
+            <span id="sub"></span>
+            <p>The Sorted list of Marks:</p>
+            <span id="sorted"></span>
+        </div>
+    </body>
+</html>

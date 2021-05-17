@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>count number of words in string.</title>
+  </head>
+  <body>
+    <textarea id="t" cols="40" rows="10"></textarea>
+    <button onclick="trimString()">trim</button>
+    <script>
+      function trimString() {
+        let string = document.getElementById("t").value;
+        let newString = string.replace(/\s+/g, " ");
+        document.write("number of words: " + newString.split(" ").length);
+      }
+    </script>
+  </body>
+</html>

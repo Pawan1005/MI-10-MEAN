@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bubble sort</title>
+        <script>
+            function Fun(){
+            var a=[],n=0,d='',e='',f='';
+            n=prompt("enter the number:")
+            for(var i=0;i<n;i++){
+               a.push(prompt("enter :"));
+               d+= '<br> Mark '+(i+1)+': '+a[i];
+               document.getElementById('before').innerHTML=(d);
+            }
+            for(var j=0;j<n-1;j++){
+               temp=0;
+               for(var k=0;k<n-1;k++){
+                  if(a[k]>a[k+1]){
+                     temp=a[k];
+                     a[k]=a[k+1];
+                     a[k+1]=temp;
+                  }
+                 e+=a+'<br>';
+                 document.getElementById("Iteration").innerHTML=e;
+               }
+            }
+            for(var l=0;l<a.length;l++){
+               f+='Mark'+(l+1)+': '+a[l]+'<br>';
+               document.getElementById("Asscending").innerHTML=f;
+            }
+         }
+        </script>
+    </head>
+    <body>
+       <div>
+            <h1>Bubble Sort</h1>
+            <span>Before Sorting:</span>
+            <span id="before"></span>
+            <p>Iteration</p>
+            <span id="Iteration"></span>
+            <p>After Sorting:</p>
+            <p id="Asscending"></p>
+            <button onclick="Fun()">Asscending</button> 
+       </div>
+    </body>
+</html>

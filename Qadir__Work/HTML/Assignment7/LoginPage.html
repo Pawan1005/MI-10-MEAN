@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Login.css">
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header__logo">
+                <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="naukri_Logo">
+            </div>
+            <div class="header__nav">
+                <select name="jobs" id="jobs">
+                    <option value="" selected hidden disabled>JOBS</option>
+                    <option value="Search Job">Search Job</option>
+                    <option value="Job By Skill">Job By Skill</option>
+                    <option value="Job By Company">Job By Company</option>
+                    <option value="Job By Location">Job By Location</option>
+                    <option value="Advance Search">Advance Search</option>
+                </select>
+                <select name="recruiters" id="recruiters">
+                    <option value="" selected hidden disabled>RECRUITERS</option>
+                    <option value="Browse All Recruiters">Browse All Recruiters</option>
+                    <option value="Recruiter Connection">Recruiter Connection</option>
+                    <option value="Go to NaukriRecruiter">Go to NaukriRecruiter</option>
+                </select>
+                <select name="companies" id="companies">
+                    <option value="" selected hidden disabled>COMPANIES</option>
+                    <option value="Browse All Company">Browse All Company</option>
+                    <option value="About Company">About Company</option>
+                    <option value="Company Reviews">Company Reviews</option>
+                </select>
+                <select name="tools" id="tools">
+                    <option value="" selected hidden disabled>TOOLS</option>
+                    <option value="Skill Trends">Skill Trends</option>
+                    <option value="Company Dashboard">Company Dashboard</option>
+                    <option value="Naukri Lab">Naukri Lab</option>
+                </select>
+                <select name="services" id="services">
+                    <option value="" selected hidden disabled>SERVICES</option>
+                    <optgroup label="Resume Writing">Resume Writing
+                        <option value="Resume Sample">Resume Sample</option>
+                        <option value="Visual Resume">Visual Resume</option>
+                    </optgroup>
+                    <optgroup label="Jobs For You">
+                        <option value="Jobs4U">Jobs4U</option>
+                    </optgroup>
+                </select>
+                <a href="QadirA7__Q1.html" target="_self">FOR EMPLOYERS</a>
+            </div>
+        </div>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="SuccessPage.html">
+                <label for="emailid">Email ID/ Username</label>
+                <input type="text" id="emailid" name="emailid" placeholder="Enter Email ID / Username">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

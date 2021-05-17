@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que 3</title>
+    <script>
+        function prime() {
+            var i, j, c, start, end;
+            start = parseInt(document.getElementById('val1').value);                
+            end = parseInt(document.getElementById('val2').value);
+            document.getElementById("result").innerHTML = '';
+            for (i = start; i <= end; i++) {                    
+                c = 0;
+                for (j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        c++;
+                    }
+                }
+                if (c == 2) {
+                    document.getElementById("result").insertAdjacentHTML('beforeend', i + '<br>');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Print Prime numbers between two integers</h1>
+    <div style="text-align: center; margin-top: 50px;">
+    <label for="val1">Enter Number 1</label>
+        <input type="number" name="val1" id="val1" style="width: 100px;" /><br><br>
+        <label for="val2">Enter Number 2</label>
+        <input type="number" name="val2" id="val2" style="width: 100px;"  /><br><br>
+        <button type="submit" onclick="prime()">Print Prime Numbers</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

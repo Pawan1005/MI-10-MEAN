@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum no</title>
+</head>
+<body>
+    <h1>Sum Of Number</h1>
+    <h4>Press Start Button and Enter Number For Cancel: <strong>Enter 'X'</strong></h4>
+    <button type="submit" onclick="sumOfNumber()">Start</button>
+    <p id="total"></p>
+    <script>function sumOfNumber()
+     {
+        let total = document.getElementById('total');
+        let num = [];
+        let flag = true;
+        while(flag) {
+            let num = prompt('Enter a Number:');
+            if (num != 'x' && num != 'X' && num != null) {
+                num.push(parseInt(num));
+            }
+            else {
+                flag = false;
+            }
+        }
+    total.innerHTML = `Sum Of Number are ${num.join('+')} = <b>${num.reduce((sum, num) => sum += num)}</b>`</script>
+    }
+</body>
+</html>

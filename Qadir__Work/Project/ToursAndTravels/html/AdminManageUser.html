@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrapCSS/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/adminStyle.css">
+        <title>Manage User</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="mainLeft">
+                <div class="sectionNavbar">
+                    <img src="../css/bootstrap-icons-1.4.0/list.svg" alt="Menu">
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/clipboard-data.svg" alt="Dashboard">
+                    <a href="./AdminHomePage.html">Dashboard</a>
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/briefcase.svg" alt="Tour Packages">
+                    <nav class="navbar navbar-expand-sm">
+                        <div class="container">
+                          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav dropend">
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Tour Packages
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                                  <li><a class="dropdown-item text-primary" href="./AdminCreatePackage.html">Create</a></li>
+                                  <li><a class="dropdown-item text-primary" href="./AdminManagePackage.html">Manage</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="section active">
+                    <img src="../css/bootstrap-icons-1.4.0/person-plus.svg" alt="Manage Users">
+                    <a href="./AdminManageUser.html">Manage Users</a>
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/journal-richtext.svg" alt="Manage Booking">
+                    <a href="./AdminBooking.html">Manage Booking</a>
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/journal-text.svg" alt="Manage Issues">
+                    <a href="./AdminIssuePage.html">Manage Issues</a>
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/journal-bookmark-fill.svg" alt="Manage Enquiries">
+                    <a href="./AdminEnquiries.html">Manage Enquiries</a>
+                </div>
+                <div class="section">
+                    <img src="../css/bootstrap-icons-1.4.0/person-bounding-box.svg" alt="Person">
+                    <a href="./AdminProfile.html">Profile</a>
+                </div>
+            </div>
+            <div class="mainRight">
+                <div class="mainRight__header">
+                    <img src="../img/logo.png" alt="logo">
+                    <div>
+                        <img src="../css/bootstrap-icons-1.4.0/person-fill.svg" alt="personAdmin">
+                        <h6>Welcome <br>Adminstrator</h6>
+                    </div>
+                </div>
+                <div class="mainRight__bodyBooking">
+                    <h2>Manage Users</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email Id</th>
+                                <th scope="col">Mobile No.</th>
+                                <th scope="col">Regestration Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BK12457</th>
+                                <td>Kriti</td>
+                                <td>kriti@gmail.com</td>
+                                <td>1478523690</td>
+                                <td>18/05/2020</td>
+                            </tr>
+                            <tr>
+                                <td>BK12458</th>
+                                <td>Jacob</td>
+                                <td>jacob123@gmail.com</td>
+                                <td>9632587410</td>
+                                <td>23/05/2020</td>
+                            </tr>
+                            <tr>
+                                <td>BK12459</th>
+                                <td>Larry</td>
+                                <td>larry@gmail.com</td>
+                                <td>9875236410</td>
+                                <td>24/05/2020</td>
+                            </tr>
+                            <tr>
+                                <td>BK12462</th>
+                                <td>Becky</td>
+                                <td>becky345@gmail.com</td>
+                                <td>863257419</td>
+                                <td>30/05/2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mainRight__footer">
+                    <span>&copy;CopyRights 2020-2021</span>
+                    <button type="button">Privacy Policy</button>
+                    <button type="button">Terms</button>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap -->
+        <script src="../js/bootstrapJs/bootstrap.min.js"></script>
+    </body>
+</html>

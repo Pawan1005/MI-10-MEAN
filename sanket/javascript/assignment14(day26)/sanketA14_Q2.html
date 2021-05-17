@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank details</title>
+  </head>
+  <body>
+    <script>
+      class BankDet {
+        constructor() {
+          this.acc_no = 0;
+          this.acc_name = "";
+          this.bal = 0;
+          srNo++;
+        }
+        getData(acc_no, acc_name, bal) {
+          this.acc_no = acc_no;
+          this.acc_name = acc_name;
+          this.bal = bal;
+        }
+        deposit(amountCredited) {
+          this.bal = this.bal + amountCredited;
+        }
+        withdraw(amountDebited) {
+          if (amountDebited < this.bal) this.bal = this.bal - amountDebited;
+          else document.write("<br>Error:Insufficient Funds");
+          if (this.bal < 1000)
+            document.write("<br>Warning – Balance below 1000");
+        }
+        display(no) {
+          document.write(
+            `<br>SrNo: ${srNo}, Acc_No: ${this.acc_no}, Name: ${this.acc_name}, Balance: ${this.bal}<br>`
+          );
+        }
+      }
+      let srNo = 0;
+      const customerOne = new BankDet();
+      let acc_no = prompt("Enter account No");
+      let acc_name = prompt("Enter account name");
+      let bal = parseInt(prompt("Enter account balance"));
+      customerOne.getData(acc_no, acc_name, bal);
+      customerOne.deposit(parseInt(prompt("enter amount to deposit")));
+      customerOne.withdraw(parseInt(prompt("enter amount to withdraw")));
+      customerOne.display();
+      const customerTwo = new BankDet();
+      let acc_no2 = prompt("Enter account No");
+      let acc_name2 = prompt("Enter account name");
+      let bal2 = parseInt(prompt("Enter account balance"));
+      customerTwo.getData(acc_no2, acc_name2, bal2);
+      customerTwo.deposit(parseInt(prompt("enter amount to deposit")));
+      customerTwo.withdraw(parseInt(prompt("enter amount to withdraw")));
+      customerTwo.display();
+    </script>
+  </body>
+</html>

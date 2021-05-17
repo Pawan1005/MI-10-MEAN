@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swap of Two number</title>
+    <script language="javascript">
+        function func1(){
+            var a,b,c;
+            a = parseInt(document.getElementById('val1').value);
+            b = parseInt(document.getElementById('val2').value);
+            c = a;
+            a = b;
+            b = c;
+            document.getElementById('pid1').innerHTML = "<h1> Method 1: With Temporary Variable</h1>"
+            document.getElementById('pid2').innerHTML = "After Swaping (Method 1) =" + "A:" +a + "B:" +b
+        }
+        function func2(){
+            var a,b,c;
+            a = parseInt(document.getElementById('val1').value);
+            b = parseInt(document.getElementById('val2').value);
+            a = a+b;
+            b = a-b;
+            a= a-b;
+            document.getElementById('pid3').innerHTML = "<h1> Method 2: Without Temporary Variable</h1>"
+            document.getElementById('pid4').innerHTML = "After Swaping (Method 2) =" + "A:" +a + "B:" +b
+        }
+    </script>
+  </head>
+  <body>
+      A : <input type="text" id="val1">
+      B : <input type="text" id="val2">
+      <button type="button" onclick="func1()">Method 1</button>
+      <button type="button" onclick="func2()">Method 2</button>
+      <p id="pid1"></p>
+      <p id="pid2"></p>
+      <p id="pid3"> </p>
+      <p id="pid4"></p>
+  </body>
+</html>

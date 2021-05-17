@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 3</title>
+    </head>
+    <body>
+        <script>
+            var arrMarks = [];
+            var num, temp;
+            num = prompt("Enter number of students:");
+            for (var i = 1; i <= num; i++) {
+                arrMarks[i] = parseInt(prompt("Enter Marks:"));
+            }
+            document.write("*****Before Sorting*****");
+            for (var i = 1; i <= num; i++) {      
+                document.write("<br> Marks " + i + ": " + arrMarks[i]);
+            }
+            for (var i = 1; i <= num - 1; i++) {
+                for (var j = 1; j <= num - 1; j++) {
+                    if (arrMarks[j] > arrMarks[j + 1]) {
+                        temp = arrMarks[j];
+                        arrMarks[j] = arrMarks[j + 1];
+                        arrMarks[j + 1] = temp;
+                    }
+                }
+                document.write("<br>Iteration: " + i + ":" + arrMarks);
+            }
+            document.write("<br><br>*****After Sorting (Bubble Sort)*****");
+            for (var i = 1; i <= num; i++) {
+                document.write("<br>Marks " + i + ": " + arrMarks[i]);
+            }
+        </script>
+    </body>
+</html>

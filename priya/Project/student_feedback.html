@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feedback</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 100px;
+    width: 100px;  
+  }
+  .span1{
+        font-family: sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 600;
+        text-decoration: rgb(0, 0, 0);
+        text-transform: uppercase;
+        text-align: center;
+        word-spacing: 0px;
+        background-position: 0%0%;
+        color: #FFFFFF;
+        height: 80.6px;
+        width: 200.6px;
+        margin: 0.10px 0.10px;
+        padding: 30px 6px 30px 6px;
+        position: relative;
+        top: 0px; bottom: 0px; right: 0px;left: 0px;
+        display: inline-block;
+        cursor: pointer;
+        box-sizing: border-box;
+        transform: none;
+       }
+       .course1{
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        text-decoration: rgb(0, 0, 0);
+        text-align: center;
+        text-transform: uppercase;
+        background-position: 0%0%;
+        color: #0a0a0a;
+        height:auto;
+        width:auto px;
+        display: inline;
+        box-sizing: border-box;
+        transform: none;
+        cursor: pointer;
+    }
+
+    .marquee1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size:30px;
+        line-height: 25px;
+        font-weight: 600;
+        text-decoration: rgb(207, 198, 72);
+        vertical-align: text-bottom;
+        white-space: nowrap;
+        background-position: 0%0%;
+        color: rgb(207, 198, 72);
+        height: 40.6px;
+        width: 1024.6px;
+        display: inline-block;
+        cursor: pointer;
+        box-sizing: border-box;
+        transform: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="jmbotron text-center bg-dark" style="margin-bottom: 0;">
+    <div>
+      <marquee behavior="scroll" direction="left" class="marquee1">AMBERSOFT TECHNOLOGY PVT LTD</marquee>
+    </div>
+  </div>
+  <nav class=" bg-warning text-center container-fluid">
+    <span class="span1"><span class="course1"><a href="projecthome.html">HOME</a></span></span>
+  </nav>
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm-3">
+        <h2>Profile</h2>
+        <div class="fakeimg"> <img src="file:///home/priyaughade/Downloads/login.png" width="80px" height="70px"></div>
+        <br>
+        <ul class="container">
+          <li> <a href="student_update_profile.html">Update Profile</a> </li>
+          <br>
+          <li> <a href="student_update_password.html">Update Password</a> </li>
+          <br>
+          <li> <a href="#">FeedBack</a> </li>
+          <br>
+          <li> <a href="projecthome.html">Logout</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 shadow">
+        <h4 class="text-info">Feedback</h4>
+        <h6>5-very good 4-good 3-avarage 2-bad 1-poor</h6>
+        <br>
+        <h4>1-Course Material</h4>
+        <table class="table">
+          <tr>
+            <td>
+              <b>1:</b> Teacher provided the course material related to subject and provide
+              list of required text book:</td>  
+            <td>
+              <input type="radio" name="quest1" value="5" required> 5
+              <input type="radio" name="quest1" value="4">4
+              <input type="radio" name="quest1" value="3"> 3
+              <input type="radio" name=" quest1" value="2">2
+              <input type="radio" name="quest1" value="1">1</td>
+          </tr>
+          <tr>
+        <td>
+          <b>2:</b>Course integrates throretical course concepts with the real world examples:</td> 
+        <td>
+          <input type="radio" name="quest2" value="5" required> 5
+          <input type="radio" name="quest2" value="4">4
+          <input type="radio" name="quest2" value="3"> 3
+          <input type="radio" name="quest2" value="2">2
+          <input type="radio" name="quest2" value="1">1</td>
+        </tr>
+        </table>
+        <h3>2-Class Teaching</h3>
+        <table  class="table" >
+          <Td><b>3:</b> Teacher is punctual,arrives on time and leaves on time:</td>
+          <td> 
+            <input type="radio" name="quest3" value="5" required> 5
+            <input type="radio" name="quest3" value="4">4
+            <input type="radio" name="quest3" value="3"> 3
+            <input type="radio" name="quest3" value="2">2
+            <input type="radio" name="quest3" value="1">1
+          </td>
+          <tr>
+            <td><b>4:</b> Teacher is good at explaining the subject matter:</td>
+          <td>
+            <input type="radio" name="quest4" value="5" required> 5
+            <input type="radio" name="quest4" value="4">4
+            <input type="radio" name="quest4" value="3"> 3
+            <input type="radio" name=" quest4" value="2">2
+            <input type="radio" name="quest4" value="1">1</td>
+          </tr>
+          <tr>
+            <td>
+              <b>5:</b> Teacher's presentation was clear,loud ad easy to understand:</td>
+            <td> 
+              <input type="radio" name="quest5" value="5" required> 5
+              <input type="radio" name="quest5" value="4">4
+              <input type="radio" name="quest5" value="3"> 3
+              <input type="radio" name="quest5" value="2">2
+              <input type="radio" name="quest5" value="1">1</td>
+             </tr>
+          <tr>
+            <td>
+               <b>6:</b> Teacher is available and helpful during counseling hours:</td> 
+           <td>
+             <input type="radio" name="quest6" value="5" required>5
+             <input type="radio" name="quest6" value="4">4
+             <input type="radio" name="quest6" value="3"> 3
+             <input type="radio" name="quest6" value="2">2
+             <input type="radio" name="quest6" value="1">1</td>
+           </tr>
+          </table>
+        
+        <h4>3-Class Assessment</h4>
+         <table  class="table" >
+        <tr>
+          <td><b>7:</b>Teacher was always fair and impartial:</td>
+        <td>
+          <input type="radio" name="quest7" value="5" required> 5
+          <input type="radio" name="quest7" value="4">4
+          <input type="radio" name="quest7" value="3"> 3
+          <input type="radio" name="quest7" value="2">2
+          <input type="radio" name="quest7" value="1">1</td>
+        </tr>
+        <tr>
+        <td>
+          <b>8:</b>Assessments conducted are clearly connected to maximize learining objectives:</td>
+        <Td>
+          <input type="radio" name="quest8" value="5" required> 5
+          <input type="radio" name="quest8" value="4">4
+          <input type="radio" name="quest8" value="3"> 3
+          <input type="radio" name="quest8" value="2">2
+          <input type="radio" name="quest8" value="1">1</td>
+        </tr>
+        </table> 
+        <b>9:</b>What I liked about the course:<br><br>
+        <center>
+        <textarea name="quest9" rows="5" cols="60" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+        </textarea></center><br><br>
+        <b>10:</b>Why I disliked about the course:<br><br>
+        <center>
+        <textarea name="quest10" rows="5" cols="60" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+        </textarea></center><br>
+        <input type="submit" value="submit" placeholder="submit"/><br>
+        <br>
+        </form>
+       
+      </div>
+    </div>
+</div>
+<br>
+</body>
+</html>

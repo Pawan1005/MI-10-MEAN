@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap year</title>
+    <style>
+        .year{
+            text-align: center;
+        }
+        #year{
+            color: red;
+        }
+    </style>
+   </head>
+   <body>
+       <div class="year">
+           <h1>To Find Leap Year</h1>
+           <label for="leap">Enter the year:</label>
+           <input id="leap">
+           <button onclick="Fun()">Click</button>
+           <p id="year"></p>
+       </div>
+    <script>
+        function Fun() {
+            event.preventDefault()
+            var a;
+            a = parseInt(document.getElementById("leap").value);
+            if (a%4==0){
+                document.getElementById("year").innerHTML="LEAP YEAR"
+            }
+            else{
+                document.getElementById("year").innerHTML="NOT A LEAP YEAR"
+            }
+        }
+    </script>
+   </body>
+</html>

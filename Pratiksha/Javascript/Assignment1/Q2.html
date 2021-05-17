@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Conversion of celcius to fahrenheit</h1>
+    <form >
+      Temp:
+      <input type="text" id="val1" />°C
+      <button onclick="convert()">Convert</button>
+    </form>
+    <p id="fahrenheit"></p>
+    <script>
+      function convert() {
+          var x,y;
+        x = parseInt(document.getElementById("val1").value);
+        y = (x * 9/5) + 32;
+        event.preventDefault();
+        document.getElementById("fahrenheit").innerText = `${x} °C is equal to ${y} °F`;
+      }
+    </script>
+  </body>
+</html>

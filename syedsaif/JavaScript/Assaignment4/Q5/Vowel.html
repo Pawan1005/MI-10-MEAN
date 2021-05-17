@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Vowel or Not</h1>
+        <label for="vowel">Enter the Character:</label>
+        <input id="vowel" type="text">
+        <button onclick="Fun()">Find</button>
+        <p id="number"></p>
+    </div>
+    <script>
+        function Fun() {
+            event.preventDefault();
+            var a=document.getElementById("vowel").value;
+            switch (a) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    document.getElementById("number").innerHTML="The given Character is Vowel";
+                break;
+                default:
+                    document.getElementById("number").innerHTML="The given Character is  not a Vowel";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

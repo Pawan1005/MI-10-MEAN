@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String palindrome</title>
+  </head>
+  <body>
+    <h4>check string palindrome or not</h4>
+    <p>
+      String :
+      <input type="text" id="str" placeholder="enter string here" /><br />
+      <br />
+      <br />
+      <button onclick="string()">Submit</button>
+    </p>
+    <script>
+      function string() {
+        var input_string, split_input;
+        input_string = document.getElementById("str").value;
+        document.write("<br>The input string is :" + input_string + "<br>");
+        split_input = input_string.split("").reverse().join("");
+        document.write("<br>The reversed string is : " + split_input + "<br>");
+        if (input_string == split_input) {
+          document.write("<br> The string is Palindrome <br>");
+        } else {
+          document.write("<br>Not a Palindrome <br>");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insertion_sort</title>
+    </head>
+    <body>
+        <p style="text-align: center;">
+            <h4>Insertion_sort</h4>
+            Number_of_student : <input type="text" id="num" placeholder="Enter number of students"><br>
+            <br>
+            <button onclick="insert()">submit</button><br>
+            <br>
+            <p id="demo"></p>
+        </p>
+        <script>
+            function insert(){
+                var input,arr,temp;
+                a=parseInt(document.getElementById("num").value);
+                arr=[];
+                for (var i=0; i<input ; i++){
+                    arr[i]=parseInt(prompt("Enter the marks"))
+                }
+                document.write("********* Before Sorting ********** <br>" );
+                for(var i=0; i< input ; i++){
+                    document.write("Marks "+ (i+1)+ ": "+arr[i] + "<br>")
+                }
+                document.write( "<br>" )
+                document.write("********* Before Sorting ********** <br>" );
+                document.write( "<br>" + arr + "<br>")
+                for (var i=1; i< arr.length; i++){
+                    for(var j=0; j< arr.length; j++){
+                        if (arr[j] > arr[i]){
+                            temp = arr[j];
+                            arr[j]=arr[i];
+                           for (var k=i; k>j; k--){ 
+                               arr[k]=arr[k-1];
+                           }
+                           arr[k+1]=temp;
+                        }
+                    }
+                    document.write("<br> array after iteration : " + arr )  
+                }
+                document.write( "<br>" )
+                document.write( "<br> **********After sorting (Insertion sort )*********")
+                document.write( "<br>" )
+                document.write( "<br>" + arr)
+            } 
+        </script>
+    </body>
+</html>
+

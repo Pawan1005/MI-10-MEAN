@@ -1,0 +1,19 @@
+body{
+    background-color: brown;
+
+}
+h1{
+    text-align: center;
+}
+a{
+    text-align: center;
+}
+.left{
+   float:left; width:50%;box-sizing:border-box; -moz-box-sizing:border-box;}
+       
+.text
+ {
+    float:right;width:50%;box-sizing:border-box; -moz-box-sizing:border-box;padding:0px}
+.right
+    {float:right; width:30%;box-sizing:border-box; -moz-box-sizing:border-box;}
+    

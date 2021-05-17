@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./studentClass.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Report Card</title>
+    </head>
+    <body>
+        <h1 id="reportCardHeading">Student Report Form</h1>
+        <form id="reportCardForm"> 
+            <label for="rollNo">RollNo: </label>
+            <br>
+            <input type="text" id="rollNo">
+            <br>
+            <label for="name">Name: </label>
+            <br>
+            <input type="text" id="name">
+            <br>
+            <label for="maths">Maths: </label>
+            <br>
+            <input type="text" id="maths">
+            <br>
+            <label for="science">Science: </label>
+            <br>
+            <input type="text" id="science">
+            <br>
+            <label for="history">Hisotry: </label>
+            <br>
+            <input type="text" id="history">
+            <br>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="reportCard"></div>
+        <script src="./studentClassAction.js"></script>
+    </body>
+</html>

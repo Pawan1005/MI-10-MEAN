@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsAssign3_Q3_PrimeNumber</title>
+  </head>
+  <body>
+    <h4>Prime Number</h4>
+    Number : <input type="text" id="leap" placeholder="Enter Number" /><br />
+    <br />
+    <button type="button" onclick="prime()">Submit</button>
+    <p id="demo"></p>
+    <script language="javascript">
+      function prime() {
+        var a, flage, count;
+        flage=true;
+        a = parseInt(document.getElementById("leap").value);
+        if(a >1){
+            count=2;
+            while(count < a){
+                if(a%count ==0){
+                    flage = false;
+                    break;
+                }
+                count = count+1 ;
+            }
+        }
+        if(flage==false){
+            document.getElementById("demo").innerHTML= a + " <b > : is not prime number <b><br>";
+        }
+        else{
+            document.getElementById("demo").innerHTML= a + " <b > : is  prime number <b><br>";
+        }
+        }       
+    </script>
+  </body>
+</html>

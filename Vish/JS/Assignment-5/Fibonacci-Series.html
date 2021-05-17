@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function fibonacciSeries() {
+                event.preventDefault();
+                let numbers = parseInt(document.getElementById("number").value);
+                let result = document.getElementById("result");
+                let firstNumber = 0;
+                let secondNumber = 1;
+                let nextNumber = 0;
+                result.style.display = "block";
+                for (let number = 1; number <= numbers; number++) {
+                    result.innerHTML += `<br> ${firstNumber}`;
+                    nextNumber = firstNumber + secondNumber;
+                    firstNumber = secondNumber;
+                    secondNumber = nextNumber;
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center;">
+        <h1>Fibonacci Series Upto Given Number</h1>
+        <hr>
+        <label for="number">Enter a Number: </label>
+        <input type="text" id="number" placeholder="Enter a Number='5'">
+        <br>
+        <button type="submit" onclick="fibonacciSeries()">Generate Fibonacci Series</button>
+        <p id="result" style="display: none;"><b>Fibonacci Series:</b> </p>
+    </body>
+</html>

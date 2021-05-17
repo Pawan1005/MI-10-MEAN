@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pattern() {
+            // alert("hi");
+            row = document.getElementById("row").value;
+            col = document.getElementById("col").value;
+            demo = document.getElementById("demo");
+            for(i=1;i<=row;i++){
+                for(j=1;j<=col;j++){
+                   document.getElementById("demo").innerText += " * ";
+                }
+                document.getElementById("demo").innerHTML += "<br>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Create Rectangle-Square-Pattern-Print </h1>
+        <hr color="green">
+        Enter Row :- <input type="text" id="row" required autofocus> <br>
+        Enter Col :- <input type="text" id="col" required autofocus> <br><br>
+        <button onclick="pattern()">Print</button> <br><br>
+        <div id="demo"></div>
+    </center>
+</body>
+</html>

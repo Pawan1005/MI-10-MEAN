@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 2</title>
+    </head>
+    <body>
+        <script>
+            class salesman {
+                constructor(name, id) {
+                    this.name = name;
+                    this.id = id;
+                }
+            }
+            class sales extends salesman {
+                constructor(name, id, sale) {
+                    super(name, id);
+                    this.sale = sale;
+                }
+                salesCommission() {
+                    try {
+                        if (this.sale < 0) {
+                            alert("enter valid sales");
+                            this.sale = parseInt(prompt("Enter a sale"));
+                        }
+                    } catch (err) {
+                        alert(err);
+                    }
+
+                    if (this.sale > 0 && this.sale <= 5000) {
+                        commission = this.sale * 0.02;
+                        document.write("<br>Amount of sale: " + this.sale);
+                        document.write("<br>Commission: " + commission);
+                    } else if (this.sale > 5000 && this.sale <= 12000) {
+                        commission = this.sale * 0.05;
+                        document.write("<br>Amount of sale: " + this.sale);
+                        document.write("<br>Commission: " + commission);
+                    } else if (this.sale > 12000 && this.sale <= 50000) {
+                        commission = this.sale * 0.1;
+                        document.write("<br>Amount of sale: " + this.sale);
+                        document.write("<br>Commission: " + commission);
+                    } else if (this.sale > 50000) {
+                        commission = this.sale * 1.5;
+                        document.write("<br>Amount of sale: " + this.sale);
+                        document.write("<br>Commission: " + commission);
+                    }
+                }
+            }
+            let name = prompt("Enter name of salesman:");
+            let id = parseInt(prompt("Enter id:"));
+            let amount = parseInt(prompt("enter sales : "));
+            var commission;
+            document.write("Salesman name: " + name);
+            document.write("<br>Salesman id: " + id)
+            let sale = new sales(name, id, amount);
+            sale.salesCommission();
+        </script>
+    </body>
+</html>

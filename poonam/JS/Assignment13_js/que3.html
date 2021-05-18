@@ -20,7 +20,7 @@
                 let dateCopy = new Date(date);
                                                                                                                                                     
                 dateCopy.setDate(date.getDate() - days);
-                return dateCopy.getDate();
+                return dateCopy;
                 }                                                                                                                                  
                 document.write("<br>Previous date: " + getDateAgo(date, days) );
                 document.write("<br>Day before previous date: " + getDateAgo(date, days+1) );

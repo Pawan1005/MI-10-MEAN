@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <fieldset>
+            <label id="Firstname" for="Firstname">Firstname</label>
+            <input type="text" id="fname" />
+            <label id="Lastname" for="Lastname">Lastname</label>
+            <input type="text" id="lname" />
+            <label id="Username" for="Username">Username</label>
+            <input type="text" id="Uname" />
+            <label id="Password" for="Password">Password</label>
+            <input type="text" id="password" />
+        </fieldset>
+        <button onclick="login()">LOGIN</button>
+        <script>
+            function login() {
+                var uname = document.getElementById("Uname").value;
+                patt = /^[a-zA-Z][\w\W]{8,15}$/;
+                var check = patt.test(uname);
+                if (check) {
+                    alert("ok");
+                } else {
+                    alert(
+                        "START WITH ALPHABET AND MST CONTAIN ATLEAST8 CHAR AND MAX 15 CHAR"
+                    );
+                }
+                var password = document.getElementById("password").value;
+                patt =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8})/i;
+                var check1 = patt.test(password);
+                if (check1) {
+                    alert("ok");
+                } else {
+                    alert("plase enter proper password format");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trycatch</title>
+  </head>
+  <body>
+    <script>
+      debugger;
+      class sales {
+        constructor(name, id) {
+          this.name = name;
+          this.id = id;
+        }
+      }
+      class comission extends sales {
+        constructor(name, id, sale) {
+          super(name, id);
+          this.sale = sale;
+        }
+        showComm() {
+          debugger;
+          try {
+            if (this.sale < 0) {
+              alert("enter valid sales");
+              this.sale = parseInt(prompt("Enter a sale"));
+            } 
+          } catch (err) {
+            alert(err);
+          }
+
+          if (this.sale > 0 && this.sale <= 5000) {
+            let comm = this.sale * 0.02;
+            return `the sale is ${this.sale} and comission is  ${comm} `;
+          } else if (this.sale > 5000 && this.sale <= 12000) {
+            let comm = this.sale * 0.05;
+            return `the sale is ${this.sale} and comission is  ${comm} `;
+          } else if (this.sale > 12000 && this.sale <= 50000) {
+            let comm = this.sale * 0.1;
+            return `the sale is ${this.sale} and comission is  ${comm} `;
+          } else if (this.sale > 50000) {
+            let comm = this.sale * 1.5;
+            return `the sale is ${this.sale} and comission is  ${comm} `;
+          }
+        }
+      }
+      let name = prompt("Enter name of salesman:");
+      let id = parseInt(prompt("Enter id:"));
+      let sale_amt = parseInt(prompt("enter sales : "));
+      let salesman = new comission(name, id, sale_amt);
+      document.write(salesman.showComm());
+    </script>
+  </body>
+</html>

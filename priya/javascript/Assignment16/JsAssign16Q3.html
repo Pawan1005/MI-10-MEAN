@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment16Q3</title>
+  </head>
+  <body>
+    <h1 id="head_tag" style="color: blue; text-align: left">Flowers</h1>
+    <img
+      src="file:///home/priyaughade/Downloads/flower.jpg" alt="img1"id="img"width="200px"height="100px">
+      <br>
+    <button onclick="play()" ondblclick="change()">Play</button>
+    <script>
+      var flag = 0;
+      function play() {
+        if (flag == 0) {
+          document.getElementById("head_tag").innerHTML ="<h5>Flower Image1<h5>";
+          document.getElementById("head_tag").style.color = "orange";
+          document.getElementById("img").src ="file:///home/priyaughade/Downloads/flow.jpg";
+          flag = 1;
+        } else {
+          document.getElementById("head_tag").innerHTML ="<h5>Flower Image2<h5>";
+          document.getElementById("head_tag").style.color = "green";
+          document.getElementById("img").src ="file:///home/priyaughade/Downloads/flow1.jpg";
+          flag = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

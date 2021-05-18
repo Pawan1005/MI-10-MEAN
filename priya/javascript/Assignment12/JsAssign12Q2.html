@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classes</title>
+  </head>
+  <body>
+    <script>
+      class employee {
+        constructor() {
+          this.empno = 0;
+          this.name = "";
+          this.adress = "";
+          this.city = "";
+          this.salary = 0;
+        }
+        show_init() {
+          return `Empolyee Id : ${this.empno} <br> Empolyee name : ${this.name} <br> Employee Address: ${this.adress} <br>City :${this.city} <br>Salary:${this.salary}<br>`;
+        }
+        get_data(Name, Address, City, salary) {
+          debugger;
+          this.name = Name;
+          this.adress = Address;
+          this.city = City;
+          this.salary = salary;
+          return `<br> Empolyee name : ${this.name} <br> Employee Address: ${this.adress} <br>City :${this.city} <br>Salary:${this.salary}<br>`;
+        }
+        calculate(basic) {
+          let da = (30 / 100) * this.salary;
+          let hra = (15 / 100) * this.salary;
+          let pf = (12.5 / 100) * this.salary;
+          this.gross = basic + da + hra;
+          this.net = this.gross - pf;
+          if (this.gross > 148000) {
+            return `your annual salary is :${this.gross} <br> <b>Income tax payer <b><br>`;
+          } else {
+            return `your annual salary is :${this.gross} <br> <b>Not a tax payer <b><br>`;
+          }
+        }
+        display() {
+          return `Empolyee Id : ${this.empno} <br> Empolyee name : ${this.name} <br> Employee Address: ${this.adress} <br>City :${this.city} <br>Salary:${this.salary}<br>Gros Salary:${this.gross}<br>Net Salary :${this.net} <br>`;
+        }
+      }
+      var employer = new employee();
+      var employer2 = new employee();
+      document.write(employer.show_init());
+      document.write(employer.calculate(100000));
+      document.write(employer.display());
+      document.write(employer.get_data("priya", "Saimegh Society", "pune", 10000));
+      document.write(employer2.show_init());
+      document.write(employer2.calculate(100000));
+      document.write(employer2.display());
+      document.write(employer2.get_data("diksha", "Saimegh Society", "pune", 10000));
+    </script>
+  </body>
+</html>

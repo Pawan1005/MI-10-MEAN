@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment12Q1</title>
+</head>
+<body>
+    <p id="demo">
+        <p id="demo1">
+            <p id="demo2"></p>
+        </p>
+    </p>
+    <script>
+        class employee {
+            constructor () {
+                this.empno = 101 ;
+                this.name = "Ashok kumar";
+                this.adress = "43 ramnagar";
+                this.city ="Pune Maharashtra";
+                this.salary= 80000;
+            }
+            show_init(){
+                return  `Empolyee Id : ${this.empno} <br> Empolyee name : ${this.name} <br> Employee Address: ${this.adress} <br>City :${this.city} <br>Salary:${this.salary}<br>`;  
+            }
+            calculate(basic){
+                let da = ((30/100)*(this.salary));
+                let hra = ((15/100)*(this.salary));
+                let pf = ((12.5/100)*(this.salary));
+                this.gross = (basic+da+hra);
+                this.net = this.gross-pf;
+                if (this.gross > 148000){
+                    return `your annual salary is :${this.gross} <br> <b>Income tax payer <b><br>`; 
+                }
+                else{
+                    return `your annual salary is :${this.gross} <br> <b>Not a tax payer <b><br>`; 
+                }
+            }
+            display(){
+                return `Empolyee Id : ${this.empno} <br> Empolyee name : ${this.name} <br> Employee Address: ${this.adress} <br>City :${this.city} <br>Salary:${this.salary}<br>Gros Salary:${this.gross}<br>Net Salary :${this.net} <br>`;  
+            }
+        }
+        var employer= new employee();
+        document.getElementById("demo").innerHTML= employer.show_init();
+        document.getElementById("demo1").innerHTML= employer.calculate(100000);
+        document.getElementById("demo2").innerHTML= employer.display();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment16Q2</title>
+  </head>
+  <body>
+    <p id="para_tag" style="text-align: center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nam sit
+      fugiat dignissimos dolorem, magnam veritatis voluptatum numquam amet.
+      Distinctio, necessitatibus magni commodi perferendis facilis ipsa ullam.
+      Temporibus, ullam cumque? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Nesciunt nam sit fugiat dignissimos dolorem, magnam
+      veritatis voluptatum numquam amet. Distinctio, necessitatibus magni
+      commodi perferendis facilis ipsa ullam. Temporibus, ullam cumque? Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nam sit fugiat
+      dignissimos dolorem, magnam veritatis voluptatum numquam amet. Distinctio,
+      necessitatibus magni commodi perferendis facilis ipsa ullam. Temporibus,
+      ullam cumque?
+    </p>
+    <br>
+    <br>
+    <br>
+    <span>
+      <form action="#">
+        <fieldset style="position: absolute; left: 10px; top: 165px">
+          <legend>Colors</legend>
+          <span>
+            <button onclick="red()">Red</button>
+            <button onclick="blue()">Blue</button>
+            <button onclick="green()">Green</button>
+          </span>
+        </fieldset>
+        <fieldset style="position: absolute; left: 350px; top: 165px">
+          <legend>size</legend>
+          <span>
+            <button onclick="small()">small</button>
+            <button onclick="large()">large</button>
+            <button onclick="extralarge()">ExtraLarge</button>
+          </span>
+        </fieldset>
+        <fieldset style="position: absolute; right: 280px; top: 165px">
+          <legend>Font</legend>
+          <span>
+            <button onclick="cambria()">Cambria</button>
+            <button onclick="arial()">arial</button>
+            <button onclick="verdana()">verdana</button>
+          </span>
+        </fieldset>
+      </form>
+    </span>
+    <script>
+      function red() {
+        document.getElementById("para_tag").style.color = "red";
+      }
+      function blue() {
+        document.getElementById("para_tag").style.color = "blue";
+      }
+      function green() {
+        document.getElementById("para_tag").style.color = "green";
+      }
+      function small() {
+        document.getElementById("para_tag").style.fontSize = "10px";
+      }
+      function large() {
+        document.getElementById("para_tag").style.fontSize = "15px";
+      }
+      function extralarge() {
+        document.getElementById("para_tag").style.fontSize = "18px";
+      }
+      function cambria() {
+        document.getElementById("para_tag").style.fontFamily = "Cambria";
+      }
+      function arial() {
+        document.getElementById("para_tag").style.fontFamily = "arial";
+      }
+      function verdana() {
+        document.getElementById("para_tag").style.fontFamily = "verdana";
+      }
+    </script>
+  </body>
+</html>

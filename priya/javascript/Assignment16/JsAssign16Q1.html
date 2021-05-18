@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment16Q1</title>
+  </head>
+  <body>
+    <h1 id="head_tag" style="color: red">Assignment16Q1</h1>
+    <span
+      ><button onclick="left()">Left</button>
+      <button onclick="middle()">Middle</button>
+      <button onclick="right()">Right</button></span>
+    <script>
+      function left() {
+        document.getElementById("head_tag").style.textAlign = "left";
+        document.getElementById("head_tag").style.color = "green";
+      }
+      function middle() {
+        document.getElementById("head_tag").style.textAlign = "center";
+        document.getElementById("head_tag").style.color = "black";
+      }
+      function right() {
+        document.getElementById("head_tag").style.textAlign = "right";
+        document.getElementById("head_tag").style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 3</title>
+    </head>
+    <body>
+        <h1 id="name">Rose</h1>
+        <img src="https://cdn.pixabay.com/photo/2020/05/19/12/55/rose-5190627_960_720.jpg" alt="flower" id="image"
+            style="height: 400px; width: 400px;">
+        <br>
+        <button onclick="changeImage()">Play</button>
+        <script>
+            var flag = 0;
+            function changeImage() {
+                if (flag == 0) {
+                    document.getElementById("name").innerText = "Rose";
+                    document.getElementById("image").src = "https://cdn.pixabay.com/photo/2020/05/19/12/55/rose-5190627_960_720.jpg";
+                    flag = 1;
+                }
+                else if (flag == 1) {
+                    document.getElementById("name").innerText = "Sunflower";
+                    document.getElementById("image").src = "https://cdn.shopify.com/s/files/1/2954/2248/products/Sunflower-Skyscraper-Flower-Annual-Ferry-Morse.jpg?v=1609856038";
+                    flag = 2;
+                }
+                else {
+                    document.getElementById("name").innerText = "Lily";
+                    document.getElementById("image").src = "https://i.pinimg.com/originals/d6/9a/a6/d69aa606683af391f30222c09f39e74d.jpg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

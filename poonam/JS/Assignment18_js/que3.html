@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discount on shopping</title>
+    </head>
+    <body>
+        Enter shopping amount: <input type="text" id="input"><br>
+        <button type="submit" onclick="calculate()">Calculate</button>
+        <p>Total amount: <b id="result"></b></p>
+        <script>
+            function calculate() {
+                var amount = Number(document.getElementById("input").value);
+                var res;
+                if (amount > 1000) {
+                    res = amount + amount * 0.15;
+                }
+                else {
+                    res = amount + amount * 0.05;
+                }
+                document.getElementById("result").innerHTML = res;
+            }
+        </script>
+    </body>
+</html>

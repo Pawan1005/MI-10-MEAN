@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 2</title>
+    </head>
+    <body>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius recusandae quo sapiente tempore
+            nostrum commodi rem dicta omnis, id ea modi culpa quos hic cumque temporibus. Obcaecati sit eos, nesciunt nulla
+            quas impedit consectetur quasi beatae illum suscipit aliquam ipsa cupiditate. Delectus placeat eligendi
+            consectetur necessitatibus culpa? Eum, magnam in.</p>
+        <fieldset>
+            <legend>Colors</legend>
+            <button onclick="fontRed()">Red</button>
+            <button onclick="fontBlue()">Blue</button>
+            <button onclick="fontGreen()">Green</button>
+        </fieldset>
+        <fieldset>
+            <legend>Size</legend>
+            <button onclick="fontSmall()">Small</button>
+            <button onclick="fontMedium()">Medium</button>
+            <button onclick="fontLarge()">Large</button>
+        </fieldset>
+        <fieldset>
+            <legend>Font</legend>
+            <button onclick="fontArial()">Arial</button>
+            <button onclick="fontGeorgia()">Georgia</button>
+            <button onclick="fontCourier()">Courier New</button>
+        </fieldset>
+        <script>
+            function fontRed() {
+                document.getElementById("paragraph").style.color = "red";
+            }
+            function fontBlue() {
+                document.getElementById("paragraph").style.color = "blue";
+            }
+            function fontGreen() {
+                document.getElementById("paragraph").style.color = "green";
+            }
+            function fontSmall() {
+                document.getElementById("paragraph").style.fontSize = "small";
+            }
+            function fontMedium() {
+                document.getElementById("paragraph").style.fontSize = "medium";
+            }
+            function fontLarge() {
+                document.getElementById("paragraph").style.fontSize = "large";
+            }
+            function fontArial() {
+                document.getElementById("paragraph").style.fontFamily = "Arial";
+            }
+            function fontGeorgia() {
+                document.getElementById("paragraph").style.fontFamily = "Georgia";
+            }
+            function fontCourier() {
+                document.getElementById("paragraph").style.fontFamily = "Courier New";
+            }
+        </script>
+    </body>
+</html>

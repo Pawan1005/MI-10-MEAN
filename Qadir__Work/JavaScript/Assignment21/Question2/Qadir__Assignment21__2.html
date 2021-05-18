@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./crudOperations.js"></script>
+        <style>
+            table,
+            td,
+            th {
+                border: 1px solid;
+            }
+
+            td,
+            th {
+                text-align: center;
+                padding: 5px 100px 5px 100px;
+            }
+
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+            }
+
+            button, 
+            input[type="button"] {
+                border-radius: 5px;
+                padding: 7px 10px 7px 10px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            table + button {
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+        </style>
+        <title>Table Create, Update, Read and Delete</title>
+    </head>
+    <body>
+        <table id="richestManList">
+            <caption>List Of Richest Man in World</caption>
+            <tr>
+                <th>Select</th>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>City</th>
+            </tr>
+            <tr id="row1">
+                <td id="tdRow11"><input type="checkbox" id="tdCb11" onchange="checkBoxValueChange()"></td>
+                <td id="tdRow12">1</td>
+                <td id="tdRow13">b</td>
+                <td id="tdRow14">123</td>
+                <td id="tdRow15">Delhi</td>
+            </tr>
+            <tr id="row2">
+                <td id="tdRow21"><input type="checkbox" id="tdCb21" onchange="checkBoxValueChange()"></td>
+                <td id="tdRow22">2</td>
+                <td id="tdRow23">c</td>
+                <td id="tdRow24">456</td>
+                <td id="tdRow25">Gurgaon</td>
+            </tr>
+            <tr id="row3">
+                <td id="tdRow31"><input type="checkbox" id="tdCb31" onchange="checkBoxValueChange()"></td>
+                <td id="tdRow32">3</td>
+                <td id="tdRow33">d</td>
+                <td id="tdRow34">879</td>
+                <td id="tdRow35">Noida</td>
+            </tr>
+        </table>
+        <button onclick="addData()">Add</button>
+        <button id="editBtn">Edit</button>
+        <button id="saveBtn">Save</button>
+        <button id="deleteBtn">Delete</button>
+        <script>
+            var table = document.getElementById('richestManList');
+            var mainRow = table.rows.length;
+
+            // Storing Single Active or Check RowId
+            // var rowNumberId;
+
+            // Storing Multple Select RowId
+            var rowNumberList = [];
+
+            document.getElementById('editBtn').addEventListener('click', function(){
+                editData(rowNumberList);
+            });
+            document.getElementById('saveBtn').addEventListener('click', function(){
+                saveData(rowNumberList);
+            });
+            document.getElementById('deleteBtn').addEventListener('click', function(){
+                deleteData(rowNumberList);
+            });
+        </script>
+    </body>
+</html>

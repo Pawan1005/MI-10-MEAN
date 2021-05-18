@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./Student__Registration__Form__Post.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        </style>
+        <title>Report Card Using Local Storage</title>
+    </head>
+    <body>
+        <h1 id="reportCardHeading">Student Report Form</h1>
+        <form action="./Student__Report__Post.html" method="POST">
+            <label for="rollNo">RollNo: </label>
+            <br>
+            <input type="text" name="rollNo" id="rollNo" placeholder="Please Enter a Roll Number">
+            <br>
+            <label for="name">Name: </label>
+            <br>
+            <input type="text" name="stdName" id="stdName" placeholder="Please Enter a Name">
+            <br>
+            <label for="maths">Maths: </label>
+            <br>
+            <input type="text" name="maths" id="maths" placeholder="Please Enter Marks">
+            <br>
+            <label for="science">Science: </label>
+            <br>
+            <input type="text" name="science" id="science" placeholder="Please Enter Marks">
+            <br>
+            <label for="history">Hisotry: </label>
+            <br>
+            <input type="text" name="history" id="history" placeholder="Please Enter Marks">
+            <br>
+            <label for="biology">Biology: </label>
+            <br>
+            <input type="text" name="biology" id="biology" placeholder="Please Enter Marks">
+            <br>
+            <label for="physics">Physics: </label>
+            <br>
+            <input type="text" name="physics" id="physics" placeholder="Please Enter Marks">
+            <br>
+            <button type="submit" onclick="getData()">Submit</button>
+        </form>
+    </body>
+</html>

@@ -105,10 +105,10 @@ function saveData(rowNumberListData) {
     catch(error) {
         alert(error.message);
     }
-    rowNumberList = [];
 }
 
 function deleteData(rowNumberListData) {
+
     try {
         if (rowNumberListData.length) {
             for (let totalSelect = 0; totalSelect < rowNumberListData.length; totalSelect++) { 
@@ -116,10 +116,12 @@ function deleteData(rowNumberListData) {
             }
         }
         else {
+
             throw new Error("Please Select Row for Delete")
         }
     }
     catch(error) {
         alert(error.message);
     }
+    rowNumberList = [];
 }

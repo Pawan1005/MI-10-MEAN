@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Previous date</title>
+    </head>
+    <body>
+        Enter Date: <input type="date" id="inputDate">
+        Enter no. of days: <input type="number" id="inputDays">
+        <button onclick="output()">Submit</button>
+        <script>
+            function output() {   
+                var input = document.getElementById("inputDate").value;
+                var days = parseInt(document.getElementById("inputDays").value); 
+                var date = new Date(input);  
+                document.write("Date: " + date)          
+                function getDateAgo(date, days) {
+                let dateCopy = new Date(date);
+                                                                                                                                                    
+                dateCopy.setDate(date.getDate() - days);
+                return dateCopy;
+                }                                                                                                                                  
+                document.write("<br>Previous date: " + getDateAgo(date, days) );
+                document.write("<br>Day before previous date: " + getDateAgo(date, days+1) );
+                document.write("<br>Date: " + getDateAgo(date, 365) );
+            }
+        </script>
+    </body>
+</html>

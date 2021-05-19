@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment21Q1</title>
+  </head>
+  <body>
+    <h3 style="text-align: center">Login Page</h3>
+    <p style="text-align: center">
+      <b>Login to Account</b><br>
+      <br>
+      First Name : <input type="text" id="F_name"><br>
+      <br>
+      last name : <input type="text" id="L_name"><br>
+      <br>
+      username : <input type="text" id="U_name"><br>
+      <br>
+      password : <input type="password" id="pass"><br>
+      <br>
+      <button onclick="login_id()">Login</button>
+    </p>
+    <script>
+      function login_id() {
+        var username, password;
+        username = document.getElementById("U_name").value;
+        password = document.getElementById("pass").value;
+        let regex_username = /^[a-zA-Z0-9]{8,15}$/;
+        let regex_password = /^[a-zA-Z0-9!@#$%^&*()_]{8,}$/;
+        if (regex_username.test(username)) {
+          if (regex_password.test(password)) {
+            alert("password matching");
+          } else {
+            alert("enter valid password");
+          }
+        } else {
+          alert("Enter valid username");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+  </head>
+  <body>
+    <h4><b>Table</b></h4>
+    <input type="text" id="mul_table" placeholder="Enter a number"><br>
+    <br>
+    <button onclick="table()">Create</button>
+    <br>
+    <p id="demo"></p>
+    <script>
+      function table() {
+        var input_number = parseInt(document.getElementById("mul_table").value);
+        if (isNaN(input_number)) {
+          document.getElementById("demo").innerHTML = "Enter valid input";
+        } 
+        else {
+          for (var index = 1; index <= 10; index++) {
+             let output = input_number * index;
+             document.write(`${input_number} * ${index} = ${output} <br>`);
+            }
+          }
+        }
+    </script>
+  </body>
+</html>

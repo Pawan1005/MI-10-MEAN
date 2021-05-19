@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Row table</title>
+    <style>
+      table,tr,td,th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 50%;
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table_data">
+      <tr>
+        <th>ADD ROW</th>
+      </tr>
+      <tr id="row1">
+        <td id="colNumber11">1</td>
+      </tr>
+      <tr id="row2">
+        <td id="colNumber12">2</td>
+      </tr>
+    </table>
+    <br>
+    <button id="btn1" onclick="add()">Add</button> <br>
+    <br>
+    <button id="btn2" onclick="save()">save</button>
+    <script>
+      var table = document.getElementById("table_data");
+      var table_length = table.rows.length;
+      function add() {
+        var add_row,add_cell,text_input;
+        add_row = table.insertRow(-1);
+        add_row.id = `row${table_length}`;
+        add_cell = add_row.insertCell();
+        add_cell.id = `colNumber1${table_length} `;
+        text_input = document.createElement("input");
+        text_input.type = "text";
+        text_input.id = `text${table_length}1 `;
+        add_cell.appendChild(text_input);
+      }
+      function save(){
+          var mainRow = table_length;
+          let text_field = document.getElementById(`text${table_length}1 `).value;
+          let cell_id = document.getElementById(`colNumber1${table_length} `);
+          cell_id.innerHTML = text_field ; 
+      }
+    </script>
+  </body>
+</html>

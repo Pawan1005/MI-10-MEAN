@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even odd</title>
+</head>
+<body>
+    <p id="pid">
+        <fieldset style="width: 350px; height: 120px;" >
+              Number : <input type="text" id="text" placeholder="Enter number"><br>
+                <br>
+                <button onclick="EvenOdd()">Even/Odd</button><br>
+                <p id="demo"></p>
+        </fieldset>
+    </p>
+    <script>
+        function EvenOdd(){
+            var input ;
+            input=parseInt(document.getElementById("text").value);
+            if (input > 0){
+                 if (input % 2 == 0 ){
+                     document.getElementById("demo").innerHTML= `The input number ${input} is even number `
+                    }
+                else{
+                    document.getElementById("demo").innerHTML= `The input number ${input} is odd number `
+                 }
+            }
+            else {
+                alert("Enter valid number")
+            }
+        }
+    </script>
+  </body>
+</html>

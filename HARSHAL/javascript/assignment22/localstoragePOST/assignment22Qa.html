@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>localStorage POST method</title>
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="assignment22QaREPORTCARD.html" method="POST">
+            <label for="rollno">ROLL NO.</label>
+            <input type="text" id="rollno" name="rollno" placeholder="rollno" /><br />
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" placeholder="name" /><br />
+            <label for="maths">MATHS</label>
+            <input type="text" id="maths" name="maths" placeholder="enter marks" /><br />
+            <label for="science">SCIENCE</label>
+            <input type="text" id="science" name="science" placeholder="enter marks" /><br />
+            <label for="history">HISTORY</label>
+            <input type="text" id="history" name="history" placeholder="enter marks" /><br />
+            <button onclick="data()">submit</button>
+        </form>
+     <script>
+         function data(){
+             var rollno =document.getElementById("rollno").value;
+             var name =document.getElementById("name").value;
+             var maths =document.getElementById("maths").value;
+             var science =document.getElementById("science").value;
+             var history =document.getElementById("history").value;
+             
+             localStorage.setItem("rollno",rollno);
+             localStorage.setItem("name",name);
+             localStorage.setItem("maths",maths);
+             localStorage.setItem("science",science);
+             localStorage.setItem("history",history);
+         }
+     </script>
+    </body>
+</html>

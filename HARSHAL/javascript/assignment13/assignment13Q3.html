@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que3</title>
+        <style>
+            body {
+                justify-content: center;
+                text-align: center;
+            }
+            button,
+            label,
+            input {
+                padding: 10px;
+                background-color: rgb(87, 169, 33);
+                font-weight: bolder;
+                color: white;
+            }
+            label {
+                margin-right: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="dateInput">Date: </label>
+        <input type="date" name="dateInput" id="date" />
+        <button type="submit" onclick="minusdate()">Get</button>
+        <script>
+            function getDateAgo(dt, number) {
+                days = 86400000; //number of milliseconds in a day
+                DaysAgo = new Date(dt - number * days);
+                alert(`${number} days ago of ${dt} is \n${DaysAgo}`);
+            }
+            function minusdate() {
+                var userdate = document.getElementById("date").value;
+                var dt = new Date(userdate);
+                getDateAgo(
+                    dt,
+                    parseInt(
+                        prompt(
+                            "enter the number which you are going to cancel the date with"
+                        )
+                    )
+                );
+            }
+        </script>
+    </body>
+</html>

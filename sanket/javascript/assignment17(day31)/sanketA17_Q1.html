@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>report card</title>
+  </head>
+  <body>
+    <label>RollNo: </label>
+    <input id="rn" type="text" /><br /><br />
+    <label>Name: </label>
+    <input id="n" type="text" /><br /><br />
+    <label>Maths: </label>
+    <input id="m" type="text" placeholder="marks out of 100" /><br /><br />
+    <label>Science: </label>
+    <input id="s" type="text" placeholder="marks out of 100" /><br /><br />
+    <label>History: </label>
+    <input id="h" type="text" placeholder="marks out of 100" /><br /><br />
+    <button onclick="calculate()">Submit</button>
+    <h4>******REPORT CARD******</h4>
+    <p>RollNO: <span id="p"></span></p>
+    <p>Name: <span id="p1"></span></p>
+    <p>Maths: <span id="p2"></span></p>
+    <p>Science: <span id="p3"></span></p>
+    <p>History: <span id="p4"></span></p>
+    <p><strong>TOTAL: </strong><span id="p5"></span></p>
+    <p><strong>PERCENTAGE: </strong><span id="p6"></span></p>
+    <p><strong>GRADE: </strong><span id="p7"></span></p>
+    <script>
+      class Student {
+        constructor(rollNO, name, maths, science, history) {
+          this.rollNO = rollNO;
+          this.name = name;
+          this.maths = maths;
+          this.science = science;
+          this.history = history;
+        }
+        total() {
+          return this.maths + this.science + this.history;
+        }
+        percentage() {
+          let total = this.total();
+          return parseInt(total / 3);
+        }
+        grade() {
+          let percentage = this.percentage();
+          if (percentage < 40) {
+            document.getElementById("p7").innerHTML =
+              "<strong>No Grade</strong>";
+            return (document.getElementById("p7").style.color = "red");
+          }
+          if (percentage < 55) {
+            document.getElementById("p7").innerHTML = "<strong>B</strong>";
+            return (document.getElementById("p7").style.color = "brown");
+          }
+          if (percentage < 60) {
+            document.getElementById("p7").innerHTML = "<strong>B+</strong>";
+            return (document.getElementById("p7").style.color = "brown");
+          }
+          if (percentage < 80) {
+            document.getElementById("p7").innerHTML = "<strong>A</strong>";
+            return (document.getElementById("p7").style.color = "green");
+          }
+          document.getElementById("p7").innerHTML = "<strong>A+</strong>";
+          return (document.getElementById("p7").style.color = "green");
+        }
+        display() {
+          document.getElementById("p").innerHTML = `${this.rollNO}`;
+          document.getElementById("p1").innerHTML = `${this.name}`;
+          document.getElementById("p2").innerHTML = `${this.maths}`;
+          document.getElementById("p3").innerHTML = `${this.science}`;
+          document.getElementById("p4").innerHTML = `${this.history}`;
+          document.getElementById("p5").innerHTML = `${this.total()}`;
+          document.getElementById("p6").innerHTML = `${this.percentage()}%`;
+        }
+      }
+      function calculate() {
+        let rollNO = document.getElementById("rn").value;
+        let name = document.getElementById("n").value.toUpperCase();
+        let maths = parseInt(document.getElementById("m").value);
+        let science = parseInt(document.getElementById("s").value);
+        let history = parseInt(document.getElementById("h").value);
+        try {
+          if (/\D/.test(maths) || /\D/.test(science) || /\D/.test(history))
+            throw new Error("marks can not be alphanumeric");
+          else if (maths > 100 || science > 100 || history > 100)
+            throw new Error("marks can not be greater than 100");
+          const student = new Student(rollNO, name, maths, science, history);
+          student.grade();
+          student.display();
+        } catch (ex) {
+          alert(ex);
+        }
+      }
+    </script>
+  </body>
+</html>

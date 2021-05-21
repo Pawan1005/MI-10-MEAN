@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que2</title>
+    </head>
+    <body>
+        <ol id="ol">
+            <li>SDLC</li>
+            <li>HTML</li>
+            <li>FIGMA</li>
+        </ol>
+        <input id="text" type="text" />
+        <button onclick="add()">Add</button>
+        <script>
+            function add() {
+                var output = document.getElementById("text").value;
+                document.getElementById("ol").innerHTML +="<li>"+output+"</li>";
+            }
+        </script>
+    </body>
+</html>

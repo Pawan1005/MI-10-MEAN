@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>even odd</title>
+        <script>
+            function evenodd(){
+                var n;
+                n = parseInt(document.getElementById("num").value);
+                if(n%2 == 0){
+                    document.getElementById("eo").innerHTML = n + " is a even number."
+                }
+                else{
+                    document.getElementById("eo").innerHTML = n + " is a odd number."
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Check Even number and Odd number</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="num">Enter Number</label>
+            <input type="number" id="num">
+            <button type="button" onclick="evenodd()">Check</button>
+            <h4 id="eo"></h4>
+    </body>
+</html>

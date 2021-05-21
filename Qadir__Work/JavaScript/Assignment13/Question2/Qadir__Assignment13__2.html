@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./weekDay.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>WeekDay</title>
+    </head>
+    <body>
+        <h1>Showing WeekDay from Date</h1>
+        <form>
+            <label for="dateInput">Date: </label>
+            <input type="date" name="dateInput" id="dateInput" placeholder="Select Date">
+            <button type="submit" onclick="getWeekDayFunction()">Get WeekDay</button>
+        </form>
+    </body>
+</html>

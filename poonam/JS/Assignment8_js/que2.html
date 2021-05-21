@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick sort</title>
+    <script>
+      function quick(arrMarks, first, last) {
+        var pivot, temp, lower, upper;
+        if (first < last) {
+          pivot = first;
+          lower = first;
+          upper = last;
+          while (lower < upper) {
+            while (arrMarks[lower] <= arrMarks[pivot] && lower < last) {
+              lower++;
+            }
+            while (arrMarks[upper] > arrMarks[pivot]) {
+              upper--;
+            }
+            if (lower < upper) {
+              temp = arrMarks[lower];
+              arrMarks[lower] = arrMarks[upper];
+              arrMarks[upper] = temp;
+            }
+          }
+          temp = arrMarks[pivot];
+          arrMarks[pivot] = arrMarks[upper];
+          arrMarks[upper] = temp;
+          quick(arrMarks, first, upper - 1);
+          quick(arrMarks, upper + 1, last);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      var arrMarks = [];
+      for (var i = 0; i < 10; i++) {
+        marks = parseInt(prompt("Enter marks out of 80 for subject" + (i + 1) + " :"));
+        if (marks > 80) {
+          alert("Enter marks less than or equals to 80.");
+        }
+        else {
+          marks = marks + (marks / 10 * 2);
+          arrMarks.push(marks);
+        }
+      }
+      document.write("Quick Sort");
+      document.write("<br>Before Sorting: " + arrMarks);
+      quick(arrMarks, 0, 9);
+      document.write("<br>After Sorting : " + arrMarks);
+    </script>
+  </body>
+</html>

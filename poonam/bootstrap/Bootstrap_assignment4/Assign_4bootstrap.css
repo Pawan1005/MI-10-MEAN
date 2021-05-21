@@ -1,0 +1,13 @@
+.headimg{
+    height: 200px;
+    background-image: url('sunset1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    opacity: 0.5;
+}
+img:hover{
+    opacity: 1;
+    border: 2px solid cyan;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="sanketA7_Q1.html"><span>job.com</span></a>
+        <li>
+          <a class="pl2" href="pers_acad.html">Personal Details</a>
+        </li>
+        <li><a class="pl2" href="prof.html">Professional Details</a></li>
+      </ul>
+    </nav>
+    <form>
+      <label for="resume">Upload Resume</label>
+      <input type="file" multiple accept=".doc, .pdf" />
+      <section>
+        <h2>Personal details</h2>
+        <input type="hidden" name="p-details" value="12" />
+        <label for="date">Date of birth</label>
+        <input type="date" id="date" required />
+        <label>Gender</label>
+        <input type="radio" id="male" />
+        <label class="label-inline" for="male">Male</label>
+        <input type="radio" id="female" />
+        <label class="label-inline" for="female">Female</label>
+        <input type="radio" id="other" />
+        <label class="label-inline" for="other">Transgender</label>
+        <label for="padd">Permanent Address</label>
+        <textarea id="padd"></textarea>
+        <label for="htown">Hometown</label>
+        <input type="text" id="htown" />
+        <label for="pcode">Pincode</label>
+        <input type="number" id="pcode" min="0" max="10" required />
+        <label>Marital status</label>
+        <select>
+          <option>Select a option</option>
+          <option>Single/unmarried</option>
+          <option>Married</option>
+          <option>Widowed</option>
+          <option>Divorced</option>
+          <option>Separated</option>
+          <option>other</option>
+        </select>
+        <label for="lang">Language</label>
+        <input type="text" id="lang" />
+        <input type="checkbox" id="read" />
+        <label class="label-inline" for="read">Read</label>
+        <input type="checkbox" id="write" />
+        <label class="label-inline" for="write">Write</label>
+        <input type="checkbox" id="speak" />
+        <label class="label-inline" for="speak">Speak</label>
+        <label for="lang">Language</label>
+        <input type="text" id="lang" />
+        <input type="checkbox" id="read" />
+        <label class="label-inline" for="read">Read</label>
+        <input type="checkbox" id="write" />
+        <label class="label-inline" for="write">Write</label>
+        <input type="checkbox" id="speak" />
+        <label class="label-inline" for="speak">Speak</label><br />
+        <a href="">Add Another language </a>
+      </section>
+    </form>
+    <form>
+      <section>
+        <h2>Academic Details</h2>
+        <label for="edu">Education</label>
+        <input type="text" id="edu" />
+        <label for="course">Course</label>
+        <input type="text" id="course" />
+        <label for="sep">Specialization</label>
+        <input type="text" id="sep" />
+        <label for="uni">University/Institute</label>
+        <input type="text" id="uni" />
+        <label>Course Type</label>
+        <input type="radio" id="ftime" />
+        <label class="label-inline" for="ftime">Full Time</label>
+        <input type="radio" id="ptime" />
+        <label class="label-inline" for="ptime">Part Time</label>
+        <input type="radio" id="dl" />
+        <label class="label-inline" for="dl">Distance Learning</label>
+        <label for="year">Passing Out Year</label>
+        <input type="number" id="year" min="1947" max="2025" required />
+      </section>
+    </form>
+    <div class="mb"><a href="prof.html">Next Page</a></div>
+  </body>
+</html>

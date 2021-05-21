@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add a value in the list</title>
+  </head>
+  <body>
+    <ol id="ol">
+      <li>SDLC</li>
+      <li>HTML</li>
+      <li>FIGMA</li>
+    </ol>
+    <input id="n" type="text" />
+    <button onclick="add()">Add</button>
+    <script>
+      function add() {
+        let list = document.createElement("li");
+        list.textContent = document.getElementById("n").value;
+        let ol = document.getElementById("ol");
+        ol.insertBefore(list, ol.lastElementChild.nextSibling);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floyd’s triangle</title>
+    <link rel="stylesheet" href="../all.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Floyd’s triangle</h1>
+        <button onclick="Fun()">Click</button>
+        <p id="number"></p>
+    </div>
+    <script>
+        function Fun() {
+            var rows=0, number = 1, counter=0, j=0;
+            var num_value = parseInt(prompt("Enter number: "));
+
+            document.write("<br>");
+            document.write("<h3> Floyd's Triagle</h3>");
+                for ( counter = 1 ; counter <= num_value; counter++ )
+                {
+                      for ( j = 1 ; j <= counter ; j++ )
+                    {
+                        document.write("<font face='arial' size='3'>");
+                        document.write(" " + number + " </font>");
+                        number++;
+                    }
+                      document.write("<br>");
+                }
+                 document.write("<h3> End of Program </h3>");
+                }
+    </script>
+</body>
+</html>

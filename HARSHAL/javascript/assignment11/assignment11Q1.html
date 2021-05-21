@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que1</title>
+    </head>
+    <body>
+        <h1>ENTER ROLL NUMBER TO SHOW MARKS OF IT</h1>
+        <label for="a">ENTER ROLL NO.:</label>
+        <input type="number" id="a" value="" /><br />
+        <button onclick="myFunction()">click me</button>
+        <h2 id="nd"></h2>
+        <script>
+            var rollno = [];
+            for (var b = 0; b <= 3; b++) {
+                rollno.push(
+                    parseInt(prompt(`ENTER ROLL NUMBER FOR STUDENT ${b + 1}`))
+                );
+                document.write(`<br>roll no. of student ${b + 1}:${rollno[b]}`);
+            }
+            var marks = [];
+            for (var a = 0; a <= 3; a++) {
+                marks.push(parseInt(prompt(`ENTER MARKS: ${a + 1}`)));
+                if (marks[a] > 50 || marks[a] < 0) {
+                    alert("INVALID MARK");
+                    marks.pop();
+                    marks.push(parseInt(prompt(`ENTER MARKS: ${a + 1}`)));
+                    if (marks[a] > 50 || marks[a] < 0) {
+                        alert("INVALID MARK ENTERED TWICE");
+                        system.exit();
+                    }
+                }
+            }
+            var total = [];
+            for (var b = 3; b >= 0; b--) {
+                total[b] = marks[b] + 0.2 * marks[b];
+                document.write(
+                    `<br>marks for roll number ${rollno[b]} is ${total[b]}`
+                );
+            }
+            function myFunction() {
+                var getroll = parseInt(document.getElementById("a").value);
+                var result = rollno.indexOf(getroll);
+                document.getElementById(
+                    "nd"
+                ).innerText = `ROLL NUMBER ${getroll} HAS ${total[result]} MARKS`;
+            }
+        </script>
+    </body>
+</html>

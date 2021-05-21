@@ -1,0 +1,23 @@
+#mimean li {
+  color: rebeccapurple;
+}
+
+#mimean ol {
+  list-style-type: lower-roman;
+}
+
+#system li {
+  color: #6495ed;
+}
+
+#system ol {
+  list-style-type: lower-roman;
+}
+
+#mimean-9 li {
+  margin: 15px;
+}
+
+ul {
+  list-style-type: disc;
+}

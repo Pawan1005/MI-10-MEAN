@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que2</title>
+    </head>
+    <style>
+        body {
+            justify-content: center;
+            text-align: center;
+        }
+        button,
+        label,
+        input {
+            padding: 10px;
+            background-color: rgb(87, 169, 33);
+            font-weight: bolder;
+            color: white;
+        }
+        label {
+            margin-right: 8px;
+        }
+    </style>
+    <body>
+        <label for="dateInput">Date: </label>
+        <input type="date" name="dateInput" id="date" />
+        <button type="submit" onclick="get_day()">Get WeekDay</button>
+
+        <script>
+            function getWeekDay(dt) {
+                var day = dt.getDay();
+                var weekday = [];
+                weekday[0] = "SU";
+                weekday[1] = "MO";
+                weekday[2] = "TU";
+                weekday[3] = "WE";
+                weekday[4] = "TH";
+                weekday[5] = "FR";
+                weekday[6] = "SA";
+                return weekday[day];
+            }
+            function get_day() {
+                var userdate = document.getElementById("date").value;
+                var dt = new Date(userdate);
+                alert(getWeekDay(dt));
+            }
+        </script>
+    </body>
+</html>

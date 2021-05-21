@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que 3</title>
+    </head>
+    <body>
+        <h1 id="even"></h1>
+        <script>
+            function iseven(n) {
+                var n = prompt("ENTER A NUMBER");
+                if (n % 2 == 0) {
+                    return `${n} is an even number`;
+                } else {
+                    return `${n} is an odd number`;
+                }
+            }
+            document.getElementById("even").innerText = iseven();
+        </script>
+    </body>
+</html>

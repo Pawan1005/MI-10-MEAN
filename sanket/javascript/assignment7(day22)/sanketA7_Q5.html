@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion sort</title>
+  </head>
+  <body>
+    <script>
+      let totalStudents,
+        marks = [];
+      totalStudents = prompt("How many students");
+      document.write("(****Before  sorting****)");
+      for (i = 0; i < totalStudents; i++) {
+        j = prompt("Enter marks");
+        marks.push(parseInt(j));
+        document.write("<br>Marks " + (i + 1) + " : " + marks[i]);
+      }
+      document.write("<br>(*****each iteration****)");
+      for (i = 1; i < marks.length; i++) {
+        let current = marks[i];
+        j = i - 1;
+        while (j >= 0 && marks[j] > current) {
+          marks[j + 1] = marks[j];
+          j--;
+        }
+        marks[j + 1] = current;
+        document.write(" <br>" + marks);
+      }
+      document.write("<br>(****After Sorting(Insertion sort)****)");
+      for (i = 0; i < totalStudents; i++)
+        document.write("<br> Marks " + (i + 1) + " : " + marks[i]);
+    </script>
+  </body>
+</html>

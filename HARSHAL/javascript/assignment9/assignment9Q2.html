@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>q2</title>
+    </head>
+    <body>
+        <h1>To check whether a number is prime palindrome or not</h1>
+        <script>
+            var Number = prompt("ENTER A NUMBER");
+            var OriginalNumber = Number;
+            var ReverseNumber = 0;
+            while (Number != 0) {
+                var Lastdigit = parseInt(Number % 10);
+                var ReverseNumber = ReverseNumber * 10 + Lastdigit;
+                Number = parseInt(Number / 10);
+            }
+            document.write(ReverseNumber);
+            if (OriginalNumber == ReverseNumber) {
+                for (var i = 2; i < OriginalNumber; i++) {
+                    if (OriginalNumber % i == 0) {
+                        var Prime = true;
+                        break;
+                    }
+                }
+                if (Prime == true) {
+                    document.write("<br>Number is not Prime Palindrome<br>");
+                } else {
+                    document.write("<br>Number is Prime Palindrome<br>");
+                }
+            } else {
+                document.write("<br>Number is not Prime Palindrome<br>");
+            }
+        </script>
+    </body>
+</html>

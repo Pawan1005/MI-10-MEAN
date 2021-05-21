@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que4</title>
+        <style>
+            body {
+                justify-content: center;
+                text-align: center;
+            }
+            button,
+            label,
+            input {
+                padding: 10px;
+                background-color: rgb(87, 169, 33);
+                font-weight: bolder;
+                color: white;
+            }
+            label {
+                margin-right: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="dateInput">BirthDate: </label>
+        <input type="date" name="dateInput" id="date" />
+        <button type="submit" onclick="age()">click</button>
+        <script>
+            function age() {
+                var dt = new Date();
+                var present = Date.parse("2020,04,4");
+                var userdate = document.getElementById("date").value;
+                var bday = Date.parse(userdate);
+                console.log(bday);
+                agemilli = present - bday;
+                var minutes = 1000 * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var age = Math.round(agemilli / years);
+                alert("YOUR AGE IS " + age);
+            }
+        </script>
+    </body>
+</html>

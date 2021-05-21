@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./dateAgo.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+                width: 18%;
+            }
+
+            input[type="date"] {
+                margin-left: 175px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Previous Date</title>
+    </head>
+    <body>
+        <h1>Getting Number of Previous Date</h1>
+        <form>
+            <label for="dateInput">Date: </label>
+            <input type="date" name="dateInput" id="dateInput" placeholder="Select Date">
+            <br>
+            <label for="number">Enter How Much Date Go Back: </label>
+            <input type="text" id="number" placeholder="Enter a Number for Go Previous Date">
+            <br>
+            <button type="submit" onclick="getDateAgoCall()">Get Date</button>
+        </form>
+    </body>
+</html>

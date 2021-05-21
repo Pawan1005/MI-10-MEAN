@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Prime number</title>
+       <style>
+           .center{
+               text-align: center;
+           }
+           #prime{
+               color: red;
+           }
+       </style>
+   </head>
+   <body>
+    <div class="center">
+        <h1>Prime number</h1>
+        <label for="number">Enter a number:</label>
+        <input id="number">
+        <button onclick="Fun()">Click</button>
+        <p id="prime"></p>
+    </div>
+    <script>
+        function Fun() {
+            var a,c=0;
+            a=parseInt(document.getElementById("number").value);
+            if(a>2){
+                for(var i=2;i<a;i++){
+                    if (a%i==0){
+                        c=c+1;
+                    }
+                    else{
+                        continue;
+                    }
+                }
+                if(c>0){
+                    document.getElementById("prime").innerHTML="It is not Prime number";
+                }
+                else{
+                document.getElementById("prime").innerHTML="It is Prime number";
+                }
+            }
+            else{
+                document.getElementById("prime").innerHTML="It is Prime number";
+            }
+        }
+    </script>
+   </body>
+</html>

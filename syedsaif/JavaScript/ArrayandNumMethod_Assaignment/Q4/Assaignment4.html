@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assaignment4</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body onload="Fun(10)">
+        <div class="center">
+            <h1>Prime number or Not</h1>
+        </div>
+        <script>
+            var a;
+            function Fun(a){
+                if(a>1){
+                    for(var i=2;i<=a;i++){
+                        if (a%i==0 && a>3){
+                                document.write("It is not a Prime number");
+                            break;
+                        }
+                        else{
+                            document.write("It is Prime number");
+                            break;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

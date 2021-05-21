@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add rows to table</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="t">
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Aakav</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Aarav</td>
+      </tr>
+    </table>
+    <br />
+    <button onclick="add()">add row</button>
+    <script>
+      function add() {
+        let table = document.getElementById("t");
+        let row = table.insertRow();
+        row.insertCell();
+        row.insertCell();
+      }
+    </script>
+  </body>
+</html>

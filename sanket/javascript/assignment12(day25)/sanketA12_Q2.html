@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>employee details constructor</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor() {
+          this.empNo = 0;
+          this.name = "";
+          this.address = "";
+          this.city = "";
+          this.salary = 0;
+        }
+        showInit() {
+          document.write(
+            `employeeNo= ${this.empNo}, name= ${this.name}, address= ${this.address},
+            city= ${this.city}, salary= ${this.salary}<br>`
+          );
+        }
+        getData() {
+          this.empNo = prompt("Enter Employee No");
+          this.name = prompt("Enter Employee Name");
+          this.address = prompt("Enter Employee Address");
+          this.city = prompt("Enter Employee City");
+          this.salary = parseInt(prompt("Enter Employee salary"));
+        }
+        calculate() {
+          let da = 0.3 * this.salary;
+          let hra = 0.15 * this.salary;
+          let pf = 0.125 * this.salary;
+          this.gross = this.salary + da + hra;
+          this.net = this.gross - pf;
+          document.write(
+            `da= ${da}, hra= ${hra}, pf= ${pf},
+            gross= ${this.gross}, net= ${this.net}<br>`
+          );
+          if (this.gross * 12 > 180000) document.write("Income Tax Payer<br>");
+          else document.write("not an Income Tax Payer<br>");
+        }
+        display() {
+          document.write(
+            `employeeNo= ${this.empNo}, name= ${this.name}, 
+            grossSalary= ${this.gross}, netSalary= ${this.net}<br><br>`
+          );
+        }
+      }
+      const empOne = new Employee();
+      empOne.getData();
+      empOne.showInit();
+      empOne.calculate();
+      empOne.display();
+      const empTwo = new Employee();
+      empTwo.getData();
+      empTwo.showInit();
+      empTwo.calculate();
+      empTwo.display();
+    </script>
+  </body>
+</html>

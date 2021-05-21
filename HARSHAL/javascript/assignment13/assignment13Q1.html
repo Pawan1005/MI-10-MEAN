@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que1</title>
+        <style>
+            body {
+                justify-content: center;
+                text-align: center;
+            }
+            button {
+                padding: 10px;
+                background-color: darkseagreen;
+                font-weight: bolder;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>SHOWS DATE IN REQUIRED FORMAT</h1>
+        <button onclick="alert(dt)">SHOW DATE</button>
+        <script>
+            var dt = new Date();
+            var date = dt.setDate(21);
+            var date = dt.setMonth(1);
+            var date = dt.setFullYear(2012);
+            var date = dt.setHours(3);
+            var date = dt.setMinutes(12);
+        </script>
+    </body>
+</html>

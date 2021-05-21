@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que2</title>
+        <style>
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            veniam maxime at voluptas quas in ex voluptatum error, neque
+            cupiditate. Eveniet, sequi nemo ipsum vero, modi ad porro sit ex
+            rerum explicabo rem eaque atque voluptatem accusantium quod
+            assumenda odit quis quam ut facere? Veniam, voluptate? Illo
+            doloribus ipsa voluptas!
+        </p>
+        <fieldset>
+            <legend>COLORS</legend>
+            <button onclick="red()">RED</button>
+            <button onclick="blue()">BLUE</button>
+            <button onclick="green()">GREEN</button>
+        </fieldset>
+        <fieldset>
+            <legend>SIZE</legend>
+            <button onclick="small()">SMALL</button>
+            <button onclick="med()">MEDIUM</button>
+            <button onclick="large()">LARGE</button>
+        </fieldset>
+        <fieldset>
+            <legend>FONT</legend>
+            <button onclick="arial()">ARIAL</button>
+            <button onclick="timesnewroman()">TIMESNEWROMAN</button>
+            <button onclick="monospace()">MONOSPACE</button>
+        </fieldset>
+        <script>
+            function red(){
+                document.getElementById("para").style.color="red";
+            }
+            function blue(){
+                document.getElementById("para").style.color="blue";
+            }
+            function green(){
+                document.getElementById("para").style.color="green";
+            }
+            function small(){
+                document.getElementById("para").style.fontSize="small";
+            }
+            function med(){
+                document.getElementById("para").style.fontSize="medium";
+            }
+            function large(){
+                document.getElementById("para").style.fontSize="large";
+            }
+            function arial(){
+                document.getElementById("para").style.fontFamily="Arial, Helvetica, sans-serif";
+            }
+            function timesnewroman(){
+                document.getElementById("para").style.fontFamily="'Times New Roman'";
+            }
+            function monospace(){
+                document.getElementById("para").style.fontFamily="monospace";
+            }
+        </script>
+    </body>
+</html>

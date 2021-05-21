@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./tableCrud.js"></script>
+        <style>
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                table-layout: auto;
+                width: 90%;
+            }
+
+            table,
+            td,
+            th {
+                border: 1px solid;
+            }
+
+            td,
+            th {
+                text-align: center;
+                padding: 5px 100px 5px 100px;
+            }
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b59cee4005eda1d3e370bf4370bec929c8a4d174
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+            }
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b59cee4005eda1d3e370bf4370bec929c8a4d174
+            button, input[type="button"] {
+                border-radius: 5px;
+                padding: 7px 10px 7px 10px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b59cee4005eda1d3e370bf4370bec929c8a4d174
+            table + button {
+                margin-top: 10px;
+                margin-left: 50%;
+            }
+        </style>
+        <title>Table Create, Update, Read and Delete</title>
+    </head>
+    <body>
+        <table id="richestManList">
+            <caption>List Of Richest Man in World</caption>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Net Worth</th>
+                <th>Operations</th>
+            </tr>
+            <tr id="row1">
+                <td id="tdRow11">1</td>
+                <td id="tdRow12">Jeff Bezos</td>
+                <td id="tdRow13">$187B</td>
+                <td id="tdRow14">
+                    <button onclick="editData(1)">Edit</button>
+                    <button onclick="saveData(1)">Save</button>
+                    <button onclick="deleteData(1)">Delete</button>
+                </td>
+            </tr>
+            <tr id="row2">
+                <td id="tdRow21">2</td>
+                <td id="tdRow22">Elon Musk</td>
+                <td id="tdRow23">$157B</td>
+                <td id="tdRow24">
+                    <button onclick="editData(2)">Edit</button>
+                    <button onclick="saveData(2)">Save</button>
+                    <button onclick="deleteData(2)">Delete</button>
+                </td>
+            </tr>
+        </table>
+        <button onclick="addData()">Add</button>
+        <script>
+            var table = document.getElementById('richestManList');
+            var mainRow = table.rows.length;
+        </script>
+    </body>
+</html>

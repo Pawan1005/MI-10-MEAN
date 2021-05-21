@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armstrong number</title>
+  </head>
+  <body>
+    no: <input type="text" id="no" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function cal() {
+        let n = parseInt(document.getElementById("no").value);
+        let t = n,
+          s = 0,
+          r;
+        while (n > 0) {
+          r = n % 10;
+          s += r * r * r;
+          n = parseInt(n / 10);
+        }
+        if (t == s)
+          return (document.getElementById(
+            "p"
+          ).innerHTML = `${t} armstrong  no`);
+        else document.getElementById("p").innerHTML = `${t}  not armstrong  no`;
+      }
+    </script>
+  </body>
+</html>

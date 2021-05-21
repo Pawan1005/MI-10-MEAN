@@ -1,0 +1,26 @@
+div{
+    background-color: plum;
+}
+img{
+    float: right;
+    margin-top: 20px;
+}
+h2{
+    color: blueviolet;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    
+}
+.box{
+    width: 150px;
+    height: 30px;
+    margin-top: 50px;
+}
+section{
+    margin-left: 20px;
+}

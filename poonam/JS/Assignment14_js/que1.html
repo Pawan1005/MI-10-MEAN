@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student marks</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class student{
+            constructor(RollNo,Name){
+            this.RollNo=RollNo;
+            this.Name=Name;
+            }
+            display(){
+            document.write("<br>Inside Display");
+            document.write("<br>Roll No "+this.RollNo);
+            document.write("<br>Name "+this.Name);
+            }
+            }
+            //Marks is a derived class/child class
+            class Marks extends student{
+            //Construcor Overrriding
+            constructor(RollNo,Name,Marks){
+            super(RollNo,Name);
+            this.RollNo=RollNo;
+            this.Name=Name;
+            this.Marks=Marks;
+            this.created = (d1.getDate() +"/"+ d1.getMonth() +"/"+ d1.getFullYear());
+            }
+            marks(){
+                super.display();
+            document.write("<br>Inside Marks---Created on "+this.created);
+            document.write("<br>Inside Marks---Name "+this.Name);
+            document.write("<br>Inside Marks---Marks "+this.Marks);
+            }
+            }
+            var d1 = new Date();
+            var m2=new Marks(2,"ss",45);
+            m2.marks();
+        </script>
+    </body>
+</html>

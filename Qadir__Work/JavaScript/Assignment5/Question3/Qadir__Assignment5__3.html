@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./allPrimeNumber.js"></script>
+        <style>
+            input {
+                padding: 5px;
+                outline-color: cornflowerblue;
+                margin-bottom: 10px;
+            }
+            input[id='start'] {
+                margin-left: 5px;
+            }
+
+            input[id='last'] {
+                margin-left: 8px;
+            }
+
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        </style>
+        <title>Prime Number</title>
+    </head>
+    <body>
+        <h1>Prime Numbers From Start to Last Range</h1>
+        <form>
+            <label for="start">Start Number: </label>
+            <input type="text" id="start" placeholder="Enter a Start Number Range">
+            <br>
+            <label for="last">Last Number: </label>
+            <input type="text" id="last" placeholder="Enter a Last Number Range">
+            <br>
+            <button type="submit" onclick="primeSeries()">Generate Prime Series</button>
+        </form>
+
+        <p id="range"></p>
+        <p id="result" style="display: none;"><b>Prime Series:</b> </p>
+    </body>
+</html>

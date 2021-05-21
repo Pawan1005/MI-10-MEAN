@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que4</title>
+    </head>
+    <body>
+        <fieldset>
+            <p>Select country to find its capital</p>
+            <label>Country</label>
+            <select id="c" onclick="capital()">
+                <option></option>
+                <option>India</option>
+                <option>Nepal</option>
+            </select>
+            <label>Capital</label>
+            <select id="ca">
+                <option></option>
+                <option>Kathmandu</option>
+                <option>New Delhi</option>
+            </select>
+        </fieldset>
+        <script>
+            function capital() {
+                let country = document.getElementById("c").value;
+                if (country == "India") {
+                    document.getElementById("ca").value = "New Delhi";
+                } else if(country=="Nepal") {
+                    document.getElementById("ca").value = "Kathmandu";
+                }
+            }
+        </script>
+    </body>
+</html>

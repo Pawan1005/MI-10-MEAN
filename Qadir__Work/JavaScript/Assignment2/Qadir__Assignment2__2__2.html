@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./gradeFind.js"></script>
+        <title>Result Grade</title>
+        <style>
+            div {
+                display: grid;
+                grid-template-columns: 80px 250px;
+                align-items: center;
+                gap: 10px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+            input {
+                margin-top: 10px;
+                margin-left: 25px;
+                outline-color: cyan;
+                padding: 5px;
+            }
+            button {
+                margin-top: 10px;
+                border: none;
+                padding: 10px;
+                color: white;
+                font-weight: 700;
+                background-color: rgb(0, 155, 245);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>School Marks on each subjects</h1>
+        <form>
+            <div>
+                <label for="maths">Maths:</label>
+                <input type="text" id="maths" placeholder="Please Enter Your Marks">
+            </div>
+            <div>
+                <label for="science">Science:</label>
+                <input type="text" id="science" placeholder="Please Enter Your Marks">
+            </div>
+            <div>
+                <label for="biology">Biology:</label>
+                <input type="text" id="biology" placeholder="Please Enter Your Marks">
+            </div>
+            <div>
+                <label for="chemistry">Chemistry:</label>
+                <input type="text" id="chemistry" placeholder="Please Enter Your Marks">
+            </div>
+            <div>
+                <label for="physics">Physics:</label>
+                <input type="text" id="physics" placeholder="Please Enter Your Marks">
+            </div>
+            <button type="submit" onclick="calculateGrade()">Calculate Percentage</button>
+        </form>
+        <h4 id="total"></h4>
+        <h4 id="per"></h4>
+        <h4 id="grade"></h4>
+        <h4 id="gradeLess"></h4>
+    </body>
+</html>

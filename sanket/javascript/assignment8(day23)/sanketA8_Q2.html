@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marks of a student quick sort</title>
+  </head>
+  <body>
+    <script>
+      let marks,
+        totalMarks = [];
+      externalMarks = [];
+      internalMarks = [];
+      for (i = 0; i < 10; i++) {
+        marks = prompt("Enter marks of subject " + (i + 1));
+        if (marks > 80) window.alert("enter marks less than 80 ");
+        else externalMarks.push(parseInt(marks));
+      }
+      for (i = 0; i < externalMarks.length; i++) {
+        internalMarks[i] = (20 * externalMarks[i]) / 100;
+        totalMarks[i] = parseInt(externalMarks[i] + internalMarks[i]);
+      }
+      totalMarks.forEach((marks, index) =>
+        document.write(`subject ${index + 1} = marks : ${marks}<br>`)
+      );
+      quickSort(totalMarks, 0, totalMarks.length - 1);
+      document.write("<br>Sorted Marks : " + totalMarks);
+      function quickSort(array, start, end) {
+        if (start >= end) return;
+        let boundary = partition(array, start, end);
+        quickSort(array, start, boundary - 1);
+        quickSort(array, boundary + 1, end);
+      }
+      function partition(array, start, end) {
+        let pivot = array[end];
+        let boundary = start - 1;
+        for (i = start; i <= end; i++) {
+          if (array[i] <= pivot) {
+            let temp = array[++boundary];
+            array[boundary] = array[i];
+            array[i] = temp;
+          }
+        }
+        return boundary;
+      }
+    </script>
+  </body>
+</html>

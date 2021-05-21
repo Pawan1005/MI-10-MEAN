@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display the marks of the students.</title>
+  </head>
+  <body>
+    <script>
+      let totalStudents,
+        marks = [];
+      totalStudents = prompt("How many students");
+      for (i = 0; i < totalStudents; i++) {
+        marks[i] = prompt("Enter marks");
+        document.write("Marks " + (i + 1) + " : " + marks[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

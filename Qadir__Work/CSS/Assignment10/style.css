@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin: 0 100px 0 100px;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__section {
+    flex: 0.6;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar__section > a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgb(97, 97, 97);
+}
+
+.navbar__section > a:hover {
+    color: black;
+    font-weight: 700;
+}
+
+.navbar__section > a:first-child {
+    font-weight: 600;
+    color: black;
+}
+
+.navbar__stats {
+    flex: 0.4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar__statsNumber {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar__statsNumber > h4 {
+    font-size: 13px;
+}
+
+.navbar__statsNumber > h4:first-child {
+    color: rgb(54, 54, 54);
+}
+
+.navbar__statsNumber > h4:last-child {
+    color: rgb(138, 138, 138);
+}
+
+.navbar__statsRecruiter {
+    border-left: 1px solid rgb(167, 167, 167);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 30px;
+}
+
+.navbar__statsRecruiter > h4 {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(3, 3, 146);
+}
+
+.navbar__statsRecruiter > h4:first-child {
+    font-weight: 200;
+    color: rgb(55, 55, 245);
+}
+
+.header {
+    margin: 0px 100px 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > img {
+    object-fit: contain;
+    height: 100px;
+}
+
+.header__notification {
+    background-color: rgb(243, 223, 108);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header__notification > h3 {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__notification > input {
+    border: 1px solid black;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header__notification > input:nth-child(2) {
+    background-color: red;
+    color: white;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.header__login >  input {
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 2px solid rgb(248, 59, 59);
+    background-color: white;
+    color: red;
+}
+
+.search {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbQ5ig7nCSD_UY7DIT-wCU2kiUqc7eFCm6w&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+.search__jobs {
+    display: flex;
+    align-items: center;
+}
+
+.search__jobs > input, select {
+    border: none;
+    padding: 10px;
+}
+
+.search__jobs > input[name="Skill"] {
+    padding-right: 100px;
+    border-right: 1px solid gray;
+}
+
+.search__jobs > input[name="location"] {
+    padding-right: 50px;
+}
+
+.search__jobs > select {
+    padding: 9px;
+    border-left: 1px solid rgb(163, 163, 163);
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+
+.search__jobs > input[type=button] {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(252, 67, 67);
+    color: white;
+    font-weight: 600;
+}
+
+.search__resume {
+     display: flex;
+     padding: 10px;
+     align-items: center;
+     background-color: whitesmoke;
+     gap: 8px;
+}
+
+.search__resume > span {
+    font-size: 30px;
+}
+
+.search__upload > h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(0, 153, 255);
+}
+
+.banner {
+    background-color: rgb(186, 237, 250);
+    padding: 20px 100px 0px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner__left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner__left > img {
+    object-fit: fill;
+    width: 800px;
+    height: 150px;
+}
+
+.banner__left > h4 {
+    font-size: large;
+    font-weight: 600;
+}
+
+.banner__jobs {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 15px;
+}
+
+.banner__jobsInfo {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+}
+
+.banner__jobsInfoTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banner__jobsInfoTitle > h5 {
+    font-size: 15px;
+}
+
+.banner__jobsInfoTitle > h4 {
+    color: red;
+    font-size: 14px;
+}
+
+.banner__jobsCompany {
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner__jobsCompany > div:nth-child(2) {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-around;
+    max-width: 300px;
+    padding: 15px;
+}
+
+.banner__jobsCompany > div > img {
+    object-fit: contain;
+    height: 80px;
+}
+
+.banner__Name > span {
+    border: 1px solid rgb(83, 169, 250);
+    padding: 5px;
+    margin-left: 5px;
+    background-color: rgb(175, 204, 248);
+    font-size: 14px;
+}
+
+.banner__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner__right > img:nth-child(3) {
+    height: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px 0px 100px;
+    background-color: rgb(155, 214, 253);
+}
+
+.footer > h4 {
+    font-size: 12px;
+}

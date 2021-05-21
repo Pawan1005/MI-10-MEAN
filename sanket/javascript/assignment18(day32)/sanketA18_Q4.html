@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country and Capital</title>
+  </head>
+  <body>
+    <fieldset>
+      <p>Select country to find its capital</p>
+      <label>Country</label>
+      <select id="c" onchange="select()">
+        <option></option>
+        <option>India</option>
+        <option>China</option>
+      </select>
+      <label>Capital</label>
+      <select id="ca">
+        <option></option>
+        <option>New Delhi</option>
+        <option>Beijing</option>
+      </select>
+    </fieldset>
+    <script>
+      function select() {
+        let country = document.getElementById("c").value;
+        country == "India"
+          ? (document.getElementById("ca").value = "New Delhi")
+          : (document.getElementById("ca").value = "Beijing");
+      }
+    </script>
+  </body>
+</html>

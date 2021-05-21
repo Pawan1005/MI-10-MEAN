@@ -1,0 +1,43 @@
+body {
+    background-color: aquamarine;
+}
+
+body > h1 {
+    text-align: center;
+}
+
+body > .navigation  {
+    text-align: center;
+}
+
+body > .navigation > a:nth-child(2) {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 2px solid rgb(143, 60, 143);
+    border-right: 2px solid rgb(143, 60, 143);
+}
+
+.main {
+    display: grid;
+}
+
+.main__section1 > h2 {
+    text-align: center;
+}
+
+.main__section1 > .homepage {
+    display: inline-block;
+    justify-content: center;
+}
+
+.main > .main__section1 > .homepage > img:first-child {
+    float: right;
+}
+
+.main > .main__section1 > .homepage > img:last-child {
+    float: left;
+}
+
+.main > p {
+    display: block;
+}

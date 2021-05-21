@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./evenOrOdd.js"></script>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            
+            input {
+                padding: 5px;
+            }
+            
+            button {
+                margin-top: 10px;
+                margin-left: 60px;
+                border: none;
+                padding: 8px;
+                background-color: rgb(5, 84, 255);
+                color: white;
+                font-weight: 700;
+            }
+        </style>
+        <title>Even and Odd</title>
+    </head>
+    <body>
+        <h1>Check Even and Odd Number</h1>
+        <form>
+            <label for="number">Number:</label>
+            <input type="text" id="number" placeholder="Enter a Number">
+            <br>
+            <button type="submit" onclick="checkEvenOrOdd()">Check Even Number or Not</button>
+        </form>
+        <h4 id="even"></h4>
+    </body>
+</html>

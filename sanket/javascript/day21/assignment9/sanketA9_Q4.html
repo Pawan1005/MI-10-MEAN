@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>palindrome string</title>
+  </head>
+  <body>
+    <input type="text" id="no" />
+    <button onclick="palindromeString()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function palindromeString() {
+        let string, reverse;
+        string = document.getElementById("no").value;
+        j = string.length;
+        reverse = "";
+        for (i = j; i >= 0; i--) reverse = reverse + string.charAt(i);
+        if (string == reverse)
+          document.getElementById("p").innerHTML =
+            string + " is Palindrome string";
+        else
+          document.getElementById("p").innerHTML =
+            string + " is not Palindrome String";
+      }
+    </script>
+  </body>
+</html>

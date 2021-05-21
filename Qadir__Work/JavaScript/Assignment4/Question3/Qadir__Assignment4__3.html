@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./krishnamurthyChecker.js"></script>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            input {
+                padding: 5px;
+                margin-bottom: 15px;
+                outline-color: cornflowerblue;
+            }
+            button {
+                padding: 10px;
+                border: none;
+                background-color: darkorchid;
+                color: white;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+        </style>
+        <title>Krishnamurthy Number</title>
+    </head>
+    <body>
+        <h1>Krishnamurthy Number Checker</h1>
+        <form>
+            <label for="number">Number: </label>
+            <input type="text" id="number" placeholder="Enter a Number">
+            <br>
+            <button type="submit" onclick="isKrishnamurthy()">Krishnamurthy number or Not</button>
+        </form>
+        <p id="calculation"></p>
+        <p id="result"></p>
+    </body>
+</html>

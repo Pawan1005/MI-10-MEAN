@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sales</title>
+  </head>
+  <body>
+    <script>
+      class Salesman {
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+      }
+      class Sales extends Salesman {
+        constructor(id, name, noOfSales) {
+          super(id, name);
+          this.noOfSales = noOfSales;
+        }
+        sales() {
+          for (let i = 0; i < this.noOfSales; i++) {
+            let sale = parseInt(prompt("enter sale amount"));
+            try {
+              if (sale < 0) {
+                ++this.noOfSales;
+                throw "enter a valid sale amount can't be negative";
+              } else if (isNaN(sale)) {
+                ++this.noOfSales;
+                throw "enter a valid sale amount can't be a string ";
+              }
+              if (sale > 0 && sale <= 5000) commission += sale * 0.02;
+              if (sale > 5001 && sale <= 12000) commission += sale * 0.05;
+              if (sale > 12001 && sale <= 50000) commission += sale * 0.1;
+              if (sale > 50001) commission += sale * 0.15;
+            } catch (ex) {
+              alert(ex);
+            }
+          }
+        }
+        totalSales() {
+          document.write(
+            `id: ${this.id}, salesman-name: ${this.name},<br> total-commission for salesman is: ${commission}<br><br>`
+          );
+        }
+      }
+      let commission = 0;
+      let noOfSales = prompt("enter total no of sales made by salesman");
+      let id = prompt("enter salesman id");
+      let name = prompt("enter salesman name");
+      const sales = new Sales(id, name, noOfSales);
+      sales.sales();
+      sales.totalSales();
+    </script>
+  </body>
+</html>

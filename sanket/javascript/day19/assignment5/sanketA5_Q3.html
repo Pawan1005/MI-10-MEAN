@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime numbers</title>
+  </head>
+  <body>
+    no1: <input type="text" id="no1" /> no2: <input type="text" id="no2" />
+    <button onclick="cal()">calculate</button>
+    <p id="p"></p>
+    <script>
+      function cal() {
+        let n1 = document.getElementById("no1").value;
+        let n2 = document.getElementById("no2").value;
+
+        for (i = n1; i <= n2; i++) {
+          if (i == 1 || i == 0) continue;
+          let flag = 1;
+          for (j = 2; j <= i / 2; j++)
+            if (i % j == 0) {
+              flag = 0;
+              break;
+            }
+          if (flag == 1) {
+            document.write(i);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

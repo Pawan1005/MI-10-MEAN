@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generate table</title>
+    </head>
+    <body>
+        <h1>Generate Table</h1>
+        Enter the Number: <input type="number" id="input"><br>
+        <button type="submit" onclick="table()">Create</button>
+        <script>
+            function table() {
+                var number = (document.getElementById("input").value);
+                for (var i = 1; i <= 10; i++) {
+                    var res = i * number;
+                    document.write("<br>" + number + " * " + i + " = " + res);
+                }
+            }
+        </script>
+    </body>
+</html>

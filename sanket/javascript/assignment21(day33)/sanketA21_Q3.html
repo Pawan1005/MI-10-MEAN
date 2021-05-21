@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add edit save delete</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="t">
+      <tr>
+        <th>Select</th>
+        <th>Sr No.</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th>Operation</th>
+      </tr>
+      <tr id="row1">
+        <td><input id="rowCol10" type="radio" /></td>
+        <td id="rowCol11">1</td>
+        <td id="rowCol12">a</td>
+        <td id="rowCol13">123</td>
+        <td id="rowCol14">Delhi</td>
+        <td>
+          <button onclick="editRow('1')">Edit</button>
+          <button onclick="saveRow('1')">Save</button>
+          <button onclick="deleteRow('1')">Delete</button>
+        </td>
+      </tr>
+      <tr id="row2">
+        <td><input id="rowCol20" type="radio" /></td>
+        <td id="rowCol21">2</td>
+        <td id="rowCol22">b</td>
+        <td id="rowCol23">456</td>
+        <td id="rowCol24">Gurgaon</td>
+        <td>
+          <button onclick="editRow('2')">Edit</button>
+          <button onclick="saveRow('2')">Save</button>
+          <button onclick="deleteRow('2')">Delete</button>
+        </td>
+      </tr>
+      <tr id="row3">
+        <td><input id="rowCol30" type="radio" /></td>
+        <td id="rowCol31">3</td>
+        <td id="rowCol32">c</td>
+        <td id="rowCol33">789</td>
+        <td id="rowCol34">Noida</td>
+        <td>
+          <button onclick="editRow('3')">Edit</button>
+          <button onclick="saveRow('3')">Save</button>
+          <button onclick="deleteRow('3')">Delete</button>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <button onclick="addRow()">Add</button>
+    <script>
+      let table = document.getElementById("t");
+      let actRow = table.rows.length;
+      function addRow() {
+        table.insertRow().outerHTML = `<tr id="row${actRow}">
+            <td><input id="rowCol${actRow}0" type="radio"></td>
+            <td id="rowCol${actRow}1">${actRow}</td>
+            <td id="rowCol${actRow}2"><input type="text" id="nameTxt${actRow}"></td>
+            <td id="rowCol${actRow}3"><input type="text" id="mobileTxt${actRow}"></td>
+            <td id="rowCol${actRow}4"><input type="text" id="cityTxt${actRow}"></td>  
+            <td>
+              <button onclick="editRow(${actRow})">Edit</button>
+              <button onclick="saveRow(${actRow})">Save</button>
+              <button onclick="deleteRow(${actRow})">Delete</button>            
+            </td>
+          </tr>`;
+        actRow++;
+      }
+      function saveRow(actRow) {
+        let name = document.getElementById(`nameTxt${actRow}`).value;
+        let mobile = document.getElementById(`mobileTxt${actRow}`).value;
+        let city = document.getElementById(`cityTxt${actRow}`).value;
+        document.getElementById(`rowCol${actRow}2`).innerHTML = name;
+        document.getElementById(`rowCol${actRow}3`).innerHTML = mobile;
+        document.getElementById(`rowCol${actRow}4`).innerHTML = city;
+      }
+      function editRow(rowNo) {
+        let name = document.getElementById(`rowCol${rowNo}2`);
+        let mobile = document.getElementById(`rowCol${rowNo}3`);
+        let city = document.getElementById(`rowCol${rowNo}4`);
+        let save = document.getElementById(`rowCol${rowNo}5`);
+        let nameData = name.innerHTML;
+        let mobileData = mobile.innerHTML;
+        let cityData = city.innerHTML;
+        name.innerHTML = `<input type="text" id="nameTxt${rowNo}" value="${nameData}"/>`;
+        mobile.innerHTML = `<input type="text" id="mobileTxt${rowNo}" value="${mobileData}"/>`;
+        city.innerHTML = `<input type="text" id="cityTxt${rowNo}" value="${cityData}"/>`;
+      }
+      function deleteRow(rowNo) {
+        document.getElementById(`row${rowNo}`).outerHTML = "";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armstrong</title>
+</head>
+<body>
+  Enter any Number: <input id="val1">
+  <button onclick="armstrg()">Check</button></br></br>
+  <p id="demo"></p>
+  <script>
+    function armstrg() {
+      var arm = 0, actual_No, temp, num;
+      num = Number(document.getElementById("val1").value);
+      temp = num;
+      while (temp > 0) {
+        actual_No = temp % 10;
+        temp = parseInt(temp / 10);
+        arm = arm + actual_No * actual_No * actual_No;
+      }
+      if (arm == num) {
+        alert("Armstrong number");
+      }
+      else {
+        alert("Not Armstrong number");
+      }
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="./tempratureConvert.js"></script>
+        <title>Temprature Conversion</title>
+    </head>
+    <body>
+        <h1>Conversion of Celcius to Fahrenheit</h1>
+        <form>
+            <label for="temprature">Temp:</label>
+            <input type="text" id="temprature">
+            <span><sup>o</sup>C</span>
+            <button type="submit" onclick="celciusToFahrenheit()">Convert</button>
+        </form>
+        <h3>After Conversion</h3>
+        <p><span id="celcius"></span><sup>o</sup>C is equal to <span id="fahrnite"></span><sup>o</sup>F</p>
+    </body>
+</html>

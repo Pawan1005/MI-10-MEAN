@@ -1,0 +1,82 @@
+.loginmenu {
+    background-image: url('images/Background.png');
+    height: 600px;
+    width: 411px;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+h1, h2 {
+    margin-left: 30px;
+    margin-top: 80px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+p {
+    color: #fff;
+    margin-left: 15px;
+}
+
+input {
+    background-repeat: no-repeat;
+    background-position: 13px 13px;
+    width: 340px;
+    height: 47px;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.3);
+    background-color: #E5E5E5;
+    text-indent: 50px;
+}
+
+input[type=text] {
+    background-image: url('images/person.svg');
+}
+
+input[type=password] {
+    background-image: url('images/pass.svg');
+}
+
+button {
+    width: 162px;
+    height: 45px;
+    color: #fff;
+    font-weight: bolder;
+    background: #E98074;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px #C4C4C4;
+    border-radius: 10px;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+label {
+    margin-left: 50px;
+    color: #fff;
+}
+
+div>a :hover {
+    color: rgba(0, 0, 0, 0.51);
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.51);
+}
+
+.display {
+    display: flex;
+    margin-top: 50px;
+    gap: 3px;
+    margin-left: 30px;
+}
+
+ul, a {
+    text-decoration: none;
+    color: #fff;
+    list-style-type: none;
+}

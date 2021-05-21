@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Case</title>
+        <script>
+            function upper(){
+                var text= document.getElementById("txt").value;
+                var t=text.toUpperCase();
+                document.getElementById("case").innerHTML = t;
+            }
+            function lower(){
+                var text= document.getElementById("txt").value;
+                var t=text.toLowerCase();
+                document.getElementById("case").innerHTML = t;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Conversion</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="txt">Enter text</label>
+            <input type="text" id="txt">
+            <button type="button" onclick="upper()">Uppercase</button>
+            <button type="button" onclick="lower()">Lowercase</button>
+            <h4 id="case"></h4>
+        </form>
+    </body>
+</html>

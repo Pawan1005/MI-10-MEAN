@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page validation</title>
+  </head>
+  <body>
+    <label>FirstName: </label>
+    <input type="text" id="f" />
+    <label>LastName: </label>
+    <input type="text" id="l" /><br /><br />
+    <label>UserName: </label>
+    <input type="text" id="u" /><br /><br />
+    <label>Password: </label>
+    <input type="text" id="p" /><br /><br />
+    <button onclick="login()">Login</button>
+    <script>
+      function login() {
+        let username = document.getElementById("u").value;
+        let password = document.getElementById("p").value;
+        if (
+          /^[A-Za-z]/.test(username) &&
+          username.length >= 8 &&
+          username.length <= 15 &&
+          /[A-za-z]/.test(password) &&
+          /\d/.test(password) &&
+          /\W/.test(password) &&
+          password.length >= 8
+        )
+          alert("login successful");
+        else alert("login failed");
+      }
+    </script>
+  </body>
+</html>

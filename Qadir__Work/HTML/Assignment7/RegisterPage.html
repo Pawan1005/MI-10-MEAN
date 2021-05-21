@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Register.css">
+        <title>Register Page</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header__logo">
+                <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="naukri_Logo">
+            </div>
+            <p>Already Registered?<a href="LoginPage.html">Login</a>here</p>
+        </div>
+        <div class="navbar">
+            <a href="RegisterPage.html" target="_self">Personal</a>
+            <a href="Education.html" target="_self">Education</a>
+        </div>
+        <div class="formSection">
+            <form action="Education.html" target="_self">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your full Name">
+                <label for="emailid">Email ID*</label>
+                <input type="email" required name="email" id="email" placeholder="Enter your active email id to receive relevent jobs">
+                <label for="password">Create Password*</label>
+                <input type="password" required name="password" id="password" placeholder="Minimum 6 characters">
+                <label for="mobile">Mobile number*</label>
+                <input type="text" required placeholder="91+ Where recruiter can contact you" name="mobile" id="mobile">
+                <label for="city">Current City*</label>
+                <input type="text" name="city" required placeholder="Tell us about your current city" id="city">
+                <label for=""></label>
+                <label for="terms">
+                    <input type="checkbox" name="terms" id="terms">
+                    I agree to the Terms and Conditions and Privacy Policy governing the use of Naukri.com.
+                </label>
+                <div></div>
+                <button type="submit" id="register">Register Now</button>
+            </form>
+        </div>
+    </body>
+</html>

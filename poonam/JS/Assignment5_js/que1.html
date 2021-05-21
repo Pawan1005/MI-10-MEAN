@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Que 1</title>
+        <script>
+        function calculate(){
+                var n = parseInt(document.getElementById ("val").value);
+                var middle,last,sum,first;
+                last = n%10;
+                let m = parseInt(n/10);
+                middle = m%10;
+                first = parseInt(n/100);
+                sum = last + first;
+                if(sum==middle){
+                    document.getElementById("result").innerHTML= "Sum match";
+                }
+                else{
+                    document.getElementById("result").innerHTML="Sum does not match";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Check middle digit of given 3 digit number is Equal to the Sum of Other Two digits or Not.</h1>
+        <form action="" style="text-align: center; margin-top: 50px;">
+            <label for="val">Enter Number</label>
+            <input type="number" maxlength="3" id="val">
+            <button type="button" onclick="calculate()">Check</button>
+            <h4 id="result"></h4>
+        </form>
+    </body>
+</html>

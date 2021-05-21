@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Merge Sort Method 1</title>
+    </head>
+    <body>
+        <script>
+            var sectionA = [];
+            var sectionB = [];
+            var result = [];
+            for (var i = 0; i < 5; i++) {
+                sectionA[i] = parseInt(prompt("Enter marks for A section:"));
+            }
+            for (var i = 0; i < 5; i++) {
+                sectionB[i] = parseInt(prompt("Enter marks for B section:"));
+            }
+            document.write("Before sorting");
+            document.write("<br>Section A: " + sectionA);
+            document.write("<br>Section B: " + sectionB);
+            var temp;
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j <= i; j++) {
+                    if (sectionA[j] > sectionA[i]) {
+                        temp = sectionA[j];
+                        sectionA[j] = sectionA[i];
+                        for (var k = i; k > j; k--) {
+                            sectionA[k] = sectionA[k - 1];
+                        }
+                        sectionA[k + 1] = temp;
+                    }
+                }
+            }
+            document.write("<br>Array a (after sorting) : " + sectionA);
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j <= i; j++) {
+                    if (sectionB[j] > sectionB[i]) {
+                        temp = sectionB[j];
+                        sectionB[j] = sectionB[i];
+                        for (var k = i; k > j; k--) {
+                            sectionB[k] = sectionB[k - 1];
+                        }
+                        sectionB[k + 1] = temp;
+                    }
+                }
+            }
+            document.write("<br>Array b (after sorting) : " + sectionB);
+            var i, j, k;
+            for (i = j = k = 0; i <= 9;) {
+                if (sectionA[i] <= sectionB[j]) {
+                    result[k] = sectionA[i];
+                    k++;
+                    i++;
+                }
+                else {
+                    result[k] = sectionB[j];
+                    k++;
+                    j++;
+                }
+                if (i == 5 || j == 5) {
+                    break;
+                }
+            }
+            for (; i <= 4;) {
+                result[k] = sectionA[j];
+                k++;
+                i++;
+            }
+            for (; j <= 4;) {
+                result[k] = sectionB[j];
+                k++;
+                j++;
+            }
+            document.write("<br>Result array (after sorting) : " + result);
+        </script>
+    </body>
+</html>

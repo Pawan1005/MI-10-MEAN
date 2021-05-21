@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Fibonacci Series Upto Given Number</h3>
+    <form>
+      <label for="number">Number: </label>
+      <input type="text" id="number" />
+      <br />
+      <button type="submit" onclick="fibonacciSeries()">Fibonacci</button>
+    </form>
+    <p id="result"><b></b></p>
+    <script>
+      function fibonacciSeries() {
+        event.preventDefault();
+        let numbers = parseInt(document.getElementById("number").value);
+        let result = document.getElementById("result");
+        let firstNumber = 0,
+        let secondNumber = 1;
+        let nextNumber = 0;
+        result.style.display = "block";
+        for (let number = 1; number <= numbers; number++) {
+          result.innerHTML += ` ${firstNumber}`;
+          nextNumber = firstNumber + secondNumber;
+          firstNumber = secondNumber;
+          secondNumber = nextNumber;
+        }
+      }
+    </script>
+  </body>
+</html>

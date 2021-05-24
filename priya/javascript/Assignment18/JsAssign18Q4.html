@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment18Q4</title>
+</head>
+<body>
+   <fieldset style="width: 300px; height: 100px;">
+    <p style="float: left;"> country 
+        <select id="country">
+            <option value="ConOpt1" >select</option>
+            <option value="ConOpt2" >India</option>
+            <option value="ConOpt3" >china</option>
+        </select>
+    </p>
+    <p style="float: right;"> Capital 
+        <select id="capital" >
+            <option value="CapOpt1" >select</option>
+            <option value="CapOpt2" >delhi</option>
+            <option value="CapOpt3" > Bijing</option>
+        </select>
+   </p>
+   </fieldset>
+   <p id="demo"></p>
+   <br>
+   <button onclick="show()">show</button>
+   <script>
+       function show(){
+           var get1;
+           get1 = document.getElementById("country").value;
+            if (get1 == "ConOpt2"){
+              document.getElementById("capital").value = "CapOpt2";
+            }
+            else if (get1 == "ConOpt3"){
+              document.getElementById("capital").value = "CapOpt3";
+            }
+            else{
+              document.getElementById("demo").innerHTML = "Please select proper  country"
+            }
+          }
+     </script>
+  </body>
+</html>

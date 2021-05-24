@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voter or not</title>
+    </head>
+    <body>
+        <p>
+            <fieldset style="width: 380px; height: 180px;" >
+              Enter Name : <input type="text" id="name" placeholder="Enter Name"><br>
+              <br>
+              Enter Age : <input type="text" id="Age" placeholder="Enter Age"><br>
+              <br>
+              <button onclick="NameAge()">Show</button><br>
+              <p id="demo"></p> 
+            </fieldset>
+        </p>
+        <script>
+            function NameAge(){
+                var name,age ;
+                age = parseInt(document.getElementById("Age").value);
+                name = document.getElementById("name").value;
+                if (age > 0 && age < 120){
+                    if (age >= 18 ){
+                        document.getElementById("demo").innerHTML= ` ${name} is eligble to vote  `;
+                    }
+                    else{
+                        document.getElementById("demo").innerHTML= `${name} is not eligible to vote`;
+                    }
+                }
+                else 
+                {
+                alert("Enter valid age");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 1</title>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <h4>Enter the following details</h4>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname"><br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname"><br><br>
+        <label for="uname">User Name:</label>
+        <input type="text" id="uname"><br><br>
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd"><br><br>
+        <button onclick="login()">Login</button>
+        <script>
+            function login() {
+                var userName = document.getElementById("uname").value;
+                var pass = document.getElementById("pwd").value;
+                let regex_user = /^[a-z A-Z 0-9]{8-15}$/;
+                let regex_pass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-z A-Z 0-9 !@#$%^&*]{1-8}$/;
+                if (regex_user.test(userName) && regex_pass.test(pass)) {
+                    alert("Login");
+                } else {
+                    alert("Enter valid username and password");
+                }
+            }
+        </script>
+    </body>
+</html>

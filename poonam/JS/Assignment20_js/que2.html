@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Que 2</title>
+        <style>
+            table,
+            td,
+            tr,
+            th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                width: 300px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="tdata">
+            <tr>
+                <td>Sr. No.</td>
+                <td>Name</td>
+            </tr>
+            <tr id="row1">
+                <td>1.</td>
+                <td>Poonam</td>
+            </tr>
+            <tr id="row2">
+                <td>2.</td>
+                <td>Neha</td>
+            </tr>
+        </table>
+        <br>
+        Enter no of row: <input type="text" id="rowno"><br><br>
+        Enter no of column: <input type="text" id="colno"><br><br>
+        Enter data to update: <input type="text" id="data"><br><br>
+        <button onclick="add()">Add row</button>
+        <button onclick="changeContent()">Update</button>
+        <script>
+            function add() {
+                var table = document.getElementById("tdata");
+                var row = table.insertRow(-1);
+                var col1 = row.insertCell();
+                var col2 = row.insertCell();
+            }
+            function changeContent() {
+                rn = document.getElementById("rowno").value;
+                cn = document.getElementById("colno").value;
+                content = document.getElementById("data").value;
+                var x = document.getElementById('tdata').rows[rn].cells;
+                x[cn].innerHTML = content;
+            }
+        </script>
+    </body>
+</html>

@@ -3,7 +3,7 @@ import React from 'react'
 function Timer({date}) {
     return (
         <div className="App">
-            <h1>Clock</h1>
+            <h1>Clock without setState</h1>
             <h2>
                 Today Date: {date.toLocaleString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}
             </h2>

@@ -7,10 +7,28 @@ class TimerClass extends Component {
             date: new Date()
         };
     }
+
+    componentDidMount() {
+        // using setInterval method for updating date value every 1 second
+        this.timer = setInterval(() => this.clock(), 1000);
+    }
+
+    // using setState method for updating Date value
+    clock() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
+    componentWillUnmount() {
+        // If component remove this.timer and clearInterval method stop the time.
+        clearInterval(this.timer);
+    }
+
     render() {
         return (
             <div className="App">
-                <h1>The Class Component</h1>
+                <h1>The Class Component With setState Method</h1>
                 <h2>
                     Today Date: {this.state.date.toLocaleString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}
                 </h2>

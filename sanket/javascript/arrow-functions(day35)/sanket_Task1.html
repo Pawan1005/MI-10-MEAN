@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this keyword</title>
+    <style>
+      h3,
+      span,
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>using arrow function</h2>
+    <h3 id="ahid">this is heading</h3>
+    <span id="asid">this is span</span>
+    <button id="abid">this is button</button>
+    <p id="apid"></p>
+    <br />
+    <h2>using function</h2>
+    <h3 id="hid">this is heading</h3>
+    <span id="sid">this is span</span>
+    <button id="bid">this is button</button>
+    <p id="pid"></p>
+
+    <script>
+      function normalFunction() {
+        document.getElementById("pid").innerHTML = this;
+      }
+
+      document.getElementById("hid").addEventListener("click", normalFunction);
+      document.getElementById("sid").addEventListener("click", normalFunction);
+      document.getElementById("bid").addEventListener("click", normalFunction);
+
+      arrowFunction = () => {
+        document.getElementById("apid").innerHTML += `${this} `;
+      };
+
+      document.getElementById("ahid").addEventListener("click", arrowFunction);
+      document.getElementById("asid").addEventListener("click", arrowFunction);
+      document.getElementById("abid").addEventListener("click", arrowFunction);
+    </script>
+  </body>
+</html>

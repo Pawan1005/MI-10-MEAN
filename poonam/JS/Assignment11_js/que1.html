@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>que 1</title>
+    </head>
+    <body>
+        <script>
+            var rollno = [];
+            var marks = [];
+            var totalMarks = [];
+            function add(){
+                for (var i = 0; i < 10; i++) {
+                    rollno.push(parseInt(prompt("Roll no of student" +(i+1))));
+                    marks.push(parseInt(prompt("Marks of student" +(i+1))));
+                    if (marks[i] > 50 || marks[i] < 0) {
+                        alert("Error – Invalid Marks!!");
+                    }
+                }
+                for (var i = 0; i < 10; i++) {
+                    totalMarks[i] = marks[i] + 0.2 * marks[i];
+                
+                }
+                for (var i = 0; i < 10; i++){
+                    document.getElementById("display").innerHTML = `<br>Roll NO ${rollno}<br>Marks ${totalMarks}`;
+                }
+            }
+            function display() {
+                var rollValue = parseInt(document.getElementById("input").value);
+                var result = rollno.indexOf(rollValue);
+                document.getElementById("res").innerText = `Marks of Roll no ${rollValue} is ${totalMarks[result]}`;
+            }
+        </script>
+        <h4>Click here to add roll no and marks of students:</h4>
+        <button onclick="add()">Add</button><br>
+        <p id="display"></p>
+        Roll no: <input type="number" id="input"><br><br>
+        <button onclick="display()">Marks</button>
+        <h2 id="res"></h2>
+    </body>
+</html>

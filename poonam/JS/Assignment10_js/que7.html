@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Que 7</title>
+    </head>
+    <body>
+        <script>
+            var input = prompt("Enter value: ");
+            document.write("The given value is: " + input + "<br>");
+            var reg_exp = /^[a-z A-Z 0-9]+$/i;
+            if (reg_exp.test(input)){
+                document.write("The input value is Alphanumeric");
+            }
+            else {
+                document.write("The input value is not Alphanumeric");
+            }
+        </script>
+    </body>
+</html>

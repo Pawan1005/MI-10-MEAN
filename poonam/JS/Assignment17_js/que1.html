@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report card</title>
+</head>
+
+<body>
+    <h1>Enter the details</h1>
+    <form>
+        <label>Roll No.:</label><br>
+        <input type="text" required id="roll"><br><br>
+        <label>Name:</label><br>
+        <input type="text" required id="name"><br><br>
+        <label>Maths:</label><br>
+        <input type="text" required id="maths"><br><br>
+        <label>Science:</label><br>
+        <input type="text" required id="science"><br><br>
+        <label>History:</label><br>
+        <input type="text" required id="history"><br><br>
+        <button type="submit" id="btn" onclick="result()">Submit</button>
+    </form>
+    <div id="report"></div>
+    <script>
+        function result() {
+            var roll_no, name, maths, science, history;
+            roll_no = document.getElementById("roll").value;
+            name = document.getElementById("name").value;
+            name = name.toUpperCase();
+            maths = parseInt(document.getElementById("maths").value);
+            science = parseInt(document.getElementById("science").value);
+            history = parseInt(document.getElementById("history").value);
+            var regexp_marks = /^[0-9]*$/;
+            if (regexp_marks.test(maths) && regexp_marks.test(science) && regexp_marks.test(history)) {
+                document.write("******Report Card******")
+                document.write(`<br> Name: ${name} <br>Rollno:${roll_no}<br>Math:${maths}<br>Science:${science}<br>History:${history} `);
+                var total, average, percentage;
+                total = maths + science + history;
+                average = total / 3;
+                average = average.toFixed(2);
+                percentage = (total / 300) * 100;
+                percentage = percentage.toFixed(2);
+                document.write(`<br> Total: ${total}<br> Average: ${average}<br> Percentage: ${percentage}%<br>`);
+                if (percentage >= 80) {
+                    document.write("<br>Grade: " + "<p style= 'color: green;'>A+</p>");
+                }
+                else if (percentage < 80 && percentage >= 60) {
+                    document.write("<br>Grade: " + "<p style= 'color: green;'>A</p>");
+                }
+                else if (percentage < 60 && percentage >= 55) {
+                    document.write("<br>Grade: " + "<p style= 'color: orange;'>B+</p>");
+                }
+                else if (percentage < 55 && percentage >= 40) {
+                    document.write("<br>Grade: " + "<p style= 'color: orange;'>B</p>");
+                }
+                else if (percentage < 40) {
+                    document.write("<br>Grade: " + "<p style= 'color: red;'>No Grade</p>");
+                }
+            }
+            else {
+                alert("Marks cant be alphanumeric");
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>

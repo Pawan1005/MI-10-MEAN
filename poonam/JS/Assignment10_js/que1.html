@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>que 1</title>
+    </head>
+    <body>
+        <script>
+            var str = prompt("Enter a string: ");
+            document.write(str + "<br>");
+            var res = str.match(/^[A-Z]/);
+            if (res != null) {
+                document.write("the first character of a string is uppercase");
+                
+            }
+            else {
+                document.write("the first character of a string is not uppercase");
+            }
+        </script>
+    </body>
+</html>

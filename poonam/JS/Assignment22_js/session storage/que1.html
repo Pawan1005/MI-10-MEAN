@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SessionStorage POST method</title>
+    </head>
+    <body>
+        <form action="result.html" method="POST">
+            <label for="rollno">Roll no:</label>
+            <input type="text" id="rollno" name="rollno" /><br />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" /><br />
+            <label for="sub1">Subject 1:</label>
+            <input type="text" id="sub1" name="sub1" /><br />
+            <label for="sub2">Subject 2:</label>
+            <input type="text" id="sub2" name="sub2" /><br />
+            <label for="sub3">Subject 3:</label>
+            <input type="text" id="sub3" name="sub3" /><br />
+            <label for="sub4">Subject 4:</label>
+            <input type="text" id="sub4" name="sub4" /><br />
+            <label for="sub5">Subject 5:</label>
+            <input type="text" id="sub5" name="sub5" /><br />
+            <button onclick="readData()">submit</button>
+        </form>
+        <script>
+            function readData() {
+                var roll_no, name, subject1, subject2, subject3, subject4, subject5;
+                roll_no = document.getElementById("rollno").value;
+                name = document.getElementById("name").value;
+                subject1 = document.getElementById("sub1").value;
+                subject2 = document.getElementById("sub2").value;
+                subject3 = document.getElementById("sub3").value;
+                subject4 = document.getElementById("sub4").value;
+                subject5 = document.getElementById("sub5").value;
+
+                sessionStorage.setItem("rollno", roll_no);
+                sessionStorage.setItem("name", name);
+                sessionStorage.setItem("sub1", subject1);
+                sessionStorage.setItem("sub2", subject2);
+                sessionStorage.setItem("sub3", subject3);
+                sessionStorage.setItem("sub4", subject4);
+                sessionStorage.setItem("sub5", subject5);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment17Q3</title>
+  </head>
+  <body>
+    <script>
+      class report {
+        constructor(name, rollno, math, Science, history) {
+          this.name = name;
+          this.rollno = rollno;
+          this.math = math;
+          this.science = Science;
+          this.history = history;
+        }
+        showInfo() {
+          var upper_name = this.name.toUpperCase();
+          document.write("*********** REPORT CARD **********<br>");
+          document.write("Name : " + upper_name + "<br>ROll number :" + this.rollno);
+        }
+        marks() {
+          var tot, avg;
+          tot = (this.math + this.science + this.history) / 3;
+          avg = ((this.math + this.science + this.history) / 300) * 100;
+          this.total = tot.toFixed(2);
+          this.percentage = avg.toFixed(2);
+          document.write("<br>Total is :" +this.total +"<br>percentage is :" +this.percentage);
+        }
+        grade() {
+          if (this.percentage >= 80) {
+            document.write("<b><br>Grade:</b>" + "<p style= 'color: green;'> A+ </p>");
+          } 
+          else if (this.percentage < 80 && this.percentage >= 60) {
+            document.write("<b><br>Grade:</b>" + "<p style= 'color: green;'> A </p>");
+          } 
+          else if (this.percentage < 60 && this.percentage >= 55) {
+            document.write("<b><br>Grade:</b>" + "<p style= 'color: orange;'> B+ </p>" );
+          } 
+          else if (this.percentage < 55 && this.percentage >= 40) {
+            document.write("<b><br>Grade:</b>" + "<p style= 'color: orange;'> B </p>" );
+          } 
+          else if (this.percentage < 40) {
+            document.write("<b><br>Grade:</b>" + "<p style= 'color: red;'> No grade </p>");
+          } 
+          else {
+            document.write("Enter valid input");
+          }
+        }
+      }
+      let input_name = prompt("Enter student name : ");
+      let input_roll = parseInt(prompt("Enter roll number"));
+      let mark_math = parseInt(prompt("Enter marks of math"));
+      let mark_science = parseInt(prompt("Enter marks of math"));
+      let mark_history = parseInt(prompt("Enter marks of math"));
+      let r_card = new report(
+        input_name,
+        input_roll,
+        mark_math,
+        mark_science,
+        mark_history
+      );
+      r_card.showInfo();
+      r_card.marks();
+      r_card.grade();
+    </script>
+  </body>
+</html>

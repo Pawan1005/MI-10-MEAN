@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Display 5 Names Using Array</title>
+
+    <style>
+      .container {
+        margin-top: 15%;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1>Display Names Using Array :</h1>
+
+      <button type="submit" onclick="createArray()" class="btn btn-primary">
+        Enter Names
+      </button>
+
+    </div>
+
+    <script>
+      function createArray() {
+        var arr = [];
+        var i;
+
+        for (i = 0; i <= 4; i++) {
+          arr[i] = prompt("Enter 5 Names :");
+        }
+
+        document.write("Entered Names List: " + arr + "<br />");
+        document.write("<br />");
+        document.write("List of names : ");
+        document.write("<br / >");
+
+        for (i = 0; i <= arr.lenght - 1; i++) {
+          document.write(arr[i] + ",   " + "<br />");
+        }
+        document.write("<br />");
+        for (i = 0; i <= arr.length - 1; i++) {
+          document.write("Name " + (i + 1) + ": " + arr[i] + "<br />");
+          document.write("<br />");
+        }
+      }
+    </script>
+  </body>
+</html>

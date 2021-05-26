@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping</title>
+    </head>
+    <body>
+        <p>
+            <fieldset style="width: 380px; height: 130px;" >
+              Enter Amount : <input type="text" id="amount" placeholder="Enter amount"><br>
+              <br>
+              <button onclick="Shopping()">Calculate</button><br>
+              <p id="demo"></p> 
+            </fieldset>
+        </p>
+        <script>
+            function Shopping(){
+                var amount,cal,total,tot_amt;
+                amount = parseInt(document.getElementById("amount").value);
+                if (amount > 0){
+                    if (amount >= 1000 ){
+                         total = ((15/100)*amount);
+                         tot_amt = amount - total;
+                         document.getElementById("demo").innerHTML= `Total amount : ${tot_amt}  after discount `;
+                        }
+                    else{
+                        total = ((5/100)*amount);
+                        tot_amt = amount - total;
+                        document.getElementById("demo").innerHTML= `Total amount :  ${tot_amt}  after discount `;
+                    }
+                }
+                else {
+                    alert("Enter valid amount");
+                }
+            }
+        </script>
+    </body>
+</html>

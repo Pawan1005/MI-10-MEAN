@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ClassComp from './Component/class'
+import State from './Component/state'
+import FunComp from './Component/funComp';
+import Clock from './Component/clock'
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <ClassComp/>
+    <FunComp/>
+    <Clock/>
+    <State/>
   </React.StrictMode>,
   document.getElementById('root')
 );

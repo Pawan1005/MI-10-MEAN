@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Check First letter is capital or not</title>
+
+    <style>
+      .container {
+        margin-top: 15%;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1>Check first letter of string is capital or not</h1>
+      <br />
+      <input type="text" id="capLet" />
+      <button type="submit" onclick="chkCapLet()" class="btn btn-primary">
+        Check
+      </button>
+      <br /><br />
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function chkCapLet() {
+        var _str, _show, _f_charLet, _chkUpperCase;
+        _str = document.getElementById("capLet").value;
+        _show = document.getElementById("result");
+        _f_charLet = /^[A-Z]/;
+        _chkUpperCase = _f_charLet.test(_str);
+        if (_chkUpperCase) {
+          _show.innerHTML += `First character of  <strong>${_str}</strong> is uppercase`;
+        } else {
+          _show.innerHTML += `First character of  <strong>${_str}</strong> is not uppercase`;
+        }
+      }
+    </script>
+  </body>
+</html>

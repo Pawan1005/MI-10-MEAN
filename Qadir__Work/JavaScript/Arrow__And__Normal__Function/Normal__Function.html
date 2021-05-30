@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Normal Function</title>
+    </head>
+    <body>
+        <h1>Normal Function with <q>this</q> keyword</h1>
+        <h2 id="heading1">This is Heading</h2>
+        <p id="pid" class="paragraph">This is Paragraph</p>
+        <button id="check" type="button">Check</button>
+        <p id="demo"></p>
+        <script>
+            function message() {
+            // print element class name or either Element Object
+            return (document.getElementById("demo").innerHTML +=
+                (this.id ? this.id : this) + "<br />");
+            }
+
+            window.addEventListener("load", message);
+
+            document.getElementById("heading1").addEventListener("click", message);
+            document.getElementById("pid").addEventListener("click", message);
+            document.getElementById("check").addEventListener("click", message);
+        </script>
+    </body>
+</html>

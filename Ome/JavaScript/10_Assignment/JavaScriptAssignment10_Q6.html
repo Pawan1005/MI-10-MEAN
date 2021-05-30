@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Check valid URL</title>
+
+    <style>
+      .container {
+        margin-top: 15%;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1>Check URL is valid or not</h1>
+      <br />
+      <input type="text" id="validURL" />
+      <button type="submit" onclick="chkURL()" class="btn btn-primary">
+        Check
+      </button>
+      <br /><br />
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function chkURL($_str) {
+        var $_str = document.getElementById("validURL").value;
+        var $_show = document.getElementById("result");
+        var $_regExp =
+          /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+        $_regExp.test($_str)
+          ? ($_show.innerHTML += `Given URL is valid <br><br>`)
+          : ($_show.innerHTML += `Given URL is not valid <br><br>`);
+      }
+    </script>
+  </body>
+</html>

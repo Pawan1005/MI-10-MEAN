@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Prime Palindrome Number</title>
+
+    <style>
+      .container {
+        margin-top: 15%;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1>Check no. is prime palindrome or not</h1>
+      <br />
+      <input type="number" id="getNum" />
+      <button
+        type="submit"
+        onclick="chkPrimePalindrome()"
+        class="btn btn-primary"
+      >
+        Check
+      </button>
+      <br />
+      <br />
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function chkPrimePalindrome() {
+        var num = document.getElementById("getNum").value;
+        var show = document.getElementById("result");
+
+        let isPrime = true;
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          var revNumber = num.toString().split("").reverse().join("");
+
+          if (num == revNumber) {
+            show.innerHTML += `${num} : The given number is prime palindrome number <br /><br />`;
+          } else {
+            show.innerHTML += `${num} : The given number is not prime palindrome number<br /><br />`;
+          }
+        } else {
+          show.innerHTML += `${num} : The given number is not prime palindrome number<br /><br />`;
+        }
+      }
+    </script>
+  </body>
+</html>

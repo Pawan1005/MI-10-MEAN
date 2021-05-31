@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-mail address</title>
+    </head>
+    <body>
+        <script>
+            var input = prompt("Enter your Email address: ");
+            document.write("Email address: " + input + "<br>");
+            var exp = / ([a-z] [A-Z] [0-9] [! # $ % & ' * + - / = ? ^ _ ` { | } ~]+ )@([a-z A-Z 0-9]+).([a-z]+)$/g;
+            if (exp.test(input)) {
+                document.write("This email address is valid.");
+            }
+            else {
+                document.write("This email address is not valid.");
+            }
+        </script>
+    </body>
+</html>

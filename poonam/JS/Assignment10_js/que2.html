@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Credit card validation</title>
+    </head>
+    <body>
+        <script>
+            var input = prompt("Enter your credit card number: ");
+            document.write("Credit card number: " + input + "<br>");
+            var visa, masterCard, discover, amex, dinersClub, jcb;
+            visa = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            masterCard = /^(?:5[1-5][0-9]{14})$/;
+            discover = /^(?:6(?:011|5[0-9]{2})[0-9]{12})$/;
+            amex = /^(?:3[47][0-9]{13})$/;
+            dinersClub = /^(?:3(?:0[0-5]|[68][0-9])[0-9]{11})$/;
+            jcb = /^(?:(?:2131|1800|35[0-9]{3})[0-9]{11})$/;
+            if (visa.test(input) || masterCard.test(input)  || discover.test(input)  || amex.test(input)  || dinersClub.test(input)  || jcb.test(input)) {
+                document.write("The credir card number is valid.");
+            }
+            else {
+                document.write("The credir card number is not valid.");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REPORT CARD</title>
+    </head>
+    <body>
+        <h4>Result</h4>
+        <p>RollNo: <span id="rollno"></span></p>
+        <p>Name: <span id="name"></span></p>
+        <p>Subject 1: <span id="sub1"></span></p>
+        <p>Subject 2: <span id="sub2"></span></p>
+        <p>Subject 3: <span id="sub3"></span></p>
+        <p>Subject 4: <span id="sub4"></span></p>
+        <p>Subject 5: <span id="sub5"></span></p>
+        <p>Total: <span id="total"></span></p>
+        <p>Percentage: <span id="percentage"></span>%</p>
+        <p>Grade: <span id="grade"></span></p>
+        <script>
+            window.addEventListener("load", () => {
+                let params = new URL(document.location).searchParams;
+                var roll_no, name, subject1, subject2, subject3, subject4, subject5;
+                roll_no = params.get("rollno");
+                name = params.get("name");
+                subject1 = params.get("sub1");
+                subject2 = params.get("sub2");
+                subject3 = params.get("sub3");
+                subject4 = params.get("sub4");
+                subject5 = params.get("sub5");
+
+                document.getElementById("rollno").innerHTML = roll_no;
+                document.getElementById("name").innerHTML = name;
+                document.getElementById("sub1").innerHTML = subject1;
+                document.getElementById("sub2").innerHTML = subject2;
+                document.getElementById("sub3").innerHTML = subject3;
+                document.getElementById("sub4").innerHTML = subject4;
+                document.getElementById("sub5").innerHTML = subject5;
+                var total, percentage;
+                total = parseInt(subject1) + parseInt(subject2) + parseInt(subject3) + parseInt(subject4) + parseInt(subject5);
+
+                percentage = total / 5;
+                document.getElementById("total").innerHTML = total;
+                document.getElementById("percentage").innerHTML = percentage;
+                if (percentage >= 80) {
+                    document.getElementById("grade").innerHTML = "<p style= 'color: green;'>A+</p>";
+                }
+                else if (percentage < 80 && percentage >= 60) {
+                    document.getElementById("grade").innerHTML = "<p style= 'color: green;'>A</p>";
+                }
+                else if (percentage < 60 && percentage >= 55) {
+                    document.getElementById("grade").innerHTML = "<p style= 'color: orange;'>B+</p>";
+                }
+                else if (percentage < 55 && percentage >= 40) {
+                    document.getElementById("grade").innerHTML = "<p style= 'color: orange;'>B</p>";
+                }
+                else if (percentage < 40) {
+                    document.getElementById("grade").innerHTML = "<p style= 'color: red;'>No Grade</p>";
+                }
+            });
+        </script>
+    </body>
+</html>

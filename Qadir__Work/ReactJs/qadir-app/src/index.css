@@ -19,4 +19,56 @@ code {
 .btn {
   font-size: 15px !important;
   font-weight: 700 !important;
+
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+li {
+  width: 60%;
+  margin-bottom: 15px;
+  /* display: grid;
+  align-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(9, 100px); */
+  border-bottom: 2px solid rgb(252, 3, 3);
+}
+
+.btn {
+  margin-left: 10px;
+}
+
+.btn {
+  margin-top: 15px !important;
+}
+
+input {
+  margin-left: 35px !important;
+}
+
+.fruit {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 300px;
+  border: 5px double black;
+}
+
+.fruit-footer {
+  width: 290px;
+  border: 1px solid black;
+  padding: 10px 40px 10px 40px;
+}
+
+h1 {
+  margin-left: 40px;
+  color: rgb(3, 111, 199);
+}
+
+li {
+  grid-template-columns: repeat(1,100px) !important;
+}
+
+.fruitInput {
+  margin-left: 10px !important;
+  width: 160px;
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function declaration, expression and arrow function</title>
+  </head>
+  <body>
+    <p id="fd"></p>
+    <p id="fe"></p>
+    <p id="af"></p>
+    <p>arrow function eg addition of two no: <span id="afe"></span></p>
+
+    <script>
+      function show() {
+        return "this is function declaration";
+      }
+
+      let showFunction = function () {
+        return "this is function expression";
+      };
+
+      let arrowFunction = () => {
+        return "this is arrow function ";
+      };
+
+      let x = parseInt(prompt("enter a no"));
+      let y = parseInt(prompt("enter a no"));
+
+      let sum = (a, b) => a + b;
+
+      document.getElementById("fd").innerHTML = show();
+      document.getElementById("fe").innerHTML = showFunction();
+      document.getElementById("af").innerHTML = arrowFunction();
+      document.getElementById("afe").innerHTML = sum(x, y);
+    </script>
+  </body>
+</html>

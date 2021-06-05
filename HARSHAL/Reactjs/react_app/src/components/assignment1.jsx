@@ -4,21 +4,21 @@ class Currencyconvertor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            amount: "",
-            convert: "",
+            amount: 0,
+            convert: 0,
         };
     }
-    changeamount = (event) => {
+    ChangeAmount = (event) => {
         this.setState({
             amount: event.target.value,
         });
     };
-    changecurrency = (event) => {
+    ChangeCurrency = (event) => {
         this.setState({
             currency: event.target.value,
         });
     };
-    setcurrency = (event) => {
+    SetCurrency = (event) => {
         event.preventDefault();
         const convert =
             this.state.currency === "Pound"
@@ -35,17 +35,17 @@ class Currencyconvertor extends Component {
                 <input
                     type="number"
                     value={this.state.amount}
-                    onChange={this.changeamount}
+                    onChange={this.ChangeAmount}
                 />
                 <select
                     value={this.state.currency}
-                    onChange={this.changecurrency}
+                    onChange={this.ChangeCurrency}
                 >
                     <option value="">select</option>
                     <option value="Pound">Pound</option>
                     <option value="Dollar">United States Dollar</option>
                 </select>
-                <button onClick={this.setcurrency}>CALCULATE</button>
+                <button onClick={this.SetCurrency}>CALCULATE</button>
                 <h2>
                     conversion of {this.state.amount}rs to {this.state.currency}{" "}
                     :- {this.state.convert}

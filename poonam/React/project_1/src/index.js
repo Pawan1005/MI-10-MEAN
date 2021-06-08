@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-
+import Currency from './Component/currency';
+import Temperature from './Component/temperature';
+import Counter from './Component/counter'
+import Input from './Component/input';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div>
+     <Currency/>
+      <Temperature/>
+      <Counter/>
+      <Input/>
+  </div>
+ ,
   document.getElementById('root')
 );
 

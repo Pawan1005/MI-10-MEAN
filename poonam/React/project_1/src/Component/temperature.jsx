@@ -12,11 +12,12 @@ export class Temperature extends Component {
 
     handleChange(e){
         this.setState({input : parseInt(e.target.value)});
-    
     }
+
     selectChange(e){
         this.setState({unit: e.target.value});
     }
+
     handleClick(e){
         e.preventDefault();
         console.log("click")
@@ -30,6 +31,7 @@ export class Temperature extends Component {
             this.setState({convert: temp});
         }
     }
+    
     render() {
         return (
             <div >

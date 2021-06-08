@@ -9,12 +9,12 @@ import Counter from './Component/counter'
 import Input from './Component/input';
 ReactDOM.render(
   <div>
-     <Currency/>
-      <Temperature/>
-      <Counter/>
-      <Input/>
+    <Currency />
+    <Temperature />
+    <Counter />
+    <Input />
   </div>
- ,
+  ,
   document.getElementById('root')
 );
 

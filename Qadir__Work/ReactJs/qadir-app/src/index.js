@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TimerClass from './Components/TimerClass';
-import Counter from './Components/Counter';
 import Timer from './Components/Timer';
+import BootstrapCounter from './Components/BootstrapCounter';
+import Clock from './Components/Clock';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <TimerClass />
-    <Counter addTwo={2} />
+    <BootstrapCounter />
+    <App /> 
+    <Clock />
   </React.StrictMode>,
   document.getElementById('root')
 );

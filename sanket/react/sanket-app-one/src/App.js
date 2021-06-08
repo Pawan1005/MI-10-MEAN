@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import DateClass from "./components/DateClass";
 import DateFunction from "./components/DateFunction";
 import Clock from "./components/Clock";
+import CurrencyConverter from "./components/CurrencyConverter";
+import TemperatureConvertor from "./components/TemperatureConvertor";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <DateClass />
       <DateFunction />
       <Clock />
+      <CurrencyConverter />
+      <TemperatureConvertor />
     </Fragment>
   );
 }

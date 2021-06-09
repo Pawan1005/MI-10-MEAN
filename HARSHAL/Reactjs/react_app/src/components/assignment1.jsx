@@ -22,7 +22,7 @@ class Currencyconvertor extends Component {
         event.preventDefault();
         const convert =
             this.state.currency === "Pound"
-                ? this.state.amount * 0.097
+                ? this.state.amount * 0.0097
                 : this.state.amount * 0.014;
         this.setState({ convert });
     };

@@ -12,6 +12,7 @@ import Currency from './Component/currency'
 import Temperature from './Component/temperature'
 import Counter from './Component/counter'
 import Input from './Component/input'
+import Fruitlist from './Component/fruitlist'
 ReactDOM.render(
   <div>
     <App />
@@ -23,6 +24,7 @@ ReactDOM.render(
     <Temperature />
     <Counter />
     <Input />
+    <Fruitlist/>
   </div>,
   document.getElementById('root')
 );

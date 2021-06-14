@@ -40,3 +40,33 @@ DROP TABLE temp;
 SHOW TABLES;
 
 -- 6-
+SELECT * FROM employees
+WHERE firstName LIKE 'F%';
+
+-- 7-
+SELECT * FROM employees
+WHERE firstName LIKE '______' AND lastName LIKE '%n';
+
+-- 8-
+SELECT officeCode, postalCode, city  FROM offices
+WHERE country='USA';
+
+-- 9-
+SELECT * FROM employees
+ORDER BY firstName
+LIMIT 6;
+
+-- 10-
+SELECT * FROM customers
+WHERE contactFirstName LIKE 'J%' AND state IS NOT NULL;
+
+-- 11-
+SELECT * FROM customers
+WHERE contactFirstName LIKE 'J%' AND state IS NOT NULL
+ORDER BY creditLimit DESC;
+
+-- 12-
+SELECT * FROM customers
+WHERE contactFirstName LIKE 'J%' AND state IS NOT NULL
+ORDER BY creditLimit DESC
+LIMIT 2;

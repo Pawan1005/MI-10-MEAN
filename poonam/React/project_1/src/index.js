@@ -3,18 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassComp from './Component/class'
 import State from './Component/state'
 import FunComp from './Component/funComp';
 import Clock from './Component/clock'
+import Currency from './Component/currency'
+import Temperature from './Component/temperature'
+import Counter from './Component/counter'
+import Input from './Component/input'
 ReactDOM.render(
-  <React.StrictMode>
+  <div>
     <App />
-    <ClassComp/>
-    <FunComp/>
-    <Clock/>
-    <State/>
-  </React.StrictMode>,
+    <ClassComp />
+    <FunComp />
+    <Clock />
+    <State />
+    <Currency />
+    <Temperature />
+    <Counter />
+    <Input />
+  </div>,
   document.getElementById('root')
 );
 

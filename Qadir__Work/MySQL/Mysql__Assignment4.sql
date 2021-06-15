@@ -35,9 +35,9 @@ Where status = "cancelled";
 -- 6
 Select cust.customerNumber, cust.customerName, cust.city, o.orderNumber
 From customers cust
-JOIN orders o
+left JOIN orders o
 On cust.customerNumber = o.customerNumber
-Where o.customerNumber Is Null;
+Where o.orderNumber Is Null;
 
 -- 7
 Select o.orderNumber, o.orderDate, o.status, prd.productCode, prd.productName, od.quantityOrdered

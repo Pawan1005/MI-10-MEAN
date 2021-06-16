@@ -48,10 +48,10 @@ export class Counter extends Component {
         return (
             <div>
                 <h3>Assignment 2</h3>
-                <Button variant="outline-primary" className="ml-5" onClick={() => this.reset()}> Reset </Button> <br /><br />
-                <Button variant="outline-primary" className="ml-5" onClick={() => this.incrementCounter()}> + </Button>
+                <Button variant="primary" className="ml-5" onClick={() => this.reset()}> Reset </Button> <br /><br />
+                <Button variant="primary" className="ml-5" onClick={() => this.incrementCounter()} disabled={this.state.counter === 10}> + </Button>
                 <Badge variant="success" className="ml-5" >  <h5>{this.state.counter}</h5>  </Badge>
-                <Button variant="outline-primary" className="ml-5" onClick={() => this.decrementCounter()}> - </Button> <br /><br />
+                <Button variant="primary" className="ml-5" onClick={() => this.decrementCounter()} disabled={this.state.counter === 0}> - </Button> <br /><br />
                 <hr />
             </div>
         )

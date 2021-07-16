@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <title>Roll number and Marks</title>
+
+    <style>
+        .container {
+            margin-top: 15%;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+        <h1>Check 10 students Marks as per their Roll no.</h1>
+        <br />
+        <label>Enter number :</label>
+        <input type="text" id="findId" />
+        <button onclick="showRno()" class="btn btn-primary">show</button>
+        <br /><br />
+        <p id="demo"></p>
+        <p id="marks"></p>
+    </div>
+
+    <script>
+        function showRno() {
+            var x = parseInt(document.getElementById("findId").value);
+            let $_markRno = document.getElementById("demo");
+            let isPresent = false;
+
+            for (let index = 0; index < $_sortMarks.length; index++) {
+                if ($_sortMarks[index]["roll_no"] == x) {
+                    $_markRno.innerHTML = `ROLL NO ${x} HAS SCORED ${$_sortMarks[index]["marks"]} MARKS`;
+                    isPresent = true;
+                    break;
+                }
+            }
+            if (!isPresent) {
+                $_markRno.innerHTML = `GIVEN ROLL NUMBER ${x} IS NOT PRESENT`;
+            }
+        }
+
+        var $_input = [],
+            $_rno,
+            $_marks,
+            $_studTotal;
+
+        $_studTotal = parseInt(prompt("ENTER TOTAL STUDENTS :"));
+
+        for (var index = 0; index < $_studTotal; index++) {
+            $_rno = parseInt(prompt("ENTER ROLL NUMBER :"));
+            $_marks = parseInt(prompt("ENTER MARKS OF STUDENTS :"));
+
+            if ($_marks > 50 || $_marks < 0 || $_rno < 0) {
+                alert("PLEASE ENTER VALID INPUT :");
+                $_studTotal++;
+            } else {
+                $_marks = $_marks + parseInt($_marks * 0.2);
+                $_input.push({ roll_no: $_rno, marks: $_marks });
+            }
+        }
+
+        var $_tempVar,
+            $_sortMarks = $_input;
+
+        for (var iter = 0; iter < $_sortMarks.length; iter++) {
+            for (var index = 0; index <= $_sortMarks.length - 2; index++) {
+                if ($_sortMarks[index]["marks"] < $_sortMarks[index + 1]["marks"]) {
+                    $_tempVar = $_sortMarks[index];
+                    $_sortMarks[index] = $_sortMarks[index + 1];
+                    $_sortMarks[index + 1] = $_tempVar;
+                }
+            }
+        }
+
+        document.getElementById("marks").innerHTML =
+            "<br> Roll no " + "  Marks <br>";
+
+        for (var i = 0; i < $_sortMarks.length; i++) {
+            document.getElementById("marks").innerHTML +=
+                "<br>" +
+                $_sortMarks[i]["roll_no"] +
+                "&nbsp &nbsp &nbsp &nbsp &nbsp " +
+                $_sortMarks[i]["marks"];
+        }
+    </script>
+</body>
+
+</html>

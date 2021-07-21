@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Assignment 17_Q1</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      .container {
+        margin-top: 8%;
+      }
+
+      input {
+        margin: 5px;
+      }
+
+      form {
+        margin: 20px;
+        margin-left: 514px;
+        margin-right: 476px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1>Student Report Card</h1>
+      <h4>Enter below information to generate report card</h4>
+
+      <form>
+        <label>Roll No :</label>
+        <input type="text" id="roll_no" placeholder="Enter a roll no." /><br />
+        <label>Name :</label>
+        <input
+          type="text"
+          id="stud_name"
+          placeholder="Enter student name"
+        /><br />
+        <label>Maths :</label>
+        <input type="text" id="sub1" placeholder="Enter marks" /><br />
+        <label>Science :</label>
+        <input type="text" id="sub2" placeholder="Enter marks" /><br />
+        <label>Hisotry :</label>
+        <input type="text" id="sub3" placeholder="Enter marks" /><br />
+        <button onclick="formSubmit()" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <p id="show_Result"></p>
+    <p id="r_rollno"></p>
+    <p id="r_name"></p>
+    <p id="r_maths"></p>
+    <p id="r_science"></p>
+    <p id="r_history"></p>
+    <p id="r_total"></p>
+    <p id="r_percentage"></p>
+    <p id="r_grade"></p>
+
+    <script>
+      function formSubmit() {
+        event.preventDefault();
+
+        let rollNo = document.getElementById("roll_no").value;
+        let name = document.getElementById("stud_name").value.toUpperCase();
+        let maths = parseInt(document.getElementById("sub1").value);
+        let science = parseInt(document.getElementById("sub2").value);
+        let history = parseInt(document.getElementById("sub3").value);
+
+        try {
+          if (/\D/.test(maths) || /\D/.test(science) || /\D/.test(history))
+            throw new Error("Invalid input,you put marks alphanumeric");
+          else if (maths > 100 || science > 100 || history > 100)
+            throw new Error("Invalid input,you put marks greater than 100");
+
+          const student = new Student(rollNo, name, maths, science, history);
+          student.grade();
+          student.display();
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      class Student {
+        constructor(rollNo, name, maths, science, history) {
+          this.rollNo = rollNo;
+          this.name = name;
+          this.maths = maths;
+          this.science = science;
+          this.history = history;
+        }
+
+        total() {
+          return this.maths + this.science + this.history;
+        }
+
+        percentage() {
+          let total = this.total();
+          return parseInt(total / 3);
+        }
+
+        grade() {
+          let percentage = this.percentage();
+          if (percentage < 40) {
+            document.getElementById("r_grade").innerHTML =
+              "<strong>No Grade</strong>";
+            return (document.getElementById("r_grade").style.color = "red");
+          }
+          if (percentage < 55) {
+            document.getElementById("r_grade").innerHTML =
+              "<strong>Grade : B</strong>";
+            return (document.getElementById("r_grade").style.color = "brown");
+          }
+          if (percentage < 60) {
+            document.getElementById("r_grade").innerHTML =
+              "<strong>Grade : B+</strong>";
+            return (document.getElementById("r_grade").style.color = "brown");
+          }
+          if (percentage < 80) {
+            document.getElementById("r_grade").innerHTML =
+              "<strong>Grade : A</strong>";
+            return (document.getElementById("r_grade").style.color = "green");
+          }
+          document.getElementById("r_grade").innerHTML =
+            "<strong>Grade : A+</strong>";
+          return (document.getElementById("r_grade").style.color = "green");
+        }
+
+        display() {
+          document.getElementById(
+            "show_Result"
+          ).innerHTML = `<strong>**********Report Card**********</strong>`;
+          document.getElementById(
+            "r_rollno"
+          ).innerHTML = `<strong>Roll No :</strong>      ${this.rollNo}`;
+          document.getElementById(
+            "r_name"
+          ).innerHTML = `<strong>Name :</strong>         ${this.name}`;
+          document.getElementById(
+            "r_maths"
+          ).innerHTML = `<strong>Maths :</strong>        ${this.maths}`;
+          document.getElementById(
+            "r_science"
+          ).innerHTML = `<strong>Science :</strong>      ${this.science}`;
+          document.getElementById(
+            "r_history"
+          ).innerHTML = `<strong>History :</strong>      ${this.history}`;
+          document.getElementById(
+            "r_total"
+          ).innerHTML = `<strong>Total :</strong>        ${this.total()}`;
+          document.getElementById(
+            "r_percentage"
+          ).innerHTML = `<strong>Percentage :</strong>   ${this.percentage()}%`;
+        }
+      }
+    </script>
+  </body>
+</html>

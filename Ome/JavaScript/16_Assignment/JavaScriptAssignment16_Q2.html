@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Assignment 16_Q2</title>
+
+    <style>
+      #heading,
+      #para,
+      form {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #heading {
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+
+      #para {
+        padding: 20px;
+        border: 1px solid goldenrod;
+      }
+
+      button {
+        background-color: #ffeeee;
+        border: none;
+        color: rgb(8, 8, 8);
+        padding: 10px 45px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 15px;
+        -webkit-transition-duration: 0.4s;
+      }
+
+      button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="heading">Change paragraph color, font-size & font-size</h1>
+      <br /><br />
+
+      <p id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni officia
+        vero delectus ad doloribus sint
+        <br />
+        inventore eos sunt, dicta incidunt blanditiis obcaecati ipsum et totam
+        iste veniam nesciunt perferendis
+        <br />
+        nihil corporis! Tenetur, iusto reiciendis facilis corrupti voluptas
+        expedita reprehenderit fugiat!
+      </p>
+      <br /><br />
+
+      <form action="">
+        <fieldset>
+          <legend>Colors</legend>
+          <button onclick="btnRed()">Red</button>
+          <button onclick="btnBlue()">Blue</button>
+          <button onclick="btnGreen()">Green</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Font-Size</legend>
+          <button onclick="btnSmall()">Small</button>
+          <button onclick="btnMedium()">Medium</button>
+          <button onclick="btnLarge()">Large</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Font-Style</legend>
+          <button onclick="btnSanSerif()">Sans-serif</button>
+          <button onclick="btnCursive()">Cursive</button>
+          <button onclick="btnFantasy()">Fantasy</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <script>
+      //Color change.
+      function btnRed() {
+        event.preventDefault();
+        document.getElementById("para").style.color = "red";
+      }
+      function btnBlue() {
+        event.preventDefault();
+        document.getElementById("para").style.color = "blue";
+      }
+      function btnGreen() {
+        event.preventDefault();
+        document.getElementById("para").style.color = "green";
+      }
+
+      //Font-Size Change
+      function btnSmall() {
+        event.preventDefault();
+        document.getElementById("para").style.fontSize = "small";
+      }
+      function btnMedium() {
+        event.preventDefault();
+        document.getElementById("para").style.fontSize = "medium";
+      }
+      function btnLarge() {
+        event.preventDefault();
+        document.getElementById("para").style.fontSize = "large";
+      }
+
+      //Font-Style Change
+      function btnSanSerif() {
+        event.preventDefault();
+        document.getElementById("para").style.fontFamily = "sans-serif,Georgia";
+      }
+      function btnCursive() {
+        event.preventDefault();
+        document.getElementById("para").style.fontFamily = "cursive";
+      }
+      function btnFantasy() {
+        event.preventDefault();
+        document.getElementById("para").style.fontFamily = "fantasy";
+      }
+    </script>
+  </body>
+</html>

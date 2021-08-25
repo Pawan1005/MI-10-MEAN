@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <title>Assignment 12_Q2</title>
+
+    <style>
+        /* .container {
+            margin-top: 15%;
+        }
+
+        input {
+            margin: 5px;
+        } */
+    </style>
+</head>
+
+<body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+        <h1>Employee Details display by using constructor</h1>
+        <br />
+
+        <label>Below button Add the details of an empoloyee :</label>
+        <br /><br />
+        <button onclick="addEmpDetails()" class="btn btn-primary">Add Employee details</button>
+        <br /><br />
+
+        <label>Below button display the details of an empoloyee :</label>
+        <br /><br />
+        <button onclick="empDetails()" class="btn btn-primary">Employee Details</button>
+        <br /><br />
+
+        <label>Below button display the details of an empoloyee is tax payer or not :</label>
+        <br /><br />
+        <button onclick="taxDetails()" class="btn btn-primary">Tax Payer Details</button>
+        <br /><br />
+
+        <p id="show1"></p>
+        <p id="show2"></p>
+    </div>
+
+    <script>
+        class Employee {
+            constructor() {
+                //details of an employee
+                this._empNum = 0;
+                this._empName = "";
+                this._empAddress = "";
+                this._empCity = "";
+                this._empSal = 0;
+                //details of salary
+                this._da = 0;
+                this._hra = 0;
+                this._pf = 0;
+                this._gross = 0;
+                this._net = 0;
+                this._basic = 0;
+                this._counter = 0;
+            }
+
+            getData(_empNum, _empName, _empAddress, _empCity, _empSal) {
+                this._empNum = _empNum;
+                this._empName = _empName;
+                this._empAddress = _empAddress;
+                this._empCity = _empCity;
+                this._empSal = _empSal;
+            }
+
+            //Display employee details
+            empDetails() {
+                document.getElementById('show1').innerHTML += `<br><strong>Employee Details</strong><br>`;
+                document.getElementById('show1').innerHTML += `<br>Employee No: <strong>${this._empNum}</strong>`;
+                document.getElementById('show1').innerHTML += `<br>Name: <strong>${this._empName}</strong>`;
+                document.getElementById('show1').innerHTML += `<br>Address: <strong>${this._empAddress}</strong>`;
+                document.getElementById('show1').innerHTML += `<br>City: <strong>${this._empCity}</strong>`;
+                document.getElementById('show1').innerHTML += `<br>Salary: <strong>${this._empSal}</strong>`;
+                document.getElementById('show1').innerHTML += `<br><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong>`;
+                document.getElementById('show1').innerHTML += `<br>`;
+                this._counter++;
+            }
+            //Calculate emp to check if he/she is tax payer or not salary
+            calculate() {
+                this._da = this._empSal * 0.3;
+                this._hra = this._empSal * 0.15;
+                this._pf = this._empSal * 0.125;
+                this._basic = this._empSal * 12;
+                this._gross = this._basic + (this._da * 12) + (this._hra * 12);
+                this._net = this._gross - (this._pf * 12);
+
+                if (this._gross > 1_80_000) {
+                    window.alert('Income tax payer');
+                }
+                else {
+                    window.alert('Not an income tax payer');
+                }
+            }
+            //Display the output of income tax details 
+            display() {
+                this.calculate();
+                document.getElementById('show2').innerHTML += `<br><strong>Tax Paying Details</strong><br>`;
+                document.getElementById('show2').innerHTML += `<br>Name: <b>${this._empName}</b>`;
+                document.getElementById('show2').innerHTML += `<br>Employee No: <b>${this._empNum}</b>`;
+                document.getElementById('show2').innerHTML += `<br>Annual Gross Salary: <b>${this._gross}</b>`;
+                document.getElementById('show2').innerHTML += `<br>Net Salary: <b>${this._net}</b>`;
+                document.getElementById('show2').innerHTML += `<br><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong>`;
+                document.getElementById('show2').innerHTML += `<br>`;
+            }
+        }
+
+
+        var std = null;
+        //Get emp data from user
+        //create empty object of class
+        function addEmpDetails() {
+            let $_emp_Number = parseInt(prompt('Enter a Employee Number:'));
+            let $_emp_Name = prompt('Enter a Employee Name:');
+            let $_emp_Adress = prompt('Enter a Employee Address:');
+            let $_emp_City = prompt('Enter a Employee City:');
+            let $_emp_Salary = parseInt(prompt('Enter a Employee Salary:'));
+
+            std = new Employee();
+            std.getData($_emp_Number, $_emp_Name, $_emp_Adress, $_emp_City, $_emp_Salary);
+        }
+
+
+        function empDetails() {
+            event.preventDefault();
+            std.empDetails();
+        }
+
+        function taxDetails() {
+            std.display();
+        }
+    </script>
+</body>
+
+</html>

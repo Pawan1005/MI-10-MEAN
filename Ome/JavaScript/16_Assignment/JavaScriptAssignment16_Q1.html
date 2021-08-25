@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <title>Assignment 16_Q1</title>
+
+    <style>
+        .container {
+            margin-top: 15%;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+        <h1 id="heading" style="text-align: center">Heading</h1>
+        <label>Change the direction of the heading according to the button</label>
+        <br /><br />
+        <button onclick="left()" class="btn btn-primary">Align-Left</button>
+        <button onclick="center()" class="btn btn-primary">Align-Center</button>
+        <button onclick="right()" class="btn btn-primary">Align-Right</button>
+    </div>
+
+    <script>
+        function left() {
+            var _heading = (document.getElementById("heading").style.textAlign =
+                "left");
+        }
+
+        function center() {
+            var _heading = (document.getElementById("heading").style.textAlign =
+                "center");
+        }
+
+        function right() {
+            var _heading = (document.getElementById("heading").style.textAlign =
+                "right");
+        }
+    </script>
+</body>
+
+</html>

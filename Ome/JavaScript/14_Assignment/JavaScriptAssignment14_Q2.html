@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <title>Assignment 14_Q2</title>
+
+    <style>
+        .container {
+            margin-top: 15%;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid rgb(8, 2, 14);
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+        <h1>Bank Transactions Details</h1>
+
+        <label>Enter person bank details :</label>
+        <br /><br />
+        <button onclick="bnkDetails()" class="btn btn-primary">Enter details</button>
+        <br /><br />
+
+        <label>Deposite amount into bank account :</label>
+        <br /><br />
+        <button onclick="depositeAmt()" class="btn btn-primary">Enter deposite amount</button>
+        <br /><br />
+
+        <label>Withdraw amount from bank account :</label>
+        <br /><br />
+        <button onclick="withdrawAmt()" class="btn btn-primary">Enter withdraw amount</button>
+        <br /><br />
+
+        <label>Display bank details :</label>
+        <br /><br />
+        <button onclick="disDetails()" class="btn btn-primary">Display Amount</button>
+        <br /><br />
+
+        <p id="show1"> 
+            <!-- Error message shows here -->
+        </p>
+        <p id="show2"> 
+            <!-- warning message shows here -->
+        </p>
+
+        <table style="display: none;" id="table">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Ac No.</th>
+                    <th>Ac.Holder Name </th>
+                    <th>Ac.Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script>
+        class bankTransactions 
+        {
+            constructor() 
+            {
+                this.$_accNum_ = 0;
+                this.$_accName_ = "";
+                this.$_accBalance_ = 0;
+            }
+
+            getData($_accNum_, $_accName_, $_accBalance_) 
+            {
+                this.$_accNum_ = $_accNum_;
+                this.$_accName_ = $_accName_;
+                this.$_accBalance_ = $_accBalance_;
+            }
+
+            deposit(amntAdd) 
+            {
+                this.$_accBalance_ += amntAdd;
+            }
+
+            withdraw(amt) 
+            {
+                if (amt > this.$_accBalance_) 
+                {
+                    document.getElementById('show1').innerHTML = '<strong> Error: Insufficient Funds </strong>';
+                }
+                else 
+                {
+                    this.$_accBalance_ -= amt;
+                    if (this.$_accBalance_ < 1000) 
+                    {
+                        document.getElementById('show2').innerHTML = '<strong> Warning - Balance below 1000 </strong>';
+                    }
+                }
+            }
+        }
+
+        var $_x_ = null;
+        var $_counter_ = 0;
+
+        function bnkDetails() 
+        {
+            var $_ac_no_ = parseInt(prompt('Enter a Account Number:'));
+            var $_ac_name = prompt('Enter a Account Holder Name:');
+            var $_ac_bal = parseInt(prompt('Enter a Total Balance:'));
+
+            $_x_ = new bankTransactions();
+            $_x_.getData($_ac_no_, $_ac_name, $_ac_bal);
+            $_counter_++;
+        }
+
+        function depositeAmt() 
+        {
+            var $_depoAmt = parseInt(prompt('Enter a Amount to Be Deposit:'));
+            $_x_.deposit($_depoAmt);
+        }
+
+        function withdrawAmt() 
+        {
+            var withdrawAmt = parseInt(prompt('Enter a Amount to Be Withdraw:'));
+            $_x_.withdraw(withdrawAmt);
+        }
+
+        function disDetails() 
+        {
+            var $_table_ = document.getElementById('table');
+
+            $_table_.style.display = "inline-block";
+
+            var $_row_ = $_table_.insertRow();
+            var $_row_Data1_ = $_row_.insertCell(0);
+            var $_row_Data2_ = $_row_.insertCell(1);
+            var $_row_Data3_ = $_row_.insertCell(2);
+            var $_row_Data4_ = $_row_.insertCell(3);
+
+            $_row_Data1_.innerHTML = `${$_counter_}`;
+            $_row_Data2_.innerHTML = `${$_x_.$_accNum_}`;
+            $_row_Data3_.innerHTML = `${$_x_.$_accName_}`;
+            $_row_Data4_.innerHTML = `${$_x_.$_accBalance_}`;
+        }
+    </script>
+</body>
+
+</html>

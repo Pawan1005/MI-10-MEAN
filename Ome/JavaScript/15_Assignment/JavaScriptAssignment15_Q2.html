@@ -1,0 +1,172 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Assignment 15_Q2</title>
+
+    <style>
+      /* .container {
+            margin-top: 15%;
+        }
+
+        input {
+            margin: 5px;
+        } */
+
+      table,
+      td,
+      th {
+        border: 1px solid rgb(8, 2, 14);
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 15px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+      <h1 style="text-align: center">Sales Details</h1>
+      <br /><br />
+      <label>Enter sales person details :</label>
+      <br /><br />
+      <button onclick="saleDetails()" class="btn btn-primary">
+        Enter details
+      </button>
+      <br /><br />
+
+      <label>Enter sales by salesman :</label>
+      <br /><br />
+      <button onclick="inputDetails()" class="btn btn-primary">
+        Enter deposite amt
+      </button>
+      <br /><br />
+
+      <label>Display total sales details :</label>
+      <br /><br />
+      <button onclick="disDetails()" class="btn btn-primary">
+        Display amt
+      </button>
+      <br /><br />
+
+      <p id="show1">
+        <!-- Error message shows here -->
+      </p>
+      <p id="show2">
+        <!-- output shows here -->
+      </p>
+
+      <table style="display: none" id="table">
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>Salesman Id.</th>
+            <th>Salesman Name</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="show"></p>
+    </div>
+
+    <script>
+      class salPer {
+        constructor() {
+          this.$_Pid = 0;
+          this.$_Pname = "";
+        }
+
+        getData($_Pid, $_Pname) {
+          this.$_Pid = $_Pid;
+          this.$_Pname = $_Pname;
+        }
+      }
+
+      class show2 extends salPer {
+        constructor() {
+          super();
+          this.$_Total_sale = 0;
+        }
+
+        calSale(amt) {
+          try {
+            if (amt < 0 || !amt) {
+              throw new Error("Invalid sale input, please enter correct sales");
+            } else if (amt >= 0 && amt <= 5000) {
+              this.$_Total_sale = amt - amt * 0.02;
+              document.getElementById("show1").innerHTML = "";
+            } else if (amt >= 5001 && amt <= 12000) {
+              this.$_Total_sale = amt - amt * 0.05;
+              document.getElementById("show1").innerHTML = "";
+            } else if (amt >= 12001 && amt <= 50000) {
+              this.$_Total_sale = amt - amt * 0.1;
+              document.getElementById("show1").innerHTML = "";
+            } else {
+              this.$_Total_sale = amt - amt * 0.15;
+              document.getElementById("show1").innerHTML = "";
+            }
+          } catch (error) {
+            document.getElementById(
+              "show1"
+            ).innerHTML = `<bold">${error.message}</bold>`;
+          }
+        }
+      }
+
+      var $_sales_person = null;
+      var i = 0;
+      var $_temp = false;
+
+      function saleDetails() {
+        $_temp = false;
+        let $_Sale_id = parseInt(prompt("Enter sales ID :"));
+        let $_Person_name = prompt("Enter sales person name :");
+        $_sales_person = new show2();
+        $_sales_person.getData($_Sale_id, $_Person_name);
+        i++;
+      }
+
+      function inputDetails() {
+        $_temp = true;
+        let $_sales_amt = parseInt(prompt("Enter sale amount :"));
+        $_sales_person.calSale($_sales_amt);
+      }
+
+      function disDetails() {
+        let $_table = document.getElementById("table");
+        $_table.style.display = "inline-block";
+        let $_row = $_table.insertRow();
+        let $_rowData1 = $_row.insertCell(0);
+        let $_rowData2 = $_row.insertCell(1);
+        let $_rowData3 = $_row.insertCell(2);
+        $_rowData1.innerHTML = `${i}`;
+        $_rowData2.innerHTML = `${$_sales_person.$_Pid}`;
+        $_rowData3.innerHTML = `${$_sales_person.$_Pname}`;
+        $_temp
+          ? (document.getElementById(
+              "show2"
+            ).innerHTML += `<br><br>total sale and commision: <bold>${$_sales_person.$_Total_sale}</bold>`)
+          : "";
+      }
+    </script>
+  </body>
+</html>
